@@ -91,7 +91,8 @@ main {
 
 /* Style for biography text */
 .bio p {
-    font-size: 18px; /* Modifica la dimensione del testo */
+    font-size: 30px; /* Modifica la dimensione del testo */
+    color: #003476;
 }
 
 /* Style for footer */
@@ -100,4 +101,23 @@ footer {
     color: #fff;
     padding: 10px 20px;
     text-align: center;
+}
+
+/* Style for biography */
+.bio {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif; /* Font moderno */
+    line-height: 1.6; /* Distanza tra le righe del testo */
+}
+
+/* Style for biography title */
+.bio h2 {
+    color: #003476; /* Colore del titolo */
+}
+
+/* Style for biography text */
+.bio p {
+    color: #003476; /* Colore del testo */
+    font-size: 18px; /* Modifica la dimensione del testo */
 }
