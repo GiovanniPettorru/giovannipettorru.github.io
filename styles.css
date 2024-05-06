@@ -7,7 +7,7 @@
 
 /* Style for header */
 header {
-    background-color: #333;
+    background-color: #003476;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -98,7 +98,7 @@ main {
 
 /* Style for footer */
 footer {
-    background-color: #333;
+    background-color: #003476;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
@@ -159,7 +159,7 @@ footer {
 .menu-icon .line {
     width: 25px;
     height: 3px;
-    background-color: #333;
+    background-color: 003476;
     margin: 5px 0;
 }
 
