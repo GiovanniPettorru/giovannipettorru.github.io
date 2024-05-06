@@ -191,7 +191,7 @@ footer {
 
 /* Stile per il navigation bar */
 .navbar {
-    background-color: #003476;
+    background-color:#333;
     font-family: Arial, sans-serif; /* Font moderno */
     text-align: center;
     margin-bottom: 20px;
@@ -209,7 +209,7 @@ footer {
 }
 
 .navbar ul li a {
-    color: #333;
+    color:#f9f9f9;
     text-decoration: none;
     font-size: 18px;
 }
