@@ -65,12 +65,14 @@ header h1 {
     font-size: 10px;
 }
 
-/* Style for main section */
+/* Stile per il main */
 main {
     display: grid;
     grid-template-rows: auto 1fr auto; /* Header, Content, Footer */
-    min-height: 100%;
+    min-height: 100vh; /* Altezza della pagina pari al 100% dell'altezza dello schermo */
 }
+
+
 
 /* Style for grid container */
 .grid-container {
@@ -115,14 +117,13 @@ main {
     font-size: 18px; /* Modifica la dimensione del testo */
 }
 
-/* Stile per footer */
+/* Stile per il footer */
 footer {
     background-color: #003476;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
     font-family: Arial, sans-serif; /* Font moderno */
-    width: 100%; /* Occupa tutta la larghezza */
 }
 
 /* Stile per navigation bar */
