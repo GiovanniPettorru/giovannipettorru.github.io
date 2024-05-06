@@ -79,7 +79,6 @@ main {
     display: grid;
     grid-template-columns: 1fr 2fr; /* Due colonne */
     gap: 10px;
-    padding: 16px;
 }
 
 /* Style for photo */
@@ -89,7 +88,7 @@ main {
 
 /* Stile per la colonna della biografia */
 .bio {
-    width: 80%; /* Imposta la larghezza desiderata */
+    width: 90%; /* Imposta la larghezza desiderata */
     display: flex;
     flex-direction: column;
     font-family: Arial, sans-serif; /* Font moderno */
