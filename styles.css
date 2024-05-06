@@ -19,19 +19,6 @@ header h1 {
     font-family: Arial, sans-serif; /* Font moderno */
 }
 
-/* Stile per i link */
-header h1 a {
-    color: #f9f9f9;
-    text-decoration: none; /* Rimuove la sottolineatura */
-    font-size: 30px;
-}
-
-/* Stile per i link al passaggio del mouse */
-header h1 a:hover {
-    text-decoration: none; /* Rimuove la sottolineatura */
-    color:#f9f9f9; /* Mantiene il colore originale */
-}
-
 /* Style for dropdown */
 .dropdown {
     position: relative;
@@ -248,7 +235,7 @@ footer {
 
 /* Stile per i link */
 .navbar ul li a {
-    color: #333;
+    color: #f9f9f9;
     text-decoration: none; /* Rimuove la sottolineatura */
     font-size: 18px;
 }
@@ -256,5 +243,35 @@ footer {
 /* Stile per i link al passaggio del mouse */
 .navbar ul li a:hover {
     text-decoration: none; /* Rimuove la sottolineatura */
-    color: #333; /* Mantiene il colore originale */
+    color: #f9f9f9; /* Mantiene il colore originale */
+}
+
+/* Stile per il titolo nell'header */
+header h1 a {
+    color: #fff; /* Colore bianco */
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+/* Stile per il titolo al passaggio del mouse */
+header h1 a:hover {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: #fff; /* Mantiene il colore bianco */
+}
+
+/* Stile per il contenitore delle icone social */
+.social-icons {
+    text-align: center;
+    margin-top: 20px; /* Aggiungi spazio tra la bio e le icone */
+}
+
+/* Stile per le icone social */
+.social-icons a {
+    display: inline-block; /* Posiziona le icone su una riga */
+    margin: 0 10px; /* Spazio tra le icone */
+    color: #333; /* Colore delle icone */
+}
+
+/* Stile per le icone social al passaggio del mouse */
+.social-icons a:hover {
+    color: #007bff; /* Cambia colore delle icone al passaggio del mouse */
 }
