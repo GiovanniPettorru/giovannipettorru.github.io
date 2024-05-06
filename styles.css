@@ -257,6 +257,7 @@ header h1 a {
     display: flex; /* Utilizza Flexbox per posizionare gli elementi in orizzontale */
     justify-content: center; /* Centra gli elementi orizzontalmente */
     margin-top: 20px; /* Aggiungi spazio tra la bio e le icone */
+    flex-direction: row;
 }
 
 /* Stile per le icone social */
