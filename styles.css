@@ -247,13 +247,13 @@ footer {
 }
 
 /* Stile per il titolo nell'header */
-header h1 a {
+.header h1 a {
     color: #f9f9f9; /* Colore bianco */
     text-decoration: none; /* Rimuove la sottolineatura */
 }
 
 /* Stile per il titolo al passaggio del mouse */
-header h1 a:hover {
+.header h1 a:hover {
     text-decoration: none; /* Rimuove la sottolineatura */
     color: #f9f9f9; /* Mantiene il colore bianco */
 }
