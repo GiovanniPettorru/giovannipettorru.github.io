@@ -226,16 +226,20 @@ footer {
     text-decoration: underline;
 }
 
+/* Aggiungi questa parte di codice al tuo file CSS */
+
 /* Stile per le icone social */
 .social-icons {
-    display: flex;
+    text-align: center;
+    margin-top: 20px; /* Aggiungi spazio tra la bio e le icone */
 }
 
 .social-icons a {
-    margin-left: 10px;
+    margin: 0 10px; /* Aggiungi spazio tra le icone */
     color: #333; /* Colore delle icone */
 }
 
 .social-icons a:hover {
     color: #007bff; /* Colore delle icone al passaggio del mouse */
 }
+
