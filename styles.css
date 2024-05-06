@@ -192,7 +192,6 @@ footer {
 /* Stile per il navigation bar */
 .navbar {
     text-align: center;
-    object-position: center;
     margin-bottom: 20px;
 }
 
@@ -219,6 +218,7 @@ footer {
 
 /* Stile per le icone social */
 .social-icons {
+    width: 20px;
     text-align: center;
     margin-top: 20px; /* Spazio tra la bio e le icone */
 }
