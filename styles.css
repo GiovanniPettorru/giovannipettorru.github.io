@@ -205,6 +205,12 @@ footer {
     text-align: center;
 }
 
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .navbar ul li {
     display: inline;
     margin: 0 10px;
@@ -218,4 +224,18 @@ footer {
 
 .navbar ul li a:hover {
     text-decoration: underline;
+}
+
+/* Stile per le icone social */
+.social-icons {
+    display: flex;
+}
+
+.social-icons a {
+    margin-left: 10px;
+    color: #333; /* Colore delle icone */
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Colore delle icone al passaggio del mouse */
 }
