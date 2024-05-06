@@ -187,4 +187,11 @@ header h1 a {
 
     .photo {
         grid-row: 1; /* Posiziona la foto sopra la biografia */
-       
+        grid-column: 1; /* Posiziona la foto nella prima colonna */
+    }
+
+    .bio {
+        grid-row: 2; /* Posiziona la biografia sotto la foto */
+        grid-column: 1; /* Posiziona la biografia nella prima colonna */
+    }
+}
