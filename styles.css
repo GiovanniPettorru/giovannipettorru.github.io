@@ -5,13 +5,15 @@
     box-sizing: border-box;
 }
 
-/* Style for header */
+/* Stile per header */
 header {
     background-color: #003476;
     color: #fff;
     padding: 20px;
     text-align: center;
+    width: 100%; /* Occupa tutta la larghezza */
 }
+
 
 /* Style for h1 in header */
 header h1 {
@@ -110,17 +112,17 @@ main {
     font-size: 18px; /* Modifica la dimensione del testo */
 }
 
-/* Style for footer */
+/* Stile per footer */
 footer {
     background-color: #003476;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
-    font-family: Arial; /* Font moderno */
+    font-family: Arial, sans-serif; /* Font moderno */
+    width: 100%; /* Occupa tutta la larghezza */
 }
 
-/* Stile per il navigation bar */
-/* Stile per il navigation bar */
+/* Stile per navigation bar */
 .navbar {
     background-color: #333; /* Colore di sfondo della barra di navigazione */
     font-family: Arial, sans-serif; /* Font moderno */
@@ -129,6 +131,7 @@ footer {
     display: flex; /* Utilizza Flexbox */
     justify-content: center; /* Centra il contenuto orizzontalmente */
     align-items: center; /* Centra il contenuto verticalmente */
+    width: 100%; /* Occupa tutta la larghezza */
 }
 
 .navbar ul {
@@ -161,8 +164,6 @@ footer {
     text-decoration: none; /* Rimuove la sottolineatura */
     color: #f9f9f9; /* Mantiene il colore originale */
 }
-
-
 
 
 /* Stile per il titolo nell'header */
