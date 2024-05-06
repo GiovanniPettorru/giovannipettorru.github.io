@@ -9,21 +9,15 @@
 <body>
     <header>
         <h1>Giovanni Pettorru</h1>
-        <!-- Menu icon -->
-        <div class="menu-icon" onclick="toggleMenu()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <!-- Dropdown Menu -->
-        <nav class="dropdown">
-            <div class="dropdown-content">
-                <a href="index.html">Home</a>
-                <a href="contact.html">Contact</a>
-                <a href="publications.html">Publications</a>
-            </div>
-        </nav>
     </header>
+
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="publications.html">Publications</a></li>
+        </ul>
+    </nav>
 
     <main>
         <div class="grid-container">
@@ -47,12 +41,5 @@
     <footer>
         <p>&copy; 2024 Giovanni Pettorru. All rights reserved.</p>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.querySelector('.dropdown-content');
-            menu.classList.toggle('show');
-        }
-    </script>
 </body>
 </html>
