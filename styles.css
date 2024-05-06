@@ -164,13 +164,11 @@ header h1 a {
 .social-icons {
     display: flex; /* Utilizza Flexbox per posizionare gli elementi in orizzontale */
     justify-content: center; /* Centra gli elementi orizzontalmente */
-    margin-top: auto; /* Aggiungi spazio tra la bio e le icone */
 }
 
 /* Stile per le icone social */
 .social-icons a {
     display: inline-block; /* Permette il controllo delle dimensioni */
-    margin: 0 10px; /* Spazio tra le icone */
 }
 
 /* Imposta le dimensioni desiderate per le icone */
