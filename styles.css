@@ -129,7 +129,7 @@ footer {
 /* Media query per schermi più grandi (larghezza minima di 768px) */
 @media screen and (min-width: 768px) {
     .navbar {
-        height: 60px; /* Altezza desiderata della barra di navigazione */
+        height: 40px; /* Altezza desiderata della barra di navigazione */
     }
 }
 
