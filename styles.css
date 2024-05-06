@@ -104,7 +104,8 @@ main {
     font-size: 24px; /* Modifica la dimensione del testo */
 }
 
-.contact-info p {
+.contact-info {
+    font-family: Arial, sans-serif; /* Font moderno */
     color: #003476; /* Colore del testo */
     font-size: 18px; /* Modifica la dimensione del testo */
 }
