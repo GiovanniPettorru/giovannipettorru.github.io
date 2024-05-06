@@ -219,5 +219,14 @@ header h1 a {
     /* Riduci la dimensione del testo del body */
     .bio {
         font-size: 10px;
+        
+    }
+}
+
+/* Stile per il main solo su dispositivi desktop */
+@media screen and (min-width: 769px) {
+    main {
+        height: 100vh; /* Altezza pari al 100% dell'altezza della finestra del browser */
+        overflow: hidden; /* Nasconde la barra di scorrimento verticale */
     }
 }
