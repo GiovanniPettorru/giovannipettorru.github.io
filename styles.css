@@ -241,3 +241,8 @@ header h1 a {
         height: 100px; /* Altezza del footer */
     }
 }
+
+/* Stile per mostrare il footer quando si scorre verso il basso */
+body.scrollable-footer footer {
+    display: block; /* Mostra il footer quando si scorre verso il basso */
+}
