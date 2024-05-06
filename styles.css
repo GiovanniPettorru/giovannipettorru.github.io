@@ -11,6 +11,7 @@ header {
     color: #fff;
     padding: 20px;
     text-align: center;
+    position: relative;
 }
 
 /* Style for h1 in header */
@@ -18,13 +19,14 @@ header h1 {
     margin: 0;
 }
 
-/* Style for dropdown button */
-.dropbtn {
-    background-color: #555;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
+/* Style for dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style for dropdown toggle */
+.dropdown-toggle {
     cursor: pointer;
 }
 
@@ -36,6 +38,9 @@ header h1 {
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
+    top: 100%; /* Posiziona il dropdown al di sotto del pulsante */
+    left: 0;
+    width: 100%;
 }
 
 /* Style for dropdown links */
@@ -47,29 +52,26 @@ header h1 {
 }
 
 /* Style for dropdown on hover */
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-/* Show dropdown content on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Style for main section */
-main {
-    padding: 20px;
+/* Style for dropdown toggle arrow */
+.dropdown-toggle span {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 10px;
 }
 
-/* Style for section */
-section {
-    margin-bottom: 20px;
-}
-
-/* Style for footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
+/* Media query per schermi più piccoli */
+@media screen and (max-width: 768px) {
+    header h1 {
+        display: none; /* Nascondi il nome su schermi più piccoli */
+    }
+    .dropdown-toggle span {
+        display: none; /* Nascondi l'icona su schermi più piccoli */
+    }
+    .dropdown-content {
+        position: relative; /* Cambia la posizione del dropdown al relativo */
+    }
 }
