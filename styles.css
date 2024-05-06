@@ -121,10 +121,17 @@ footer {
 
 /* Stile per il navigation bar */
 .navbar {
-    background-color:#333;
-    font-family: Arial; /* Font moderno */
-    text-align: center;
-    margin-bottom: 20px;
+    background-color: #333; /* Colore di sfondo della barra di navigazione */
+    font-family: Arial, sans-serif; /* Font moderno */
+    text-align: center; /* Allineamento del testo al centro */
+    margin-bottom: 20px; /* Margine inferiore */
+}
+
+/* Media query per schermi più grandi (larghezza minima di 768px) */
+@media screen and (min-width: 768px) {
+    .navbar {
+        height: 60px; /* Altezza desiderata della barra di navigazione */
+    }
 }
 
 .navbar ul {
