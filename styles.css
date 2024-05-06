@@ -79,9 +79,8 @@ main {
 }
 
 /* Style for photo */
-.photo img {
-    max-width: 70%;
-    height: auto;
+.photo {
+    text-align: center; /* Centra la foto orizzontalmente */
 }
 
 /* Style for biography */
