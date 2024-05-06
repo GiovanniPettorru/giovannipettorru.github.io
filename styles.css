@@ -88,27 +88,6 @@ main {
 .bio {
     display: flex;
     flex-direction: column;
-}
-
-/* Style for biography text */
-.bio p {
-    font-size: 30px; /* Modifica la dimensione del testo */
-    color: #003476;
-}
-
-/* Style for footer */
-footer {
-    background-color: #003476;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-    font-family: Arial, sans-serif; /* Font moderno */
-}
-
-/* Style for biography */
-.bio {
-    display: flex;
-    flex-direction: column;
     font-family: Arial, sans-serif; /* Font moderno */
     line-height: 1.6; /* Distanza tra le righe del testo */
 }
@@ -126,68 +105,14 @@ footer {
     font-size: 24px; /* Modifica la dimensione del testo */
 }
 
-/* Rest of your CSS */
-
-/* Style for dropdown content */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 100%;
-    left: 0;
-    width: 100%;
+/* Style for footer */
+footer {
+    background-color: #003476;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif; /* Font moderno */
 }
-
-/* Style for dropdown links */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Style for menu icon */
-.menu-icon {
-    display: none;
-    cursor: pointer;
-    padding: 10px;
-}
-
-/* Style for menu icon lines */
-.menu-icon .line {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px 0;
-}
-
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-    /* Hide the dropdown menu by default */
-    .dropdown-content {
-        display: none;
-    }
-
-    /* Display the menu icon */
-    .menu-icon {
-        display: block;
-    }
-
-    /* Hide the navigation links */
-    .dropdown {
-        position: relative;
-    }
-
-    /* Show the dropdown menu when the menu icon is clicked */
-    .dropdown-content.show {
-        display: block;
-    }
-}
-
-/* Aggiungi questa parte di codice al tuo file CSS */
 
 /* Stile per il navigation bar */
 .navbar {
@@ -217,22 +142,6 @@ footer {
     text-decoration: underline;
 }
 
-/* Stile per le icone social */
-.social-icons {
-    width: 50px;
-    text-align: center;
-    margin-top: 20px; /* Spazio tra la bio e le icone */
-}
-
-.social-icons a {
-    margin: 0 10px; /* Spazio tra le icone */
-    color: #333; /* Colore delle icone */
-}
-
-.social-icons a:hover {
-    color: #007bff; /* Colore delle icone al passaggio del mouse */
-}
-
 /* Stile per i link */
 .navbar ul li a {
     color: #f9f9f9;
@@ -257,7 +166,6 @@ header h1 a {
     display: flex; /* Utilizza Flexbox per posizionare gli elementi in orizzontale */
     justify-content: center; /* Centra gli elementi orizzontalmente */
     margin-top: 20px; /* Aggiungi spazio tra la bio e le icone */
-    flex-direction: row;
 }
 
 /* Stile per le icone social */
@@ -271,6 +179,3 @@ header h1 a {
     width: 90px; /* Imposta la larghezza delle icone */
     height: auto; /* Imposta l'altezza in base alla larghezza per mantenere l'aspetto proporzionato */
 }
-
-
-
