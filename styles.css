@@ -119,6 +119,10 @@ main {
 
 /* Stile per il footer */
 footer {
+    position: fixed; /* Posiziona il footer in modo fisso */
+    bottom: 0; /* Posiziona il footer alla parte inferiore della finestra del browser */
+    left: 0;
+    width: 100%;
     background-color: #003476;
     color: #fff;
     padding: 10px 20px;
@@ -226,7 +230,14 @@ header h1 a {
 /* Stile per il main solo su dispositivi desktop */
 @media screen and (min-width: 769px) {
     main {
-        height: 100vh; /* Altezza pari al 100% dell'altezza della finestra del browser */
+        min-height: 100vh; /* Altezza minima pari al 100% dell'altezza della finestra del browser */
         overflow: hidden; /* Nasconde la barra di scorrimento verticale */
+    }
+
+    /* Assicura che il footer sia posizionato alla fine della finestra del browser */
+    main:after {
+        content: "";
+        display: block;
+        height: 100px; /* Altezza del footer */
     }
 }
