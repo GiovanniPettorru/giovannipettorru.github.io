@@ -79,11 +79,13 @@ main {
     display: grid;
     grid-template-columns: 1fr 2fr; /* Due colonne */
     gap: 10px;
+    padding: 16px;
 }
 
 /* Style for photo */
 .photo {
     text-align: center; /* Centra la foto orizzontalmente */
+    width: 70%;
 }
 
 /* Stile per la colonna della biografia */
