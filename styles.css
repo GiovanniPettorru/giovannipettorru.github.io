@@ -83,12 +83,6 @@ main {
     justify-content: center; /* Centra la foto orizzontalmente */
 }
 
-/* Stile per la foto */
-.photo img {
-    width: 80%; /* Assicura che la foto non superi la larghezza massima del suo contenitore */
-    height: 80%;
-}
-
 /* Style for biography */
 .bio {
     display: flex;
