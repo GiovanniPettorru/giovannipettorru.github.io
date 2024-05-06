@@ -124,13 +124,7 @@ footer {
     background-color: #333; /* Colore di sfondo della barra di navigazione */
     font-family: Arial, sans-serif; /* Font moderno */
     text-align: center; /* Allineamento del testo al centro */
-}
-
-/* Media query per schermi più grandi (larghezza minima di 768px) */
-@media screen and (min-width: 768px) {
-    .navbar {
-        height: 40px; /* Altezza desiderata della barra di navigazione */
-    }
+    height: 40px;
 }
 
 .navbar ul {
