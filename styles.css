@@ -85,8 +85,8 @@ main {
 
 /* Stile per la foto */
 .photo img {
-    max-width: 75%; /* Assicura che la foto non superi la larghezza massima del suo contenitore */
-    height: auto;
+    width: 50%; /* Assicura che la foto non superi la larghezza massima del suo contenitore */
+    height: 50%;
 }
 
 /* Style for biography */
