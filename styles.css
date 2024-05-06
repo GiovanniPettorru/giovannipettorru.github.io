@@ -16,7 +16,7 @@ header {
 /* Style for h1 in header */
 header h1 {
     margin: 0;
-    font-family: Arial, sans-serif; /* Font moderno */
+    font-family: Arial; /* Font moderno */
 }
 
 /* Style for dropdown */
@@ -87,7 +87,7 @@ main {
 .bio {
     display: flex;
     flex-direction: column;
-    font-family: Arial, sans-serif; /* Font moderno */
+    font-family: Arial; /* Font moderno */
     line-height: 1.6; /* Distanza tra le righe del testo */
 }
 
@@ -105,9 +105,10 @@ main {
 }
 
 .contact-info {
-    font-family: Arial, sans-serif; /* Font moderno */
+    font-family: Arial; /* Font moderno */
     color: #003476; /* Colore del testo */
     font-size: 18px; /* Modifica la dimensione del testo */
+    text-align: left;
 }
 
 /* Style for footer */
@@ -116,13 +117,13 @@ footer {
     color: #fff;
     padding: 10px 20px;
     text-align: center;
-    font-family: Arial, sans-serif; /* Font moderno */
+    font-family: Arial; /* Font moderno */
 }
 
 /* Stile per il navigation bar */
 .navbar {
     background-color:#333;
-    font-family: Arial, sans-serif; /* Font moderno */
+    font-family: Arial; /* Font moderno */
     text-align: center;
     margin-bottom: 20px;
 }
