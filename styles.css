@@ -81,12 +81,14 @@ main {
 .photo img {
     max-width: 100%;
     height: auto;
+    position: left;
 }
 
 /* Style for biography */
 .bio {
     display: flex;
     flex-direction: column;
+    position: right;
 }
 
 /* Style for footer */
