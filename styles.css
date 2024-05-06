@@ -69,6 +69,26 @@ main {
     min-height: 100vh;
 }
 
+/* Style for grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Una colonna per la foto, due colonne per la biografia */
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style for photo */
+.photo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style for biography */
+.bio {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Style for footer */
 footer {
     background-color: #333;
