@@ -82,6 +82,7 @@ main {
 .photo img {
     max-width: 70%;
     height: auto;
+    align-items: center;
 }
 
 /* Style for biography */
