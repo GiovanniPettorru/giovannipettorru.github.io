@@ -97,7 +97,7 @@ main {
 .bio h2 {
     color: #003476; /* Colore del titolo */
     font-size: 30px;
-    text-align: center;
+    text-align: justify;
 }
 
 /* Style for biography text */
