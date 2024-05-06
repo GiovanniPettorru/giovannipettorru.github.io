@@ -120,6 +120,7 @@ footer {
 }
 
 /* Stile per il navigation bar */
+/* Stile per il navigation bar */
 .navbar {
     background-color: #333; /* Colore di sfondo della barra di navigazione */
     font-family: Arial, sans-serif; /* Font moderno */
@@ -127,6 +128,7 @@ footer {
     height: 40px;
     display: flex; /* Utilizza Flexbox */
     justify-content: center; /* Centra il contenuto orizzontalmente */
+    align-items: center; /* Centra il contenuto verticalmente */
 }
 
 .navbar ul {
@@ -159,6 +161,7 @@ footer {
     text-decoration: none; /* Rimuove la sottolineatura */
     color: #f9f9f9; /* Mantiene il colore originale */
 }
+
 
 
 /* Stile per il titolo nell'header */
