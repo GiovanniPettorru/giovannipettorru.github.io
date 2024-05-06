@@ -199,6 +199,7 @@ header h1 a {
 @media screen and (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr; /* Modifica la disposizione in una singola colonna */
+        justify-items: center; /* Allinea il contenuto al centro della colonna */
     }
 
     .photo {
@@ -209,6 +210,7 @@ header h1 a {
     .bio {
         grid-row: 2; /* Posiziona la biografia sotto la foto */
         grid-column: 1; /* Posiziona la biografia nella prima colonna */
+        text-align: center; /* Allinea il testo al centro */
     }
 }
 
