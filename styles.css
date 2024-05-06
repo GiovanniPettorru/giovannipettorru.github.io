@@ -85,8 +85,8 @@ main {
 
 /* Stile per la foto */
 .photo img {
-    width: 50%; /* Assicura che la foto non superi la larghezza massima del suo contenitore */
-    height: 50%;
+    width: 80%; /* Assicura che la foto non superi la larghezza massima del suo contenitore */
+    height: 80%;
 }
 
 /* Style for biography */
@@ -181,6 +181,6 @@ header h1 a {
 
 /* Imposta le dimensioni desiderate per le icone */
 .social-icons a img {
-    width: 90px; /* Imposta la larghezza delle icone */
+    width: 70px; /* Imposta la larghezza delle icone */
     height: auto; /* Imposta l'altezza in base alla larghezza per mantenere l'aspetto proporzionato */
 }
