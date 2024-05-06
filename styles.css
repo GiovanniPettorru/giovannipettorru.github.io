@@ -192,6 +192,7 @@ footer {
 /* Stile per il navigation bar */
 .navbar {
     text-align: center;
+    object-position: center;
     margin-bottom: 20px;
 }
 
@@ -199,7 +200,6 @@ footer {
     padding: 0;
     margin: 0;
     list-style-type: none;
-    text-align: center;
 }
 
 .navbar ul li {
