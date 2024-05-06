@@ -187,37 +187,27 @@ footer {
     }
 }
 
-/* Rest of your CSS */
+/* Aggiungi questa parte di codice al tuo file CSS */
 
-/* Style for navigation bar */
+/* Stile per il navigation bar */
 .navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    font-family: Arial, sans-serif; /* Font moderno */
-}
-
-/* Style for navigation links */
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .navbar ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
 .navbar ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 10px; /* Spazio tra i link */
 }
 
 .navbar ul li a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
     font-size: 18px;
 }
@@ -226,20 +216,17 @@ footer {
     text-decoration: underline;
 }
 
-/* Aggiungi questa parte di codice al tuo file CSS */
-
 /* Stile per le icone social */
 .social-icons {
     text-align: center;
-    margin-top: 20px; /* Aggiungi spazio tra la bio e le icone */
+    margin-top: 20px; /* Spazio tra la bio e le icone */
 }
 
 .social-icons a {
-    margin: 0 10px; /* Aggiungi spazio tra le icone */
+    margin: 0 10px; /* Spazio tra le icone */
     color: #333; /* Colore delle icone */
 }
 
 .social-icons a:hover {
     color: #007bff; /* Colore delle icone al passaggio del mouse */
 }
-
