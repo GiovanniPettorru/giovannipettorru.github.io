@@ -79,9 +79,8 @@ main {
 }
 
 /* Style for photo */
-.photo img {
-    max-width: 100%; /* Rende l'immagine responsiva */
-    height: auto; /* Evita il ridimensionamento distorto */
+.photo {
+    text-align: center; /* Centra la foto orizzontalmente */
 }
 
 /* Style for biography */
@@ -114,7 +113,7 @@ footer {
     font-family: Arial, sans-serif; /* Font moderno */
 }
 
-/* Style for navigation bar */
+/* Stile per il navigation bar */
 .navbar {
     background-color:#333;
     font-family: Arial, sans-serif; /* Font moderno */
@@ -142,36 +141,50 @@ footer {
     text-decoration: underline;
 }
 
-/* Style for social icons */
+/* Stile per i link */
+.navbar ul li a {
+    color: #f9f9f9;
+    text-decoration: none; /* Rimuove la sottolineatura */
+    font-size: 18px;
+}
+
+/* Stile per i link al passaggio del mouse */
+.navbar ul li a:hover {
+    text-decoration: none; /* Rimuove la sottolineatura */
+    color: #f9f9f9; /* Mantiene il colore originale */
+}
+
+/* Stile per il titolo nell'header */
+header h1 a {
+    color: #fff; /* Colore bianco */
+    text-decoration: none; /* Rimuove la sottolineatura */
+}
+
+/* Stile per il contenitore delle icone social */
 .social-icons {
     display: flex; /* Utilizza Flexbox per posizionare gli elementi in orizzontale */
     justify-content: center; /* Centra gli elementi orizzontalmente */
-    margin-top: 20px; /* Aggiungi spazio sopra le icone */
+    margin-top: 20px; /* Aggiungi spazio tra la bio e le icone */
 }
 
+/* Stile per le icone social */
 .social-icons a {
     display: inline-block; /* Permette il controllo delle dimensioni */
     margin: 0 10px; /* Spazio tra le icone */
 }
 
+/* Imposta le dimensioni desiderate per le icone */
 .social-icons a img {
     width: 90px; /* Imposta la larghezza delle icone */
     height: auto; /* Imposta l'altezza in base alla larghezza per mantenere l'aspetto proporzionato */
 }
 
-/* Style for contact information */
-.contact-info {
-    font-family: Arial, sans-serif; /* Font moderno */
-    text-align: center;
-    margin-top: 20px; /* Aggiungi spazio sopra le informazioni di contatto */
-}
+/* Media query per dispositivi di larghezza massima di 768px (come tablet e smartphone) */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Modifica la disposizione in una singola colonna */
+    }
 
-.contact-info h2 {
-    color: #003476; /* Colore del titolo */
-    font-size: 24px;
-}
-
-.contact-info p {
-    color: #003476; /* Colore del testo */
-    font-size: 18px;
-}
+    .photo {
+        grid-row: 1; /* Posiziona la foto sopra la biografia */
+       
