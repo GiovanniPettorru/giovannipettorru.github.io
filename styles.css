@@ -104,6 +104,7 @@ main {
 .bio p {
     color: #003476; /* Colore del testo */
     font-size: 24px; /* Modifica la dimensione del testo */
+    text-align: justify;
 }
 
 .contact-info {
