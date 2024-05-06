@@ -78,11 +78,15 @@ main {
     padding: 20px;
 }
 
-/* Style for photo */
+.photo {
+    display: flex;
+    justify-content: center; /* Centra la foto orizzontalmente */
+}
+
+/* Stile per la foto */
 .photo img {
-    max-width: 70%;
+    max-width: 100%; /* Assicura che la foto non superi la larghezza massima del suo contenitore */
     height: auto;
-    align-items: center;
 }
 
 /* Style for biography */
