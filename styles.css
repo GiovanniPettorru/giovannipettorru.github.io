@@ -254,20 +254,27 @@ header h1 a {
 
 /* Stile per il contenitore delle icone social */
 .social-icons {
-    display: flex; /* Utilizza Flexbox per posizionare le icone in orizzontale */
-    justify-content: center; /* Centra le icone orizzontalmente */
+    text-align: center;
+    margin-top: 20px; /* Aggiungi spazio tra la bio e le icone */
 }
 
 /* Stile per le icone social */
 .social-icons a {
     display: inline-block; /* Permette il controllo delle dimensioni */
-    margin: 5px; /* Spazio tra le icone */
+    margin: 0 20px; /* Spazio tra le icone */
+    color: #333; /* Colore delle icone */
+}
+
+/* Stile per le icone social al passaggio del mouse */
+.social-icons a:hover {
+    color: #007bff; /* Cambia colore delle icone al passaggio del mouse */
 }
 
 /* Imposta le dimensioni desiderate per le icone */
 .social-icons a img {
-    width: auto; /* Imposta la larghezza delle icone */
+    width: 90px; /* Imposta la larghezza delle icone */
     height: auto; /* Imposta l'altezza in base alla larghezza per mantenere l'aspetto proporzionato */
 }
+
 
 
