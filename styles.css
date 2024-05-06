@@ -212,7 +212,7 @@ header h1 a {
 /* Media query per dispositivi mobili con larghezza massima di 768px */
 @media screen and (max-width: 768px) {
     /* Riduci la dimensione del testo del body */
-    body {
+    .bio {
         font-size: 10px;
     }
 }
