@@ -72,7 +72,7 @@ main {
 /* Style for grid container */
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Una colonna per la foto, due colonne per la biografia */
+    grid-template-columns: 1fr 2fr; /* Due colonne */
     gap: 20px;
     padding: 20px;
 }
