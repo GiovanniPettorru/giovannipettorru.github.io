@@ -85,15 +85,17 @@ main {
     text-align: center; /* Centra la foto orizzontalmente */
 }
 
-/* Style for biography */
+/* Stile per la colonna della biografia */
 .bio {
+    width: 60%; /* Imposta la larghezza desiderata */
     display: flex;
     flex-direction: column;
-    font-family: Arial; /* Font moderno */
+    font-family: Arial, sans-serif; /* Font moderno */
     line-height: 1.6; /* Distanza tra le righe del testo */
+    text-align: justify; /* Giustifica il testo */
 }
 
-/* Style for biography title */
+/* Stile per il titolo della biografia */
 .bio h2 {
     color: #003476; /* Colore del titolo */
     font-size: 30px;
