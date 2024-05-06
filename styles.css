@@ -125,6 +125,8 @@ footer {
     font-size: 24px; /* Modifica la dimensione del testo */
 }
 
+/* Rest of your CSS */
+
 /* Style for dropdown content */
 .dropdown-content {
     display: none;
@@ -150,6 +152,7 @@ footer {
 .menu-icon {
     display: none;
     cursor: pointer;
+    padding: 10px;
 }
 
 /* Style for menu icon lines */
@@ -174,7 +177,7 @@ footer {
 
     /* Hide the navigation links */
     .dropdown {
-        display: none;
+        position: relative;
     }
 
     /* Show the dropdown menu when the menu icon is clicked */
