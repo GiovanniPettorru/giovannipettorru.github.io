@@ -79,7 +79,7 @@ main {
 
 /* Style for photo */
 .photo img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
 }
 
@@ -115,6 +115,7 @@ footer {
 .bio h2 {
     color: #003476; /* Colore del titolo */
     font-size: 30px;
+    text-align: center;
 }
 
 /* Style for biography text */
