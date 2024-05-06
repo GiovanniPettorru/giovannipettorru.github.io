@@ -175,11 +175,10 @@ header h1 a {
 
 /* Imposta le dimensioni desiderate per le icone */
 .social-icons a img {
-    width: 90px; /* Imposta la larghezza delle icone */
+    width: 70px; /* Imposta la larghezza delle icone */
     height: auto; /* Imposta l'altezza in base alla larghezza per mantenere l'aspetto proporzionato */
 }
 
-/* Media query per dispositivi di larghezza massima di 768px (come tablet e smartphone) */
 @media screen and (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr; /* Modifica la disposizione in una singola colonna */
@@ -187,4 +186,9 @@ header h1 a {
 
     .photo {
         grid-row: 1; /* Posiziona la foto sopra la biografia */
-       
+    }
+
+    .bio {
+        grid-row: 2; /* Posiziona la biografia sotto la foto */
+    }
+}
