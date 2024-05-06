@@ -178,3 +178,13 @@ header h1 a {
     width: 90px; /* Imposta la larghezza delle icone */
     height: auto; /* Imposta l'altezza in base alla larghezza per mantenere l'aspetto proporzionato */
 }
+
+/* Media query per dispositivi di larghezza massima di 768px (come tablet e smartphone) */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Modifica la disposizione in una singola colonna */
+    }
+
+    .photo {
+        grid-row: 1; /* Posiziona la foto sopra la biografia */
+       
