@@ -1,3 +1,10 @@
+
+Per creare un'icona del menu con le tre linee, comunemente nota come "hamburger icon", e un effetto di apertura del menu quando viene premuta, possiamo utilizzare CSS per lo stile e JavaScript per la gestione dell'apertura e della chiusura del menu. Ecco come puoi farlo:
+
+HTML:
+
+html
+Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,10 +16,14 @@
 <body>
     <header>
         <h1>Giovanni Pettorru</h1>
+        <!-- Menu icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <!-- Dropdown Menu -->
         <nav class="dropdown">
-            <div class="dropdown-toggle">
-                <span>&#9662;</span> Menu
-            </div>
             <div class="dropdown-content">
                 <a href="index.html">Home</a>
                 <a href="contact.html">Contact</a>
@@ -43,5 +54,12 @@
     <footer>
         <p>&copy; 2024 Giovanni Pettorru. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.dropdown-content');
+            menu.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>

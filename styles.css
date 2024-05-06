@@ -124,3 +124,61 @@ footer {
     color: #003476; /* Colore del testo */
     font-size: 24px; /* Modifica la dimensione del testo */
 }
+
+/* Style for dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+/* Style for dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Style for menu icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+/* Style for menu icon lines */
+.menu-icon .line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    /* Hide the dropdown menu by default */
+    .dropdown-content {
+        display: none;
+    }
+
+    /* Display the menu icon */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Hide the navigation links */
+    .dropdown {
+        display: none;
+    }
+
+    /* Show the dropdown menu when the menu icon is clicked */
+    .dropdown-content.show {
+        display: block;
+    }
+}
