@@ -207,3 +207,11 @@ header h1 a {
         grid-column: 1; /* Posiziona la biografia nella prima colonna */
     }
 }
+
+/* Media query per dispositivi mobili con larghezza massima di 768px */
+@media screen and (max-width: 768px) {
+    /* Riduci la dimensione del testo del body */
+    body {
+        font-size: 14px;
+    }
+}
