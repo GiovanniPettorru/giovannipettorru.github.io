@@ -85,7 +85,7 @@ main {
 
 /* Stile per la foto */
 .photo img {
-    max-width: 100%; /* Assicura che la foto non superi la larghezza massima del suo contenitore */
+    max-width: 75%; /* Assicura che la foto non superi la larghezza massima del suo contenitore */
     height: auto;
 }
 
