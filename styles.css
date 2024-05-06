@@ -125,6 +125,8 @@ footer {
     font-family: Arial, sans-serif; /* Font moderno */
     text-align: center; /* Allineamento del testo al centro */
     height: 40px;
+    display: flex; /* Utilizza Flexbox */
+    justify-content: center; /* Centra il contenuto orizzontalmente */
 }
 
 .navbar ul {
@@ -157,6 +159,7 @@ footer {
     text-decoration: none; /* Rimuove la sottolineatura */
     color: #f9f9f9; /* Mantiene il colore originale */
 }
+
 
 /* Stile per il titolo nell'header */
 header h1 a {
