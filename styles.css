@@ -104,6 +104,11 @@ main {
     font-size: 24px; /* Modifica la dimensione del testo */
 }
 
+.contact-info p {
+    color: #003476; /* Colore del testo */
+    font-size: 18px; /* Modifica la dimensione del testo */
+}
+
 /* Style for footer */
 footer {
     background-color: #003476;
@@ -175,7 +180,7 @@ header h1 a {
 
 /* Imposta le dimensioni desiderate per le icone */
 .social-icons a img {
-    width: 50px; /* Imposta la larghezza delle icone */
+    width: 40px; /* Imposta la larghezza delle icone */
     height: auto; /* Imposta l'altezza in base alla larghezza per mantenere l'aspetto proporzionato */
 }
 
