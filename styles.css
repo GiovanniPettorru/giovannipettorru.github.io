@@ -272,7 +272,7 @@ header h1 a {
 
 /* Imposta le dimensioni desiderate per le icone */
 .social-icons a img {
-    width: auto; /* Imposta la larghezza delle icone */
+    width: 65px; /* Imposta la larghezza delle icone */
     height: auto; /* Imposta l'altezza in base alla larghezza per mantenere l'aspetto proporzionato */
 }
 
