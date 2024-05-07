@@ -1,4 +1,4 @@
-/* Reset default margin and padding */
+/* MAIN + general HTML ##################################################################################################################
 * {
     margin: 0;
     padding: 0;
@@ -245,4 +245,44 @@ header h1 a {
 /* Stile per mostrare il footer quando si scorre verso il basso */
 body.scrollable-footer footer {
     display: block; /* Mostra il footer quando si scorre verso il basso */
+}
+
+/* PUBLICATION HTML ##################################################################################################################
+/* Stile per le pubblicazioni */
+.publication {
+    margin-bottom: 20px; /* Aggiungi spazio tra le pubblicazioni */
+}
+
+/* Stile per il titolo della pubblicazione */
+.publication h2 {
+    color: #003476; /* Colore del titolo */
+    font-size: 24px; /* Dimensione del titolo */
+}
+
+/* Stile per il testo delle pubblicazioni */
+.publication p {
+    color: #003476; /* Colore del testo */
+    font-size: 18px; /* Dimensione del testo */
+}
+
+/* Stile per il pulsante "Show Abstract" */
+.show-abstract-btn {
+    background-color: transparent; /* Sfondo trasparente */
+    border: 1px solid #003476; /* Bordo */
+    color: #003476; /* Colore del testo */
+    padding: 10px 20px; /* Spaziatura interna */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    transition: background-color 0.3s, color 0.3s; /* Transizione fluida */
+}
+
+.show-abstract-btn:hover {
+    background-color: #003476; /* Cambia il colore di sfondo al passaggio del mouse */
+    color: #fff; /* Cambia il colore del testo al passaggio del mouse */
+}
+
+/* Stile per l'abstract */
+.abstract {
+    color: #003476; /* Colore del testo */
+    font-size: 18px; /* Dimensione del testo */
+    margin-top: 10px; /* Spazio superiore */
 }
