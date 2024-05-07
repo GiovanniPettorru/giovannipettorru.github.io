@@ -300,12 +300,13 @@ body.scrollable-footer footer {
     border: none; /* Rimuove il bordo */
     border-radius: 20px; /* Bordo arrotondato */
     cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-    transition: background-color 0.3s; /* Effetto di transizione */
+    transition: background-color 0.3s, color 0.3s; /* Effetto di transizione */
     font-size: 14px; /* Dimensione del testo */
 }
 
 .access-document-btn:hover {
     background-color: #0056b3; /* Colore di sfondo al passaggio del mouse */
+    color: #fff;
 }
 
 
