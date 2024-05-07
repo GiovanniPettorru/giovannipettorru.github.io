@@ -104,7 +104,7 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar ul {
-font-size: 14px;
+font-size: 20px;
 text-align: center; /* Per centrare i link */
 flex-wrap: wrap; /* Per consentire il wrapping dei link quando necessario */   
 list-style-type: none;
@@ -134,6 +134,7 @@ text-decoration: none;
 /* Media query per schermi più stretti, ad esempio da telefono */
 @media (max-width: 767px) {
     .navbar ul {
+        font-size: 16px;
         flex-direction: column; /* Disporre i link in colonna */
         align-items: center; /* Allineare i link al centro */
     }
