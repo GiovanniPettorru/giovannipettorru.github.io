@@ -111,6 +111,10 @@ font-family: Arial, sans-serif; /* Font moderno */
     .navbar {
         height: 45px; /* Altezza più ridotta per PC */
     }
+
+    .navbar ul li {
+        padding: 20px;
+    }
 }
 
 .navbar ul {
@@ -127,7 +131,6 @@ font-family: Arial, sans-serif; /* Font moderno */
 .navbar ul li {
     display: inline;
     margin-right: 10px;
-    padding: 20px;
 }
 
 .navbar ul li a {
