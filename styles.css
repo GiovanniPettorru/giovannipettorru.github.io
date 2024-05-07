@@ -258,16 +258,12 @@ body.scrollable-footer footer {
 .publication h2 {
     color: #003476; /* Colore del titolo */
     font-size: 24px; /* Dimensione del titolo */
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 /* Stile per il testo delle pubblicazioni */
 .publication p {
     color: #003476; /* Colore del testo */
     font-size: 18px; /* Dimensione del testo */
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 /* Stile per il pulsante "Show Abstract" */
