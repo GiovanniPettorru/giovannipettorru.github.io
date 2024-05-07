@@ -16,20 +16,14 @@
     </header>
 
     <!-- Navigation bar -->
-    <div class="mobile-menu">
-        <i class="fas fa-chevron-down"></i>
-    </div>
-      
-    <div class="mobile-navbar">
-        <nav class="navbar">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="publications.html">Publications</a></li>
-              <li><a href="#" disabled>My Research Topics</a></li>
-              <li><a href="#" disabled>Professional Activities</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="#" disabled>My Research Topics</a></li>
+          <li><a href="#" disabled>Professional Activities</a></li>
+        </ul>
+    </nav>
 
     <main>
         <!-- Pubblicazioni in ordine dal più nuovo al più vecchio -->
@@ -289,18 +283,5 @@
             var abstract = document.getElementById('abstract' + id);
             abstract.style.display = (abstract.style.display === 'none') ? 'block' : 'none';
         }
-    </script>
-    <script>
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const mobileNavbar = document.querySelector('.mobile-navbar');
-
-        mobileMenu.addEventListener('click', () => {
-        mobileNavbar.innerHTML = ''; // Pulisci il contenuto precedente del menu mobile
-        
-        const navLinks = document.querySelector('.navbar ul').innerHTML;
-        mobileNavbar.innerHTML = navLinks; // Aggiungi i link dalla navbar al menu mobile
-        
-        mobileNavbar.classList.toggle('active');
-        });
     </script>
 </body>
