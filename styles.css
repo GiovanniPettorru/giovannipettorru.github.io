@@ -110,13 +110,23 @@ margin: 0;
 }
 
 .navbar ul li {
-display: block;
+display: inline;
 padding: 10px 0;
 }
 
 .navbar ul li a {
 color: white;
+display: block;
+padding: 10px;
 text-decoration: none;
+}
+
+
+/* Media query per schermi più larghi, ad esempio da PC */
+@media (min-width: 768px) {
+    .navbar ul li {
+        margin-right: 10px;
+    }
 }
 
 /* Stile per il titolo nell'header */
