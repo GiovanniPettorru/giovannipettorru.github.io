@@ -281,7 +281,7 @@ body.scrollable-footer footer {
     background-color: transparent; /* Sfondo trasparente */
     border: none; /* Rimuovi il bordo */
     color: #003476; /* Colore del testo */
-    font-size: 18px; /* Dimensione del testo */
+    font-size: 14px; /* Dimensione del testo */
     padding: 10px 20px; /* Spaziatura interna */
     cursor: pointer; /* Cambia il cursore al passaggio del mouse */
     transition: background-color 0.3s, color 0.3s, border-color var(--animation-duration), background-image var(--animation-duration), text-decoration-color var(--animation-duration); /* Transizioni fluide */
@@ -298,5 +298,20 @@ body.scrollable-footer footer {
     text-decoration-color: #fff; /* Cambia il colore della sottolineatura al passaggio del mouse */
 }
 
+/* Stile per il pulsante "Access Document" */
+.access-document-btn {
+    background-color: #007bff; /* Colore di sfondo */
+    color: #fff; /* Colore del testo */
+    padding: 10px 20px; /* Spaziatura interna */
+    border: none; /* Rimuove il bordo */
+    border-radius: 20px; /* Bordo arrotondato */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    transition: background-color 0.3s; /* Effetto di transizione */
+    font-size: 14px;
+}
+
+.access-document-btn:hover {
+    background-color: #0056b3; /* Colore di sfondo al passaggio del mouse */
+}
 
 
