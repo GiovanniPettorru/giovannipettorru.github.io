@@ -142,7 +142,7 @@ header {
 
 /* Stili per la navbar */
 .navbar {
-    background-color: #444;
+    background-color: #2928CE;
     color:#fff;
     font-family: Arial, sans-serif; /* Font moderno */
     text-align: center;
@@ -168,7 +168,7 @@ header {
 /* Stili per il menu mobile */
 .mobile-menu {
     text-align: center;
-    background-color: #333;
+    background-color: #2928CE;
     padding: 10px;
     display: none;
 }
