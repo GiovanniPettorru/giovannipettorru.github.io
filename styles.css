@@ -294,7 +294,7 @@ body.scrollable-footer footer {
 
 /* Stile per il pulsante "Access Document" */
 .access-document-btn {
-    background-color: #007bff; /* Colore di sfondo */
+    background-color: transparent; /* Colore di sfondo */
     color: #fff; /* Colore del testo */
     padding: 8px 16px; /* Spaziatura interna più compatta */
     border: none; /* Rimuove il bordo */
