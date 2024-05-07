@@ -25,9 +25,44 @@
     </nav>
 
     <main>
-        
+        <div class="publication">
+            <h3>Trustworthy Localization in IoT Networks: A Survey of Localization Techniques, Threats, and Mitigation</h3>
+            <p>Pettorru, G., Pilloni, V., Martalò, M.</p>
+            <p>Sensors, 2024, 24(7), 2214</p>
+            <button class="show-abstract-btn">Show Abstract</button>
+            <div class="abstract" style="display: none;">
+                <p>The Internet of Things (IoT) has revolutionized the world, connecting billions of devices that offer assistance 
+                    in various aspects of users’ daily lives. Context-aware IoT applications exploit real-time environmental, 
+                    user-specific, or situational data to dynamically adapt to users’ needs, offering tailored experiences. 
+                    In particular, Location-Based Services (LBS) exploit geographical information to adapt to environmental settings or 
+                    provide recommendations based on users’ and nodes’ positions, thus delivering efficient and personalized services. 
+                    To this end, there is growing interest in developing IoT localization systems within the scientific community. 
+                    In addition, due to the sensitivity and privacy inherent to precise location information, LBS introduce new security 
+                    challenges. To ensure a more secure and trustworthy system, researchers are studying how to prevent vulnerabilities
+                    and mitigate risks from the early design stages of LBS-empowered IoT applications. The goal of this study is to carry
+                    out an in-depth examination of localization techniques for IoT, with an emphasis on both the signal-processing 
+                    design and security aspects. The investigation focuses primarily on active radio localization techniques, 
+                    classifying them into range-based and range-free algorithms, while also exploring hybrid approaches.
+                    Next, security considerations are explored in depth, examining the main attacks for each localization 
+                    technique and linking them to the most interesting solutions proposed in the literature. By highlighting 
+                    advances, analyzing challenges, and providing solutions, the survey aims to guide researchers in navigating the 
+                    complex IoT localization landscape.
+                </p>
+            </div>
+        </div>
     </main>
+    
     <footer>
         <p>&copy; 2024 Giovanni Pettorru. All rights reserved.</p>
     </footer>
+
+    <script>
+        // JavaScript to toggle display of abstract on button click
+        const abstractBtn = document.querySelector('.show-abstract-btn');
+        const abstract = document.querySelector('.abstract');
+
+        abstractBtn.addEventListener('click', () => {
+            abstract.style.display = (abstract.style.display === 'none') ? 'block' : 'none';
+        });
+    </script>
 </body>
