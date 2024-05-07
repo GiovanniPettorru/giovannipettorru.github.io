@@ -253,7 +253,7 @@ body.scrollable-footer footer {
     margin-left: 40px;
     margin-right: 40px;
     margin-top: 40px;
-    margin-top: 20px;
+    margin-bottom: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -273,7 +273,7 @@ body.scrollable-footer footer {
 /* Stile per il pulsante "Show Abstract" */
 .show-abstract-btn {
     margin-top: 10pt;
-    margin-bottom: 10pt;
+    margin-bottom: 20pt;
     border-radius: 5px;
     text-align: justify;
     background-color: transparent; /* Sfondo trasparente */
