@@ -276,42 +276,36 @@ body.scrollable-footer footer {
 
 /* Stile per il pulsante "Show Abstract" */
 .show-abstract-btn {
-    border-radius: 5px;
-    text-align: justify;
     background-color: transparent; /* Sfondo trasparente */
-    border: none; /* Rimuovi il bordo */
     color: #003476; /* Colore del testo */
-    font-size: 14px; /* Dimensione del testo */
-    padding: 10px 20px; /* Spaziatura interna */
+    padding: 8px 16px; /* Spaziatura interna più compatta */
+    border: none; /* Rimuovi il bordo */
+    border-radius: 20px; /* Bordo arrotondato */
     cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-    transition: background-color 0.3s, color 0.3s, border-color var(--animation-duration), background-image var(--animation-duration), text-decoration-color var(--animation-duration); /* Transizioni fluide */
-    text-decoration-style: solid;
-    text-decoration-thickness: var(--button-border-width, var(--border-l));
-    text-decoration-color: var(--button-underline-color, transparent);
-    text-decoration-line: underline;
-    text-underline-offset: calc(var(--line-height) - var(--font-size) - var(--button-border-width, var(--border-l)) / 2);
+    transition: background-color 0.3s, color 0.3s; /* Transizioni fluide */
+    font-size: 14px; /* Dimensione del testo */
 }
 
 .show-abstract-btn:hover {
     background-color: #003476; /* Cambia il colore di sfondo al passaggio del mouse */
     color: #fff; /* Cambia il colore del testo al passaggio del mouse */
-    text-decoration-color: #fff; /* Cambia il colore della sottolineatura al passaggio del mouse */
 }
 
 /* Stile per il pulsante "Access Document" */
 .access-document-btn {
     background-color: #007bff; /* Colore di sfondo */
     color: #fff; /* Colore del testo */
-    padding: 10px 20px; /* Spaziatura interna */
+    padding: 8px 16px; /* Spaziatura interna più compatta */
     border: none; /* Rimuove il bordo */
     border-radius: 20px; /* Bordo arrotondato */
     cursor: pointer; /* Cambia il cursore al passaggio del mouse */
     transition: background-color 0.3s; /* Effetto di transizione */
-    font-size: 14px;
+    font-size: 14px; /* Dimensione del testo */
 }
 
 .access-document-btn:hover {
     background-color: #0056b3; /* Colore di sfondo al passaggio del mouse */
 }
+
 
 
