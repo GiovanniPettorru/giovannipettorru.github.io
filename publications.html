@@ -282,5 +282,11 @@
             var abstract = document.getElementById('abstract' + id);
             abstract.style.display = (abstract.style.display === 'none') ? 'block' : 'none';
         }
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const mobileNavbar = document.querySelector('.mobile-navbar');
+
+        mobileMenu.addEventListener('click', () => {
+        mobileNavbar.classList.toggle('active');
+});
     </script>
 </body>
