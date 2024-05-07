@@ -250,7 +250,7 @@ body.scrollable-footer footer {
 /* PUBLICATION HTML ################################################################################################################## */
 /* Stile per le pubblicazioni */
 .publication {
-    margin-bottom: 30px; /* Aggiungi spazio tra le pubblicazioni */
+    margin-bottom: 20px; /* Aggiungi spazio tra le pubblicazioni */
     margin-left: 40px;
     margin-right: 20px;
     margin-top: 20px;

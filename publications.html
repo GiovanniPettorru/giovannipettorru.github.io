@@ -50,9 +50,7 @@
                     complex IoT localization landscape.
                 </p>
             </div>
-        </div>
 
-        <div class="publication">
             <h2> A Cross-Layer Survey on Secure and Low-Latency Communications in Next-Generation IoT </h2>
             <p> Martalo, M., Pettorru, G., Atzori, L. </p>
             <p> IEEE Transactions on Network and Service Management, 2024 </p>
@@ -73,6 +71,25 @@
                     We follow an approach where the proposals are reviewed by grouping them based on the reference architectural layer, 
                     i.e., access, network, and application layers. We also review the works that propose promising solutions that rely 
                     on the exploitation of the QUIC protocol at the higher levels of the protocol stack.
+                </p>
+            </div>
+
+            <h2> QUIC and WebSocket for Secure and Low-Latency IoT Communications: An Experimental Analysis </h2>
+            <p> Pettorru, G., Martalò, M. </p>
+            <p> IEEE International Conference on Communications, 2023, 2023-May, pp. 628–633 </p>
+            <button class="show-abstract-btn" onclick="toggleAbstract(3)">Show Abstract</button>
+            <div class="abstract" id="abstract3" style="display: none;">
+                <p> This work addresses the problem of security and low latency in communications typical of several Internet of Things 
+                    (IoT) scenarios, such as those in Industry 4.0 applications. In particular, we propose a WebSocket over QUIC 
+                    (WS-QUIC) protocol for intra-network communications between the IoT devices and the gateway. In particular, 
+                    low latency is achieved by combining the connection persistence of WebSocket (WS) with the reduced connection 
+                    establishment time required by QUIC. Moreover, the use of QUIC implicitly exploit the security extensions of 
+                    WS provided by the Transport Layer Security (TLS) protocol. We experimentally analyzed the performance of the 
+                    proposed system and compare it with that provided by other Web-based secure protocols, such as HyperText Transfer 
+                    Protocol Secure (HTTPS) and WebSocket Secure (WSS). Our results show that WS-QUIC outperforms HTTPS and WSS for 
+                    medium-large file sizes. Moreover, the use of the so-called TLS ticket resumption makes WS-QUIC suitable also for 
+                    medium-small file sizes. Finally, we also discuss the potential use of a single shared session ticket between 
+                    different IoT devices in the same cluster to further decrease the latency.
                 </p>
             </div>
         </div>
