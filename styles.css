@@ -268,13 +268,13 @@ body.scrollable-footer footer {
     color: #003476; /* Colore del testo */
     font-size: 18px; /* Dimensione del testo */
     text-align: justify;
-    margin-bottom: 30px;
 }
+
 
 /* Stile per il pulsante "Show Abstract" */
 .show-abstract-btn {
     margin-top: 10pt;
-    margin-bottom: 20pt;
+    margin-bottom: 10pt;
     border-radius: 5px;
     text-align: justify;
     background-color: transparent; /* Sfondo trasparente */
