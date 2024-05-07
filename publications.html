@@ -17,12 +17,24 @@
     <!-- Navigation bar -->
     <nav class="navbar">
         <ul>
-            <li><a href="index.html" disabled>Home</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <li><a href="" disabled>My Research Topics</a></li>
-            <li><a href="" disabled>Professional Activities</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="#" disabled>My Research Topics</a></li>
+          <li><a href="#" disabled>Professional Activities</a></li>
         </ul>
-    </nav>
+      </nav>
+      
+      <div class="mobile-menu">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      
+      <div class="mobile-navbar">
+        <ul>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="#" disabled>My Research Topics</a></li>
+          <li><a href="#" disabled>Professional Activities</a></li>
+        </ul>
+      </div>
+    </div>
 
     <main>
         <!-- Pubblicazioni in ordine dal più nuovo al più vecchio -->
@@ -282,6 +294,7 @@
             var abstract = document.getElementById('abstract' + id);
             abstract.style.display = (abstract.style.display === 'none') ? 'block' : 'none';
         }
+
         const mobileMenu = document.querySelector('.mobile-menu');
         const mobileNavbar = document.querySelector('.mobile-navbar');
 
