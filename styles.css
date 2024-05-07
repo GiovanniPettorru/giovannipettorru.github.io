@@ -104,14 +104,19 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar ul {
+text-align: center; /* Per centrare i link */
+    flex-wrap: wrap; /* Per consentire il wrapping dei link quando necessario */   
 list-style-type: none;
 padding: 0;
 margin: 0;
+display: flex;
+justify-content: center; /* Per allineare i link al centro */
 }
 
 .navbar ul li {
 display: inline;
 padding: 10px 0;
+margin-right: 10px;
 }
 
 .navbar ul li a {
@@ -121,11 +126,20 @@ padding: 10px;
 text-decoration: none;
 }
 
+.navbar ul li:last-child {
+    margin-right: 0; /* Rimuovere il margine dal'ultimo link */
+}
 
-/* Media query per schermi più larghi, ad esempio da PC */
-@media (min-width: 768px) {
+/* Media query per schermi più stretti, ad esempio da telefono */
+@media (max-width: 767px) {
+    .navbar ul {
+        flex-direction: column; /* Disporre i link in colonna */
+        align-items: center; /* Allineare i link al centro */
+    }
+
     .navbar ul li {
-        margin-right: 10px;
+        margin-right: 0; /* Rimuovere il margine dai link */
+        margin-bottom: 10px; /* Aggiungere un margine inferiore per separare i link */
     }
 }
 
