@@ -30,8 +30,8 @@
             <h2>Trustworthy Localization in IoT Networks: A Survey of Localization Techniques, Threats, and Mitigation</h2>
             <p>Pettorru, G., Pilloni, V., Martalò, M.</p>
             <p>Sensors, 2024, 24(7), 2214</p>
-            <button class="show-abstract-btn">Show Abstract</button>
-            <div class="abstract" style="display: none;">
+            <button class="show-abstract-btn" onclick="toggleAbstract(1)">Show Abstract</button>
+            <div class="abstract" id="abstract2" style="display: none;">
                 <p>The Internet of Things (IoT) has revolutionized the world, connecting billions of devices that offer assistance 
                     in various aspects of users’ daily lives. Context-aware IoT applications exploit real-time environmental, 
                     user-specific, or situational data to dynamically adapt to users’ needs, offering tailored experiences. 
@@ -51,13 +51,13 @@
                 </p>
             </div>
         </div>
-        
+
         <div class="publication">
             <h2> A Cross-Layer Survey on Secure and Low-Latency Communications in Next-Generation IoT </h2>
             <p> Martalo, M., Pettorru, G., Atzori, L. </p>
             <p> IEEE Transactions on Network and Service Management, 2024 </p>
-            <button class="show-abstract-btn">Show Abstract</button>
-            <div class="abstract" style="display: none;">
+            <button class="show-abstract-btn" onclick="toggleAbstract(2)">Show Abstract</button>
+            <div class="abstract" id="abstract2" style="display: none;">
                 <p> The last years have been characterized by strong market exploitation of the Internet of Things (IoT) technologies 
                     in different application domains, such as Industry 4.0, smart cities, and eHealth. All the relevant solutions should 
                     properly address the security issues to ensure that sensor data and actuators are not under the control of malicious
@@ -82,13 +82,10 @@
         <p>&copy; 2024 Giovanni Pettorru. All rights reserved.</p>
     </footer>
 
-    <script>
-        // JavaScript to toggle display of abstract on button click
-        const abstractBtn = document.querySelector('.show-abstract-btn');
-        const abstract = document.querySelector('.abstract');
-
-        abstractBtn.addEventListener('click', () => {
+   <script>
+        function toggleAbstract(id) {
+            var abstract = document.getElementById('abstract' + id);
             abstract.style.display = (abstract.style.display === 'none') ? 'block' : 'none';
-        });
+        }
     </script>
 </body>
