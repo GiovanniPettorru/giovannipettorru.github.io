@@ -296,7 +296,6 @@ body.scrollable-footer footer {
 .access-document-btn {
     background-color: transparent; /* Colore di sfondo */
     color: #0056b3;
-    color: #fff; /* Colore del testo */
     padding: 8px 8px; /* Spaziatura interna più compatta */
     border: none; /* Rimuove il bordo */
     border-radius: 20px; /* Bordo arrotondato */
