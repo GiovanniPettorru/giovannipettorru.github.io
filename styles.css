@@ -1,4 +1,5 @@
-/* MAIN + general HTML ##################################################################################################################
+/* MAIN HTML ################################################################################################################## */
+
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +14,6 @@ header {
     text-align: center;
     width: 100%; /* Occupa tutta la larghezza */
 }
-
 
 /* Style for h1 in header */
 header h1 {
@@ -247,10 +247,13 @@ body.scrollable-footer footer {
     display: block; /* Mostra il footer quando si scorre verso il basso */
 }
 
-/* PUBLICATION HTML ##################################################################################################################
+/* PUBLICATION HTML ################################################################################################################## */
 /* Stile per le pubblicazioni */
 .publication {
     margin-bottom: 20px; /* Aggiungi spazio tra le pubblicazioni */
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
