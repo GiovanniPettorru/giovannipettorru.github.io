@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Aggiunta di Font Awesome per le icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
     <header>
@@ -300,7 +301,14 @@
     <script>
         const mobileMenu = document.querySelector('.mobile-menu');
         const mobileNavbar = document.querySelector('.mobile-navbar');
+
         mobileMenu.addEventListener('click', () => {
-        mobileNavbar.classList.toggle('active');});
+        mobileNavbar.innerHTML = ''; // Pulisci il contenuto precedente del menu mobile
+        
+        const navLinks = document.querySelector('.navbar ul').innerHTML;
+        mobileNavbar.innerHTML = navLinks; // Aggiungi i link dalla navbar al menu mobile
+        
+        mobileNavbar.classList.toggle('active');
+        });
     </script>
 </body>

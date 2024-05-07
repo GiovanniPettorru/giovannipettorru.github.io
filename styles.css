@@ -34,156 +34,151 @@ header h1 {
 
 /* Style for dropdown content */
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 1;
-    top: 100%;
-    left: 0;
-    width: 100%;
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+z-index: 1;
+top: 100%;
+left: 0;
+width: 100%;
 }
 
 /* Style for dropdown links */
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
 }
 
 /* Style for dropdown on hover */
 .dropdown:hover .dropdown-content {
-    display: block;
+display: block;
 }
 
 /* Style for dropdown toggle arrow */
 .dropdown-toggle span {
-    display: inline-block;
-    margin-left: 5px;
-    font-size: 10px;
+display: inline-block;
+margin-left: 5px;
+font-size: 10px;
 }
 
 /* Stile per il main */
 main {
-    display: grid;
-    grid-template-rows: auto 1fr auto; /* Header, Content, Footer */
-    min-height: 100vh; /* Altezza della pagina pari al 100% dell'altezza dello schermo */
+display: grid;
+grid-template-rows: auto 1fr auto; /* Header, Content, Footer */
+min-height: 100vh; /* Altezza della pagina pari al 100% dell'altezza dello schermo */
 }
 
 
 
 /* Style for grid container */
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* Due colonne */
-    gap: 10px;
-    padding: 16px;
+display: grid;
+grid-template-columns: 1fr 2fr; /* Due colonne */
+gap: 10px;
+padding: 16px;
 }
 
 /* Style for photo */
 .photo {
-    text-align: center; /* Centra la foto orizzontalmente */
+text-align: center; /* Centra la foto orizzontalmente */
 }
 
 /* Stile per la colonna della biografia */
 .bio {
-    width: 90%; /* Imposta la larghezza desiderata */
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif; /* Font moderno */
-    line-height: 1.6; /* Distanza tra le righe del testo */
-    text-align: justify; /* Giustifica il testo */
+width: 90%; /* Imposta la larghezza desiderata */
+display: flex;
+flex-direction: column;
+font-family: Arial, sans-serif; /* Font moderno */
+line-height: 1.6; /* Distanza tra le righe del testo */
+text-align: justify; /* Giustifica il testo */
 }
 
 /* Stile per il titolo della biografia */
 .bio h2 {
-    color: #003476; /* Colore del titolo */
-    font-size: 30px;
-    text-align: center;
+color: #003476; /* Colore del titolo */
+font-size: 30px;
+text-align: center;
 }
 
 /* Style for biography text */
 .bio p {
-    color: #003476; /* Colore del testo */
-    font-size: 20px; /* Modifica la dimensione del testo */
-    text-align: justify;
+color: #003476; /* Colore del testo */
+font-size: 20px; /* Modifica la dimensione del testo */
+text-align: justify;
 }
 
 .contact-info {
-    font-family: Arial; /* Font moderno */
-    color: #003476; /* Colore del testo */
-    font-size: 18px; /* Modifica la dimensione del testo */
+font-family: Arial; /* Font moderno */
+color: #003476; /* Colore del testo */
+font-size: 18px; /* Modifica la dimensione del testo */
 }
 
 /* Stile per il footer */
 footer {
-    position: fixed; /* Posiziona il footer in modo fisso */
-    bottom: 0; /* Posiziona il footer alla parte inferiore della finestra del browser */
-    left: 0;
-    width: 100%;
-    background-color: #003476;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-    font-family: Arial, sans-serif; /* Font moderno */
-}
-
-/* Stile per navigation bar */
-/* Stili per l'header */
-header {
-    background-color: #003476;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-family: Arial, sans-serif; /* Font moderno */
+position: fixed; /* Posiziona il footer in modo fisso */
+bottom: 0; /* Posiziona il footer alla parte inferiore della finestra del browser */
+left: 0;
+width: 100%;
+background-color: #003476;
+color: #fff;
+padding: 10px 20px;
+text-align: center;
+font-family: Arial, sans-serif; /* Font moderno */
 }
 
 /* Stili per la navbar */
 .navbar {
-    background-color: #2928CE;
-    color:#fff;
-    font-family: Arial, sans-serif; /* Font moderno */
-    text-align: center;
-    padding: 10px;
+background-color: #444;
+padding: 10px;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+list-style-type: none;
+padding: 0;
+margin: 0;
 }
 
 .navbar ul li {
-    display: inline;
+display: block;
+padding: 10px 0;
 }
 
 .navbar ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
+color: white;
+text-decoration: none;
 }
 
 /* Stili per il menu mobile */
 .mobile-menu {
-    text-align: center;
-    background-color: #2928CE;
-    padding: 10px;
-    display: none;
+text-align: center;
+background-color: #333;
+padding: 10px;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 .mobile-navbar {
-    display: none;
+display: none;
+padding: 10px;
+}
+
+.mobile-navbar.active {
+display: block;
 }
 
 /* Stili per l'icona della freccia */
 .mobile-menu i {
-    color: white;
-    font-size: 24px;
+color: white;
+font-size: 24px;
 }
-
-/* Media query per schermi con larghezza inferiore a 600px */
+  
+  /* Media query per schermi con larghezza inferiore a 600px */
 @media screen and (max-width: 600px) {
 .navbar {
     display: none;
@@ -192,13 +187,7 @@ header {
 .mobile-menu {
     display: block;
 }
-
-.mobile-navbar {
-    display: block;
 }
-}
-  
-
 
 /* Stile per il titolo nell'header */
 header h1 a {
