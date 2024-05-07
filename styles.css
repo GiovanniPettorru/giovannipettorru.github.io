@@ -176,16 +176,11 @@ footer {
 /* Media query per schermi con larghezza inferiore a 600px (tipicamente dimensioni dei telefoni) */
 @media screen and (max-width: 600px) {
     /* Stili per la navbar quando la larghezza dello schermo è inferiore a 600px */
-    .navbar {
+    .navbar ul li {
       /* Impostazioni per la navbar su telefono */
       flex-direction: column; /* Imposta gli elementi in verticale */
     }
-  
-    /* Opzionalmente, puoi modificare ulteriormente gli stili degli elementi della navbar su telefono */
-    .navbar-item {
-      /* Stili specifici per gli elementi della navbar su telefono */
-    }
-  }
+}
 
 
 /* Stile per il titolo nell'header */
