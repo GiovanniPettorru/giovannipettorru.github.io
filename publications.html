@@ -30,7 +30,7 @@
       
       <div class="mobile-navbar">
         <ul>
-          <li><a href="index.html">Home</a></li> 
+        <li><a href="index.html">Home</a></li> 
           <li><a href="publications.html">Publications</a></li>
           <li><a href="#" disabled>My Research Topics</a></li>
           <li><a href="#" disabled>Professional Activities</a></li>
@@ -296,12 +296,11 @@
             var abstract = document.getElementById('abstract' + id);
             abstract.style.display = (abstract.style.display === 'none') ? 'block' : 'none';
         }
-
+    </script>
+    <script>
         const mobileMenu = document.querySelector('.mobile-menu');
         const mobileNavbar = document.querySelector('.mobile-navbar');
-
         mobileMenu.addEventListener('click', () => {
-        mobileNavbar.classList.toggle('active');
-});
+        mobileNavbar.classList.toggle('active');});
     </script>
 </body>
