@@ -251,7 +251,7 @@ body.scrollable-footer footer {
 /* Stile per le pubblicazioni */
 .publication {
     margin-bottom: 20px; /* Aggiungi spazio tra le pubblicazioni */
-    margin-left: 20px;
+    margin-left: 40px;
     margin-right: 20px;
     margin-top: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -272,21 +272,22 @@ body.scrollable-footer footer {
 /* Stile per il pulsante "Show Abstract" */
 .show-abstract-btn {
     background-color: transparent; /* Sfondo trasparente */
-    border: 1px solid #003476; /* Bordo */
+    border: none; /* Rimuovi il bordo */
     color: #003476; /* Colore del testo */
+    font-size: 18px; /* Dimensione del testo */
     padding: 10px 20px; /* Spaziatura interna */
     cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-    transition: background-color 0.3s, color 0.3s; /* Transizione fluida */
+    transition: background-color 0.3s, color 0.3s, border-color var(--animation-duration), background-image var(--animation-duration), text-decoration-color var(--animation-duration); /* Transizioni fluide */
+    text-decoration-style: solid;
+    text-decoration-thickness: var(--button-border-width, var(--border-l));
+    text-decoration-color: var(--button-underline-color, transparent);
+    text-decoration-line: underline;
+    text-underline-offset: calc(var(--line-height) - var(--font-size) - var(--button-border-width, var(--border-l)) / 2);
 }
 
 .show-abstract-btn:hover {
     background-color: #003476; /* Cambia il colore di sfondo al passaggio del mouse */
     color: #fff; /* Cambia il colore del testo al passaggio del mouse */
+    text-decoration-color: #fff; /* Cambia il colore della sottolineatura al passaggio del mouse */
 }
 
-/* Stile per l'abstract */
-.abstract {
-    color: #003476; /* Colore del testo */
-    font-size: 18px; /* Dimensione del testo */
-    margin-top: 10px; /* Spazio superiore */
-}
