@@ -123,14 +123,12 @@ justify-content: center; /* Per allineare i link al centro */
 
 .navbar ul li {
 display: inline;
-padding: 20px 0;
 margin-right: 10px;
 }
 
 .navbar ul li a {
 color: white;
 display: block;
-padding: 20px;
 text-decoration: none;
 }
 
