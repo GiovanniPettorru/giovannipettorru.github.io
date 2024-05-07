@@ -267,6 +267,7 @@ body.scrollable-footer footer {
 .publication p {
     color: #003476; /* Colore del testo */
     font-size: 18px; /* Dimensione del testo */
+    text-align: justify;
 }
 
 /* Stile per il pulsante "Show Abstract" */
@@ -291,4 +292,6 @@ body.scrollable-footer footer {
     color: #fff; /* Cambia il colore del testo al passaggio del mouse */
     text-decoration-color: #fff; /* Cambia il colore della sottolineatura al passaggio del mouse */
 }
+
+
 
