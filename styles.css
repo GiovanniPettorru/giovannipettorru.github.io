@@ -109,7 +109,7 @@ font-family: Arial, sans-serif; /* Font moderno */
 /* Media query per schermi più larghi, ad esempio da PC */
 @media (min-width: 768px) {
     .navbar {
-        height: 45px; /* Altezza più ridotta per PC */
+        height: 50px; /* Altezza più ridotta per PC */
     }
 
     .navbar ul li {
