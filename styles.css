@@ -173,13 +173,18 @@ footer {
     color: #f9f9f9; /* Mantiene il colore originale */
 }
 
-/* Media query per schermi con larghezza inferiore a 600px (tipicamente dimensioni dei telefoni) */
+.navbar-item {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Media query per schermi con larghezza inferiore a 600px */
 @media screen and (max-width: 600px) {
-    /* Stili per la navbar quando la larghezza dello schermo è inferiore a 600px */
-    .navbar ul li {
-      /* Impostazioni per la navbar su telefono */
-      flex-direction: column; /* Imposta gli elementi in verticale */
-    }
+.navbar {
+    flex-direction: column; /* Imposta gli elementi in verticale */
+    align-items: center; /* Centra gli elementi verticalmente */
+}
 }
 
 
