@@ -271,7 +271,8 @@ body.scrollable-footer footer {
 }
 
 .abstract {
-    margin-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* Stile per il pulsante "Show Abstract" */
