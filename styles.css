@@ -139,6 +139,10 @@ text-decoration: none;
 
 /* Media query per schermi più stretti, ad esempio da telefono */
 @media (max-width: 767px) {
+    .navbar{
+        height: 20%; /* Altezza più ridotta per PC */
+    }
+
     .navbar ul {
         font-size: 18px;
         flex-direction: column; /* Disporre i link in colonna */
@@ -147,7 +151,6 @@ text-decoration: none;
 
     .navbar ul li {
         margin-right: 0; /* Rimuovere il margine dai link */
-        margin-bottom: 3px; /* Aggiungere un margine inferiore per separare i link */
     }
 }
 
