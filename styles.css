@@ -271,6 +271,7 @@ body.scrollable-footer footer {
 
 /* Stile per il pulsante "Show Abstract" */
 .show-abstract-btn {
+    text-align: justify;
     background-color: transparent; /* Sfondo trasparente */
     border: none; /* Rimuovi il bordo */
     color: #003476; /* Colore del testo */
