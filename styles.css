@@ -97,6 +97,7 @@ font-family: Arial, sans-serif; /* Font moderno */
 
 /* Stili per la navbar */
 .navbar {
+height: 20%;
 background-color: #701414;
 padding: 10px;
 text-align: center;
@@ -116,14 +117,14 @@ justify-content: center; /* Per allineare i link al centro */
 
 .navbar ul li {
 display: inline;
-padding: 10px 0;
+padding: 20px 0;
 margin-right: 10px;
 }
 
 .navbar ul li a {
 color: white;
 display: block;
-padding: 10px;
+padding: 20px;
 text-decoration: none;
 }
 
