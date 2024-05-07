@@ -157,6 +157,7 @@ font-family: Arial, sans-serif; /* Font moderno */
 
     .navbar ul li {
         margin-right: 0; /* Rimuovere il margine dai link */
+        padding: 3px;
     }
 }
 
