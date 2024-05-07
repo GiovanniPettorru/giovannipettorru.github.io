@@ -97,41 +97,43 @@ font-family: Arial, sans-serif; /* Font moderno */
 
 /* Stili per la navbar */
 .navbar {
-background-color: #701414;
-padding: 10px;
-text-align: center;
-align-items: center;
-font-family: Arial, Helvetica, sans-serif;
+    background-color: #701414;
+    padding: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centrare verticalmente */
 }
 
 /* Media query per schermi più larghi, ad esempio da PC */
 @media (min-width: 768px) {
-    .navbar{
+    .navbar {
         height: 45px; /* Altezza più ridotta per PC */
     }
 }
 
 .navbar ul {
-font-size: 20px;
-text-align: center; /* Per centrare i link */
-flex-wrap: wrap; /* Per consentire il wrapping dei link quando necessario */   
-list-style-type: none;
-padding: 0;
-margin: 0;
-display: flex;
-justify-content: center; /* Per allineare i link al centro */
+    font-size: 20px;
+    text-align: center; /* Per centrare i link */
+    flex-wrap: wrap; /* Per consentire il wrapping dei link quando necessario */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Per allineare i link al centro */
 }
 
 .navbar ul li {
-display: inline;
-margin-right: 10px;
-padding: 10px;
+    display: inline;
+    margin-right: 10px;
+    padding: 10px;
 }
 
 .navbar ul li a {
-color: white;
-display: block;
-text-decoration: none;
+    color: white;
+    display: block;
+    text-decoration: none;
 }
 
 .navbar ul li:last-child {
@@ -140,25 +142,19 @@ text-decoration: none;
 
 /* Media query per schermi più stretti, ad esempio da telefono */
 @media (max-width: 767px) {
-    .navbar{
-        height: 20%; /* Altezza più ridotta per PC */
+    .navbar {
+        height: auto; /* Altezza automatica per telefono */
     }
 
     .navbar ul {
         font-size: 18px;
         flex-direction: column; /* Disporre i link in colonna */
-        align-items: center; /* Allineare i link al centro */
+        align-items: center; /* Allineare i link al centro verticalmente */
     }
 
     .navbar ul li {
         margin-right: 0; /* Rimuovere il margine dai link */
     }
-}
-
-/* Stile per il titolo nell'header */
-header h1 a {
-    color: #fff; /* Colore bianco */
-    text-decoration: none; /* Rimuove la sottolineatura */
 }
 
 /* Stile per il contenitore delle icone social */
