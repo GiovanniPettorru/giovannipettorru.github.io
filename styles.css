@@ -97,11 +97,17 @@ font-family: Arial, sans-serif; /* Font moderno */
 
 /* Stili per la navbar */
 .navbar {
-height: 10%;
 background-color: #701414;
 padding: 10px;
 text-align: center;
 font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Media query per schermi più larghi, ad esempio da PC */
+@media (min-width: 768px) {
+    .navbar ul {
+        height: 30px; /* Altezza più ridotta per PC */
+    }
 }
 
 .navbar ul {
