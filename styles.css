@@ -298,6 +298,16 @@ body.scrollable-footer footer {
     color: #fff;
 }
 
+/* bottoni Download CV */
+.download-cv img {
+    width: 30px; /* Regola la larghezza delle icone */
+    height: 30px; /* Regola l'altezza delle icone */
+    margin: 0 5px; /* Aggiunge spazio tra le icone */
+  }
+  
+  .download-cv img:hover {
+    opacity: 0.8; /* Riduce l'opacità al passaggio del mouse */
+  }
 
 
 
