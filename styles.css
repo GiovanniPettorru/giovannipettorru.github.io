@@ -69,6 +69,12 @@ main {
     text-align: center;
 }
 
+.bio h3 {
+    color: #003476; /* Colore del titolo */
+    font-size: 20px;
+    text-align: left;
+}
+
 /* Stile per il testo della bio */
 .bio p {
     color: #003476; /* Colore del testo */
