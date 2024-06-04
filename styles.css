@@ -310,6 +310,10 @@ body.scrollable-footer footer {
     opacity: 0.8; /* Riduce l'opacità al passaggio del mouse */
   }
 
+  .no-space {
+    display: flex;
+  }
+
   
 
 
