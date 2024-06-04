@@ -172,6 +172,7 @@ font-family: Arial, sans-serif; /* Font moderno */
     display: flex; /* Utilizza Flexbox per posizionare gli elementi in orizzontale */
     justify-content: center; /* Centra gli elementi orizzontalmente */
     margin-top: 20px; /* Aggiungi spazio tra la bio e le icone */
+    margin-bottom: 20px; /* Aggiungi spazio tra la bio e le icone */
 }
 
 /* Stile per le icone social */
@@ -308,6 +309,17 @@ body.scrollable-footer footer {
   .download-cv img:hover {
     opacity: 0.8; /* Riduce l'opacità al passaggio del mouse */
   }
+
+  .container_downloadCV {
+    display: flex;
+    align-items: center; /* Align items vertically */
+  }
+  
+  .flag-icons {
+    display: flex; /* Make the flag icons flexbox container */
+    justify-content: flex-end; /* Align flag icons to the right */
+  }
+  
 
 
 
