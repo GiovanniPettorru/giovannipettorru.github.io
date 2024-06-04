@@ -310,15 +310,6 @@ body.scrollable-footer footer {
     opacity: 0.8; /* Riduce l'opacità al passaggio del mouse */
   }
 
-  .container_downloadCV {
-    display: flex;
-    align-items: center; /* Align items vertically */
-  }
-  
-  .flag-icons {
-    display: flex; /* Make the flag icons flexbox container */
-    justify-content: flex-end; /* Align flag icons to the right */
-  }
   
 
 
