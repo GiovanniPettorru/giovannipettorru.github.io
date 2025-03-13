@@ -26,16 +26,34 @@
     </nav>
 
     <main>
-        <!-- Pubblicazioni in ordine dal più nuovo al più vecchio -->
         <div class="publication">
+            <h2>Assessing the Interplay between IoT Localization Accuracy and the Two-Ray Channel</h2>
+            <p>C. Huidobro, M.G. Gaitán, C. Oberli, G. Pettorru, M. Martalò, V. Pilloni</p>
+            <p>2025 IEEE Wireless Communications and Networking Conference</p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(1)">Show Abstract</button>
+                <button class="access-document-btn" disabled>Not public yet</button>
+            </div>
+            <div class="abstract" id="abstract1" style="display: none;"> 
+                <p>
+                    This paper analyzes the impact of specular signal reflections on the accuracy of Received Signal Strength (RSS)-based localization for Internet of Things 
+                    (IoT) devices using the weighted least squares (WLS) regression algorithm within a two-ray propagation channel. Simulations with realistic WiFi/BLE settings,
+                     considering distance, antenna heights, and carrier frequency, reveal that localization accuracy is significantly influenced by deep fades caused by surface reflections,
+                      which depend on the geometry of anchor-target positions. A pseudo-outlier elimination approach based on feasible localization distances effectively mitigates this issue,
+                       significantly reducing localization error. These findings offer practical insights into the performance of WLS-based IoT localization in two-ray environments and lay the
+                        groundwork for GPS-free or GPS-denied localization systems in challenging scenarios, such as overwater environments, where two-ray propagation is predominant.
+                </p>
+            </div>
+
+            <br> 
             <h2>Preserving Privacy in CSI-based Human Activity Recognition: a Data Obfuscation Case Study</h2>
             <p>F. Marcello, G. Pettorru, M. Martalò, V. Pilloni</p>
             <p>2024 IEEE Global Communications Conference: Selected Areas in Communications: E-Health</p>
             <div class="button-container">
                 <button class="show-abstract-btn" onclick="toggleAbstract(1)">Show Abstract</button>
-                <button class="access-document-btn disabled-btn" disabled> Not Public Yet </button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/abstract/document/10901018'">Access Document</button>
             </div>
-            <div class="abstract" id="abstract1" style="display: none;">
+            <div class="abstract" id="abstract1" style="display: none;"> 
                 <p>Only the chairs can edit Human Activity Recognition (HAR) techniques are playing nowadays a key role in identifying and categorizing human activities 
                     based on environmental information. More recently, the use of Channel State Information (CSI) is gaining momentum because this information can be extracted
                     in a non-intrusive manner. CSI-based algorithms leverage the correlation between CSI dynamics of wireless transmissions and body motions. In this context,
