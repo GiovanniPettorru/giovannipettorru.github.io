@@ -27,6 +27,29 @@
 
     <main>
         <div class="publication"> 
+            <h2>A Persistent and Secure Publish-Subscriber Architecture for Low-Latency IoT Communications</h2>
+            <p>Pettorru, G., Martalò, M.</p>
+            <p>IEEE Transactions on Network and Service Management, 2025</p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(20)">Show Abstract</button>
+                <button class="access-document-btn disabled" disabled> Not yet online </button>
+            </div>
+            <div class="abstract" id="abstract20" style="display: none;">
+                <p> Secure and low-latency data exchange is gaining more and more attention in Internet of Things (IoT) applications. 
+                    To achieve such stringent requirements, we propose to combine persistent connections and TLS session ticket resumption,
+                    as in WebSocket (WS) and QUIC, respectively. Considering the nodes of an IoT cluster as a single virtual entity, we 
+                    propose to integrate an innovative network management strategy, which employs a publish-subscribe (Pub/Sub) architecture 
+                    based on the Message Queuing Telemetry Transport (MQTT) protocol, for TLS session tickets sharing between cluster nodes 
+                    to mitigate the session initialization latency. The proposed system is referred to as WS over QUIC and MQTT (WSQM) 
+                    and its performance is experimentally assessed with IoT-compliant devices. Our results show that WSQM reduces the latency
+                    if compared with similar alternatives that rely on Transmission Control Protocol (TCP) and Transport Layer Security (TLS),
+                    as well as other QUIC-based protocols such as the HyperText Transfer Protocol version 3 (HTTP/3). Moreover, WSQM achieves
+                    minimal resource utilization in terms of percentage of RAM and CPU usage, thus highlighting its ability to meet the 
+                    critical requirements of IoT applications.
+                </p>
+            </div>
+
+            <br> 
             <h2>Evaluation of Resource-Aware HTTP/3 Proxies for Smuggling Resilience in IoT Environments</h2>
             <p>Pisu, L., Pettorru, G., Regano, R., Maiorca, D., Giacinto, G., Martalò, M.</p>
             <p>2025 IEEE Global Communications Conference: Technical Symposia: IoT and Sensor Networks</p>
