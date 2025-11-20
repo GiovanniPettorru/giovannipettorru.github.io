@@ -27,14 +27,36 @@
 
     <main>
         <div class="publication"> 
-            <h2>A Persistent and Secure Publish-Subscriber Architecture for Low-Latency IoT Communications</h2>
-            <p>Pettorru, G., Martalò, M.</p>
-            <p>IEEE Transactions on Network and Service Management, 2025</p>
+            <h2>Evaluation of Resource-Aware HTTP/3 Proxies for Smuggling Resilience in IoT Environments</h2>
+            <p>Pisu, L., Pettorru, G., Regano, R., Maiorca, D., Giacinto, G., Martalò, M.</p>
+            <p>2025 IEEE Global Communications Conference: Technical Symposia: IoT and Sensor Networks</p>
             <div class="button-container">
                 <button class="show-abstract-btn" onclick="toggleAbstract(20)">Show Abstract</button>
                 <button class="access-document-btn disabled" disabled> Not yet online </button>
             </div>
             <div class="abstract" id="abstract20" style="display: none;">
+                <p> The growing integration of IoT devices into Edge and Fog infrastructures, alongside the increasing adoption of 
+                    low-latency QUIC-based protocols like HTTP/3, has intensified the need for lightweight, resource-efficient 
+                    security mechanisms to counter emerging threats such as request smuggling. Within this context, proxy-based 
+                    architectures offer an optimal trade-off to strengthen network security while accommodating the limited 
+                    computational capacity of IoT devices. In this direction, this paper presents a comprehensive experimental 
+                    evaluation of the impact of different proxies for HTTP/3 services on resource usage when deployed on platforms 
+                    such as the Raspberry Pi (RPi), considering diverse traffic patterns, operational conditions, and device 
+                    configurations. The results highlight that proxies can achieve a promising balance between security and resource 
+                    overhead, confirming their viability for integration into distributed IoT-based Edge and Fog networks.
+                </p>
+            </div>
+
+            <br> 
+
+            <h2>A Persistent and Secure Publish-Subscriber Architecture for Low-Latency IoT Communications</h2>
+            <p>Pettorru, G., Martalò, M.</p>
+            <p>IEEE Transactions on Network and Service Management, 2025</p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(19)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/document/11261393'">Access Document</button>
+            </div>
+            <div class="abstract" id="abstract19" style="display: none;">
                 <p> Secure and low-latency data exchange is gaining more and more attention in Internet of Things (IoT) applications. 
                     To achieve such stringent requirements, we propose to combine persistent connections and TLS session ticket resumption,
                     as in WebSocket (WS) and QUIC, respectively. Considering the nodes of an IoT cluster as a single virtual entity, we 
@@ -46,27 +68,6 @@
                     as well as other QUIC-based protocols such as the HyperText Transfer Protocol version 3 (HTTP/3). Moreover, WSQM achieves
                     minimal resource utilization in terms of percentage of RAM and CPU usage, thus highlighting its ability to meet the 
                     critical requirements of IoT applications.
-                </p>
-            </div>
-
-            <br> 
-            <h2>Evaluation of Resource-Aware HTTP/3 Proxies for Smuggling Resilience in IoT Environments</h2>
-            <p>Pisu, L., Pettorru, G., Regano, R., Maiorca, D., Giacinto, G., Martalò, M.</p>
-            <p>2025 IEEE Global Communications Conference: Technical Symposia: IoT and Sensor Networks</p>
-            <div class="button-container">
-                <button class="show-abstract-btn" onclick="toggleAbstract(19)">Show Abstract</button>
-                <button class="access-document-btn disabled" disabled> Not yet online </button>
-            </div>
-            <div class="abstract" id="abstract19" style="display: none;">
-                <p> The growing integration of IoT devices into Edge and Fog infrastructures, alongside the increasing adoption of 
-                    low-latency QUIC-based protocols like HTTP/3, has intensified the need for lightweight, resource-efficient 
-                    security mechanisms to counter emerging threats such as request smuggling. Within this context, proxy-based 
-                    architectures offer an optimal trade-off to strengthen network security while accommodating the limited 
-                    computational capacity of IoT devices. In this direction, this paper presents a comprehensive experimental 
-                    evaluation of the impact of different proxies for HTTP/3 services on resource usage when deployed on platforms 
-                    such as the Raspberry Pi (RPi), considering diverse traffic patterns, operational conditions, and device 
-                    configurations. The results highlight that proxies can achieve a promising balance between security and resource 
-                    overhead, confirming their viability for integration into distributed IoT-based Edge and Fog networks.
                 </p>
             </div>
 
