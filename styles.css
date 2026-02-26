@@ -352,3 +352,15 @@ footer {
 .bio-content.active {
     display: block;
 }
+
+/* Riga finissima per gli anni nelle pubblicazioni */
+.publication h2 {
+    color: #003476;
+    font-size: 24px;
+    margin-top: 40px;      /* Spazio sopra la riga */
+    margin-bottom: 15px;    /* Spazio tra l'anno e il primo paper */
+    border-bottom: 1px solid #eee; /* La riga grigio chiaro finissima */
+    padding-bottom: 10px;   /* Spazio tra il testo dell'anno e la riga */
+    display: block;         /* Assicura che la riga occupi tutta la larghezza */
+    width: 100%;
+}
