@@ -4,318 +4,490 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications | Giovanni Pettorru</title>
+    <title>Giovanni Pettorru - Homepage</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Aggiunta di Font Awesome per le icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
     <header>
         <h1> Publications </h1>
     </header>
 
+    <!-- Navigation bar -->
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="publications.html">Publications</a></li>
+            <!-- <li><a href="research.html"> Research Topics</a></li> -->
+            <!-- <li><a href="professionalactivities.html">Professional Experience</a></li> -->
         </ul>
     </nav>
 
-    <main class="publication-container">
-        
-        <h2 class="year-header">2025</h2>
-
-        <div class="pub-card">
+    <main>
+        <div class="publication"> 
             <h2>FiSH: Feature-informed Similarity Hashing for Edge-based Traffic Fingerprinting</h2>
-            <p class="pub-authors">Mancosu, A., <strong>Pettorru, G.</strong>, Martalò, M.</p>
-            <p class="pub-venue">2025 IEEE International Conference on Communications</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(21)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <span class="pub-btn btn-disabled"><i class="fas fa-clock"></i> Not yet online</span>
+            <p>Mancosu, A., Pettorru, G., Martalò, M.</p>
+            <p>2026 IEEE International Conference on Communications</p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(21)">Show Abstract</button>
+                <button class="access-document-btn disabled" disabled> Not yet online </button>
             </div>
-            <div class="abstract-box" id="abstract21" style="display: none;">
-                <p>Edge-based Network Traffic Fingerprinting (NTF) enables the identification and classification of IoT communications without complex monitoring infrastructure. FiSH employs the Nilsimsa similarity hash on selected features to generate compact fingerprints.</p>
+            <div class="abstract" id="abstract21" style="display: none;">
+                <p> Edge-based Network Traffic Fingerprinting (NTF) enables the identification and classification of Internet of Things
+                     (IoT) communications without complex monitoring infrastructure. Yet, performing NTF directly on edge gateways is 
+                     challenging due to limited computational and storage resources, constraining the use of complex Machine Learning (ML)
+                     methods. This paper presents Feature-informed Similarity Hashing (FiSH), a lightweight framework for efficient 
+                     traffic fingerprinting and classification at the network edge. FiSH employs the Nilsimsa similarity hash on selected
+                     protocol-level features to generate compact, noise-tolerant fingerprints of network behavior. Experimental results
+                     demonstrate that FiSH accurately distinguishes heterogeneous IoT traffic types with minimal computational overhead,
+                     achieving real-time classification accuracy above 87\%. The proposed approach highlights similarity hashing as a 
+                     practical and scalable alternative to traditional ML-based NTF techniques for resource-constrained edge environments.
+                </p>
             </div>
-        </div>
 
-        <div class="pub-card">
+            <br> 
             <h2>Evaluation of Resource-Aware HTTP/3 Proxies for Smuggling Resilience in IoT Environments</h2>
-            <p class="pub-authors">Pisu, L., <strong>Pettorru, G.</strong>, Regano, R., Maiorca, D., Giacinto, G., Martalò, M.</p>
-            <p class="pub-venue">2025 IEEE Global Communications Conference: IoT and Sensor Networks</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(20)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <span class="pub-btn btn-disabled"><i class="fas fa-clock"></i> Not yet online</span>
+            <p>Pisu, L., Pettorru, G., Regano, R., Maiorca, D., Giacinto, G., Martalò, M.</p>
+            <p>2025 IEEE Global Communications Conference: Technical Symposia: IoT and Sensor Networks</p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(20)">Show Abstract</button>
+                <button class="access-document-btn disabled" disabled> Not yet online </button>
             </div>
-            <div class="abstract-box" id="abstract20" style="display: none;">
-                <p>Experimental evaluation of the impact of different proxies for HTTP/3 services on resource usage when deployed on platforms such as the Raspberry Pi (RPi).</p>
+            <div class="abstract" id="abstract20" style="display: none;">
+                <p> The growing integration of IoT devices into Edge and Fog infrastructures, alongside the increasing adoption of 
+                    low-latency QUIC-based protocols like HTTP/3, has intensified the need for lightweight, resource-efficient 
+                    security mechanisms to counter emerging threats such as request smuggling. Within this context, proxy-based 
+                    architectures offer an optimal trade-off to strengthen network security while accommodating the limited 
+                    computational capacity of IoT devices. In this direction, this paper presents a comprehensive experimental 
+                    evaluation of the impact of different proxies for HTTP/3 services on resource usage when deployed on platforms 
+                    such as the Raspberry Pi (RPi), considering diverse traffic patterns, operational conditions, and device 
+                    configurations. The results highlight that proxies can achieve a promising balance between security and resource 
+                    overhead, confirming their viability for integration into distributed IoT-based Edge and Fog networks.
+                </p>
             </div>
-        </div>
 
-        <div class="pub-card">
+            <br> 
+
             <h2>A Persistent and Secure Publish-Subscriber Architecture for Low-Latency IoT Communications</h2>
-            <p class="pub-authors"><strong>Pettorru, G.</strong>, Martalò, M.</p>
-            <p class="pub-venue">IEEE Transactions on Network and Service Management, 2025</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(19)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/document/11261393" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
+            <p>Pettorru, G., Martalò, M.</p>
+            <p>IEEE Transactions on Network and Service Management, 2025</p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(19)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/document/11261393'">Access Document</button>
             </div>
-            <div class="abstract-box" id="abstract19" style="display: none;">
-                <p>We propose to combine persistent connections and TLS session ticket resumption, as in WebSocket (WS) and QUIC, integrated with a Pub/Sub architecture.</p>
+            <div class="abstract" id="abstract19" style="display: none;">
+                <p> Secure and low-latency data exchange is gaining more and more attention in Internet of Things (IoT) applications. 
+                    To achieve such stringent requirements, we propose to combine persistent connections and TLS session ticket resumption,
+                    as in WebSocket (WS) and QUIC, respectively. Considering the nodes of an IoT cluster as a single virtual entity, we 
+                    propose to integrate an innovative network management strategy, which employs a publish-subscribe (Pub/Sub) architecture 
+                    based on the Message Queuing Telemetry Transport (MQTT) protocol, for TLS session tickets sharing between cluster nodes 
+                    to mitigate the session initialization latency. The proposed system is referred to as WS over QUIC and MQTT (WSQM) 
+                    and its performance is experimentally assessed with IoT-compliant devices. Our results show that WSQM reduces the latency
+                    if compared with similar alternatives that rely on Transmission Control Protocol (TCP) and Transport Layer Security (TLS),
+                    as well as other QUIC-based protocols such as the HyperText Transfer Protocol version 3 (HTTP/3). Moreover, WSQM achieves
+                    minimal resource utilization in terms of percentage of RAM and CPU usage, thus highlighting its ability to meet the 
+                    critical requirements of IoT applications.
+                </p>
             </div>
-        </div>
 
-        <div class="pub-card">
+            <br> 
+
             <h2>Balancing Complexity and Performance in Convolutional Neural Network Models for QUIC Traffic Classification</h2>
-            <p class="pub-authors"><strong>Pettorru, G.</strong>, Flumini, M., Martalò, M.</p>
-            <p class="pub-venue">Sensors, 2025, 25(15), 4576</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(18)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://www.mdpi.com/1424-8220/25/15/4576" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
+            <p>Pettorru, G., Flumini, M., Martalò, M.</p>
+            <p>Sensors, 2025, 25(15), 4576</p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(18)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://www.mdpi.com/1424-8220/25/15/4576'">Access Document</button>
             </div>
-            <div class="abstract-box" id="abstract18" style="display: none;">
-                <p>This paper addresses CNN-based NTC in the presence of encrypted communications generated by the rising Quick UDP Internet Connections (QUIC) protocol.</p>
+            <div class="abstract" id="abstract18" style="display: none;">
+                <p>The upcoming deployment of sixth-generation (6G) wireless networks promises to significantly outperform 5G in terms of data rates, spectral efficiency, device densities, and, 
+                    most importantly, latency and security. To cope with the increasingly complex network traffic, Network Traffic Classification (NTC) will be essential to ensure the high 
+                    performance and security of a network, which is necessary for advanced applications. This is particularly relevant in the Internet of Things (IoT), where resource-constrained
+                     platforms at the edge must manage tasks like traffic analysis and threat detection. In this context, balancing classification accuracy with computational efficiency is key 
+                     to enabling practical, real-world deployments. Traditional payload-based and packet inspection methods are based on the identification of relevant patterns and fields in 
+                     the packet content. However, such methods are nowadays limited by the rise of encrypted communications. To this end, the research community has turned its attention to 
+                     statistical analysis and Machine Learning (ML). In particular, Convolutional Neural Networks (CNNs) are gaining momentum in the research community for ML-based NTC 
+                     leveraging statistical analysis of flow characteristics. Therefore, this paper addresses CNN-based NTC in the presence of encrypted communications generated by the 
+                     rising Quick UDP Internet Connections (QUIC) protocol. Different models are presented, and their performance is assessed to show the trade-off between classification 
+                     accuracy and CNN complexity. In particular, our results show that even simple and low-complexity CNN architectures can achieve almost 92% accuracy with a very 
+                     low-complexity architecture when compared to baseline architectures documented in the existing literature.
+                </p>
             </div>
-        </div>
 
-        <div class="pub-card">
+            <br> 
+
             <h2>A Reliability Index for Position Estimation in Trustworthy Location-Based Services</h2>
-            <p class="pub-authors"><strong>Pettorru, G.</strong>, Coni, A., Pilloni, V., Martalò, M.</p>
-            <p class="pub-venue">2025 IEEE International Mediterranean Conference on Communications and Networking</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(17)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/abstract/document/11104437" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
+            <p>G. Pettorru, A. Coni, V. Pilloni, M. Martalò</p>
+            <p>2025 IEEE International Mediterranean Conference on Communications and Networking</p>
+            <div class="button-container"> 
+                <button class="show-abstract-btn" onclick="toggleAbstract(17)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/abstract/document/11104437'">Access Document</button>
             </div>
-            <div class="abstract-box" id="abstract17" style="display: none;">
-                <p>Introduces a reliability index specifically designed for Received Signal Strength (RSS)-based localization methods.</p>
+            <div class="abstract" id="abstract17" style="display: none;"> 
+                <p>
+                    Location-Based Services (LBS) are crucial for enhancing user experience and operational efficiency across various applications. Although modern wireless technologies 
+                    have significantly improved the accuracy of location estimates, there is still a gap in the literature on effectively measuring and evaluating the reliability of these estimates. 
+                    Since the accuracy of LBS is strictly related to the quality of the provided service, the availability of a reliability index is paramount in determining how system resources are effectively allocated. 
+                    To address this challenge, this paper introduces a reliability index specifically designed for Received Signal Strength (RSS)-based localization methods. 
+                    Such an index assesses the trustworthiness of position estimates using universally available channel-specific parameters, namely the received power standard deviation and the estimated number of malicious anchors. 
+                    The approach is validated through simulations employing detailed signal propagation models, demonstrating its robustness across various transmission conditions, system interferences, and levels of malicious activity.
+                </p>
             </div>
-        </div>
 
-        <div class="pub-card">
+            <br> 
             <h2>Multilateration-Assisted Fingerprinting-Based Localization for Dynamic IoT Environments</h2>
-            <p class="pub-authors"><strong>Pettorru, G.</strong>, Pilloni, V., Martalò, M.</p>
-            <p class="pub-venue">2025 IEEE International Mediterranean Conference on Communications and Networking</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(16)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/document/11104480" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
+            <p>G. Pettorru, V. Pilloni, M. Martalò</p>
+            <p>2025 IEEE International Mediterranean Conference on Communications and Networking</p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(16)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/document/11104480'"">Access Document</button>
             </div>
-            <div class="abstract-box" id="abstract16" style="display: none;">
-                <p>A novel hybrid RSS-based localization approach that integrates fingerprinting algorithms with multilateration assistance.</p>
-            </div>
-        </div>
+            <div class="abstract" id="abstract16" style="display: none;"> 
+                <p>
+                    Accurate and reliable localization is crucial in dynamic Internet of Things (IoT) environments where real-time, location-based decision-making is required. 
+                    However, this presents significant challenges, especially when anchor availability or environmental conditions change. In this paper, we present a novel hybrid Received Signal Strength 
+                    (RSS)-based localization approach that integrates fingerprinting algorithms with multilateration assistance to effectively address the challenges of scenario dynamism. 
+                    The primary objective of this work is to improve robustness and reliability over standard fingerprinting-based algorithms. The results show that the proposed solution significantly 
+                    outperforms traditional techniques as anchor availability decreases, achieving comparable performance in unobstructed scenarios. This demonstrates the robustness and adaptability of 
+                    hybrid approaches combining fingerprinting and multilateration, thereby advancing research on this promising yet underexplored combination.
 
-        <div class="pub-card">
+                </p>
+            </div>
+
+            <br> 
             <h2>How Do Jamming Attacks Impact the Performance of RSS-Based Localization Techniques?</h2>
-            <p class="pub-authors"><strong>Pettorru, G.</strong>, Nurcis, G., Pilloni, V., Martalò, M.</p>
-            <p class="pub-venue">2025 IEEE International Conference on Communications</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(15)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/document/11162030" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
+            <p>G. Pettorru, G. Nurcis, V. Pilloni, M. Martalò</p>
+            <p>2025 IEEE International Conference on Communications</p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(15)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/document/11162030'"">Access Document</button>
             </div>
-            <div class="abstract-box" id="abstract15" style="display: none;">
-                <p>Examines the challenges posed by additive destructive interference and Denial of Service (DoS) jamming attacks on localization.</p>
+            <div class="abstract" id="abstract15" style="display: none;"> 
+                <p>
+                    This paper examines the challenges posed by additive destructive interference and Denial of Service (DoS) jamming attacks 
+                    on multilateration-based localization algorithms, particularly concerning Least Square (LS)-based approaches. Despite the increasing interest in localization
+                     technologies in a wide range of applications, the vulnerabilities of these systems to such attacks have been insufficiently explored in existing literature. 
+                     To evaluate the impact of jamming, scenarios with varying numbers of malicious nodes are considered in this paper to assess their effects on localization accuracy. 
+                     The results reveal a significant degradation in accuracy as the number of compromised anchors increases. However, the implementation of mitigation strategies leads to 
+                     a substantial performance improvement, effectively reducing the impact of interference and maintaining lower position estimation errors.
+                </p>
             </div>
-        </div>
 
-        <div class="pub-card">
+            <br> 
             <h2>Assessing the Interplay between IoT Localization Accuracy and the Two-Ray Channel</h2>
-            <p class="pub-authors">Huidobro, C., Gaitán, M.G., Oberli, C., <strong>Pettorru, G.</strong>, Martalò, M., Pilloni, V.</p>
-            <p class="pub-venue">2025 IEEE Wireless Communications and Networking Conference</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(14)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/abstract/document/10978239" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
+            <p>C. Huidobro, M.G. Gaitán, C. Oberli, G. Pettorru, M. Martalò, V. Pilloni</p>
+            <p>2025 IEEE Wireless Communications and Networking Conference</p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(14)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/abstract/document/10978239'">Access Document</button>
             </div>
-            <div class="abstract-box" id="abstract14" style="display: none;">
-                <p>Analyzes the impact of specular signal reflections on the accuracy of RSS-based localization for IoT devices.</p>
+            <div class="abstract" id="abstract14" style="display: none;"> 
+                <p>
+                    This paper analyzes the impact of specular signal reflections on the accuracy of Received Signal Strength (RSS)-based localization for Internet of Things 
+                    (IoT) devices using the weighted least squares (WLS) regression algorithm within a two-ray propagation channel. Simulations with realistic WiFi/BLE settings,
+                     considering distance, antenna heights, and carrier frequency, reveal that localization accuracy is significantly influenced by deep fades caused by surface reflections,
+                      which depend on the geometry of anchor-target positions. A pseudo-outlier elimination approach based on feasible localization distances effectively mitigates this issue,
+                       significantly reducing localization error. These findings offer practical insights into the performance of WLS-based IoT localization in two-ray environments and lay the
+                        groundwork for GPS-free or GPS-denied localization systems in challenging scenarios, such as overwater environments, where two-ray propagation is predominant.
+                </p>
             </div>
-        </div>
 
-        <h2 class="year-header">2024</h2>
-
-        <div class="pub-card">
+            <br> 
             <h2>Preserving Privacy in CSI-based Human Activity Recognition: a Data Obfuscation Case Study</h2>
-            <p class="pub-authors">Marcello, F., <strong>Pettorru, G.</strong>, Martalò, M., Pilloni, V.</p>
-            <p class="pub-venue">2024 IEEE Global Communications Conference: E-Health</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(13)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/abstract/document/10901018" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
+            <p>F. Marcello, G. Pettorru, M. Martalò, V. Pilloni</p>
+            <p>2024 IEEE Global Communications Conference: Selected Areas in Communications: E-Health</p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(13)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/abstract/document/10901018'">Access Document</button>
             </div>
-            <div class="abstract-box" id="abstract13" style="display: none;">
-                <p>Investigates the challenge of preserving user privacy in CSI-based HAR for eHealth Ambient Assisted Living applications.</p>
+            <div class="abstract" id="abstract13" style="display: none;"> 
+                <p>Only the chairs can edit Human Activity Recognition (HAR) techniques are playing nowadays a key role in identifying and categorizing human activities 
+                    based on environmental information. More recently, the use of Channel State Information (CSI) is gaining momentum because this information can be extracted
+                    in a non-intrusive manner. CSI-based algorithms leverage the correlation between CSI dynamics of wireless transmissions and body motions. In this context,
+                    this study investigates the challenge of preserving user privacy in CSI-based HAR for eHealth Ambient Assisted Living (AAL) applications. The impact of 
+                    simple filter-based CSI obfuscation is evaluated on the accuracy performance of a Long-Short-Term Memory (LSTM)-based HAR model. Using a publicly available dataset,
+                    the accuracy between original and obfuscated versions of the dataset generated by simple filtering techniques is compared. The results show significant performance
+                    degradation when data is obfuscated, ranging from a minimum of 17.9% to a maximum of nearly 90% accuracy degradation, compared to 100% accuracy using the original dataset.
+                </p>
+            </div>
+
+            <br> 
+            <h2>Obfuscating Sensor-Based Activity Recognition in eHealth Applications: Is Encryption Enough Secure?</h2>
+            <p>F. Marcello, G. Pettorru, M. Martalò, V. Pilloni</p>
+            <p>ICC 2024-IEEE International Conference on Communications, 824-829</p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(12)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/abstract/document/10623045'">Access Document</button>
+            </div>
+            <div class="abstract" id="abstract12" style="display: none;">
+                <p>This paper addresses the problem of data privacy in Human Activity Recognition (HAR) applications for eHealth. Cryptography, a proven privacy safeguard 
+                    on the Internet, remains underutilized in the HAR context, as observed in the existing literature. This study highlights the importance of cryptographic 
+                    practices by conducting a performance analysis, focusing on the accuracy of HAR with and without data en-cryption. This paper proves that even by 
+                    introducing a very simple cryptographic mechanism, a potential eavesdropper would experience a reduction of more than 20% of accuracy in the activity 
+                    recognition task as compared to the case where no encryption is used, at the price of a limited increase in the energy consumption for the involved 
+                    sensors. Such preliminary results demonstrate the effectiveness of encryption for applications of this type, encouraging further exploration and 
+                    refinement in this direction.
+                </p>
+            </div>
+
+            <br> 
+
+            <h2>Trustworthy Localization in IoT Networks: A Survey of Localization Techniques, Threats, and Mitigation</h2>
+            <p>Pettorru, G., Pilloni, V., Martalò, M.</p>
+            <p>Sensors, 2024, 24(7), 2214</p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(11)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://www.mdpi.com/1424-8220/24/7/2214'">Access Document</button>
+            </div>
+            <div class="abstract" id="abstract11" style="display: none;">
+                <p>The Internet of Things (IoT) has revolutionized the world, connecting billions of devices that offer assistance 
+                    in various aspects of users’ daily lives. Context-aware IoT applications exploit real-time environmental, 
+                    user-specific, or situational data to dynamically adapt to users’ needs, offering tailored experiences. 
+                    In particular, Location-Based Services (LBS) exploit geographical information to adapt to environmental settings or 
+                    provide recommendations based on users’ and nodes’ positions, thus delivering efficient and personalized services. 
+                    To this end, there is growing interest in developing IoT localization systems within the scientific community. 
+                    In addition, due to the sensitivity and privacy inherent to precise location information, LBS introduce new security 
+                    challenges. To ensure a more secure and trustworthy system, researchers are studying how to prevent vulnerabilities
+                    and mitigate risks from the early design stages of LBS-empowered IoT applications. The goal of this study is to carry
+                    out an in-depth examination of localization techniques for IoT, with an emphasis on both the signal-processing 
+                    design and security aspects. The investigation focuses primarily on active radio localization techniques, 
+                    classifying them into range-based and range-free algorithms, while also exploring hybrid approaches.
+                    Next, security considerations are explored in depth, examining the main attacks for each localization 
+                    technique and linking them to the most interesting solutions proposed in the literature. By highlighting 
+                    advances, analyzing challenges, and providing solutions, the survey aims to guide researchers in navigating the 
+                    complex IoT localization landscape.
+                </p>
+            </div>
+
+            <br> 
+
+            <h2> A Cross-Layer Survey on Secure and Low-Latency Communications in Next-Generation IoT </h2>
+            <p> Martalo, M., Pettorru, G., Atzori, L. </p>
+            <p> IEEE Transactions on Network and Service Management, 2024 </p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(10)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/abstract/document/10504601'"> Access Document </button>
+            </div>
+            <div class="abstract" id="abstract10" style="display: none;">
+                <p> The last years have been characterized by strong market exploitation of the Internet of Things (IoT) technologies 
+                    in different application domains, such as Industry 4.0, smart cities, and eHealth. All the relevant solutions should 
+                    properly address the security issues to ensure that sensor data and actuators are not under the control of malicious
+                    entities. Additionally, many applications should at the same time provide low-latency communications, as in the 
+                    case for instance of remote control of industrial robots. Low latency and security are two of the most important 
+                    challenges to be addressed for the successful deployment of IoT applications. These issues have been analyzed by 
+                    several scientific papers and surveys that appeared in the last decade. However, few of them consider the two 
+                    challenges jointly. Moreover, the security aspects are primarily investigated only in specific application domains 
+                    or protocol levels and the latency issues are typically investigated only at low layers (e.g., physical, access). 
+                    This paper addresses this shortcoming and provides a systematic review of state-of-the-art solutions for providing 
+                    fast and secure IoT communications. Although the two requirements may appear to be in contrast to each other, 
+                    we investigate possible integrated solutions that minimize device connection and service provisioning. 
+                    We follow an approach where the proposals are reviewed by grouping them based on the reference architectural layer, 
+                    i.e., access, network, and application layers. We also review the works that propose promising solutions that rely 
+                    on the exploitation of the QUIC protocol at the higher levels of the protocol stack.
+                </p>
+            </div>
+
+            <br> 
+
+            <h2> QUIC and WebSocket for Secure and Low-Latency IoT Communications: An Experimental Analysis </h2>
+            <p> Pettorru, G., Martalò, M. </p>
+            <p> IEEE International Conference on Communications, 2023, 2023-May, pp. 628–633 </p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(9)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/document/10279305/'"> Access Document </button>
+            </div>
+            <div class="abstract" id="abstract9" style="display: none;">
+                <p> This work addresses the problem of security and low latency in communications typical of several Internet of Things 
+                    (IoT) scenarios, such as those in Industry 4.0 applications. In particular, we propose a WebSocket over QUIC 
+                    (WS-QUIC) protocol for intra-network communications between the IoT devices and the gateway. In particular, 
+                    low latency is achieved by combining the connection persistence of WebSocket (WS) with the reduced connection 
+                    establishment time required by QUIC. Moreover, the use of QUIC implicitly exploit the security extensions of 
+                    WS provided by the Transport Layer Security (TLS) protocol. We experimentally analyzed the performance of the 
+                    proposed system and compare it with that provided by other Web-based secure protocols, such as HyperText Transfer 
+                    Protocol Secure (HTTPS) and WebSocket Secure (WSS). Our results show that WS-QUIC outperforms HTTPS and WSS for 
+                    medium-large file sizes. Moreover, the use of the so-called TLS ticket resumption makes WS-QUIC suitable also for 
+                    medium-small file sizes. Finally, we also discuss the potential use of a single shared session ticket between 
+                    different IoT devices in the same cluster to further decrease the latency.
+                </p>
+            </div>
+
+            <br> 
+
+            <h2> A Hybrid WiFi/Bluetooth RSS Dataset with Application to Multilateration-Based Localization </h2>
+            <p> Pettorru, G., Pilloni, V., Martalo, M. </p>
+            <p> 2023 IEEE International Mediterranean Conference on Communications and Networking, MeditCom 2023, 2023, </p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(8)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/abstract/document/10266625'"> Access Document </button>
+            </div>
+            <div class="abstract" id="abstract8" style="display: none;">
+                <p> Given the growing importance of Location-Based Services (LBS) in the broader Internet of Things (IoT) context, 
+                    efficient and optimized location algorithms are essential. To address this, a hybrid WiFi/Bluetooth (BLT) 
+                    localization algorithm is experimentally investigated in this paper. This approach uses Received Signal Strength 
+                    (RSS) information to estimate target-anchors' distances, which are then fed at the input of a Least Squares 
+                    (LS)-based localization algorithm to finally estimate the target position. The study relies on a dataset created 
+                    by the authors with the goal of developing and evaluating RSS-based localization algorithms that incorporate the 
+                    fusion of data from different technologies. The experimental results presented in this paper confirm that such an 
+                    approach improves the accuracy, resilience, and robustness of location estimation and optimizes IoT services based 
+                    on contextual information with respect to schemes based on a single technology.
+                </p>
+            </div>
+
+            <br> 
+
+            <h2> Using Artificial Intelligence and IoT Solution for Forest Fire Prevention </h2>
+            <p> Pettorru, G., Fadda, M., Girau, R., Sole, M., Anedda, M., Giusto, D. </p>
+            <p> 2023 International Conference on Computing, Networking and Communications, ICNC 2023, 2023, pp. 414–418 </p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(7)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/document/10074289/'"> Access Document </button>
+            </div>
+            <div class="abstract" id="abstract7" style="display: none;">
+                <p> Natural ecosystem conservation is a topical issue that is receiving increasing attention from different branches of 
+                    the scientific community. Forests and woodlands are major contributors to climate change mitigation, able to absorb 
+                    significant amounts of carbon dioxide. The conservation of tree areas has been addressed through the adoption of 
+                    different solutions. This paper proposes a new monitoring system and the use of artificial intelligence (AI) for 
+                    real-time fire detection. The system is based on intelligent Digital Mobile Radio (DMR) nodes and a Social Internet 
+                    of Things (SIoT) platform on which AI algorithms have been implemented. The results obtained show the ability to 
+                    detect the slightest change in observed environmental parameters, determining the direction and speed of fire 
+                    propagation.
+                </p>
+            </div>
+            
+            <br> 
+
+            <h2> An IoT-based Electronic Sniffing for Forest Fire Detection </h2>
+            <p> Pettorru, G., Fadda, M., Girau, R., Anedda, M., Giusto, D. </p>
+            <p> Digest of Technical Papers - IEEE International Conference on Consumer Electronics, 2023, 2023-January </p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(6)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/document/10043411/'"> Access Document </button>
+            </div>
+            <div class="abstract" id="abstract6" style="display: none;">
+                <p> The preservation of the natural ecosystem is a topical issue that is receiving increasing attention not only 
+                    from the scientific community but from the entire world population. Forests and woodlands are the main actors 
+                    responsible for mitigating climate change, able to absorb significant amounts of carbon dioxide. The preservation 
+                    of the arboreal areas has been addressed through the adoption of various solutions. This paper proposes a new 
+                    real-time fire monitoring and detection system based on Digital Mobile Radio (DMR) nodes and a Social Internet of 
+                    Things (SIoT) platform on which artificial intelligence algorithms have been implemented. The results obtained 
+                    show the ability to detect the slightest variation in the observed parameters, determining the direction and speed 
+                    of fire propagation.
+                </p>
+            </div>
+
+            <br> 
+
+            <h2> Implementation of a Multisensors Fire-Fighting Monitoring System for Forest Protection </h2>
+            <p> Pettorru, G., Bertolusso, M., Spanu, M., Sole, M., Anedda, M., Giusto, D. </p>
+            <p> Proceedings - 2022 International Conference on Computational Science and Computational Intelligence, CSCI 2022, pp. 1205–1209</p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(5)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/document/10216586/'"> Access Document </button>
+            </div>
+            <div class="abstract" id="abstract5" style="display: none;">
+                <p> Monitoring and control of natural environments is becoming increasingly sensitive in the face of climate change. 
+                    This work proposes a solution for the protection to safeguard forests and woodlands against natural or arson fires. 
+                    Currently, existing solutions have critical issues in terms of early detection of outbreaks, or rely on expensive 
+                    solutions if implemented on a large scale. Electronic noses for fire smoke detection have been developed. 
+                    The data is transmitted in real time to a Social Internet of Things (SIoT) cloud platform that analyzes the data and 
+                    detects potential critical situations. Preliminary results obtained show the effectiveness of the system in detecting 
+                    the change in detected parameters during the occurrence of a fire front.
+                </p>
+            </div>
+        
+            <br> 
+
+            <h2> Pedestrian and Vehicular Tracking based on Wi-Fi Sniffing: a Real-World Case Study </h2>
+            <p> Bertolusso M., Pettorru G., Spanu M., Fadda M., Sole M., Farina M., Anedda M., Giusto D.D.</p>
+            <p> 2022 61st FITCE International Congress Future Telecommunications: Infrastructure and Sustainability, FITCE 2022, 2022 </p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(4)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/document/9934777/figures'"> Access Document </button>
+            </div>
+            <div class="abstract" id="abstract4" style="display: none;">
+                <p> This paper presents an innovative vehicle monitoring system based on Wi-Fi sniffing devices and real-time data 
+                    processing using machine learning techniques. Our solution involves the construction of a neural network-based 
+                    multiclass classifier that can classify the incoming Wi-Fi signal from many sources based on the received signal 
+                    strength. The solution was carried out by training the neural network to predict different output classes 
+                    corresponding to different vehicular (0-30 Km/h, 30-60 Km/h, 60-90 Km/h, 90-120 Km/h) and several pedestrian speed 
+                    ranges among 0-15 Km/h.
+                </p>
+            </div>
+        
+            <br> 
+
+            <h2> A passive Wi-Fi based Monitoring System for Urban Flows Detection </h2>
+            <p> Bertolusso, M., Pettorru, G., Spanu, M., Fadda, M., Sole, M., Anedda, M., Giusto, D. D.</p>
+            <p> Proceedings of the 2022 IEEE International Conference on Industry 4.0, Artificial Intelligence, and Communications Technology, IAICT 2022, 2022, pp. 66–70 </p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(3)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/document/9887478/'"> Access Document </button>
+            </div>
+            <div class="abstract" id="abstract3" style="display: none;">
+                <p> This paper presents an innovative vehicle monitoring system based on Wi-Fi sniffing devices and real-time data 
+                    processing using machine learning techniques. Our solution involves the construction of a neural network-based 
+                    multiclass classifier that can classify the incoming Wi-Fi signal from many sources based on the received signal 
+                    strength. The solution was carried out by training the neural network to predict different output classes 
+                    corresponding to different vehicular (0-30Km/h,30-60Km/h, 60-90Km/h, 90-120Km/h) and several pedestrian speed 
+                    ranges among 0-15Km/h.
+                </p>
+            </div>
+        
+            <br> 
+
+            <h2> A Machine Learning-based Approach for Vehicular Tracking in Low Power Wide Area Networks </h2>
+            <p> Bertolusso, M., Spanu, M., Pettorru, G., Anedda, M., Fadda, M., Girau, R., Farina, M., Giusto, D. D. </p>
+            <p> IEEE International Symposium on Broadband Multimedia Systems and Broadcasting, BMSB, 2022, 2022-June </p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(2)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/document/9828755/'"> Access Document </button>
+            </div>
+            <div class="abstract" id="abstract2" style="display: none;">
+                <p> This paper addresses the issue of monitoring and tracking people and vehicles within smart cities. 
+                    The actors in this work jointly cooperate in sensing, sensible data processing, anonymized data delivery, and 
+                    data processing, with the final goal of providing real-time mapping of vehicular and pedestrian concentration 
+                    conditions. The classification of conditions can bring out critical situations that can be communicated in real-time 
+                    to citizens. Tests were conducted in the city of Cagliari, Italy.
+                </p>
+            </div>
+        
+            <br> 
+
+            <h2> Implementation of a Magnetometer based Vehicle Detection System for Smart Parking Applications </h2>
+            <p> Floris, A., Girau, R., Porcu, S., Pettorru, G., Atzori, L. </p>
+            <p> 2020 IEEE International Smart Cities Conference, ISC2 2020, 2020, 9239005 </p>
+            <div class="button-container">
+                <button class="show-abstract-btn" onclick="toggleAbstract(1)">Show Abstract</button>
+                <button class="access-document-btn" onclick="window.location.href='https://ieeexplore.ieee.org/document/9239005'"> Access Document </button>
+            </div>
+            <div class="abstract" id="abstract1" style="display: none;">
+                <p> The time lost looking for a free parking spot in a city impacts negatively not only on the mood of the drivers 
+                    but also on the environment in terms of air quality and fuel consumption. The vehicle detection can be considered 
+                    as the most important task in Smart Parking systems as it allows to automatically monitor the occupancy state of 
+                    the parking spots in a city. In this paper, we implement and test a vehicle detection system based on a magnetometer 
+                    sensor, which is part of a complete Smart Parking system under development at the University of Cagliari. 
+                    After a preliminary analysis conducted to test the performance of the magnetometer, we conducted two specific 
+                    experiments to investigate the suitability of the magnetometer as the mean to detect the presence of a vehicle 
+                    in the parking spots. The first experiment, involving 15 different vehicles, has demonstrated that the magnetometer 
+                    can be used to reliably detect the presence of a vehicle in a parking spot if it is placed under the front or 
+                    rear axle of the vehicle. From the second experiment it resulted that, when considering 3 adjacent parking spots 
+                    and only one magnetometer placed in the central spot, it is not possible to reliably detect the vehicles parked on 
+                    the adjacent spots. Therefore, one magnetometer for each considered parking spot is needed.
+                </p>
             </div>
         </div>
-
-        <div class="pub-card">
-            <h2>Obfuscating Sensor-Based Activity Recognition in eHealth Applications</h2>
-            <p class="pub-authors">Marcello, F., <strong>Pettorru, G.</strong>, Martalò, M., Pilloni, V.</p>
-            <p class="pub-venue">ICC 2024-IEEE International Conference on Communications</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(12)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/abstract/document/10623045" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
-            </div>
-            <div class="abstract-box" id="abstract12" style="display: none;">
-                <p>Addresses the problem of data privacy in HAR applications for eHealth through cryptographic mechanisms.</p>
-            </div>
-        </div>
-
-        <div class="pub-card">
-            <h2>Trustworthy Localization in IoT Networks: A Survey</h2>
-            <p class="pub-authors"><strong>Pettorru, G.</strong>, Pilloni, V., Martalò, M.</p>
-            <p class="pub-venue">Sensors, 2024, 24(7), 2214</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(11)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://www.mdpi.com/1424-8220/24/7/2214" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
-            </div>
-            <div class="abstract-box" id="abstract11" style="display: none;">
-                <p>In-depth examination of localization techniques for IoT, emphasizing both signal-processing and security aspects.</p>
-            </div>
-        </div>
-
-        <div class="pub-card">
-            <h2>A Cross-Layer Survey on Secure and Low-Latency Communications in Next-Generation IoT</h2>
-            <p class="pub-authors">Martalo, M., <strong>Pettorru, G.</strong>, Atzori, L.</p>
-            <p class="pub-venue">IEEE Transactions on Network and Service Management, 2024</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(10)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/abstract/document/10504601" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
-            </div>
-            <div class="abstract-box" id="abstract10" style="display: none;">
-                <p>Systematic review of state-of-the-art solutions for providing fast and secure IoT communications.</p>
-            </div>
-        </div>
-
-        <h2 class="year-header">2023</h2>
-
-        <div class="pub-card">
-            <h2>QUIC and WebSocket for Secure and Low-Latency IoT Communications</h2>
-            <p class="pub-authors"><strong>Pettorru, G.</strong>, Martalò, M.</p>
-            <p class="pub-venue">IEEE International Conference on Communications, 2023</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(9)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/document/10279305/" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
-            </div>
-            <div class="abstract-box" id="abstract9" style="display: none;">
-                <p>Proposes a WebSocket over QUIC (WS-QUIC) protocol for intra-network communications between IoT devices and gateways.</p>
-            </div>
-        </div>
-
-        <div class="pub-card">
-            <h2>A Hybrid WiFi/Bluetooth RSS Dataset for Localization</h2>
-            <p class="pub-authors"><strong>Pettorru, G.</strong>, Pilloni, V., Martalo, M.</p>
-            <p class="pub-venue">MeditCom 2023</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(8)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/abstract/document/10266625" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
-            </div>
-            <div class="abstract-box" id="abstract8" style="display: none;">
-                <p>Experimental investigation of a hybrid WiFi/Bluetooth localization algorithm using RSS data.</p>
-            </div>
-        </div>
-
-        <div class="pub-card">
-            <h2>Using AI and IoT Solution for Forest Fire Prevention</h2>
-            <p class="pub-authors"><strong>Pettorru, G.</strong>, Fadda, M., Girau, R., Sole, M., Anedda, M., Giusto, D.</p>
-            <p class="pub-venue">ICNC 2023, pp. 414–418</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(7)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/document/10074289/" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
-            </div>
-            <div class="abstract-box" id="abstract7" style="display: none;">
-                <p>Proposes a monitoring system based on intelligent DMR nodes and a SIoT platform for fire detection.</p>
-            </div>
-        </div>
-
-        <div class="pub-card">
-            <h2>An IoT-based Electronic Sniffing for Forest Fire Detection</h2>
-            <p class="pub-authors"><strong>Pettorru, G.</strong>, Fadda, M., Girau, R., Anedda, M., Giusto, D.</p>
-            <p class="pub-venue">IEEE ICCE 2023</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(6)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/document/10043411/" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
-            </div>
-            <div class="abstract-box" id="abstract6" style="display: none;">
-                <p>New real-time fire monitoring system based on DMR nodes and electronic noses for smoke detection.</p>
-            </div>
-        </div>
-
-        <h2 class="year-header">2022</h2>
-
-        <div class="pub-card">
-            <h2>Implementation of a Multisensors Fire-Fighting Monitoring System</h2>
-            <p class="pub-authors"><strong>Pettorru, G.</strong>, Bertolusso, M., Spanu, M., Sole, M., Anedda, M., Giusto, D.</p>
-            <p class="pub-venue">CSCI 2022, pp. 1205–1209</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(5)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/document/10216586/" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
-            </div>
-            <div class="abstract-box" id="abstract5" style="display: none;">
-                <p>Electronic noses for fire smoke detection developed and transmitted to a SIoT cloud platform.</p>
-            </div>
-        </div>
-
-        <div class="pub-card">
-            <h2>Pedestrian and Vehicular Tracking based on Wi-Fi Sniffing</h2>
-            <p class="pub-authors">Bertolusso M., <strong>Pettorru G.</strong>, Spanu M., Fadda M., Sole M., Farina M., Anedda M., Giusto D.D.</p>
-            <p class="pub-venue">FITCE 2022</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(4)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/document/9934777/figures" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
-            </div>
-            <div class="abstract-box" id="abstract4" style="display: none;">
-                <p>Vehicle monitoring system based on Wi-Fi sniffing and ML-based multiclass classification.</p>
-            </div>
-        </div>
-
-        <div class="pub-card">
-            <h2>A passive Wi-Fi based Monitoring System for Urban Flows Detection</h2>
-            <p class="pub-authors">Bertolusso, M., <strong>Pettorru, G.</strong>, Spanu, M., Fadda, M., Sole, M., Anedda, M., Giusto, D. D.</p>
-            <p class="pub-venue">IAICT 2022, pp. 66–70</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(3)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/document/9887478/" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
-            </div>
-            <div class="abstract-box" id="abstract3" style="display: none;">
-                <p>Neural network-based classifier for classifying incoming Wi-Fi signals for urban flow detection.</p>
-            </div>
-        </div>
-
-        <div class="pub-card">
-            <h2>A Machine Learning-based Approach for Vehicular Tracking</h2>
-            <p class="pub-authors">Bertolusso, M., Spanu, M., <strong>Pettorru, G.</strong>, Anedda, M., Fadda, M., Girau, R., Farina, M., Giusto, D. D.</p>
-            <p class="pub-venue">BMSB 2022</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(2)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/document/9828755/" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
-            </div>
-            <div class="abstract-box" id="abstract2" style="display: none;">
-                <p>Addressing the issue of monitoring and tracking people and vehicles within smart cities.</p>
-            </div>
-        </div>
-
-        <h2 class="year-header">2020</h2>
-
-        <div class="pub-card">
-            <h2>Implementation of a Magnetometer based Vehicle Detection System</h2>
-            <p class="pub-authors">Floris, A., Girau, R., Porcu, S., <strong>Pettorru, G.</strong>, Atzori, L.</p>
-            <p class="pub-venue">ISC2 2020, 9239005</p>
-            <div class="pub-buttons">
-                <button class="pub-btn" onclick="toggleAbstract(1)"><i class="fas fa-align-left"></i> Show Abstract</button>
-                <a href="https://ieeexplore.ieee.org/document/9239005" class="pub-btn" target="_blank"><i class="fas fa-external-link-alt"></i> Access Document</a>
-            </div>
-            <div class="abstract-box" id="abstract1" style="display: none;">
-                <p>Implementation and testing of a vehicle detection system based on a magnetometer sensor for Smart Parking.</p>
-            </div>
-        </div>
-
     </main>
     
-    <footer style="position: relative; margin-top: 50px;">
-        <p>&copy; 2026 Giovanni Pettorru. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2025 Giovanni Pettorru. All rights reserved.</p>
     </footer>
 
-    <script>
+   <script>
         function toggleAbstract(id) {
-            const abstract = document.getElementById('abstract' + id);
+            var abstract = document.getElementById('abstract' + id);
             abstract.style.display = (abstract.style.display === 'none') ? 'block' : 'none';
         }
     </script>
 </body>
-</html>
