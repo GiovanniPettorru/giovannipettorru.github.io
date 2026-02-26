@@ -364,3 +364,10 @@ footer {
     display: block;         /* Assicura che la riga occupi tutta la larghezza */
     width: 100%;
 }
+
+.year-marker {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    color: #003476;
+}
