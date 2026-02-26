@@ -10,11 +10,19 @@
 </head>
 <body>
     <header class="main-header">
-    <h1 id="header-title">Profile</h1>
+    <div class="header-logo">
+        <img id="header-img" src="img/PUBLICATIONS.png" alt="Publications" style="height: 50px; width: auto;">
+    </div>
     <div class="lang-buttons-header">
-        <button id="btn-en" class="lang-btn active" onclick="changeLang('en')">EN</button>
-        <button id="btn-it" class="lang-btn" onclick="changeLang('it')">ITA</button>
-        <button id="btn-fr" class="lang-btn" onclick="changeLang('fr')">FR</button>
+        <button id="btn-en" class="lang-btn active" onclick="changeLang('en')">
+            EN <span class="flag">🇬🇧</span>
+        </button>
+        <button id="btn-it" class="lang-btn" onclick="changeLang('it')">
+            ITA <span class="flag">🇮🇹</span>
+        </button>
+        <button id="btn-fr" class="lang-btn" onclick="changeLang('fr')">
+            FR <span class="flag">🇫🇷</span>
+        </button>
     </div>
     </header>
 
@@ -489,32 +497,60 @@
 
    <script>
         function changeLang(lang) {
-            localStorage.setItem('selectedLang', lang);
+        // 1. Salva la scelta
+        localStorage.setItem('selectedLang', lang);
 
-            const translations = {
-                'en': { header: "Publications", navHome: "Home", navPub: "Publications" },
-                'it': { header: "Pubblicazioni", navHome: "Inizio", navPub: "Pubblicazioni" },
-                'fr': { header: "Publications", navHome: "Accueil", navPub: "Publications" }
-            };
-
-            if(document.getElementById('nav-home')) document.getElementById('nav-home').innerText = translations[lang].navHome;
-            if(document.getElementById('nav-pub')) document.getElementById('nav-pub').innerText = translations[lang].navPub;
-            if(document.getElementById('header-title')) document.getElementById('header-title').innerText = translations[lang].header;
-
-            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            const activeBtn = document.getElementById('btn-' + lang);
-            if (activeBtn) activeBtn.classList.add('active');
-        }
-
-        window.onload = function() {
-            const savedLang = localStorage.getItem('selectedLang') || 'en';
-            changeLang(savedLang);
+        // 2. Mappa delle risorse (Immagini e Menu)
+        const translations = {
+            'en': { 
+                img: "img/PUBLICATIONS.png", 
+                navHome: "Home", 
+                navPub: "Publications", 
+                bioTitle: "Biography" 
+            },
+            'it': { 
+                img: "img/PUBBLICAZIONE.png", 
+                navHome: "Home", 
+                navPub: "Pubblicazioni", 
+                bioTitle: "Biografia" 
+            },
+            'fr': { 
+                img: "img/PUBLICATIONS.png", 
+                navHome: "Accueil", 
+                navPub: "Publications", 
+                bioTitle: "Biographie" 
+            }
         };
 
-        function toggleAbstract(id) {
-            var abstract = document.getElementById('abstract' + id);
-            abstract.style.display = (abstract.style.display === 'none') ? 'block' : 'none';
+        // 3. Cambia l'immagine nell'header
+        const headerImg = document.getElementById('header-img');
+        if (headerImg) {
+            headerImg.src = translations[lang].img;
+            headerImg.alt = lang; // Aggiorna l'alt text per accessibilità
         }
+
+        // 4. Aggiorna Menu (nav-home e nav-pub devono avere questi ID)
+        if (document.getElementById('nav-home')) document.getElementById('nav-home').innerText = translations[lang].navHome;
+        if (document.getElementById('nav-pub')) document.getElementById('nav-pub').innerText = translations[lang].navPub;
+
+        // 5. Se sei in Homepage, aggiorna Bio
+        const bioTitle = document.getElementById('bio-title');
+        if (bioTitle) {
+            bioTitle.innerText = translations[lang].bioTitle;
+            document.querySelectorAll('.bio-content').forEach(b => b.classList.remove('active'));
+            document.getElementById('bio-' + lang).classList.add('active');
+        }
+
+        // 6. Stato Bottoni
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        const activeBtn = document.getElementById('btn-' + lang);
+        if (activeBtn) activeBtn.classList.add('active');
+    }
+
+    window.onload = function() {
+        const savedLang = localStorage.getItem('selectedLang') || 'en';
+        changeLang(savedLang);
+    };
     </script>
 </body>
 </html>
