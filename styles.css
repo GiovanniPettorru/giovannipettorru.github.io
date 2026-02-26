@@ -1,277 +1,370 @@
-/* RESET & BASICS */
+/* MAIN HTML ################################################################################################################## */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    color: #003476;
-    background-color: #fcfcfc;
-}
-
-/* HEADER */
+/* Stile per header */
 header {
     background-color: #003476;
     color: #fff;
     padding: 20px;
     text-align: center;
+    width: 100%; /* Occupa tutta la larghezza */
 }
 
+/* Stile per h1 nell'header */
 header h1 {
     margin: 0;
-    font-size: 28px;
+    font-family: Arial; /* Font moderno */
 }
 
-/* NAVBAR */
+/* Stile per dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Stile per dropdown toggle */
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+/* Stile per il main */
+main {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Content, Footer */
+    min-height: 100vh; /* Altezza della pagina pari al 100% dell'altezza dello schermo */
+}
+
+/* Stile per il container grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Due colonne */
+    gap: 10px;
+    padding: 16px;
+}
+
+/* Stile per la foto */
+.photo {
+    text-align: center; /* Centra la foto orizzontalmente */
+}
+
+/* Stile per la bio */
+.bio {
+    width: 90%; /* Imposta la larghezza desiderata */
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif; /* Font moderno */
+    line-height: 1.6; /* Distanza tra le righe del testo */
+    text-align: justify; /* Giustifica il testo */
+}
+
+/* Stile per il titolo della bio */
+.bio h2 {
+    color: #003476; /* Colore del titolo */
+    font-size: 30px;
+    text-align: center;
+}
+
+.bio h3 {
+    color: #003476; /* Colore del titolo */
+    font-size: 20px;
+    text-align: left;
+}
+
+/* Stile per il testo della bio */
+.bio p {
+    color: #003476; /* Colore del testo */
+    font-size: 20px; /* Dimensione del testo */
+    text-align: justify;
+}
+
+.contact-info {
+    font-family: Arial; /* Font moderno */
+    color: #003476; /* Colore del testo */
+    font-size: 18px; /* Dimensione del testo */
+}
+
+/* Stile per il footer */
+footer {
+position: fixed; /* Posiziona il footer in modo fisso */
+bottom: 0; /* Posiziona il footer alla parte inferiore della finestra del browser */
+left: 0;
+width: 100%;
+background-color: #003476;
+color: #fff;
+padding: 10px 20px;
+text-align: center;
+font-family: Arial, sans-serif; /* Font moderno */
+}
+
+/* Stili per la navbar */
 .navbar {
     background-color: #701414;
     padding: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Centrare verticalmente */
+}
+
+/* Media query per schermi più larghi, ad esempio da PC */
+@media (min-width: 768px) {
+    .navbar {
+        height: 50px; /* Altezza più ridotta per PC */
+    }
+
+    .navbar ul li {
+        padding: 20px;
+    }
 }
 
 .navbar ul {
+    font-size: 20px;
+    text-align: center; /* Per centrare i link */
+    flex-wrap: wrap; /* Per consentire il wrapping dei link quando necessario */
     list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    gap: 20px;
+    justify-content: center; /* Per allineare i link al centro */
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 10px;
 }
 
 .navbar ul li a {
     color: white;
+    display: block;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
 }
 
-.navbar ul li a:hover {
-    text-decoration: underline;
+.navbar ul li:last-child {
+    margin-right: 0; /* Rimuovere il margine dal'ultimo link */
 }
 
-/* MAIN STRUCTURE */
-main {
-    min-height: calc(100vh - 160px); /* Sottrae altezza header e footer */
-    padding-bottom: 60px; /* Spazio per il footer fisso */
+/* Media query per schermi più stretti, ad esempio da telefono */
+@media (max-width: 767px) {
+    .navbar {
+        height: auto; /* Altezza automatica per telefono */
+    }
+
+    .navbar ul {
+        font-size: 18px;
+        flex-direction: column; /* Disporre i link in colonna */
+        align-items: center; /* Allineare i link al centro verticalmente */
+    }
+
+    .navbar ul li {
+        margin-right: 0; /* Rimuovere il margine dai link */
+        padding: 3px;
+    }
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-    padding: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+/* Stile per il contenitore delle icone social */
+.social-icons {
+    display: flex; /* Utilizza Flexbox per posizionare gli elementi in orizzontale */
+    justify-content: center; /* Centra gli elementi orizzontalmente */
+    margin-top: 20px; /* Aggiungi spazio tra la bio e le icone */
+    margin-bottom: 20px; /* Aggiungi spazio tra la bio e le icone */
 }
 
-/* FOTO & INFO (Colonna Sinistra) */
-.photo {
-    text-align: center;
+/* Stile per le icone social */
+.social-icons a {
+    display: inline-block; /* Permette il controllo delle dimensioni */
+    margin: 0 10px; /* Spazio tra le icone */
 }
 
-.photo img {
-    border-radius: 8px;
-    margin-bottom: 15px;
+/* Imposta le dimensioni desiderate per le icone */
+.social-icons a img {
+    width: 40px; /* Imposta la larghezza delle icone */
+    height: auto; /* Imposta l'altezza in base alla larghezza per mantenere l'aspetto proporzionato */
 }
 
-.contact-info {
-    font-size: 16px;
-    line-height: 1.4;
+/* Media query per dispositivi di larghezza massima di 768px (come tablet e smartphone) */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Modifica la disposizione in una singola colonna */
+        justify-items: center; /* Allinea il contenuto al centro della colonna */
+    }
+
+    .photo {
+        grid-row: 1; /* Posiziona la foto sopra la biografia */
+        grid-column: 1; /* Posiziona la foto nella prima colonna */
+    }
+
+    .bio {
+        grid-row: 2; /* Posiziona la biografia sotto la foto */
+        grid-column: 1; /* Posiziona la biografia nella prima colonna */
+        text-align: center; /* Allinea il testo al centro */
+    }
+}
+
+/* Media query per dispositivi mobili con larghezza massima di 768px */
+@media screen and (max-width: 768px) {
+    /* Riduci la dimensione del testo del body */
+    .bio {
+        font-size: 10px;
+        
+    }
+}
+
+/* Stile per il main solo su dispositivi desktop */
+@media screen and (min-width: 769px) {
+    main {
+        min-height: 100vh; /* Altezza minima pari al 100% dell'altezza della finestra del browser */
+        overflow: hidden; /* Nasconde la barra di scorrimento verticale */
+    }
+
+    /* Assicura che il footer sia posizionato alla fine della finestra del browser */
+    main:after {
+        content: "";
+        display: block;
+        height: 100px; /* Altezza del footer */
+    }
+}
+
+/* Stile per mostrare il footer quando si scorre verso il basso */
+body.scrollable-footer footer {
+    display: block; /* Mostra il footer quando si scorre verso il basso */
+}
+
+/* PUBLICATION HTML ################################################################################################################## */
+/* Stile per le pubblicazioni */
+.publication {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Stile per il titolo della pubblicazione */
+.publication h2 {
+    color: #003476; /* Colore del titolo */
+    font-size: 24px; /* Dimensione del titolo */
+}
+
+/* Stile per il testo delle pubblicazioni */
+.publication p {
+    color: #003476; /* Colore del testo */
+    font-size: 18px; /* Dimensione del testo */
+    text-align: justify;
+}
+
+.abstract {
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.contact-info a {
-    color: #003476;
-    text-decoration: none;
-    font-weight: bold;
+/* Stile per il pulsante "Show Abstract" */
+.show-abstract-btn {
+    margin-top: 5px;
+    background-color: transparent; /* Sfondo trasparente */
+    color: #003476; /* Colore del testo */
+    padding: 8px 8px; /* Spaziatura interna più compatta */
+    border: none; /* Rimuovi il bordo */
+    border-radius: 20px; /* Bordo arrotondato */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    transition: background-color 0.3s, color 0.3s; /* Transizioni fluide */
+    font-size: 14px; /* Dimensione del testo */
 }
 
-/* SOCIAL & DOWNLOAD CV */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 20px 0;
+.show-abstract-btn:hover {
+    background-color: #003476; /* Cambia il colore di sfondo al passaggio del mouse */
+    color: #fff; /* Cambia il colore del testo al passaggio del mouse */
 }
 
-.social-icons img {
-    width: 35px;
-    transition: transform 0.2s;
+/* Stile per il pulsante "Access Document" */
+.access-document-btn {
+    margin-top: 5px;
+    background-color: transparent; /* Colore di sfondo */
+    color: #0056b3;
+    padding: 8px 8px; /* Spaziatura interna più compatta */
+    border: none; /* Rimuove il bordo */
+    border-radius: 20px; /* Bordo arrotondato */
+    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+    transition: background-color 0.3s, color 0.3s; /* Effetto di transizione */
+    font-size: 14px; /* Dimensione del testo */
 }
 
-.social-icons img:hover {
-    transform: scale(1.1);
+.access-document-btn:hover {
+    background-color: #0056b3; /* Colore di sfondo al passaggio del mouse */
+    color: #fff;
 }
 
+/* bottoni Download CV */
 .download-cv img {
-    width: 40px;
-    height: 40px;
-    margin: 0 5px;
-    transition: opacity 0.2s;
-}
+    width: 40px; /* Regola la larghezza delle icone */
+    height: 40px; /* Regola l'altezza delle icone */
+    margin: 0 5px; /* Aggiunge spazio tra le icone */
+  }
+  
+  .download-cv img:hover {
+    opacity: 0.8; /* Riduce l'opacità al passaggio del mouse */
+  }
 
-.download-cv img:hover {
-    opacity: 0.7;
-}
-
-/* BIO SECTION (Colonna Destra) */
-.bio {
+  .no-space {
     display: flex;
-    flex-direction: column;
-}
+  }
 
-.bio h2 {
-    font-size: 26px;
-    margin-bottom: 15px;
-}
-
-/* LANGUAGE SWITCHER */
+/* --- Sezione Language Switcher --- */
 .lang-switch-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #eee;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
     padding-bottom: 10px;
-    margin-bottom: 20px;
+}
+
+.lang-buttons {
+    display: flex;
+    gap: 8px;
 }
 
 .lang-btn {
     background-color: #f8f9fa;
     border: 1px solid #003476;
     color: #003476;
-    padding: 6px 12px;
+    padding: 6px 14px;
     cursor: pointer;
     font-size: 13px;
     font-weight: bold;
     border-radius: 4px;
-    transition: 0.3s;
+    transition: all 0.2s ease-in-out;
+}
+
+.lang-btn:hover {
+    background-color: #e6eef7;
+    transform: translateY(-1px);
 }
 
 .lang-btn.active {
     background-color: #003476;
     color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* --- Gestione visibilità Biografia --- */
 .bio-content {
-    display: none;
-    line-height: 1.6;
+    display: none; /* Nasconde tutte le bio di default */
+    line-height: 1.7;
     text-align: justify;
-    font-size: 18px;
+    animation: fadeIn 0.4s ease; /* Piccolo effetto di comparsa */
 }
 
 .bio-content.active {
-    display: block;
-    animation: fadeIn 0.5s;
+    display: block; /* Mostra solo quella attiva */
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; } to { opacity: 1; }
-}
-
-/* PUBLICATIONS PAGE */
-.publication-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 30px 20px;
-}
-
-.year-header {
-    border-bottom: 2px solid #003476;
-    margin: 30px 0 20px;
-    padding-bottom: 5px;
-}
-
-.pub-card {
-    background: white;
-    border-left: 5px solid #003476;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.pub-card h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.pub-authors {
-    font-style: italic;
-    margin-bottom: 5px;
-}
-
-.pub-venue {
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.pub-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.pub-btn {
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 14px;
-    border: 1px solid #003476;
-    background: transparent;
-    color: #003476;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.pub-btn:hover {
-    background: #003476;
-    color: white;
-}
-
-.btn-disabled {
-    border-color: #ccc;
-    color: #ccc;
-    cursor: not-allowed;
-}
-
-.abstract-box {
-    margin-top: 15px;
-    padding: 15px;
-    background: #f9f9f9;
-    font-size: 15px;
-    border-top: 1px solid #eee;
-}
-
-/* FOOTER */
-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #003476;
-    color: #fff;
-    padding: 15px;
-    text-align: center;
-    font-size: 14px;
-}
-
-/* RESPONSIVE */
-@media screen and (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    main {
-        overflow-y: auto;
-    }
-
-    footer {
-        position: relative; /* Evita sovrapposizioni su mobile */
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
