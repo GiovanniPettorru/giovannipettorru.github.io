@@ -9,14 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <div class="top-bar">
+        <div class="lang-buttons-top">
+            <button id="btn-en" class="lang-btn active" onclick="changeLang('en')">EN</button>
+            <button id="btn-it" class="lang-btn" onclick="changeLang('it')">ITA</button>
+            <button id="btn-fr" class="lang-btn" onclick="changeLang('fr')">FR</button>
+        </div>
+    </div>
+
     <header>
-        <h1> Homepage </h1>
+        <h1 id="header-title">Homepage</h1>
     </header>
 
     <nav class="navbar">
         <ul>
-            <li><a href="publications.html">Publications</a></li>
-            </ul>
+            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="publications.html" id="nav-pub">Publications</a></li>
+        </ul>
     </nav>
  
     <main>
@@ -54,15 +63,8 @@
             </div>
 
             <div class="bio">
-                <div class="lang-switch-container">
-                    <h2 id="bio-title">Biography</h2>
-                    <div class="lang-buttons">
-                        <button id="btn-en" class="lang-btn active" onclick="changeLang('en')">EN</button>
-                        <button id="btn-it" class="lang-btn" onclick="changeLang('it')">ITA</button>
-                        <button id="btn-fr" class="lang-btn" onclick="changeLang('fr')">FR</button>
-                    </div>
-                </div>
-
+                <h2 id="bio-title">Biography</h2>
+                
                 <div id="bio-en" class="bio-content active">
                     <p>
                         <strong>Giovanni Pettorru</strong> received a B.Sc. degree in Electrical and Electronic Engineering from the University of Cagliari in 2020, with a thesis on the <i>Implementation of a Parking Occupancy Detection System Based on Magnetometer Sensor</i>. In 2022, he earned a Master’s Degree in Internet Engineering from the same university, presenting a thesis titled <i>Secure and Low-Latency Communications Based on WebSocket and QUIC in the Internet of Things Scenario</i>.
@@ -89,9 +91,9 @@
                     <p>
                         <strong>Giovanni Pettorru</strong> a obtenu sa licence (B.Sc.) in Génie Électrique et Électronique à l'Université de Cagliari en 2020, con une thèse sur l'<i>Implémentation d'un système de détection d'occupation de parking basé sur des capteurs magnétométriques</i>. En 2022, il a obtenu son Master en Internet Engineering au sein de la même université, en présentant un mémoire intitulé <i>Communications sécurisées et à faible latence basées sur WebSocket et QUIC dans le scénario de l'Internet des Objets (IoT)</i>. 
                         En février 2026, il a obtenu son Doctorat (Ph.D.) en Génie Électronique et Informatique à l'Université de Cagliari, au sein du Département de Génie Électrique et Électronique (DIEE/UdR CNIT). Sa thèse de doctorat, intitulée <i>Energy-Eﬃcient and Trustworthy Location-Based Services for Next-Generation IoT</i>, portait sulla sécurité des réseaux et les stratégies de localisation sans GPS dans les environnements IoT éco-responsables (Green IoT). <br><br>
-                        Giovanni est un membre actif de l'IEEE. Il a fait preuve de capacités de communication exceptionnelles en remportant la troisième place lors du premier concours "Three-Minute Thesis" (3MT) à l'IEEE ICC 2023 et en figurant parmi les 15 finalistes de la "Four-Minute Thesis" (4MT) lors des conférences IEEE Globecom 2024 et 2025. Ces concours mettent les chercheurs au défi de transmettre efficacement leurs travaux à un public non spécialisé en quelques minutes seulement. Ses performances soulignent sa capacité à communiquer des idées complexes avec clarté et précision. Giovanni ha également contribué à la communauté scientifique en tant que membre du comité de programme (PC member) pour la conférence AQ-IoT 2023. <br><br>
+                        Giovanni est un membre actif de l'IEEE. Il a fait preuve de capacités de communication exceptionnelles en remportant la troisième place lors du premier concours "Three-Minute Thesis" (3MT) à l'IEEE ICC 2023 et en figurant parmi les 15 finalistes de la "Four-Minute Thesis" (4MT) lors des conférences IEEE Globecom 2024 et 2025. Ces concours mettent les chercheurs au défi de transmettre efficacement leurs travaux à un public non spécialisé en quelques minutes seulement. Ses performances soulignent sa capacità à communiquer des idées complexes avec clarté et précision. Giovanni ha également contribué à la communauté scientifique en tant que membre du comité de programme (PC member) pour la conférence AQ-IoT 2023. <br><br>
                         Giovanni a apporté des contributions significatives au projet POSIDONIA (POSition Information with Digital twin Offloading in trustworthy Next-generation Internet Applications). Dans le cadre de la vision Next-Generation Internet (NGI), ce projet traite de la conception de réseaux écologiques et centrés sur l'humain à travers le continuum Fog-Edge-Cloud. Ses travaux se concentrent sur la création d'une architecture distribuée pour une localisation sans GPS fiable afin de soutenir les services basés sur la localisation (LBS) dans les applications de l'Internet des Objets (IoT).
-                        Cette solide base technologique a alimenté sa vision entrepreneuriale, à commencer par Agricultural Geolocation and Resource Optimization (AGROS), un sistema conçu per soutenir la prise de décision agricole via des services de géolocalisation. Reposant sur les piliers du projet POSIDONIA, AGROS a été récompensé par l'Université de Cagliari (Projet e.INS) et s'est classé parmi les 10 finalistes du concours Start Cup 2024 Sardegna. Le projet a ensuite été reconnu comme l'une des 10 meilleures idées du programme AgriFuture (Sardegna Ricerche), bénéficiant d'un soutien dédié pour la validation du marché.
+                        Cette solide base technologique a alimenté sa vision entrepreneuriale, à commencer par Agricultural Geolocation and Resource Optimization (AGROS), un sistema conçu per soutenir la prise de décision agricole via des services de géolocalisation. Reposant sur les piliers du projet POSIDONIA, AGROS a été récompensé par l'Université de Cagliari (Projet e.INS) et s'est classé parmi les 10 finalistes du concours Start Cup 2024 Sardegna. Le projet a ensuite été reconnu comme l'une des 10 meilleures idées du programma AgriFuture (Sardegna Ricerche), bénéficiant d'un soutien dédié pour la validation du marché.
                         Son engagement envers l'innovation s'est poursuivi lors de la Start Cup 2025, où le projet Location-based Emergency Notification System (LENS) a également atteint le top 10 e ha reçu la mention spéciale "Climate Change" pour son approche innovante de la détection d'événements naturels extrêmes. Plus récemment, au début de l'année 2026, son projet GreenShield est été sélectionné pour le programme SERICS - Lab2Bay. Cette réussite lui a permis d'intégrer un parcours d'accélération exclusif dans la Silicon Valley au hub INNOVIT, visant à valider ses solutions de sécurité économes en ressources (resource-aware) sur le marché américain.
                     </p>
                 </div>
@@ -105,27 +107,40 @@
 
     <script>
         function changeLang(lang) {
-            // Riferimenti
-            const bios = document.querySelectorAll('.bio-content');
-            const buttons = document.querySelectorAll('.lang-btn');
-            const bioTitle = document.getElementById('bio-title');
+            // Salva la scelta nel localStorage
+            localStorage.setItem('selectedLang', lang);
 
-            // Mappa dei titoli
-            const titles = {
-                'en': 'Biography',
-                'it': 'Biografia',
-                'fr': 'Biographie'
+            // Traduzioni Interfaccia
+            const translations = {
+                'en': { header: "Homepage", navHome: "Home", navPub: "Publications", bioTitle: "Biography" },
+                'it': { header: "Pagina Principale", navHome: "Inizio", navPub: "Pubblicazioni", bioTitle: "Biografia" },
+                'fr': { header: "Page d'accueil", navHome: "Accueil", navPub: "Publications", bioTitle: "Biographie" }
             };
 
-            // Reset classi active
-            bios.forEach(b => b.classList.remove('active'));
-            buttons.forEach(btn => btn.classList.remove('active'));
+            // Aggiornamento Titoli e Menu
+            document.getElementById('header-title').innerText = translations[lang].header;
+            document.getElementById('nav-home').innerText = translations[lang].navHome;
+            document.getElementById('nav-pub').innerText = translations[lang].navPub;
+            
+            const bioTitle = document.getElementById('bio-title');
+            if (bioTitle) bioTitle.innerText = translations[lang].bioTitle;
 
-            // Attivazione elementi scelti
-            document.getElementById('bio-' + lang).classList.add('active');
-            document.getElementById('btn-' + lang).classList.add('active');
-            bioTitle.innerText = titles[lang];
+            // Visibilità Testi Bio
+            document.querySelectorAll('.bio-content').forEach(b => b.classList.remove('active'));
+            const targetBio = document.getElementById('bio-' + lang);
+            if (targetBio) targetBio.classList.add('active');
+
+            // Stato Bottoni (Top Bar)
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = document.getElementById('btn-' + lang);
+            if (activeBtn) activeBtn.classList.add('active');
         }
+
+        // Al caricamento, recupera la lingua o usa EN
+        window.onload = function() {
+            const savedLang = localStorage.getItem('selectedLang') || 'en';
+            changeLang(savedLang);
+        };
     </script>
 </body>
 </html>

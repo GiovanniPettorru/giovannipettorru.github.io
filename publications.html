@@ -4,24 +4,27 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giovanni Pettorru - Homepage</title>
+    <title>Publications | Giovanni Pettorru</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Aggiunta di Font Awesome per le icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
+    <div class="top-bar">
+        <div class="lang-buttons-top">
+            <button id="btn-en" class="lang-btn active" onclick="changeLang('en')">EN</button>
+            <button id="btn-it" class="lang-btn" onclick="changeLang('it')">ITA</button>
+            <button id="btn-fr" class="lang-btn" onclick="changeLang('fr')">FR</button>
+        </div>
+    </div>
+
     <header>
-        <h1> Publications </h1>
+        <h1 id="header-title">Publications</h1>
     </header>
 
-   <!-- Navigation bar -->
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="publications.html">Publications</a></li>
-            <!-- <li><a href="research.html"> Research Topics</a></li> -->
-            <!-- <li><a href="professionalactivities.html">Professional Experience</a></li> -->
+            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="publications.html" id="nav-pub">Publications</a></li>
         </ul>
     </nav>
 
@@ -488,9 +491,33 @@
     </footer>
 
    <script>
+        function changeLang(lang) {
+            localStorage.setItem('selectedLang', lang);
+
+            const translations = {
+                'en': { header: "Publications", navHome: "Home", navPub: "Publications" },
+                'it': { header: "Pubblicazioni", navHome: "Inizio", navPub: "Pubblicazioni" },
+                'fr': { header: "Publications", navHome: "Accueil", navPub: "Publications" }
+            };
+
+            if(document.getElementById('nav-home')) document.getElementById('nav-home').innerText = translations[lang].navHome;
+            if(document.getElementById('nav-pub')) document.getElementById('nav-pub').innerText = translations[lang].navPub;
+            if(document.getElementById('header-title')) document.getElementById('header-title').innerText = translations[lang].header;
+
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = document.getElementById('btn-' + lang);
+            if (activeBtn) activeBtn.classList.add('active');
+        }
+
+        window.onload = function() {
+            const savedLang = localStorage.getItem('selectedLang') || 'en';
+            changeLang(savedLang);
+        };
+
         function toggleAbstract(id) {
             var abstract = document.getElementById('abstract' + id);
             abstract.style.display = (abstract.style.display === 'none') ? 'block' : 'none';
         }
     </script>
 </body>
+</html>
