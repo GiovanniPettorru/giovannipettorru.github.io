@@ -347,7 +347,7 @@ footer {
 
 /* Regola la dimensione dell'immagine titolo nell'header */
 #header-img {
-    height: 80px;      /* Aumenta questo valore finché non raggiungi la grandezza desiderata */
+    height: 200px;      /* Aumenta questo valore finché non raggiungi la grandezza desiderata */
     width: auto;       /* Mantiene le proporzioni originali del PNG */
     display: block;    /* Evita spazi bianchi indesiderati sotto l'immagine */
     transition: all 0.3s ease; /* Rende il cambio lingua fluido visivamente */
