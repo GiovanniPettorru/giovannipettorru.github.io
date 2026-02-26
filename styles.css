@@ -294,28 +294,10 @@ footer {
 #btn-it:hover {
     font-size: 0; /* Nasconde temporaneamente il testo ITA */
 }
-#btn-it:hover::after {
-    content: "🇮🇹"; /* Mostra la bandiera */
-    font-size: 18px; /* Dimensione della bandiera */
-}
 
-/* Quando passi sopra il tasto EN */
-#btn-en:hover {
-    font-size: 0;
-}
-#btn-en:hover::after {
-    content: "🇬🇧";
-    font-size: 18px;
-}
-
-/* Quando passi sopra il tasto FR */
-#btn-fr:hover {
-    font-size: 0;
-}
-#btn-fr:hover::after {
-    content: "🇫🇷";
-    font-size: 18px;
-}
+#btn-it:hover::after { content: " 🇮🇹"; }
+#btn-en:hover::after { content: " 🇬🇧"; }
+#btn-fr:hover::after { content: " 🇫🇷"; }
 
 /* Opzionale: un piccolo effetto di transizione per rendere il cambio fluido */
 .lang-btn {
