@@ -314,7 +314,60 @@ body.scrollable-footer footer {
     display: flex;
   }
 
+/* --- Sezione Language Switcher --- */
+.lang-switch-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
 
+.lang-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.lang-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #003476;
+    color: #003476;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.lang-btn:hover {
+    background-color: #e6eef7;
+    transform: translateY(-1px);
+}
+
+.lang-btn.active {
+    background-color: #003476;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* --- Gestione visibilità Biografia --- */
+.bio-content {
+    display: none; /* Nasconde tutte le bio di default */
+    line-height: 1.7;
+    text-align: justify;
+    animation: fadeIn 0.4s ease; /* Piccolo effetto di comparsa */
+}
+
+.bio-content.active {
+    display: block; /* Mostra solo quella attiva */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
   
 
