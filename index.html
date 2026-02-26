@@ -7,55 +7,6 @@
     <title>Giovanni Pettorru | Ph.D. Student | University of Cagliari</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    
-    <style>
-        /* Stili per lo switch della lingua */
-        .lang-switch-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-        }
-
-        .lang-buttons {
-            display: flex;
-            gap: 5px;
-        }
-
-        .lang-btn {
-            background-color: #f8f9fa;
-            border: 1px solid #003476;
-            color: #003476;
-            padding: 5px 12px;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: bold;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .lang-btn:hover {
-            background-color: #e6eef7;
-        }
-
-        .lang-btn.active {
-            background-color: #003476;
-            color: white;
-        }
-
-        /* Nascondi il contenuto non attivo */
-        .bio-content {
-            display: none;
-            line-height: 1.6;
-            text-align: justify;
-        }
-
-        .bio-content.active {
-            display: block;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -108,6 +59,7 @@
                     <div class="lang-buttons">
                         <button class="lang-btn active" onclick="changeLang('en')">EN</button>
                         <button class="lang-btn" onclick="changeLang('it')">ITA</button>
+                        <button class="lang-btn" onclick="changeLang('fr')">FR</button>
                     </div>
                 </div>
 
@@ -132,6 +84,17 @@
                         Il suo impegno verso l'innovazione è continuato alla Start Cup 2025, dove il progetto Location-based Emergency Notification System (LENS) ha ottenuto un altro posizionamento in top 10 e ha ricevuto la menzione speciale "Climate Change" per il suo approccio innovativo nel rilevamento di eventi naturali estremi. Più di recente, all'inizio del 2026, il suo progetto GreenShield è stato selezionato per il programma SERICS - Lab2Bay. Questo traguardo gli ha permesso di accedere a un esclusivo percorso di accelerazione nella Silicon Valley presso l'hub INNOVIT, con l'obiettivo di validare le sue soluzioni di sicurezza attente alle risorse (resource-aware) all'interno del mercato statunitense.
                     </p>
                 </div>
+
+                <div id="bio-fr" class="bio-content">
+                    <p>
+                        <strong>Giovanni Pettorru</strong> a obtenu sa licence (B.Sc.) in Génie Électrique et Électronique à l'Université de Cagliari en 2020, con une thèse sur l'<i>Implémentation d'un système de détection d'occupation de parking basé sur des capteurs magnétométriques</i>. En 2022, il a obtenu son Master en Internet Engineering au sein de la même université, en présentant un mémoire intitulé <i>Communications sécurisées et à faible latence basées sur WebSocket et QUIC dans le scénario de l'Internet des Objets (IoT)</i>. 
+                        En février 2026, il a obtenu son Doctorat (Ph.D.) en Génie Électronique et Informatique à l'Université de Cagliari, au sein du Département de Génie Électrique et Électronique (DIEE/UdR CNIT). Sa thèse de doctorat, intitulée <i>Energy-Eﬃcient and Trustworthy Location-Based Services for Next-Generation IoT</i>, portait sulla sécurité des réseaux et les stratégies de localisation sans GPS dans les environnements IoT éco-responsables (Green IoT). <br><br>
+                        Giovanni est un membre actif de l'IEEE. Il a fait preuve de capacités de communication exceptionnelles en remportant la troisième place lors du premier concours "Three-Minute Thesis" (3MT) à l'IEEE ICC 2023 et en figurant parmi les 15 finalistes de la "Four-Minute Thesis" (4MT) lors des conférences IEEE Globecom 2024 et 2025. Ces concours mettent les chercheurs au défi de transmettre efficacement leurs travaux à un public non spécialisé en quelques minutes seulement. Ses performances soulignent sa capacité à communiquer des idées complexes avec clarté et précision. Giovanni ha également contribué à la communauté scientifique en tant que membre du comité de programme (PC member) pour la conférence AQ-IoT 2023. <br><br>
+                        Giovanni a apporté des contributions significatives au projet POSIDONIA (POSition Information with Digital twin Offloading in trustworthy Next-generation Internet Applications). Dans le cadre de la vision Next-Generation Internet (NGI), ce projet traite de la conception de réseaux écologiques et centrés sur l'humain à travers le continuum Fog-Edge-Cloud. Ses travaux se concentrent sur la création d'une architecture distribuée pour une localisation sans GPS fiable afin de soutenir les services basés sur la localisation (LBS) dans les applications de l'Internet des Objets (IoT).
+                        Cette solide base technologique a alimenté sa vision entrepreneuriale, à commencer par Agricultural Geolocation and Resource Optimization (AGROS), un système conçu per soutenir la prise de décision agricole via des services de géolocalisation. Reposant sur les piliers du projet POSIDONIA, AGROS a été récompensé par l'Université de Cagliari (Projet e.INS) et s'est classé parmi les 10 finalistes du concours Start Cup 2024 Sardegna. Le projet a ensuite été reconnu comme l'une des 10 meilleures idées du programme AgriFuture (Sardegna Ricerche), bénéficiant d'un soutien dédié pour la validation du marché.
+                        Son engagement envers l'innovation s'est poursuivi lors de la Start Cup 2025, où le projet Location-based Emergency Notification System (LENS) a également atteint le top 10 e ha reçu la mention spéciale "Climate Change" pour son approche innovante de la détection d'événements naturels extrêmes. Plus récemment, au début de l'année 2026, son projet GreenShield a été sélectionné pour le programme SERICS - Lab2Bay. Cette réussite lui a permis d'intégrer un parcours d'accélération exclusif dans la Silicon Valley au hub INNOVIT, visant à valider ses solutions de sécurité économes en ressources (resource-aware) sur le marché américain.
+                    </p>
+                </div>
             </div>
         </div>
     </main>
@@ -142,26 +105,26 @@
 
     <script>
         function changeLang(lang) {
-            // Seleziona i contenuti
             const bioEn = document.getElementById('bio-en');
             const bioIt = document.getElementById('bio-it');
             const bioTitle = document.getElementById('bio-title');
             const buttons = document.querySelectorAll('.lang-btn');
-
-            // Rimuovi classe active da tutti i bottoni
             buttons.forEach(btn => btn.classList.remove('active'));
 
             if (lang === 'it') {
                 bioEn.classList.remove('active');
                 bioIt.classList.add('active');
                 bioTitle.innerText = "Breve biografia";
-                // Aggiungi active al bottone ITA
                 buttons[1].classList.add('active');
+            } else if (lang === 'fr') {
+                bioEn.style.display = 'none';
+                bioIt.style.display = 'none';
+                bioFr.style.display = 'block';
+                bioTitle.innerText = "Biographie courte";
             } else {
                 bioIt.classList.remove('active');
                 bioEn.classList.add('active');
                 bioTitle.innerText = "Short biography";
-                // Aggiungi active al bottone EN
                 buttons[0].classList.add('active');
             }
         }
