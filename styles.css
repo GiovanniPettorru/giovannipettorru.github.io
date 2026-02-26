@@ -90,15 +90,16 @@ main {
 
 /* Stile per il footer */
 footer {
-position: fixed; /* Posiziona il footer in modo fisso */
-bottom: 0; /* Posiziona il footer alla parte inferiore della finestra del browser */
-left: 0;
-width: 100%;
-background-color: #003476;
-color: #fff;
-padding: 10px 20px;
-text-align: center;
-font-family: Arial, sans-serif; /* Font moderno */
+    position: fixed; /* Posiziona il footer in modo fisso */
+    bottom: 0; /* Posiziona il footer alla parte inferiore della finestra del browser */
+    left: 0;
+    width: 100%;
+    background-color: #003476;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif; /* Font moderno */
+    z-index: 1000;
 }
 
 /* Stili per la navbar */
@@ -206,20 +207,10 @@ font-family: Arial, sans-serif; /* Font moderno */
     }
 }
 
-/* Media query per dispositivi mobili con larghezza massima di 768px */
-@media screen and (max-width: 768px) {
-    /* Riduci la dimensione del testo del body */
-    .bio {
-        font-size: 10px;
-        
-    }
-}
-
 /* Stile per il main solo su dispositivi desktop */
 @media screen and (min-width: 769px) {
     main {
         min-height: 100vh; /* Altezza minima pari al 100% dell'altezza della finestra del browser */
-        overflow: hidden; /* Nasconde la barra di scorrimento verticale */
     }
 
     /* Assicura che il footer sia posizionato alla fine della finestra del browser */
@@ -230,18 +221,13 @@ font-family: Arial, sans-serif; /* Font moderno */
     }
 }
 
-/* Stile per mostrare il footer quando si scorre verso il basso */
-body.scrollable-footer footer {
-    display: block; /* Mostra il footer quando si scorre verso il basso */
-}
-
 /* PUBLICATION HTML ################################################################################################################## */
 /* Stile per le pubblicazioni */
 .publication {
     margin-left: 40px;
     margin-right: 40px;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 80px; /* Aumentato per non finire sotto il footer fisso */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -249,6 +235,7 @@ body.scrollable-footer footer {
 .publication h2 {
     color: #003476; /* Colore del titolo */
     font-size: 24px; /* Dimensione del titolo */
+    margin-top: 25px;
 }
 
 /* Stile per il testo delle pubblicazioni */
@@ -261,6 +248,9 @@ body.scrollable-footer footer {
 .abstract {
     margin-top: 20px;
     margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
 }
 
 /* Stile per il pulsante "Show Abstract" */
@@ -268,8 +258,8 @@ body.scrollable-footer footer {
     margin-top: 5px;
     background-color: transparent; /* Sfondo trasparente */
     color: #003476; /* Colore del testo */
-    padding: 8px 8px; /* Spaziatura interna più compatta */
-    border: none; /* Rimuovi il bordo */
+    padding: 8px 15px; /* Spaziatura interna */
+    border: 1px solid #003476; /* Aggiunto bordo per visibilità */
     border-radius: 20px; /* Bordo arrotondato */
     cursor: pointer; /* Cambia il cursore al passaggio del mouse */
     transition: background-color 0.3s, color 0.3s; /* Transizioni fluide */
@@ -286,8 +276,8 @@ body.scrollable-footer footer {
     margin-top: 5px;
     background-color: transparent; /* Colore di sfondo */
     color: #0056b3;
-    padding: 8px 8px; /* Spaziatura interna più compatta */
-    border: none; /* Rimuove il bordo */
+    padding: 8px 15px; /* Spaziatura interna */
+    border: 1px solid #0056b3; /* Aggiunto bordo */
     border-radius: 20px; /* Bordo arrotondato */
     cursor: pointer; /* Cambia il cursore al passaggio del mouse */
     transition: background-color 0.3s, color 0.3s; /* Effetto di transizione */
@@ -299,22 +289,24 @@ body.scrollable-footer footer {
     color: #fff;
 }
 
+.access-document-btn.disabled {
+    border-color: #ccc;
+    color: #ccc;
+    cursor: not-allowed;
+}
+
 /* bottoni Download CV */
 .download-cv img {
     width: 40px; /* Regola la larghezza delle icone */
     height: 40px; /* Regola l'altezza delle icone */
     margin: 0 5px; /* Aggiunge spazio tra le icone */
-  }
+}
   
-  .download-cv img:hover {
+.download-cv img:hover {
     opacity: 0.8; /* Riduce l'opacità al passaggio del mouse */
-  }
+}
 
-  .no-space {
-    display: flex;
-  }
-
-/* --- Sezione Language Switcher --- */
+/* --- Sezione Language Switcher (Homepage) --- */
 .lang-switch-container {
     display: flex;
     justify-content: space-between;
@@ -343,28 +335,20 @@ body.scrollable-footer footer {
 
 .lang-btn:hover {
     background-color: #e6eef7;
-    transform: translateY(-1px);
 }
 
 .lang-btn.active {
     background-color: #003476;
     color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* --- Gestione visibilità Biografia --- */
+/* Gestione visibilità Biografia Homepage */
 .bio-content {
-    display: none; /* Nasconde tutte le bio di default */
+    display: none;
     line-height: 1.7;
     text-align: justify;
-    animation: fadeIn 0.4s ease; /* Piccolo effetto di comparsa */
 }
 
 .bio-content.active {
-    display: block; /* Mostra solo quella attiva */
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    display: block;
 }
