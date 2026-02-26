@@ -6,99 +6,106 @@
     box-sizing: border-box;
 }
 
-/* Stile per header */
+/* Header con layout Flexbox per Titolo + Bottoni */
 header {
     background-color: #003476;
     color: #fff;
-    padding: 20px;
-    text-align: center;
-    width: 100%; /* Occupa tutta la larghezza */
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between; /* Titolo a sx, Bottoni a dx */
+    align-items: center;            /* Allineamento verticale */
+    width: 100%;
 }
 
-/* Stile per h1 nell'header */
 header h1 {
     margin: 0;
-    font-family: Arial; /* Font moderno */
+    font-family: Arial;
 }
 
-/* Stile per dropdown */
-.dropdown {
-    position: relative;
-    display: inline-block;
+/* Container bottoni lingua nell'header */
+.lang-buttons {
+    display: flex;
+    gap: 8px;
 }
 
-/* Stile per dropdown toggle */
-.dropdown-toggle {
+/* Stile bottoni header (bianco su blu) */
+.lang-btn {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 5px 12px;
     cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.lang-btn.active {
+    background-color: #ffffff;
+    color: #003476; /* Inversione colori quando attivo */
 }
 
 /* Stile per il main */
 main {
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Header, Content, Footer */
-    min-height: 100vh; /* Altezza della pagina pari al 100% dell'altezza dello schermo */
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 /* Stile per il container grid */
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Due colonne */
+    grid-template-columns: 1fr 2fr;
     gap: 10px;
     padding: 16px;
 }
 
-/* Stile per la foto */
 .photo {
-    text-align: center; /* Centra la foto orizzontalmente */
-}
-
-/* Stile per la bio */
-.bio {
-    width: 90%; /* Imposta la larghezza desiderata */
-    display: flex;
-    flex-direction: column;
-    font-family: Arial, sans-serif; /* Font moderno */
-    line-height: 1.6; /* Distanza tra le righe del testo */
-    text-align: justify; /* Giustifica il testo */
-}
-
-/* Stile per il titolo della bio */
-.bio h2 {
-    color: #003476; /* Colore del titolo */
-    font-size: 30px;
     text-align: center;
 }
 
-.bio h3 {
-    color: #003476; /* Colore del titolo */
-    font-size: 20px;
-    text-align: left;
-}
-
-/* Stile per il testo della bio */
-.bio p {
-    color: #003476; /* Colore del testo */
-    font-size: 20px; /* Dimensione del testo */
+.bio {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     text-align: justify;
 }
 
+.bio h2 {
+    color: #003476;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.bio p {
+    color: #003476;
+    font-size: 20px;
+}
+
 .contact-info {
-    font-family: Arial; /* Font moderno */
-    color: #003476; /* Colore del testo */
-    font-size: 18px; /* Dimensione del testo */
+    font-family: Arial;
+    color: #003476;
+    font-size: 18px;
 }
 
 /* Stile per il footer */
 footer {
-    position: fixed; /* Posiziona il footer in modo fisso */
-    bottom: 0; /* Posiziona il footer alla parte inferiore della finestra del browser */
+    position: fixed;
+    bottom: 0;
     left: 0;
     width: 100%;
     background-color: #003476;
     color: #fff;
     padding: 10px 20px;
     text-align: center;
-    font-family: Arial, sans-serif; /* Font moderno */
+    font-family: Arial, sans-serif;
     z-index: 1000;
 }
 
@@ -110,15 +117,13 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centrare verticalmente */
+    align-items: center;
 }
 
-/* Media query per schermi più larghi, ad esempio da PC */
 @media (min-width: 768px) {
     .navbar {
-        height: 50px; /* Altezza più ridotta per PC */
+        height: 50px;
     }
-
     .navbar ul li {
         padding: 20px;
     }
@@ -126,13 +131,9 @@ footer {
 
 .navbar ul {
     font-size: 20px;
-    text-align: center; /* Per centrare i link */
-    flex-wrap: wrap; /* Per consentire il wrapping dei link quando necessario */
     list-style-type: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: center; /* Per allineare i link al centro */
+    justify-content: center;
 }
 
 .navbar ul li {
@@ -142,107 +143,70 @@ footer {
 
 .navbar ul li a {
     color: white;
-    display: block;
     text-decoration: none;
 }
 
-.navbar ul li:last-child {
-    margin-right: 0; /* Rimuovere il margine dal'ultimo link */
-}
-
-/* Media query per schermi più stretti, ad esempio da telefono */
-@media (max-width: 767px) {
-    .navbar {
-        height: auto; /* Altezza automatica per telefono */
-    }
-
-    .navbar ul {
-        font-size: 18px;
-        flex-direction: column; /* Disporre i link in colonna */
-        align-items: center; /* Allineare i link al centro verticalmente */
-    }
-
-    .navbar ul li {
-        margin-right: 0; /* Rimuovere il margine dai link */
-        padding: 3px;
-    }
-}
-
-/* Stile per il contenitore delle icone social */
+/* Social icons */
 .social-icons {
-    display: flex; /* Utilizza Flexbox per posizionare gli elementi in orizzontale */
-    justify-content: center; /* Centra gli elementi orizzontalmente */
-    margin-top: 20px; /* Aggiungi spazio tra la bio e le icone */
-    margin-bottom: 20px; /* Aggiungi spazio tra la bio e le icone */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-/* Stile per le icone social */
 .social-icons a {
-    display: inline-block; /* Permette il controllo delle dimensioni */
-    margin: 0 10px; /* Spazio tra le icone */
+    margin: 0 10px;
 }
 
-/* Imposta le dimensioni desiderate per le icone */
 .social-icons a img {
-    width: 40px; /* Imposta la larghezza delle icone */
-    height: auto; /* Imposta l'altezza in base alla larghezza per mantenere l'aspetto proporzionato */
+    width: 40px;
+    height: auto;
 }
 
-/* Media query per dispositivi di larghezza massima di 768px (come tablet e smartphone) */
+/* Responsive Grid */
 @media screen and (max-width: 768px) {
-    .grid-container {
-        grid-template-columns: 1fr; /* Modifica la disposizione in una singola colonna */
-        justify-items: center; /* Allinea il contenuto al centro della colonna */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
     }
-
-    .photo {
-        grid-row: 1; /* Posiziona la foto sopra la biografia */
-        grid-column: 1; /* Posiziona la foto nella prima colonna */
+    
+    .grid-container {
+        grid-template-columns: 1fr;
     }
 
     .bio {
-        grid-row: 2; /* Posiziona la biografia sotto la foto */
-        grid-column: 1; /* Posiziona la biografia nella prima colonna */
-        text-align: center; /* Allinea il testo al centro */
+        width: 100%;
+        text-align: center;
     }
 }
 
-/* Stile per il main solo su dispositivi desktop */
 @media screen and (min-width: 769px) {
-    main {
-        min-height: 100vh; /* Altezza minima pari al 100% dell'altezza della finestra del browser */
-    }
-
-    /* Assicura che il footer sia posizionato alla fine della finestra del browser */
     main:after {
         content: "";
         display: block;
-        height: 100px; /* Altezza del footer */
+        height: 100px;
     }
 }
 
 /* PUBLICATION HTML ################################################################################################################## */
-/* Stile per le pubblicazioni */
+
 .publication {
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-top: 40px;
-    margin-bottom: 80px; /* Aumentato per non finire sotto il footer fisso */
+    margin: 40px;
+    margin-bottom: 80px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Stile per il titolo della pubblicazione */
 .publication h2 {
-    color: #003476; /* Colore del titolo */
-    font-size: 24px; /* Dimensione del titolo */
+    color: #003476;
+    font-size: 24px;
     margin-top: 25px;
 }
 
-/* Stile per il testo delle pubblicazioni */
 .publication p {
-    color: #003476; /* Colore del testo */
-    font-size: 18px; /* Dimensione del testo */
-    text-align: justify;
+    color: #003476;
+    font-size: 18px;
 }
 
 .abstract {
@@ -253,39 +217,33 @@ footer {
     border-radius: 8px;
 }
 
-/* Stile per il pulsante "Show Abstract" */
-.show-abstract-btn {
+.show-abstract-btn, .access-document-btn {
     margin-top: 5px;
-    background-color: transparent; /* Sfondo trasparente */
-    color: #003476; /* Colore del testo */
-    padding: 8px 15px; /* Spaziatura interna */
-    border: 1px solid #003476; /* Aggiunto bordo per visibilità */
-    border-radius: 20px; /* Bordo arrotondato */
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-    transition: background-color 0.3s, color 0.3s; /* Transizioni fluide */
-    font-size: 14px; /* Dimensione del testo */
+    background-color: transparent;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.show-abstract-btn {
+    color: #003476;
+    border: 1px solid #003476;
 }
 
 .show-abstract-btn:hover {
-    background-color: #003476; /* Cambia il colore di sfondo al passaggio del mouse */
-    color: #fff; /* Cambia il colore del testo al passaggio del mouse */
+    background-color: #003476;
+    color: #fff;
 }
 
-/* Stile per il pulsante "Access Document" */
 .access-document-btn {
-    margin-top: 5px;
-    background-color: transparent; /* Colore di sfondo */
     color: #0056b3;
-    padding: 8px 15px; /* Spaziatura interna */
-    border: 1px solid #0056b3; /* Aggiunto bordo */
-    border-radius: 20px; /* Bordo arrotondato */
-    cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-    transition: background-color 0.3s, color 0.3s; /* Effetto di transizione */
-    font-size: 14px; /* Dimensione del testo */
+    border: 1px solid #0056b3;
 }
 
 .access-document-btn:hover {
-    background-color: #0056b3; /* Colore di sfondo al passaggio del mouse */
+    background-color: #0056b3;
     color: #fff;
 }
 
@@ -295,79 +253,36 @@ footer {
     cursor: not-allowed;
 }
 
-/* bottoni Download CV */
-.download-cv img {
-    width: 40px; /* Regola la larghezza delle icone */
-    height: 40px; /* Regola l'altezza delle icone */
-    margin: 0 5px; /* Aggiunge spazio tra le icone */
-}
-  
-.download-cv img:hover {
-    opacity: 0.8; /* Riduce l'opacità al passaggio del mouse */
-}
-
-/* --- Sezione Language Switcher (Homepage) --- */
-.lang-switch-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+/* Riga finissima Anni */
+.year-marker {
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
-}
-
-.lang-buttons {
-    display: flex;
-    gap: 8px;
-}
-
-.lang-btn {
-    background-color: #f8f9fa;
-    border: 1px solid #003476;
+    margin-top: 40px;
     color: #003476;
-    padding: 6px 14px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: all 0.2s ease-in-out;
+    display: block;
+    width: 100%;
+    background-color: rgba(0, 52, 118, 0.05); /* Sfondo leggero */
+    padding-left: 10px;
 }
 
-.lang-btn:hover {
-    background-color: #e6eef7;
-}
-
-.lang-btn.active {
-    background-color: #003476;
-    color: white;
-}
-
-/* Gestione visibilità Biografia Homepage */
+/* Bio Homepage visibility */
 .bio-content {
     display: none;
     line-height: 1.7;
-    text-align: justify;
 }
 
 .bio-content.active {
     display: block;
 }
 
-/* Riga finissima per gli anni nelle pubblicazioni */
-.publication h2 {
-    color: #003476;
-    font-size: 24px;
-    margin-top: 40px;      /* Spazio sopra la riga */
-    margin-bottom: 15px;    /* Spazio tra l'anno e il primo paper */
-    border-bottom: 1px solid #eee; /* La riga grigio chiaro finissima */
-    padding-bottom: 10px;   /* Spazio tra il testo dell'anno e la riga */
-    display: block;         /* Assicura che la riga occupi tutta la larghezza */
-    width: 100%;
+/* Download CV icons */
+.download-cv img {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    transition: 0.2s;
 }
 
-.year-marker {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-    margin-top: 40px;
-    color: #003476;
+.download-cv img:hover {
+    opacity: 0.8;
 }
