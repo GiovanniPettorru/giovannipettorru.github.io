@@ -287,3 +287,39 @@ footer {
 .download-cv img:hover {
     opacity: 0.8;
 }
+
+/* --- Effetto Bandiera al passaggio del mouse --- */
+
+/* Quando passi sopra il tasto ITA */
+#btn-it:hover {
+    font-size: 0; /* Nasconde temporaneamente il testo ITA */
+}
+#btn-it:hover::after {
+    content: "🇮🇹"; /* Mostra la bandiera */
+    font-size: 18px; /* Dimensione della bandiera */
+}
+
+/* Quando passi sopra il tasto EN */
+#btn-en:hover {
+    font-size: 0;
+}
+#btn-en:hover::after {
+    content: "🇬🇧";
+    font-size: 18px;
+}
+
+/* Quando passi sopra il tasto FR */
+#btn-fr:hover {
+    font-size: 0;
+}
+#btn-fr:hover::after {
+    content: "🇫🇷";
+    font-size: 18px;
+}
+
+/* Opzionale: un piccolo effetto di transizione per rendere il cambio fluido */
+.lang-btn {
+    min-width: 45px; /* Evita che il bottone cambi larghezza durante l'hover */
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
