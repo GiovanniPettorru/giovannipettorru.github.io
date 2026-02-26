@@ -295,9 +295,48 @@ footer {
     font-size: 0; /* Nasconde temporaneamente il testo ITA */
 }
 
-#btn-it:hover::after { content: " 🇮🇹"; }
-#btn-en:hover::after { content: " 🇬🇧"; }
-#btn-fr:hover::after { content: " 🇫🇷"; }
+/* Stile base dei bottoni lingua */
+.lang-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Spazio fisso tra testo e bandiera */
+    min-width: 70px; /* Assicura una larghezza minima costante */
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Transizione fluida per colori e opacità */
+    overflow: hidden;
+}
+
+/* Gestione della bandiera */
+.flag {
+    opacity: 0; /* Invisibile di default ma occupa spazio */
+    transition: opacity 0.3s ease;
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* Effetto Hover: la bandiera appare dolcemente senza muovere il tasto */
+.lang-btn:hover .flag {
+    opacity: 1;
+}
+
+/* Quando il bottone è attivo, possiamo decidere se mostrare sempre la bandiera o no */
+.lang-btn.active .flag {
+    opacity: 1; /* Opzionale: mostra la bandiera fissa sulla lingua attiva */
+}
+
+/* Inversione colori per il tasto attivo */
+.lang-btn.active {
+    background-color: #ffffff;
+    color: #003476;
+}
 
 /* Opzionale: un piccolo effetto di transizione per rendere il cambio fluido */
 .lang-btn {
