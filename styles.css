@@ -338,13 +338,24 @@ footer {
     transition: all 0.2s ease-in-out;
 }
 
-/* Regola la dimensione dell'immagine titolo nell'header */
 #header-img {
-    height: 50px;
-    margin-left: 10px;
-    vertical-align: middle;
-    transition: all 0.3s ease; /* Rende il cambio lingua fluido visivamente */
-    filter: brightness(0) invert(1); 
+    height: 120px !important; /* Altezza fissa generosa */
+    width: auto !important;   /* Mantiene le proporzioni */
+    max-width: 400px;        /* Evita che diventi gigantesca su alcuni schermi */
+    display: block;
+    object-fit: contain;      /* Assicura che l'immagine non venga tagliata */
+    transition: all 0.3s ease;
+}
+
+/* Header flessibile per ospitare l'immagine grande */
+header {
+    background-color: #003476;
+    color: #fff;
+    padding: 10px 50px;       /* Ridotto padding verticale per compensare immagine grande */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    min-height: 150px;        /* Forza l'altezza minima dell'header */
 }
 
 /* Opzionale: Regola lo spazio dell'header per ospitare un'immagine più grande */
