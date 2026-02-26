@@ -344,3 +344,20 @@ footer {
     text-align: center;
     transition: all 0.2s ease-in-out;
 }
+
+/* Regola la dimensione dell'immagine titolo nell'header */
+#header-img {
+    height: 80px;      /* Aumenta questo valore finché non raggiungi la grandezza desiderata */
+    width: auto;       /* Mantiene le proporzioni originali del PNG */
+    display: block;    /* Evita spazi bianchi indesiderati sotto l'immagine */
+    transition: all 0.3s ease; /* Rende il cambio lingua fluido visivamente */
+    
+    /* Se le scritte nei PNG sono nere, usa questo per renderle bianche sul blu */
+    filter: brightness(0) invert(1); 
+}
+
+/* Opzionale: Regola lo spazio dell'header per ospitare un'immagine più grande */
+.main-header {
+    min-height: 120px; /* Assicura che l'header sia abbastanza alto */
+    padding: 10px 50px;
+}
