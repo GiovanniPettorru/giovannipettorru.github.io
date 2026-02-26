@@ -288,13 +288,6 @@ footer {
     opacity: 0.8;
 }
 
-/* --- Effetto Bandiera al passaggio del mouse --- */
-
-/* Quando passi sopra il tasto ITA */
-#btn-it:hover {
-    font-size: 0; /* Nasconde temporaneamente il testo ITA */
-}
-
 /* Stile base dei bottoni lingua */
 .lang-btn {
     display: inline-flex;
