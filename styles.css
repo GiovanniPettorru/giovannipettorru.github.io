@@ -363,3 +363,16 @@ header {
     min-height: 120px; /* Assicura che l'header sia abbastanza alto */
     padding: 10px 50px;
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* Immagine sopra, bottoni sotto */
+        padding: 20px;
+        min-height: auto;
+    }
+    
+    #header-img {
+        height: 80px !important; /* Leggermente più piccola su mobile */
+        margin-bottom: 15px;
+    }
+}
