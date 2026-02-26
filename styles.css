@@ -340,12 +340,10 @@ footer {
 
 /* Regola la dimensione dell'immagine titolo nell'header */
 #header-img {
-    height: 200px;      /* Aumenta questo valore finché non raggiungi la grandezza desiderata */
-    width: auto;       /* Mantiene le proporzioni originali del PNG */
-    display: block;    /* Evita spazi bianchi indesiderati sotto l'immagine */
+    height: 50px;
+    margin-left: 10px;
+    vertical-align: middle;
     transition: all 0.3s ease; /* Rende il cambio lingua fluido visivamente */
-    
-    /* Se le scritte nei PNG sono nere, usa questo per renderle bianche sul blu */
     filter: brightness(0) invert(1); 
 }
 
