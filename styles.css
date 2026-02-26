@@ -6,26 +6,28 @@
     box-sizing: border-box;
 }
 
-/* Header con layout Flexbox per Titolo + Bottoni */
+/* Header Istituzionale: Titolo a sx, Bottoni a dx con spazio dai bordi */
 header {
     background-color: #003476;
     color: #fff;
-    padding: 20px 40px;
+    padding: 20px 50px; /* Spazio generoso dai bordi laterali */
     display: flex;
-    justify-content: space-between; /* Titolo a sx, Bottoni a dx */
-    align-items: center;            /* Allineamento verticale */
+    justify-content: space-between; 
+    align-items: center;            
     width: 100%;
 }
 
 header h1 {
     margin: 0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
 }
 
 /* Container bottoni lingua nell'header */
-.lang-buttons {
+.lang-buttons-header {
     display: flex;
-    gap: 8px;
+    gap: 10px;
 }
 
 /* Stile bottoni header (bianco su blu) */
@@ -33,7 +35,7 @@ header h1 {
     background-color: transparent;
     border: 1px solid #ffffff;
     color: #ffffff;
-    padding: 5px 12px;
+    padding: 6px 14px;
     cursor: pointer;
     font-size: 13px;
     font-weight: bold;
@@ -42,7 +44,7 @@ header h1 {
 }
 
 .lang-btn:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .lang-btn.active {
@@ -163,13 +165,13 @@ footer {
     height: auto;
 }
 
-/* Responsive Grid */
+/* Responsive Grid & Header */
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
         gap: 15px;
         text-align: center;
-        padding: 20px;
+        padding: 20px; /* Ridotto per mobile */
     }
     
     .grid-container {
@@ -253,16 +255,15 @@ footer {
     cursor: not-allowed;
 }
 
-/* Riga finissima Anni */
+/* Riga finissima Anni con sfondo leggero */
 .year-marker {
     border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
+    padding: 10px 15px;
     margin-top: 40px;
     color: #003476;
     display: block;
     width: 100%;
-    background-color: rgba(0, 52, 118, 0.05); /* Sfondo leggero */
-    padding-left: 10px;
+    background-color: rgba(0, 52, 118, 0.05); 
 }
 
 /* Bio Homepage visibility */

@@ -11,7 +11,7 @@
 <body>
 
     <header class="main-header">
-    <h1 id="header-title">Homepage</h1>
+    <h1 id="header-title">Profile</h1>
     <div class="lang-buttons-header">
         <button id="btn-en" class="lang-btn active" onclick="changeLang('en')">EN</button>
         <button id="btn-it" class="lang-btn" onclick="changeLang('it')">ITA</button>
@@ -110,9 +110,24 @@
 
             // Traduzioni Interfaccia
             const translations = {
-                'en': { header: "Homepage", navHome: "Home", navPub: "Publications", bioTitle: "Biography" },
-                'it': { header: "Pagina Principale", navHome: "Inizio", navPub: "Pubblicazioni", bioTitle: "Biografia" },
-                'fr': { header: "Page d'accueil", navHome: "Accueil", navPub: "Publications", bioTitle: "Biographie" }
+                'en': { 
+                    header: "Profile", 
+                    navHome: "Home", 
+                    navPub: "Publications", 
+                    bioTitle: "Biography" 
+                },
+                'it': { 
+                    header: "Profilo", 
+                    navHome: "Home", 
+                    navPub: "Pubblicazioni", 
+                    bioTitle: "Biografia" 
+                },
+                'fr': { 
+                    header: "Profil", 
+                    navHome: "Accueil", 
+                    navPub: "Publications", 
+                    bioTitle: "Biographie" 
+                }
             };
 
             // Aggiornamento Titoli e Menu
