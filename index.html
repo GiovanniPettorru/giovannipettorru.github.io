@@ -60,16 +60,26 @@
                                   
             </div>
             <div class="bio">
+            <div class="bio-header" style="display: flex; justify-content: space-between; align-items: center;">
                 <h2>Short biography</h2>
+                <div class="lang-switch">
+                    <button onclick="setLanguage('en')" id="btn-en" class="lang-btn active">EN</button>
+                    <button onclick="setLanguage('it')" id="id-it" class="lang-btn">ITA</button>
+                </div>
+            </div>
+
+            <div id="bio-en" class="bio-content">
                 <p>
-                    <strong>Giovanni Pettorru</strong> received a B.Sc. degree in Electrical and Electronic Engineering from the University of Cagliari in 2020, with a thesis on the <i>Implementation of a Parking Occupancy Detection System Based on Magnetometer Sensor</i>. In 2022, he earned a Master’s Degree in Internet Engineering from the same university, presenting a thesis titled <i>Secure and Low-Latency Communications Based on WebSocket and QUIC in the Internet of Things Scenario</i>.
-                    In February 2026, he earned his Ph.D. in Electronic and Computer Engineering from the University of Cagliari, within the Department of Electrical and Electronic Engineering (DIEE/UdR CNIT). His doctoral thesis, titled <i>Energy-Eﬃcient and Trustworthy Location-Based Services for Next-Generation IoT</i>, focused on network security and GPS-free localization strategies in green IoT environments. <br><br>
-                    Giovanni is an active member of IEEE. He has demonstrated exceptional communication skills by placing third in the 1st Three-Minute Thesis (3MT) competition at IEEE ICC 2023 and participating as one of the 15 finalists in the Four-Minute Thesis (4MT) at IEEE Globecom 2024 and 2025. These competitions challenge researchers to convey their work effectively to a non-specialist audience in just a few minutes. His strong performance in these contests highlights his ability to communicate complex ideas clearly and precisely. Giovanni has also contributed to the scientific community by serving as a PC member at the AQ-IoT 2023 conference. <br><br>
-                    Giovanni made significant contributions to the POSIDONIA project (POSition Information with Digital twin Offloading in trustworthy Next-generation Internet Applications). Within the Next-Generation Internet (NGI) vision, this project tackles green and human-centric network design across the Fog-Edge-Cloud continuum. His work focuses on creating a distributed architecture for reliable GPS-free localization to support Location-Based Services (LBS) in Internet of Things (IoT) applications.
-                    This strong technological foundation fueled his entrepreneurial vision, starting with Agricultural Geolocation and Resource Optimization (AGROS), a system designed to support agricultural decision-making through location-based services (LBS). Built upon the core pillars of the POSIDONIA project, AGROS earned an award from the University of Cagliari (e.INS Project) and achieved a top 10 finish in the Start Cup 2024 Sardegna competition. The project was subsequently recognized as one of the top 10 ideas in the AgriFuture program (Sardegna Ricerche), receiving dedicated support for market validation.
-                    His commitment to innovation continued at the Start Cup 2025, where the project Location-based Emergency Notification System (LENS) also achieved a top 10 finish and received the "Climate Change" special mention for its innovative approach to detecting extreme natural events. Most recently, in early 2026, his project GreenShield was selected for the SERICS - Lab2Bay program. This achievement granted him entry into an exclusive acceleration path in Silicon Valley at the INNOVIT hub, aiming to validate his resource-aware security solutions within the US market.</p>
+                    <strong>Giovanni Pettorru</strong> received a B.Sc. degree in Electrical and Electronic Engineering... 
+                    </p>
             </div>
+
+            <div id="bio-it" class="bio-content" style="display: none;">
+                <p>
+                    <strong>Giovanni Pettorru</strong> ha conseguito la Laurea Triennale in Ingegneria Elettrica ed Elettronica presso l'Università di Cagliari nel 2020...
+                    </p>
             </div>
+        </div>
         </div>
     </main>
     
