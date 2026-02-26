@@ -6,84 +6,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giovanni Pettorru | Ph.D. Student | University of Cagliari</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Aggiunta di Font Awesome per le icone -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+    <style>
+        /* Stili per lo switch della lingua */
+        .lang-switch-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .lang-buttons {
+            display: flex;
+            gap: 5px;
+        }
+
+        .lang-btn {
+            background-color: #f8f9fa;
+            border: 1px solid #003476;
+            color: #003476;
+            padding: 5px 12px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #e6eef7;
+        }
+
+        .lang-btn.active {
+            background-color: #003476;
+            color: white;
+        }
+
+        /* Nascondi il contenuto non attivo */
+        .bio-content {
+            display: none;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .bio-content.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1> Homepage </h1>
     </header>
 
-    <!-- Navigation bar -->
     <nav class="navbar">
         <ul>
             <li><a href="publications.html">Publications</a></li>
-            <!-- <li><a href="research.html"> Research Topics</a></li> -->
-            <!-- <li><a href="professionalactivities.html">Professional Experience</a></li> -->
-          </ul>
+        </ul>
     </nav>
  
     <main>
         <div class="grid-container">
             <div class="photo">
                 <img src="img/gp.png" alt="Foto di Giovanni Pettorru" style="width:50%">
-                <div div class="contact-info">
+                <div class="contact-info">
                     <p>Giovanni Pettorru, Ph.D.<br>
                     Department of Electrical and Electronic Engineering<br>
                     DIEE, University of Cagliari, Italy<br>
                     Via Marengo, 3 - 09123 Cagliari<br>
-                    Email: giovanni.pettorru@unica.it</p>
+                    Email: <a href="mailto:giovanni.pettorru@unica.it">giovanni.pettorru@unica.it</a></p>
                 </div>
-                <!-- Social icons -->
+
                 <div class="social-icons">
                     <a href="https://github.com/GiovanniPettorru"><img src="img/github.png" alt="github"></a>
                     <a href="https://www.linkedin.com/in/giovannipettorru/"><img src="img/linkedin_icon.png" alt="LinkedIn"></a>
                     <a href="https://www.scopus.com/authid/detail.uri?authorId=57220178493"><img src="img/scopus_icon.png" alt="Scopus"></a>
                     <a href="https://scholar.google.com/citations?hl=it&user=YRMlkTAAAAAJ"><img src="img/googlescholar_icon.png" alt="Google Scholar"></a>
                     <a href="https://orcid.org/0009-0002-3207-2669"><img src="img/orcid.png" alt="Orcid"></a>
-                    <a href="mailto:giovanni.pettorru@unica.it"><img src="img/mail.png" alt="MailOutlook"></a>
+                    <a href="mailto:giovanni.pettorru@unica.it"><img src="img/mail.png" alt="Mail"></a>
                 </div>
 
                 <div class="download-cv" style="margin-top: 10px; text-align: center;">
                     <p><span style="color: #003476; font-family: Arial; font-size: 18px"><strong>Download CV</strong></span></p>
                     <span style="display: flex; justify-content: center; margin-top: 3px;">
                       <a href="CV/EN CV - Giovanni Pettorru.pdf" download="giovannipettorru_cv_en.pdf">
-                        <img src="img/EN.png" alt="Download CV in inglese" class="social-icon">
+                        <img src="img/EN.png" alt="EN" class="social-icon" style="width:30px; margin: 0 5px;">
                       </a>
                       <a href="CV/ITA CV - Giovanni Pettorru.pdf" download="giovannipettorru_cv_it.pdf">
-                        <img src="img/IT.png" alt="Download CV in italiano" class="social-icon">
+                        <img src="img/IT.png" alt="IT" class="social-icon" style="width:30px; margin: 0 5px;">
                       </a>
                     </span>
                 </div>
-                  
-                                  
             </div>
+
             <div class="bio">
-            <div class="bio-header" style="display: flex; justify-content: space-between; align-items: center;">
-                <h2>Short biography</h2>
-                <div class="lang-switch">
-                    <button onclick="setLanguage('en')" id="btn-en" class="lang-btn active">EN</button>
-                    <button onclick="setLanguage('it')" id="id-it" class="lang-btn">ITA</button>
+                <div class="lang-switch-container">
+                    <h2 id="bio-title">Short biography</h2>
+                    <div class="lang-buttons">
+                        <button class="lang-btn active" onclick="changeLang('en')">EN</button>
+                        <button class="lang-btn" onclick="changeLang('it')">ITA</button>
+                    </div>
+                </div>
+
+                <div id="bio-en" class="bio-content active">
+                    <p>
+                        <strong>Giovanni Pettorru</strong> received a B.Sc. degree in Electrical and Electronic Engineering from the University of Cagliari in 2020, with a thesis on the <i>Implementation of a Parking Occupancy Detection System Based on Magnetometer Sensor</i>. In 2022, he earned a Master’s Degree in Internet Engineering from the same university, presenting a thesis titled <i>Secure and Low-Latency Communications Based on WebSocket and QUIC in the Internet of Things Scenario</i>.
+                        In February 2026, he earned his Ph.D. in Electronic and Computer Engineering from the University of Cagliari, within the Department of Electrical and Electronic Engineering (DIEE/UdR CNIT). His doctoral thesis, titled <i>Energy-Eﬃcient and Trustworthy Location-Based Services for Next-Generation IoT</i>, focused on network security and GPS-free localization strategies in green IoT environments. <br><br>
+                        Giovanni is an active member of IEEE. He has demonstrated exceptional communication skills by placing third in the 1st Three-Minute Thesis (3MT) competition at IEEE ICC 2023 and participating as one of the 15 finalists in the Four-Minute Thesis (4MT) at IEEE Globecom 2024 and 2025. Giovanni has also contributed to the scientific community by serving as a PC member at the AQ-IoT 2023 conference. <br><br>
+                        Giovanni made significant contributions to the POSIDONIA project. This strong technological foundation fueled his entrepreneurial vision, starting with AGROS, which earned an award from the University of Cagliari (e.INS Project) and achieved a top 10 finish in the Start Cup 2024 Sardegna. His commitment continued at Start Cup 2025 with the LENS project, which received the "Climate Change" special mention. Most recently, in early 2026, his project GreenShield was selected for the SERICS - Lab2Bay program, granting him entry into an exclusive acceleration path in Silicon Valley at the INNOVIT hub.
+                    </p>
+                </div>
+
+                <div id="bio-it" class="bio-content">
+                    <p>
+                        <strong>Giovanni Pettorru</strong> ha conseguito la Laurea Triennale in Ingegneria Elettrica ed Elettronica presso l'Università di Cagliari nel 2020, con una tesi sull'<i>Implementazione di un sistema di rilevamento dei parcheggi basato su sensori magnetometrici</i>. Nel 2022 ha ottenuto la Laurea Magistrale in Internet Engineering presso lo stesso ateneo, discutendo una tesi dal titolo <i>Comunicazioni sicure e a bassa latenza basate su WebSocket e QUIC nello scenario Internet of Things</i>. 
+                        Nel febbraio 2026 ha conseguito il Dottorato di ricerca in Ingegneria Elettronica e Informatica (DIEE/UdR CNIT). La sua tesi di dottorato, intitolata <i>Energy-Eﬃcient and Trustworthy Location-Based Services for Next-Generation IoT</i>, si è concentrata sulla sicurezza di rete e sulle strategie di localizzazione GPS-free in ambienti IoT eco-sostenibili. <br><br>
+                        Giovanni è un membro attivo dell'IEEE. Ha dimostrato eccellenti doti comunicative classificandosi al terzo posto nella competizione "Three-Minute Thesis" (3MT) all'IEEE ICC 2023 e partecipando come finalista alla "Four-Minute Thesis" (4MT) a IEEE Globecom 2024 e 2025. Ha inoltre contribuito alla comunità scientifica come membro del comitato di programma (PC member) della conferenza AQ-IoT 2023. <br><br>
+                        Ha fornito contributi significativi al progetto POSIDONIA. Questa solida base tecnologica ha alimentato la sua visione imprenditoriale, a partire da AGROS, progetto premiato dall'Università di Cagliari (e.INS) e classificatosi tra i primi 10 alla Start Cup Sardegna 2024. Il suo impegno è proseguito alla Start Cup 2025 con il progetto LENS, che ha ricevuto la menzione speciale "Climate Change". All'inizio del 2026, il suo progetto GreenShield è stato selezionato per il programma SERICS - Lab2Bay, permettendogli di accedere a un percorso di accelerazione esclusivo nella Silicon Valley presso l'hub INNOVIT.
+                    </p>
                 </div>
             </div>
-
-            <div id="bio-en" class="bio-content">
-                <p>
-                    <strong>Giovanni Pettorru</strong> received a B.Sc. degree in Electrical and Electronic Engineering... 
-                    </p>
-            </div>
-
-            <div id="bio-it" class="bio-content" style="display: none;">
-                <p>
-                    <strong>Giovanni Pettorru</strong> ha conseguito la Laurea Triennale in Ingegneria Elettrica ed Elettronica presso l'Università di Cagliari nel 2020...
-                    </p>
-            </div>
-        </div>
         </div>
     </main>
     
     <footer>
         <p>&copy; 2025 Giovanni Pettorru. All rights reserved.</p>
     </footer>
+
+    <script>
+        function changeLang(lang) {
+            // Seleziona i contenuti
+            const bioEn = document.getElementById('bio-en');
+            const bioIt = document.getElementById('bio-it');
+            const bioTitle = document.getElementById('bio-title');
+            const buttons = document.querySelectorAll('.lang-btn');
+
+            // Rimuovi classe active da tutti i bottoni
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            if (lang === 'it') {
+                bioEn.classList.remove('active');
+                bioIt.classList.add('active');
+                bioTitle.innerText = "Breve biografia";
+                // Aggiungi active al bottone ITA
+                buttons[1].classList.add('active');
+            } else {
+                bioIt.classList.remove('active');
+                bioEn.classList.add('active');
+                bioTitle.innerText = "Short biography";
+                // Aggiungi active al bottone EN
+                buttons[0].classList.add('active');
+            }
+        }
+    </script>
 </body>
+</html>
