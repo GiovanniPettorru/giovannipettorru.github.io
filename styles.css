@@ -379,7 +379,7 @@ header {
 
 /* Container principale CV - Ristretto e Centrato */
 .download-cv-container {
-    width: 75%;               /* Dimensione ridotta rispetto alla colonna */
+    width: 50%;               /* Dimensione ridotta rispetto alla colonna */
     margin: 25px auto 0 auto; /* Centratura orizzontale (auto a sx e dx) */
     padding: 15px;            /* Padding ridotto per adattarsi alla nuova larghezza */
     background-color: rgba(0, 52, 118, 0.03); 
