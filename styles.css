@@ -438,9 +438,7 @@ header {
     font-family: Arial, sans-serif;
     font-size: 16px;          /* Titolo proporzionato */
     font-weight: bold;
-    margin-bottom: 12px;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 /* Mobile: allinea tutto al centro se lo spazio è poco */
