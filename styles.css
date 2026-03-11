@@ -385,7 +385,7 @@ header {
     
     /* --- BORDI ARROTONDATI --- */
     border: 1px solid rgba(0, 52, 118, 0.1); /* Un bordo finissimo per definire la forma */
-    border-radius: 15px;                      /* Arrotondamento dei bordi */
+    border-radius: 45px;                      /* Arrotondamento dei bordi */
     
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* Opzionale: un'ombra leggerissima per dare profondità */
