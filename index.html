@@ -59,25 +59,25 @@
                     <p class="cv-main-title">Download CV</p>
                     
                     <div class="cv-section">
-                        <span class="cv-type">Scientific</span>
+                        <span id="cv-sci-label" class="cv-type">Scientific</span>
                         <div class="cv-links">
                             <a href="CV/EN CV Scientific - Giovanni Pettorru.pdf" download="giovannipettorru_cv_sci_en.pdf">
-                                <img src="img/EN.png" alt="CV Scientific EN" class="cv-icon" style="width:40px; margin: 0 5px;">
+                                <img src="img/EN.png" alt="CV Scientific EN" class="cv-icon">
                             </a>
                             <a href="CV/ITA CV Scientifico - Giovanni Pettorru.pdf" download="giovannipettorru_cv_sci_it.pdf">
-                                <img src="img/IT.png" alt="CV Scientifico IT" class="cv-icon" style="width:40px; margin: 0 5px;">
+                                <img src="img/IT.png" alt="CV Scientifico IT" class="cv-icon">
                             </a>
                         </div>
                     </div>
 
                     <div class="cv-section">
-                        <span class="cv-type">Industrial</span>
+                        <span id="cv-ind-label" class="cv-type">Industrial</span>
                         <div class="cv-links">
                             <a href="CV/EN CV Industrial - Giovanni Pettorru.pdf" download="giovannipettorru_cv_ind_en.pdf">
-                                <img src="img/EN.png" alt="CV Industrial EN" class="cv-icon" style="width:40px; margin: 0 5px;">
+                                <img src="img/EN.png" alt="CV Industrial EN" class="cv-icon">
                             </a>
                             <a href="CV/ITA CV Industriale - Giovanni Pettorru.pdf" download="giovannipettorru_cv_ind_it.pdf">
-                                <img src="img/IT.png" alt="CV Industriale IT" class="cv-icon" style="width:40px; margin: 0 5px;">
+                                <img src="img/IT.png" alt="CV Industriale IT" class="cv-icon">
                             </a>
                         </div>
                     </div>
@@ -128,44 +128,48 @@
     </footer>
 
     <script>
-        function changeLang(lang) {
-        // 1. Salva la scelta
+    function changeLang(lang) {
         localStorage.setItem('selectedLang', lang);
 
-        // 2. Mappa delle risorse (Immagini e Menu)
         const translations = {
             'en': { 
                 img: "img/PROFILE.png", 
                 navHome: "Home", 
                 navPub: "Publications", 
-                bioTitle: "Biography" 
+                bioTitle: "Biography",
+                sci: "Scientific",
+                ind: "Industrial"
             },
             'it': { 
                 img: "img/PROFILO.png", 
                 navHome: "Home", 
                 navPub: "Pubblicazioni", 
-                bioTitle: "Biografia" 
+                bioTitle: "Biografia",
+                sci: "Scientifico",
+                ind: "Industriale"
             },
             'fr': { 
                 img: "img/PROFIL.png", 
                 navHome: "Accueil", 
                 navPub: "Publications", 
-                bioTitle: "Biographie" 
+                bioTitle: "Biographie",
+                sci: "Scientifique",
+                ind: "Industriel"
             }
         };
 
-        // 3. Cambia l'immagine nell'header
+        // Aggiorna Immagine Header
         const headerImg = document.getElementById('header-img');
         if (headerImg) {
             headerImg.src = translations[lang].img;
-            headerImg.alt = lang; // Aggiorna l'alt text per accessibilità
+            headerImg.alt = lang;
         }
 
-        // 4. Aggiorna Menu (nav-home e nav-pub devono avere questi ID)
+        // Aggiorna Navigazione
         if (document.getElementById('nav-home')) document.getElementById('nav-home').innerText = translations[lang].navHome;
         if (document.getElementById('nav-pub')) document.getElementById('nav-pub').innerText = translations[lang].navPub;
 
-        // 5. Se sei in Homepage, aggiorna Bio
+        // Aggiorna Bio e Titolo Bio
         const bioTitle = document.getElementById('bio-title');
         if (bioTitle) {
             bioTitle.innerText = translations[lang].bioTitle;
@@ -173,7 +177,13 @@
             document.getElementById('bio-' + lang).classList.add('active');
         }
 
-        // 6. Stato Bottoni
+        // --- NUOVO: Aggiorna Etichette CV ---
+        const sciLabel = document.getElementById('cv-sci-label');
+        const indLabel = document.getElementById('cv-ind-label');
+        if (sciLabel) sciLabel.innerText = translations[lang].sci;
+        if (indLabel) indLabel.innerText = translations[lang].ind;
+
+        // Aggiorna Stato Bottoni
         document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
         const activeBtn = document.getElementById('btn-' + lang);
         if (activeBtn) activeBtn.classList.add('active');
