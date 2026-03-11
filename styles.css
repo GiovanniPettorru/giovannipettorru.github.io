@@ -380,20 +380,15 @@ header {
 /* Container principale CV */
 .download-cv-container {
     margin-top: 25px;
-    padding: 15px;
-    background-color: rgba(0, 52, 118, 0.03); /* Un velo di azzurro istituzionale */
-    border-radius: 8px;
+    padding: 20px;
+    background-color: rgba(0, 52, 118, 0.03); /* Sfondo leggero istituzionale */
+    
+    /* --- BORDI ARROTONDATI --- */
+    border: 1px solid rgba(0, 52, 118, 0.1); /* Un bordo finissimo per definire la forma */
+    border-radius: 15px;                      /* Arrotondamento dei bordi */
+    
     text-align: center;
-}
-
-.cv-main-title {
-    color: #003476;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* Opzionale: un'ombra leggerissima per dare profondità */
 }
 
 /* Singola sezione (Scientifico/Industriale) */
@@ -402,8 +397,8 @@ header {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 12px;
-    padding: 5px 10px;
-    border-bottom: 1px solid rgba(0, 52, 118, 0.1);
+    padding: 8px 5px;
+    border-bottom: 1px solid rgba(0, 52, 118, 0.08);
 }
 
 .cv-section:last-child {
@@ -435,6 +430,20 @@ header {
 .cv-icon:hover {
     transform: scale(1.1);
     opacity: 0.8;
+}
+
+.cv-section:last-child {
+    border-bottom: none; /* Rimuove la riga dall'ultimo elemento per non sporcare l'arrotondamento */
+}
+
+.cv-main-title {
+    color: #003476;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Mobile: allinea tutto al centro se lo spazio è poco */
