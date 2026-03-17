@@ -496,6 +496,18 @@
     </footer>
 
    <script>
+        function toggleAbstract(id) {
+            const el = document.getElementById('abstract' + id);
+            const btn = el.previousElementSibling.querySelector('.show-abstract-btn');
+            if (el.style.display === 'none' || el.style.display === '') {
+                el.style.display = 'block';
+                btn.textContent = 'Hide Abstract';
+            } else {
+                el.style.display = 'none';
+                btn.textContent = 'Show Abstract';
+            }
+        }
+        
         function changeLang(lang) {
         // 1. Salva la scelta
         localStorage.setItem('selectedLang', lang);
