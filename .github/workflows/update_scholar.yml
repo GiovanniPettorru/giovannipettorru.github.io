@@ -1,0 +1,66 @@
+name: Update Google Scholar Stats
+
+on:
+  schedule:
+    # Ogni lunedì alle 06:00 UTC
+    - cron: '0 6 * * 1'
+  workflow_dispatch: # permette di eseguirlo manualmente dalla tab Actions
+
+jobs:
+  update-scholar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install scholarly
+
+      - name: Fetch Scholar stats
+        run: |
+          python - <<'EOF'
+          import json
+          from datetime import date
+          from scholarly import scholarly
+
+          SCHOLAR_ID = "YRMlkTAAAAAJ"  # ID dal tuo profilo Google Scholar
+
+          try:
+              author = scholarly.search_author_id(SCHOLAR_ID)
+              scholarly.fill(author, sections=["basics", "indices"])
+
+              data = {
+                  "citations": author.get("citedby", 0),
+                  "h_index":   author.get("hindex", 0),
+                  "i10_index": author.get("i10index", 0),
+                  "updated":   str(date.today())
+              }
+          except Exception as e:
+              print(f"Error fetching Scholar data: {e}")
+              # Legge il file esistente per non sovrascrivere con zeri
+              try:
+                  with open("scholar_data.json", "r") as f:
+                      data = json.load(f)
+              except:
+                  data = {"citations": 0, "h_index": 0, "i10_index": 0, "updated": str(date.today())}
+
+          with open("scholar_data.json", "w") as f:
+              json.dump(data, f, indent=2)
+
+          print(f"Scholar data saved: {data}")
+          EOF
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scholar_data.json
+          git diff --staged --quiet || git commit -m "chore: update Google Scholar stats [skip ci]"
+          git push
