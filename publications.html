@@ -24,6 +24,7 @@
         <ul>
             <li><a href="index.html" id="nav-home">Home</a></li>
             <li><a href="publications.html" id="nav-pub">Publications</a></li>
+            <li><a href="projects.html" id="nav-proj">Projects</a></li>
         </ul>
     </nav>
 
@@ -506,7 +507,8 @@
                 labelScholar: 'Scholar Metrics',
                 labelCitations: 'Citations',
                 labelFilter: 'Filter by Topic',
-                filterAll: 'All'
+                filterAll: 'All',
+                navProj: 'Projects'
             },
             it: {
                 img: 'img/PUBBLICAZIONI.png',
@@ -514,7 +516,8 @@
                 labelScholar: 'Metriche Scholar',
                 labelCitations: 'Citazioni',
                 labelFilter: 'Filtra per Tema',
-                filterAll: 'Tutti'
+                filterAll: 'Tutti',
+                navProj: 'Progetti'
             },
             fr: {
                 img: 'img/PUBLICATIONS.png',
@@ -522,8 +525,9 @@
                 labelScholar: 'Métriques Scholar',
                 labelCitations: 'Citations',
                 labelFilter: 'Filtrer par Thème',
-                filterAll: 'Tous'
-            }
+                filterAll: 'Tous',
+                navProj: 'Projets'
+            },
         };
 
         const t = translations[lang];
@@ -533,6 +537,7 @@
 
         if (document.getElementById('nav-home')) document.getElementById('nav-home').innerText = t.navHome;
         if (document.getElementById('nav-pub'))  document.getElementById('nav-pub').innerText  = t.navPub;
+        if (document.getElementById('nav-proj')) document.getElementById('nav-proj').innerText = t.navProj;
 
         document.getElementById('label-scholar').textContent   = t.labelScholar;
         document.getElementById('label-citations').textContent = t.labelCitations;

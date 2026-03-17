@@ -31,6 +31,7 @@
         <ul>
             <li><a href="index.html" id="nav-home">Home</a></li>
             <li><a href="publications.html" id="nav-pub">Publications</a></li>
+            <li><a href="projects.html" id="nav-proj">Projects</a></li>
         </ul>
     </nav>
  
@@ -140,15 +141,16 @@
                 navPub: "Publications", 
                 bioTitle: "Biography",
                 sci: "Scientific",
-                ind: "Industrial"
-            },
+                ind: "Industrial",
+                navProj: 'Projects' },
             'it': { 
                 img: "img/PROFILO.png", 
                 navHome: "Home", 
                 navPub: "Pubblicazioni", 
                 bioTitle: "Biografia",
                 sci: "Scientifico",
-                ind: "Industriale"
+                ind: "Industriale",
+                navProj: 'Progetti'
             },
             'fr': { 
                 img: "img/PROFIL.png", 
@@ -156,7 +158,8 @@
                 navPub: "Publications", 
                 bioTitle: "Biographie",
                 sci: "Scientifique",
-                ind: "Industriel"
+                ind: "Industriel",
+                navProj: 'Projets' 
             }
         };
 
@@ -170,6 +173,7 @@
         // Aggiorna Navigazione
         if (document.getElementById('nav-home')) document.getElementById('nav-home').innerText = translations[lang].navHome;
         if (document.getElementById('nav-pub')) document.getElementById('nav-pub').innerText = translations[lang].navPub;
+        if (document.getElementById('nav-proj')) document.getElementById('nav-proj').innerText = translations[lang].navProj;
 
         // Aggiorna Bio e Titolo Bio
         const bioTitle = document.getElementById('bio-title');
