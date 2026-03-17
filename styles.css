@@ -736,7 +736,13 @@ footer {
 /* ── MAIN PUBLICATION AREA ── */
 .pub-main { padding-left: 40px; }
 
-.pub-entry { transition: opacity 0.2s ease; }
+.pub-entry {
+    transition: opacity 0.2s ease;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 28px;
+}
+.pub-entry:last-of-type { border-bottom: none; }
 .pub-entry.hidden { display: none; }
 
 .no-results {
