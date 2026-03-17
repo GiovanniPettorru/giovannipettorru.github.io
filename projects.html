@@ -11,7 +11,10 @@
 <body>
     <header class="main-header">
         <div class="header-logo">
-            <img id="header-img" src="img/PROJECTS.png" alt="Projects" style="height: 100px; width: auto;">
+            <div class="header-text">
+                <span class="header-name">Giovanni Pettorru</span>
+                <span class="header-page" id="header-page">Projects</span>
+            </div>
         </div>
         <div class="lang-buttons-header">
             <button id="btn-en" class="lang-btn active" onclick="changeLang('en')">EN <span class="flag">🇬🇧</span></button>
@@ -260,7 +263,6 @@
 
         const t = {
             en: {
-                img: 'img/PROJECTS.png',
                 navHome: 'Home', navPub: 'Publications', navProj: 'Projects',
                 title: 'Projects',
                 subtitle: 'Research and entrepreneurial projects in IoT, localization, and security',
@@ -284,7 +286,6 @@
                 gsProgram: 'Program', gsMarket: 'Target Market'
             },
             it: {
-                img: 'img/PROGETTI.png',
                 navHome: 'Home', navPub: 'Pubblicazioni', navProj: 'Progetti',
                 title: 'Progetti',
                 subtitle: 'Progetti di ricerca e imprenditoriali in IoT, localizzazione e sicurezza',
@@ -308,7 +309,6 @@
                 gsProgram: 'Programma', gsMarket: 'Mercato Target'
             },
             fr: {
-                img: 'img/PROJETS.png',
                 navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets',
                 title: 'Projets',
                 subtitle: 'Projets de recherche et entrepreneuriaux en IoT, localisation et sécurité',
@@ -335,14 +335,13 @@
 
         const l = t[lang];
 
-        const hi = document.getElementById('header-img');
-        if (hi) { hi.src = l.img; hi.alt = lang; }
-
+        if (document.getElementById('header-page')) document.getElementById('header-page').innerText = l.navProj;
         ['nav-home','nav-pub','nav-proj'].forEach((id, i) => {
             const el = document.getElementById(id);
             if (el) el.innerText = [l.navHome, l.navPub, l.navProj][i];
         });
 
+        document.getElementById('header-page').innerText   = l.navProj;
         document.getElementById('proj-title').innerText    = l.title;
         document.getElementById('proj-subtitle').innerText = l.subtitle;
 
