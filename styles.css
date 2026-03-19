@@ -356,20 +356,6 @@ main { min-height: calc(100vh - 178px); padding-bottom: 80px; }
     color: var(--navy);
     font-size: 32px;
     font-weight: 600;
-    margin-bottom: 28px;
-    padding-bottom: 16px;
-    border-bottom: 1px solid var(--border-gold);
-    position: relative;
-}
-
-.bio h2::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 48px;
-    height: 2px;
-    background: var(--gold);
 }
 
 .bio-content { display: none; }
