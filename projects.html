@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Giovanni Pettorru</title>
+    <meta name="description" content="Research and entrepreneurial projects by Giovanni Pettorru: POSIDONIA, AGROS, LENS, GreenShield — IoT, localization, and security.">
+    <meta name="keywords" content="POSIDONIA, AGROS, LENS, GreenShield, IoT projects, GPS-free, smart agriculture, emergency notification, Giovanni Pettorru">
+    <meta name="author" content="Giovanni Pettorru">
+    <meta property="og:title" content="Projects | Giovanni Pettorru">
+    <meta property="og:description" content="Research and entrepreneurial projects in IoT, localization, and security — POSIDONIA, AGROS, LENS, GreenShield.">
+    <meta property="og:url" content="https://giovannipettorru.github.io/projects.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://giovannipettorru.github.io/img/gp.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://giovannipettorru.github.io/projects.html">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -28,7 +38,6 @@
             <li><a href="index.html" id="nav-home">Home</a></li>
             <li><a href="publications.html" id="nav-pub">Publications</a></li>
             <li><a href="projects.html" id="nav-proj">Projects</a></li>
-            <li><a href="talks.html" id="nav-talks">Awards & Talks</a></li>
         </ul>
     </nav>
 
@@ -264,7 +273,7 @@
 
         const t = {
             en: {
-                navHome: 'Home', navPub: 'Publications', navProj: 'Projects', navTalks: 'Awards & Talks',
+                navHome: 'Home', navPub: 'Publications', navProj: 'Projects',
                 title: 'Projects',
                 subtitle: 'Research and entrepreneurial projects in IoT, localization, and security',
                 completed: 'Completed', active: 'Active', concept: 'Concept',
@@ -287,7 +296,7 @@
                 gsProgram: 'Program', gsMarket: 'Target Market'
             },
             it: {
-                navHome: 'Home', navPub: 'Pubblicazioni', navProj: 'Progetti', navTalks: 'Premi & Talk',
+                navHome: 'Home', navPub: 'Pubblicazioni', navProj: 'Progetti',
                 title: 'Progetti',
                 subtitle: 'Progetti di ricerca e imprenditoriali in IoT, localizzazione e sicurezza',
                 completed: 'Concluso', active: 'Attivo', concept: 'Concept',
@@ -310,7 +319,7 @@
                 gsProgram: 'Programma', gsMarket: 'Mercato Target'
             },
             fr: {
-                navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets', navTalks: 'Prix & Talks',
+                navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets',
                 title: 'Projets',
                 subtitle: 'Projets de recherche et entrepreneuriaux en IoT, localisation et sécurité',
                 completed: 'Terminé', active: 'Actif', concept: 'Concept',
@@ -336,13 +345,12 @@
 
         const l = t[lang];
 
-        if (document.getElementById('header-page')) document.getElementById('header-page').innerText = l.navProj;
+        document.getElementById('header-page').innerText   = l.navProj;
         ['nav-home','nav-pub','nav-proj'].forEach((id, i) => {
             const el = document.getElementById(id);
             if (el) el.innerText = [l.navHome, l.navPub, l.navProj][i];
         });
-
-        document.getElementById('header-page').innerText   = l.navProj;
+        if (document.getElementById('nav-talks')) document.getElementById('nav-talks').innerText = l.navTalks;
         document.getElementById('proj-title').innerText    = l.title;
         document.getElementById('proj-subtitle').innerText = l.subtitle;
 
