@@ -50,6 +50,20 @@
                 <p id="talks-subtitle">Competitions, recognitions, conference presentations, and academic service</p>
             </div>
 
+            <!-- ── AUTO PHOTO CAROUSEL ── -->
+            <div class="talks-photo-carousel" id="talks-carousel-wrap">
+                <div class="talks-carousel-stage" id="talks-carousel-stage">
+                    <!-- slides injected by JS -->
+                </div>
+                <div class="talks-carousel-bar">
+                    <div class="talks-carousel-dots" id="talks-carousel-dots"></div>
+                    <div class="talks-carousel-controls">
+                        <button class="carousel-btn" onclick="talksCarouselPrev()"><svg viewBox="0 0 12 12"><polyline points="8,2 4,6 8,10"/></svg></button>
+                        <button class="carousel-btn" onclick="talksCarouselNext()"><svg viewBox="0 0 12 12"><polyline points="4,2 8,6 4,10"/></svg></button>
+                    </div>
+                </div>
+            </div>
+
             <!-- ── AWARDS & RECOGNITION ── -->
             <div class="talks-section">
                 <div class="talks-section-label" id="label-awards">Awards & Recognition</div>
@@ -59,14 +73,14 @@
                         <div class="talks-card-year">2026</div>
                         <div class="talks-card-title">SERICS – Lab2Bay Program</div>
                         <div class="talks-card-sub">GreenShield selected for Silicon Valley acceleration at the INNOVIT hub, San Francisco</div>
-                        <span class="talks-card-tag award" id="tag-entrepreneurship">Entrepreneurship</span>
+                        <span class="talks-card-tag award">Entrepreneurship</span>
                     </div>
 
                     <div class="talks-card type-award">
                         <div class="talks-card-year">2025</div>
                         <div class="talks-card-title">Top 10 + Special Mention "Climate Change"</div>
                         <div class="talks-card-sub">Start Cup Sardegna 2025 · LENS project</div>
-                        <span class="talks-card-tag award" id="tag-competition1">Competition</span>
+                        <span class="talks-card-tag award">Competition</span>
                     </div>
 
                     <div class="talks-card type-award">
@@ -100,10 +114,17 @@
                 </div>
             </div>
 
-            <!-- ── TALKS & COMPETITIONS ── -->
+            <!-- ── TALKS ── -->
             <div class="talks-section">
                 <div class="talks-section-label" id="label-talks">Talks</div>
                 <div class="talks-card-grid">
+
+                    <div class="talks-card type-talk">
+                        <div class="talks-card-year">2025</div>
+                        <div class="talks-card-title">POSIDONIA Project Pitch – MWC Barcelona 2025</div>
+                        <div class="talks-card-sub">Mobile World Congress · Barcelona, Spain · March 2025</div>
+                        <span class="talks-card-tag talk">Pitch</span>
+                    </div>
 
                     <div class="talks-card type-talk">
                         <div class="talks-card-year">2024</div>
@@ -147,7 +168,6 @@
             <!-- ── CONFERENCE PRESENTATIONS ── -->
             <div class="talks-section">
                 <div class="talks-section-label" id="label-conf">Conference Presentations</div>
-
                 <div class="conf-table">
 
                     <div class="conf-row speaker">
@@ -220,74 +240,113 @@
         <svg viewBox="0 0 16 16"><polyline points="2,11 8,5 14,11"/></svg>
     </button>
 
-    <footer>
-        <p>&copy; 2026 Giovanni Pettorru. All rights reserved.</p>
-    </footer>
+    <footer><p>&copy; 2026 Giovanni Pettorru. All rights reserved.</p></footer>
 
     <script>
+    // ── BACK TO TOP ──
     const btt = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-        btt.classList.toggle('visible', window.scrollY > 300);
-    }, { passive: true });
+    window.addEventListener('scroll', () => { btt.classList.toggle('visible', window.scrollY > 300); }, { passive: true });
 
-    function changeLang(lang) {
-        localStorage.setItem('selectedLang', lang);
+    // ── AUTO PHOTO CAROUSEL ──
+    let _tIdx = 0, _tTimer = null, _tPhotos = [];
 
-        const t = {
-            en: {
-                page: 'Awards & Talks',
-                navHome: 'Home', navPub: 'Publications', navProj: 'Projects', navTalks: 'Awards & Talks',
-                title: 'Awards & Talks',
-                subtitle: 'Competitions, recognitions, conference presentations, and academic service',
-                labelAwards: 'Awards & Recognition',
-                labelTalks: 'Talks',
-                labelService: 'Service & Roles',
-                labelConf: 'Conference Presentations'
-            },
-            it: {
-                page: 'Premi & Talk',
-                navHome: 'Home', navPub: 'Pubblicazioni', navProj: 'Progetti', navTalks: 'Premi & Talk',
-                title: 'Premi & Talk',
-                subtitle: 'Riconoscimenti, talk, presentazioni a conferenze e servizio accademico',
-                labelAwards: 'Premi e Riconoscimenti',
-                labelTalks: 'Talk',
-                labelService: 'Servizio e Ruoli',
-                labelConf: 'Presentazioni a Conferenze'
-            },
-            fr: {
-                page: 'Prix & Talks',
-                navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets', navTalks: 'Prix & Talks',
-                title: 'Prix & Talks',
-                subtitle: 'Distinctions, talks, présentations à des conférences et service académique',
-                labelAwards: 'Prix & Distinctions',
-                labelTalks: 'Talks',
-                labelService: 'Service & Rôles',
-                labelConf: 'Présentations à des Conférences'
-            }
-        };
+    async function initTalksCarousel() {
+        const wrap = document.getElementById('talks-carousel-wrap');
+        try {
+            const res = await fetch('img/Talks/index.json?t=' + Date.now());
+            _tPhotos = await res.json();
+        } catch(e) {
+            // If no index.json or empty, hide the carousel entirely
+            wrap.style.display = 'none';
+            return;
+        }
 
-        const l = t[lang];
+        if (!_tPhotos || _tPhotos.length === 0) {
+            wrap.style.display = 'none';
+            return;
+        }
 
-        if (document.getElementById('header-page'))  document.getElementById('header-page').innerText  = l.page;
-        if (document.getElementById('nav-home'))      document.getElementById('nav-home').innerText      = l.navHome;
-        if (document.getElementById('nav-pub'))       document.getElementById('nav-pub').innerText       = l.navPub;
-        if (document.getElementById('nav-proj'))      document.getElementById('nav-proj').innerText      = l.navProj;
-        if (document.getElementById('nav-talks'))     document.getElementById('nav-talks').innerText     = l.navTalks;
-        if (document.getElementById('talks-title'))   document.getElementById('talks-title').innerText   = l.title;
-        if (document.getElementById('talks-subtitle'))document.getElementById('talks-subtitle').innerText= l.subtitle;
-        if (document.getElementById('label-awards'))  document.getElementById('label-awards').innerText  = l.labelAwards;
-        if (document.getElementById('label-talks'))   document.getElementById('label-talks').innerText   = l.labelTalks;
-        if (document.getElementById('label-service')) document.getElementById('label-service').innerText = l.labelService;
-        if (document.getElementById('label-conf'))    document.getElementById('label-conf').innerText    = l.labelConf;
+        const stage = document.getElementById('talks-carousel-stage');
+        const dotsEl = document.getElementById('talks-carousel-dots');
 
-        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
-        const activeBtn = document.getElementById('btn-' + lang);
-        if (activeBtn) activeBtn.classList.add('active');
+        // Build slides
+        _tPhotos.forEach((filename, i) => {
+            const slide = document.createElement('div');
+            slide.className = 'talks-carousel-slide' + (i === 0 ? ' active' : '');
+            slide.id = 'tslide-' + i;
+            const img = document.createElement('img');
+            img.src = 'img/Talks/' + filename;
+            img.alt = 'Presentation photo ' + (i + 1);
+            img.loading = 'lazy';
+            slide.appendChild(img);
+            stage.appendChild(slide);
+
+            // Build dot
+            const dot = document.createElement('button');
+            dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('onclick', 'talksCarouselGoTo(' + i + ')');
+            dotsEl.appendChild(dot);
+        });
+
+        // Start autoplay — 4 seconds per slide
+        _tTimer = setInterval(() => talksCarouselNext(), 4000);
+
+        // Pause on hover
+        stage.addEventListener('mouseenter', () => clearInterval(_tTimer));
+        stage.addEventListener('mouseleave', () => { _tTimer = setInterval(() => talksCarouselNext(), 4000); });
     }
 
-    window.onload = function () {
+    function talksCarouselGoTo(idx) {
+        document.querySelectorAll('.talks-carousel-slide')[_tIdx].classList.remove('active');
+        document.querySelectorAll('#talks-carousel-dots .carousel-dot')[_tIdx].classList.remove('active');
+        _tIdx = (idx + _tPhotos.length) % _tPhotos.length;
+        document.querySelectorAll('.talks-carousel-slide')[_tIdx].classList.add('active');
+        document.querySelectorAll('#talks-carousel-dots .carousel-dot')[_tIdx].classList.add('active');
+    }
+
+    function talksCarouselNext() { talksCarouselGoTo(_tIdx + 1); }
+    function talksCarouselPrev() { talksCarouselGoTo(_tIdx - 1); }
+
+    // ── LANGUAGE ──
+    function changeLang(lang) {
+        localStorage.setItem('selectedLang', lang);
+        const T = {
+            en: {
+                page:'Awards & Talks', navHome:'Home', navPub:'Publications', navProj:'Projects', navTalks:'Awards & Talks',
+                title:'Awards & Talks', subtitle:'Competitions, recognitions, conference presentations, and academic service',
+                labelAwards:'Awards & Recognition', labelTalks:'Talks', labelService:'Service & Roles', labelConf:'Conference Presentations'
+            },
+            it: {
+                page:'Premi & Talk', navHome:'Home', navPub:'Pubblicazioni', navProj:'Progetti', navTalks:'Premi & Talk',
+                title:'Premi & Talk', subtitle:'Riconoscimenti, talk, presentazioni a conferenze e servizio accademico',
+                labelAwards:'Premi e Riconoscimenti', labelTalks:'Talk', labelService:'Servizio e Ruoli', labelConf:'Presentazioni a Conferenze'
+            },
+            fr: {
+                page:'Prix & Talks', navHome:'Accueil', navPub:'Publications', navProj:'Projets', navTalks:'Prix & Talks',
+                title:'Prix & Talks', subtitle:'Distinctions, talks, présentations à des conférences et service académique',
+                labelAwards:'Prix & Distinctions', labelTalks:'Talks', labelService:'Service & Rôles', labelConf:'Présentations à des Conférences'
+            }
+        };
+        const l = T[lang];
+        document.getElementById('header-page').innerText   = l.page;
+        document.getElementById('nav-home').innerText      = l.navHome;
+        document.getElementById('nav-pub').innerText       = l.navPub;
+        document.getElementById('nav-proj').innerText      = l.navProj;
+        document.getElementById('nav-talks').innerText     = l.navTalks;
+        document.getElementById('talks-title').innerText   = l.title;
+        document.getElementById('talks-subtitle').innerText= l.subtitle;
+        document.getElementById('label-awards').innerText  = l.labelAwards;
+        document.getElementById('label-talks').innerText   = l.labelTalks;
+        document.getElementById('label-service').innerText = l.labelService;
+        document.getElementById('label-conf').innerText    = l.labelConf;
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById('btn-' + lang).classList.add('active');
+    }
+
+    window.onload = function() {
         const savedLang = localStorage.getItem('selectedLang') || 'en';
         changeLang(savedLang);
+        initTalksCarousel();
     };
     </script>
 </body>
