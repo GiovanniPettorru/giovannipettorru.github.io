@@ -1787,5 +1787,5 @@ footer {
 }
 
 @media screen and (max-width: 700px) {
-    .carousel-stage { height: 200px; }
+    .carousel-stage { height: 500px; }
 }
