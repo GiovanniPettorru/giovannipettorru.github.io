@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="lang-buttons-header">
-            <button id="btn-en" class="lang-btn active" onclick="changeLang('en')">EN <span class="flag">🇬🇧</span></button>
+            <button id="btn-en" class="lang-btn" onclick="changeLang('en')">EN <span class="flag">🇬🇧</span></button>
             <button id="btn-it" class="lang-btn" onclick="changeLang('it')">ITA <span class="flag">🇮🇹</span></button>
             <button id="btn-fr" class="lang-btn" onclick="changeLang('fr')">FR <span class="flag">🇫🇷</span></button>
         </div>
@@ -28,7 +28,6 @@
             <li><a href="index.html" id="nav-home">Home</a></li>
             <li><a href="publications.html" id="nav-pub">Publications</a></li>
             <li><a href="projects.html" id="nav-proj">Projects</a></li>
-            <li><a href="talks.html" id="nav-talks">Talks & Awards</a></li>
         </ul>
     </nav>
 
@@ -65,15 +64,11 @@
                         </div>
                         <div class="project-info-item">
                             <span class="project-info-label" id="pos-label-pi">Principal Investigator</span>
-                            <span class="project-info-value">M. Martalò</span>
+                            <span class="project-info-value">Prof. Marco Martalò</span>
                         </div>
                         <div class="project-info-item">
                             <span class="project-info-label" id="pos-label-team">Team</span>
                             <span class="project-info-value">V. Pilloni, F. Marcello, G. Pettorru</span>
-                        </div>
-                        <div class="project-info-item">
-                            <span class="project-info-label" id="pos-label-international">International Partners</span>
-                            <span class="project-info-value">F. Esposito</span>
                         </div>
                         <div class="project-info-item">
                             <span class="project-info-label" id="pos-label-areas">Research Areas</span>
@@ -84,10 +79,15 @@
                     <span class="project-awards-title" id="pos-awards-title">Recognition</span>
                     <div class="project-awards">
                         <span class="award-tag">NGI Sargasso – European Funding</span>
+                        <span class="award-tag">CNIT – UdR Cagliari</span>
                         <span class="award-tag">International Collaboration – SLU, USA</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://www.linkedin.com/company/posidonia-project" target="_blank" class="project-link">
+                        <a href="publications.html" class="project-link" id="pos-link-papers">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="10" height="10" rx="1"/><line x1="3" y1="4" x2="9" y2="4"/><line x1="3" y1="6" x2="9" y2="6"/><line x1="3" y1="8" x2="6" y2="8"/></svg>
+                            Related Papers
+                        </a>
+                        <a href="https://www.linkedin.com/in/giovannipettorru/" target="_blank" class="project-link">
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
                             Project Portal
                         </a>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="project-body">
                     <p class="project-description" id="agr-desc">
-                        AGROS is a digital platform based on IoT technologies and next-generation GPS-free Location-Based Services designed to support precision agriculture. Built on the POSIDONIA architecture, it integrates a distributed network of IoT sensor nodes, an autonomous GPS-free rover (Lynxmotion platform with LIDAR-based navigation), and an edge-cloud infrastructure for real-time data processing. The system enables automated, context-aware, and human-centric agricultural operations — monitoring soil moisture, temperature, UV radiation, and capturing geolocated images for AI-based pest detection. Validated through two experimental testbeds in Sardinia (Dorgali and Sardara), the project targets small and medium agricultural enterprises seeking affordable precision farming solutions without complex infrastructure.
+                        AGROS is a digital platform based on IoT technologies and next-generation GPS-free Location-Based Services designed to support precision agriculture. Built on the POSIDONIA architecture, it integrates a distributed network of IoT sensor nodes, an autonomous GPS-free rover (Lynxmotion platform with LIDAR-based navigation), and an edge-cloud infrastructure for real-time data processing. The system enables automated, context-aware, and human-centric agricultural operations — monitoring soil moisture, temperature, UV radiation, and capturing geolocated images for AI-based pest detection. Validated through two experimental testbeds in Sardinia (Dorgali and Sardara), the project targets small and medium agricultural enterprises seeking affordable precision farming solutions without complex GPS infrastructure.
                     </p>
 
                     <div class="project-info-grid">
@@ -121,10 +121,6 @@
                         <div class="project-info-item">
                             <span class="project-info-label" id="agr-label-team">Team</span>
                             <span class="project-info-value">G. Pettorru, F. Marcello, V. Pilloni, M. Martalò</span>
-                        </div>
-                        <div class="project-info-item">
-                            <span class="project-info-label" id="agr-label-collaborators">Collaboratori</span>
-                            <span class="project-info-value">F. Carta</span>
                         </div>
                         <div class="project-info-item">
                             <span class="project-info-label" id="agr-label-trl">TRL</span>
@@ -139,13 +135,13 @@
                         <span class="award-tag">Top 10 – AgriFuture (Sardegna Ricerche)</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://www.sardegnaricerche.it/index.php?xsl=370&s=459807&v=2&c=3169&qr=1&vd=2&t=3&sb=1" target="_blank" class="project-link">
+                        <a href="https://www.sardegnaricerche.it" target="_blank" class="project-link">
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
                             Sardegna Ricerche
                         </a>
-                        <a href="https://www.startcupsardegna.it/edizioni?anno=2024" target="_blank" class="project-link">
-                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
-                            Start Cup
+                        <a href="publications.html" class="project-link">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="10" height="10" rx="1"/><line x1="3" y1="4" x2="9" y2="4"/><line x1="3" y1="6" x2="9" y2="6"/><line x1="3" y1="8" x2="6" y2="8"/></svg>
+                            Related Papers
                         </a>
                     </div>
                 </div>
@@ -171,10 +167,6 @@
 
                     <div class="project-info-grid">
                         <div class="project-info-item">
-                            <span class="project-info-label" id="lens-label-team">Team</span>
-                            <span class="project-info-value">F. Carta, G. Pettorru, F. Esposito,F. Marcello, V. Pilloni, M. Martalò</span>
-                        </div>
-                        <div class="project-info-item">
                             <span class="project-info-label" id="lens-label-trl">TRL</span>
                             <span class="project-info-value">3 — Experimental proof of concept</span>
                         </div>
@@ -190,7 +182,7 @@
                         <span class="award-tag">Special Mention – Climate Change</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://www.startcupsardegna.it/edizioni?anno=2025" target="_blank" class="project-link">
+                        <a href="https://www.startcup.it" target="_blank" class="project-link">
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
                             Start Cup
                         </a>
@@ -218,12 +210,8 @@
 
                     <div class="project-info-grid">
                         <div class="project-info-item">
-                            <span class="project-info-label" id="gs-label-trl">TRL</span>
-                            <span class="project-info-value">3 — Experimental proof of concept</span>
-                        </div>
-                        <div class="project-info-item">
-                            <span class="project-info-label" id="gs-label-team">Team</span>
-                            <span class="project-info-value">G. Pettorru, L. Pisu, L. Regano, D. Maiorca, M. Martalò</span>
+                            <span class="project-info-label" id="gs-label-program">Program</span>
+                            <span class="project-info-value">SERICS – Lab2Bay · Silicon Valley acceleration at INNOVIT</span>
                         </div>
                         <div class="project-info-item">
                             <span class="project-info-label" id="gs-label-market">Target Market</span>
@@ -241,9 +229,13 @@
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
                             SERICS
                         </a>
-                        <a href="https://innovitsf.com/" target="_blank" class="project-link">
+                        <a href="https://innovit.org" target="_blank" class="project-link">
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
                             INNOVIT
+                        </a>
+                        <a href="publications.html" class="project-link">
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="10" height="10" rx="1"/><line x1="3" y1="4" x2="9" y2="4"/><line x1="3" y1="6" x2="9" y2="6"/><line x1="3" y1="8" x2="6" y2="8"/></svg>
+                            Related Papers
                         </a>
                     </div>
                 </div>
