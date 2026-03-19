@@ -18,15 +18,9 @@
             </div>
         </div>
         <div class="lang-buttons-header">
-            <button id="btn-en" class="lang-btn active" onclick="changeLang('en')">
-                EN <span class="flag">🇬🇧</span>
-            </button>
-            <button id="btn-it" class="lang-btn" onclick="changeLang('it')">
-                ITA <span class="flag">🇮🇹</span>
-            </button>
-            <button id="btn-fr" class="lang-btn" onclick="changeLang('fr')">
-                FR <span class="flag">🇫🇷</span>
-            </button>
+            <button id="btn-en" class="lang-btn active" onclick="changeLang('en')">EN <span class="flag">🇬🇧</span></button>
+            <button id="btn-it" class="lang-btn" onclick="changeLang('it')">ITA <span class="flag">🇮🇹</span></button>
+            <button id="btn-fr" class="lang-btn" onclick="changeLang('fr')">FR <span class="flag">🇫🇷</span></button>
         </div>
     </header>
 
@@ -35,7 +29,7 @@
             <li><a href="index.html" id="nav-home">Home</a></li>
             <li><a href="publications.html" id="nav-pub">Publications</a></li>
             <li><a href="projects.html" id="nav-proj">Projects</a></li>
-            <li><a href="talks.html" id="nav-talks">Talks & Awards</a></li>
+            <li><a href="talks.html" id="nav-talks">Awards & Talks</a></li>
         </ul>
     </nav>
 
@@ -88,43 +82,70 @@
             </div>
 
             <div class="bio">
-                <h2 id="bio-title">Biography</h2>
+                <div class="bio-header">
+                    <h2 id="bio-title">Biography</h2>
+                    <div class="bio-toggle-wrap">
+                        <button class="bio-toggle-btn active" id="btn-short" onclick="setBioMode('short')" data-label-en="Short" data-label-it="Breve" data-label-fr="Courte">Short</button>
+                        <button class="bio-toggle-btn" id="btn-full" onclick="setBioMode('full')" data-label-en="Full" data-label-it="Completa" data-label-fr="Complète">Full</button>
+                    </div>
+                </div>
 
-                <div id="bio-en" class="bio-content active">
+                <!-- ── SHORT BIO ── -->
+                <div id="bio-short-en" class="bio-content active">
+                    <p>
+                        <strong>Giovanni Pettorru</strong> is a Ph.D. in Electronic and Computer Engineering from the University of Cagliari (2026). His research focuses on <i>GPS-free localization</i>, <i>network security</i>, and <i>energy-efficient IoT systems</i> — with a particular emphasis on trustworthy Location-Based Services for next-generation networks across the Fog-Edge-Cloud continuum.<br><br>
+                        He has authored over 15 peer-reviewed publications in IEEE journals and conferences, and his work spans topics including QUIC-based secure communications, RSS-based multilateration, traffic classification via CNNs, and IoT security against jamming and request smuggling attacks.<br><br>
+                        Beyond research, Giovanni translates technology into impact: his projects AGROS, LENS, and GreenShield have earned competitive recognition at national and international level, including a Silicon Valley acceleration through the SERICS Lab2Bay program at the INNOVIT hub.
+                    </p>
+                </div>
+
+                <div id="bio-short-it" class="bio-content">
+                    <p>
+                        <strong>Giovanni Pettorru</strong> è Dottore di Ricerca in Ingegneria Elettronica e Informatica presso l'Università di Cagliari (2026). La sua ricerca si concentra su <i>localizzazione GPS-free</i>, <i>sicurezza di rete</i> e <i>sistemi IoT energy-efficient</i>, con particolare attenzione ai Location-Based Services affidabili per le reti di nuova generazione nel continuum Fog-Edge-Cloud.<br><br>
+                        Ha pubblicato oltre 15 articoli peer-reviewed su riviste e conferenze IEEE. I suoi lavori spaziano da comunicazioni sicure basate su QUIC, a multilaterazione RSS, classificazione del traffico con CNN, fino alla sicurezza IoT contro attacchi di jamming e request smuggling.<br><br>
+                        Oltre alla ricerca, Giovanni traduce la tecnologia in impatto concreto: i suoi progetti AGROS, LENS e GreenShield hanno ottenuto riconoscimenti a livello nazionale e internazionale, tra cui un percorso di accelerazione in Silicon Valley tramite il programma SERICS Lab2Bay presso l'hub INNOVIT.
+                    </p>
+                </div>
+
+                <div id="bio-short-fr" class="bio-content">
+                    <p>
+                        <strong>Giovanni Pettorru</strong> est Docteur en Génie Électronique et Informatique de l'Université de Cagliari (2026). Ses recherches portent sur la <i>localisation sans GPS</i>, la <i>sécurité des réseaux</i> et les <i>systèmes IoT à faible consommation</i>, avec un accent particulier sur les services de localisation fiables pour les réseaux de nouvelle génération dans le continuum Fog-Edge-Cloud.<br><br>
+                        Il a publié plus de 15 articles évalués par des pairs dans des revues et conférences IEEE. Ses travaux couvrent les communications sécurisées basées sur QUIC, la multilatération RSS, la classification du trafic par CNN, et la sécurité IoT contre les attaques de brouillage et de request smuggling.<br><br>
+                        Au-delà de la recherche, Giovanni transforme la technologie en impact : ses projets AGROS, LENS et GreenShield ont obtenu des distinctions nationales et internationales, dont une accélération en Silicon Valley via le programme SERICS Lab2Bay au hub INNOVIT.
+                    </p>
+                </div>
+
+                <!-- ── FULL BIO ── -->
+                <div id="bio-full-en" class="bio-content">
                     <p>
                         <strong>Giovanni Pettorru</strong> received a B.Sc. degree in Electrical and Electronic Engineering from the University of Cagliari in 2020, with a thesis on the <i>Implementation of a Parking Occupancy Detection System Based on Magnetometer Sensor</i>. In 2022, he earned a Master's Degree in Internet Engineering from the same university, presenting a thesis titled <i>Secure and Low-Latency Communications Based on WebSocket and QUIC in the Internet of Things Scenario</i>.
-                        In February 2026, he earned his Ph.D. in Electronic and Computer Engineering from the University of Cagliari, within the Department of Electrical and Electronic Engineering (DIEE/UdR CNIT). His doctoral thesis, titled <i>Energy-Eﬃcient and Trustworthy Location-Based Services for Next-Generation IoT</i>, focused on network security and GPS-free localization strategies in green IoT environments. <br><br>
-                        Giovanni is an active member of IEEE. He has demonstrated exceptional communication skills by placing third in the 1st Three-Minute Thesis (3MT) competition at IEEE ICC 2023 and participating as one of the 15 finalists in the Four-Minute Thesis (4MT) at IEEE Globecom 2024 and 2025. These competitions challenge researchers to convey their work effectively to a non-specialist audience in just a few minutes. His strong performance in these contests highlights his ability to communicate complex ideas clearly and precisely. Giovanni has also contributed to the scientific community by serving as a PC member at the AQ-IoT 2023 conference.
-                        He is currently the Web and Social Media Chair for the IEEE ComSoc Italy Chapter (2026–Present) and served as a member of the Organizing Committee for IEEE MeditCom 2026.<br><br>
-                        Giovanni made significant contributions to the POSIDONIA project (POSition Information with Digital twin Offloading in trustworthy Next-generation Internet Applications). Within the Next-Generation Internet (NGI) vision, this project tackles green and human-centric network design across the Fog-Edge-Cloud continuum. His work focuses on creating a distributed architecture for reliable GPS-free localization to support Location-Based Services (LBS) in Internet of Things (IoT) applications.
-                        This strong technological foundation fueled his entrepreneurial vision, starting with Agricultural Geolocation and Resource Optimization (AGROS), a system designed to support agricultural decision-making through location-based services (LBS). Built upon the core pillars of the POSIDONIA project, AGROS earned an award from the University of Cagliari (e.INS Project) and achieved a top 10 finish in the Start Cup 2024 Sardegna competition. The project was subsequently recognized as one of the top 10 ideas in the AgriFuture program (Sardegna Ricerche), receiving dedicated support for market validation.
-                        His commitment to innovation continued at the Start Cup 2025, where the project Location-based Emergency Notification System (LENS) also achieved a top 10 finish and received the "Climate Change" special mention for its innovative approach to detecting extreme natural events. Most recently, in early 2026, his project GreenShield was selected for the SERICS - Lab2Bay program. This achievement granted him entry into an exclusive acceleration path in Silicon Valley at the INNOVIT hub, aiming to validate his resource-aware security solutions within the US market.
+                        In February 2026, he earned his Ph.D. in Electronic and Computer Engineering from the University of Cagliari, within the Department of Electrical and Electronic Engineering (DIEE/UdR CNIT). His doctoral thesis, titled <i>Energy-Efficient and Trustworthy Location-Based Services for Next-Generation IoT</i>, focused on network security and GPS-free localization strategies in green IoT environments.<br><br>
+                        Giovanni is an active member of IEEE. He has demonstrated exceptional communication skills by placing third in the 1st Three-Minute Thesis (3MT) competition at IEEE ICC 2023 and participating as one of the 15 finalists in the Four-Minute Thesis (4MT) at IEEE Globecom 2024 and 2025. He has also contributed to the scientific community by serving as a PC member at the AQ-IoT 2023 conference, as Web and Social Media Chair for the IEEE ComSoc Italy Chapter (2026–present), and as a member of the Organizing Committee for IEEE MeditCom 2026.<br><br>
+                        Giovanni made significant contributions to the POSIDONIA project (POSition Information with Digital twin Offloading in trustworthy Next-generation Internet Applications). Within the Next-Generation Internet (NGI) vision, this project tackles green and human-centric network design across the Fog-Edge-Cloud continuum, focusing on a distributed architecture for reliable GPS-free localization to support Location-Based Services (LBS) in IoT applications.
+                        This strong technological foundation fueled his entrepreneurial vision. AGROS earned an award from the University of Cagliari (e.INS Project) and achieved a top 10 finish at Start Cup 2024 Sardegna, followed by recognition as one of the top 10 ideas in the AgriFuture program (Sardegna Ricerche). His project LENS achieved a top 10 finish at Start Cup 2025 and received the "Climate Change" special mention. Most recently, GreenShield was selected for the SERICS Lab2Bay program, granting him entry into an exclusive acceleration path in Silicon Valley at the INNOVIT hub.
                     </p>
                 </div>
 
-                <div id="bio-it" class="bio-content">
+                <div id="bio-full-it" class="bio-content">
                     <p>
                         <strong>Giovanni Pettorru</strong> ha conseguito la Laurea Triennale in Ingegneria Elettrica ed Elettronica presso l'Università di Cagliari nel 2020, con una tesi sull'<i>Implementazione di un sistema di rilevamento dell'occupazione dei parcheggi basato su sensori magnetometrici</i>. Nel 2022, ha ottenuto la Laurea Magistrale in Internet Engineering presso lo stesso ateneo, discutendo una tesi dal titolo <i>Comunicazioni sicure e a bassa latenza basate su WebSocket e QUIC nello scenario Internet of Things</i>.
-                        Nel febbraio 2026, ha conseguito il Dottorato di ricerca in Ingegneria Elettronica e Informatica presso l'Università di Cagliari, all'interno del Dipartimento di Ingegneria Elettrica ed Elettronica (DIEE/UdR CNIT). La sua tesi di dottorato, intitolata <i>Energy-Eﬃcient and Trustworthy Location-Based Services for Next-Generation IoT</i>, si è focalizzata sulla sicurezza di rete e sulle strategie di localizzazione GPS-free in ambienti IoT eco-sostenibili. <br><br>
-                        Giovanni è un membro attivo dell'IEEE. Ha dimostrato eccezionali doti comunicative classificandosi al terzo posto nella prima competizione "Three-Minute Thesis" (3MT) all'IEEE ICC 2023 e partecipando come uno dei 15 finalisti alla "Four-Minute Thesis" (4MT) presso IEEE Globecom 2024 e 2025. Queste competizioni sfidano i ricercatori a trasmettere efficacemente il proprio lavoro a un pubblico non specialistico in pochi minuti. Le sue ottime prestazioni in questi contest sottolineano la sua capacità di comunicare idee complesse in modo chiaro e preciso. Giovanni ha inoltre contribuito alla comunità scientifica servendo come membro del comitato di programma (PC member) alla conferenza AQ-IoT 2023.
-                        Attualmente ricopre il ruolo di Web and Social Media Chair per l'IEEE ComSoc Italy Chapter (2026–Presente) ed è stato membro del Comitato Organizzativo di IEEE MeditCom 2026.<br><br>
-                        Giovanni ha fornito contributi significativi al progetto POSIDONIA (POSition Information with Digital twin Offloading in trustworthy Next-generation Internet Applications). All'interno della visione "Next-Generation Internet" (NGI), questo progetto affronta la progettazione di reti green e antropocentriche attraverso il continuum Fog-Edge-Cloud. Il suo lavoro si concentra sulla creazione di un'architettura distribuita per una localizzazione GPS-free affidabile a supporto dei servizi basati sulla posizione (LBS) nelle applicazioni Internet of Things (IoT).
-                        Questa solida base tecnologica ha alimentato la sua visione imprenditoriale, a partire da Agricultural Geolocation and Resource Optimization (AGROS), un sistema progettato per supportare il processo decisionale in agricoltura attraverso i Location-Based Services (LBS). Basato sui pilastri fondamentali del progetto POSIDONIA, AGROS ha vinto un premio dall'Università di Cagliari (Progetto e.INS) e si è classificato tra i primi 10 nella competizione Start Cup Sardegna 2024. Il progetto è stato successivamente riconosciuto come una delle migliori 10 idee nel programma AgriFuture (Sardegna Ricerche), ricevendo supporto dedicato per la validazione del mercato.
-                        Il suo impegno verso l'innovazione è continuato alla Start Cup 2025, dove il progetto Location-based Emergency Notification System (LENS) ha ottenuto un altro posizionamento in top 10 e ha ricevuto la menzione speciale "Climate Change" per il suo approccio innovativo nel rilevamento di eventi naturali estremi. Più di recente, all'inizio del 2026, il suo progetto GreenShield è stato selezionato per il programma SERICS - Lab2Bay. Questo traguardo gli ha permesso di accedere a un esclusivo percorso di accelerazione nella Silicon Valley presso l'hub INNOVIT, con l'obiettivo di validare le sue soluzioni di sicurezza attente alle risorse (resource-aware) all'interno del mercato statunitense.
+                        Nel febbraio 2026, ha conseguito il Dottorato di ricerca in Ingegneria Elettronica e Informatica presso l'Università di Cagliari (DIEE/UdR CNIT). La sua tesi, intitolata <i>Energy-Efficient and Trustworthy Location-Based Services for Next-Generation IoT</i>, si è focalizzata sulla sicurezza di rete e sulle strategie di localizzazione GPS-free in ambienti IoT eco-sostenibili.<br><br>
+                        Giovanni è membro attivo dell'IEEE. Si è classificato al terzo posto nella prima competizione 3MT all'IEEE ICC 2023 e ha partecipato come finalista (top 15) alla 4MT presso IEEE Globecom 2024 e 2025. Ha contribuito alla comunità scientifica come PC member all'AQ-IoT 2023, come Web and Social Media Chair per l'IEEE ComSoc Italy Chapter (2026–presente) e come membro del Comitato Organizzativo di IEEE MeditCom 2026.<br><br>
+                        Giovanni ha contribuito significativamente al progetto POSIDONIA (NGI Sargasso), focalizzato su localizzazione GPS-free affidabile e sostenibile nel continuum Fog-Edge-Cloud.
+                        Questa base tecnologica ha alimentato la sua visione imprenditoriale: AGROS ha vinto il premio e.INS dell'Università di Cagliari e si è classificato tra i top 10 alla Start Cup 2024 e nel programma AgriFuture (Sardegna Ricerche). LENS ha ottenuto un top 10 alla Start Cup 2025 con la menzione speciale "Climate Change". GreenShield è stato selezionato per il programma SERICS Lab2Bay, con accesso a un percorso di accelerazione in Silicon Valley presso l'hub INNOVIT.
                     </p>
                 </div>
 
-                <div id="bio-fr" class="bio-content">
+                <div id="bio-full-fr" class="bio-content">
                     <p>
-                        <strong>Giovanni Pettorru</strong> a obtenu sa licence (B.Sc.) in Génie Électrique et Électronique à l'Université de Cagliari en 2020, con une thèse sur l'<i>Implémentation d'un système de détection d'occupation de parking basé sur des capteurs magnétométriques</i>. En 2022, il a obtenu son Master en Internet Engineering au sein de la même université, en présentant un mémoire intitulé <i>Communications sécurisées et à faible latence basées sur WebSocket et QUIC dans le scénario de l'Internet des Objets (IoT)</i>.
-                        En février 2026, il a obtenu son Doctorat (Ph.D.) en Génie Électronique et Informatique à l'Université de Cagliari, au sein du Département de Génie Électrique et Électronique (DIEE/UdR CNIT). Sa thèse de doctorat, intitulée <i>Energy-Eﬃcient and Trustworthy Location-Based Services for Next-Generation IoT</i>, portait sulla sécurité des réseaux et les stratégies de localisation sans GPS dans les environnements IoT éco-responsables (Green IoT). <br><br>
-                        Giovanni est un membre actif de l'IEEE. Il a fait preuve de capacités de communication exceptionnelles en remportant la troisième place lors du premier concours "Three-Minute Thesis" (3MT) à l'IEEE ICC 2023 et en figurant parmi les 15 finalistes de la "Four-Minute Thesis" (4MT) lors des conférences IEEE Globecom 2024 et 2025. Ces concours mettent les chercheurs au défi de transmettre efficacement leurs travaux à un public non spécialisé en quelques minutes seulement. Ses performances soulignent sa capacità à communiquer des idées complexes avec clarté et précision. Giovanni ha également contribué à la communauté scientifique en tant que membre du comité de programme (PC member) pour la conférence AQ-IoT 2023.
-                        Il est actuellement Web and Social Media Chair pour l'IEEE ComSoc Italy Chapter (2026–Présent) et a été membre du comité d'organisation d'IEEE MeditCom 2026.<br><br>
-                        Giovanni a apporté des contributions significatives au projet POSIDONIA (POSition Information with Digital twin Offloading in trustworthy Next-generation Internet Applications). Dans le cadre de la vision Next-Generation Internet (NGI), ce projet traite de la conception de réseaux écologiques et centrés sur l'humain à travers le continuum Fog-Edge-Cloud. Ses travaux se concentrent sur la création d'une architecture distribuée pour une localisation sans GPS fiable afin de soutenir les services basés sur la localisation (LBS) dans les applications de l'Internet des Objets (IoT).
-                        Cette solide base technologique a alimenté sa vision entrepreneuriale, à commencer par Agricultural Geolocation and Resource Optimization (AGROS), un sistema conçu per soutenir la prise de décision agricole via des services de géolocalisation. Reposant sur les piliers du projet POSIDONIA, AGROS a été récompensé par l'Université de Cagliari (Projet e.INS) et s'est classé parmi les 10 finalistes du concours Start Cup 2024 Sardegna. Le projet a ensuite été reconnu comme l'une des 10 meilleures idées du programma AgriFuture (Sardegna Ricerche), bénéficiant d'un soutien dédié pour la validation du marché.
-                        Son engagement envers l'innovation s'est poursuivi lors de la Start Cup 2025, où le projet Location-based Emergency Notification System (LENS) a également atteint le top 10 e ha reçu la mention spéciale "Climate Change" pour son approche innovante de la détection d'événements naturels extrêmes. Plus récemment, au début de l'année 2026, son projet GreenShield est été sélectionné pour le programme SERICS - Lab2Bay. Cette réussite lui a permis d'intégrer un parcours d'accélération exclusif dans la Silicon Valley au hub INNOVIT, visant à valider ses solutions de sécurité économes en ressources (resource-aware) sur le marché américain.
+                        <strong>Giovanni Pettorru</strong> a obtenu sa licence en Génie Électrique et Électronique à l'Université de Cagliari en 2020, avec une thèse sur l'<i>Implémentation d'un système de détection d'occupation de parking basé sur des capteurs magnétométriques</i>. En 2022, il a obtenu son Master en Internet Engineering, avec un mémoire intitulé <i>Communications sécurisées et à faible latence basées sur WebSocket et QUIC dans le scénario IoT</i>.
+                        En février 2026, il a obtenu son Doctorat en Génie Électronique et Informatique à l'Université de Cagliari (DIEE/UdR CNIT). Sa thèse, intitulée <i>Energy-Efficient and Trustworthy Location-Based Services for Next-Generation IoT</i>, portait sur la sécurité des réseaux et les stratégies de localisation sans GPS dans les environnements IoT éco-responsables.<br><br>
+                        Giovanni est membre actif de l'IEEE. Il a remporté la 3e place au concours 3MT lors de l'IEEE ICC 2023 et figuré parmi les 15 finalistes de la 4MT à l'IEEE Globecom 2024 et 2025. Il a également contribué à la communauté scientifique en tant que PC member à l'AQ-IoT 2023, Web and Social Media Chair pour l'IEEE ComSoc Italy Chapter (2026–présent) et membre du comité d'organisation d'IEEE MeditCom 2026.<br><br>
+                        Giovanni a contribué de manière significative au projet POSIDONIA (NGI Sargasso), axé sur une localisation sans GPS fiable et durable dans le continuum Fog-Edge-Cloud.
+                        Cette base technologique a alimenté sa vision entrepreneuriale : AGROS a remporté le prix e.INS de l'Université de Cagliari et s'est classé dans le top 10 à la Start Cup 2024 et au programme AgriFuture (Sardegna Ricerche). LENS a atteint le top 10 à la Start Cup 2025 avec la mention spéciale "Climate Change". GreenShield a été sélectionné pour le programme SERICS Lab2Bay, lui donnant accès à un parcours d'accélération en Silicon Valley au hub INNOVIT.
                     </p>
                 </div>
+
             </div>
         </div>
     </main>
@@ -134,25 +155,38 @@
     </footer>
 
     <script>
+    let currentMode = 'short';
+    let currentLang = 'en';
+
+    function setBioMode(mode) {
+        currentMode = mode;
+        document.querySelectorAll('.bio-content').forEach(b => b.classList.remove('active'));
+        document.getElementById('bio-' + mode + '-' + currentLang).classList.add('active');
+        document.getElementById('btn-short').classList.toggle('active', mode === 'short');
+        document.getElementById('btn-full').classList.toggle('active', mode === 'full');
+        localStorage.setItem('bioMode', mode);
+    }
+
     function changeLang(lang) {
+        currentLang = lang;
         localStorage.setItem('selectedLang', lang);
 
         const translations = {
             'en': {
                 page: 'Home',
-                navHome: 'Home', navPub: 'Publications', navProj: 'Projects', navTalks: 'Talks & Awards',
+                navHome: 'Home', navPub: 'Publications', navProj: 'Projects', navTalks: 'Awards & Talks',
                 bioTitle: 'Biography',
                 sci: 'Scientific', ind: 'Industrial'
             },
             'it': {
                 page: 'Home',
-                navHome: 'Home', navPub: 'Pubblicazioni', navProj: 'Progetti', navTalks: 'Talks & Premi',
+                navHome: 'Home', navPub: 'Pubblicazioni', navProj: 'Progetti', navTalks: 'Premi & Talk',
                 bioTitle: 'Biografia',
                 sci: 'Scientifico', ind: 'Industriale'
             },
             'fr': {
                 page: 'Accueil',
-                navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets', navTalks: 'Talks & Prix',
+                navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets', navTalks: 'Prix & Talks',
                 bioTitle: 'Biographie',
                 sci: 'Scientifique', ind: 'Industriel'
             }
@@ -160,39 +194,44 @@
 
         const t = translations[lang];
 
-        // Header page label
         const hp = document.getElementById('header-page');
         if (hp) hp.innerText = t.page;
 
-        // Navbar
         if (document.getElementById('nav-home'))  document.getElementById('nav-home').innerText  = t.navHome;
         if (document.getElementById('nav-pub'))   document.getElementById('nav-pub').innerText   = t.navPub;
         if (document.getElementById('nav-proj'))  document.getElementById('nav-proj').innerText  = t.navProj;
         if (document.getElementById('nav-talks')) document.getElementById('nav-talks').innerText = t.navTalks;
 
-        // Bio
         const bioTitle = document.getElementById('bio-title');
-        if (bioTitle) {
-            bioTitle.innerText = t.bioTitle;
-            document.querySelectorAll('.bio-content').forEach(b => b.classList.remove('active'));
-            document.getElementById('bio-' + lang).classList.add('active');
-        }
+        if (bioTitle) bioTitle.innerText = t.bioTitle;
 
-        // CV labels
+        // Update toggle button labels
+        const shortLabels = { en: 'Short', it: 'Breve', fr: 'Courte' };
+        const fullLabels  = { en: 'Full',  it: 'Completa', fr: 'Complète' };
+        document.getElementById('btn-short').innerText = shortLabels[lang];
+        document.getElementById('btn-full').innerText  = fullLabels[lang];
+
+        // Show correct bio
+        document.querySelectorAll('.bio-content').forEach(b => b.classList.remove('active'));
+        document.getElementById('bio-' + currentMode + '-' + lang).classList.add('active');
+
         const sciLabel = document.getElementById('cv-sci-label');
         const indLabel = document.getElementById('cv-ind-label');
         if (sciLabel) sciLabel.innerText = t.sci;
         if (indLabel) indLabel.innerText = t.ind;
 
-        // Lang buttons
         document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
         const activeBtn = document.getElementById('btn-' + lang);
         if (activeBtn) activeBtn.classList.add('active');
     }
 
     window.onload = function() {
-        const savedLang = localStorage.getItem('selectedLang') || 'en';
-        changeLang(savedLang);
+        currentLang = localStorage.getItem('selectedLang') || 'en';
+        currentMode = localStorage.getItem('bioMode') || 'short';
+        changeLang(currentLang);
+        // Restore toggle state
+        document.getElementById('btn-short').classList.toggle('active', currentMode === 'short');
+        document.getElementById('btn-full').classList.toggle('active', currentMode === 'full');
     };
     </script>
 </body>

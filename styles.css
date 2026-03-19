@@ -1559,3 +1559,55 @@ footer {
     .conf-row > :last-child { grid-column: 3; margin-top: 4px; }
     .talks-header h2 { font-size: 26px; }
 }
+
+/* ── BIO TOGGLE ── */
+.bio-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-gold);
+    position: relative;
+}
+
+.bio-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 48px;
+    height: 2px;
+    background: var(--gold);
+}
+
+.bio-toggle-wrap {
+    display: flex;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.bio-toggle-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 2px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.bio-toggle-btn:hover {
+    border-color: var(--border-gold);
+    color: var(--text-mid);
+}
+
+.bio-toggle-btn.active {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: #fff;
+}
