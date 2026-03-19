@@ -1603,3 +1603,189 @@ footer {
     color: #fff;
     font-weight: 600;
 }
+
+/* ============================================================
+   PROJECT PHOTO CAROUSEL
+   ============================================================ */
+
+.photos-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: transparent;
+    cursor: pointer;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    transition: var(--transition);
+    margin-top: 4px;
+}
+
+.photos-trigger:hover {
+    border-color: var(--border-gold);
+    color: var(--text-mid);
+    background: var(--warm-white);
+}
+
+.photos-trigger svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    fill: none;
+    flex-shrink: 0;
+}
+
+.photos-trigger .photo-count {
+    font-size: 10px;
+    padding: 1px 7px;
+    border-radius: 10px;
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+.photos-trigger.open {
+    border-color: var(--border-gold);
+    color: var(--gold);
+}
+
+.photos-trigger.open .photo-count {
+    background: rgba(200,169,81,0.1);
+    border-color: var(--border-gold);
+    color: #854f0b;
+}
+
+/* Carousel wrapper — animates open/close */
+.carousel-wrap {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 14px;
+}
+
+.carousel-wrap.open {
+    max-height: 400px;
+}
+
+.carousel {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+/* Square 1:1 stage */
+.carousel-stage {
+    position: relative;
+    width: 100%;
+    padding-top: 56%; /* 16:9 — overridden below for square */
+    background: var(--warm-white);
+}
+
+/* Square crop */
+.carousel-stage {
+    padding-top: 0;
+    height: 280px;
+}
+
+.carousel-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.carousel-slide.active { opacity: 1; }
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* crops to fill, maintains 1:1 */
+    display: block;
+}
+
+/* Caption bar */
+.carousel-caption {
+    padding: 10px 14px;
+    background: var(--cream);
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.caption-text {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.carousel-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--border);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: var(--transition);
+}
+
+.carousel-dot.active {
+    background: var(--navy);
+    transform: scale(1.2);
+}
+
+.carousel-btn {
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--warm-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    padding: 0;
+}
+
+.carousel-btn:hover {
+    border-color: var(--border-gold);
+    background: var(--cream);
+}
+
+.carousel-btn svg {
+    width: 12px;
+    height: 12px;
+    stroke: var(--text-muted);
+    stroke-width: 2;
+    fill: none;
+}
+
+@media screen and (max-width: 700px) {
+    .carousel-stage { height: 200px; }
+}
