@@ -38,6 +38,7 @@
             <li><a href="index.html" id="nav-home">Home</a></li>
             <li><a href="publications.html" id="nav-pub">Publications</a></li>
             <li><a href="projects.html" id="nav-proj">Projects</a></li>
+            <li><a href="talks.html" id="nav-talks">Awards & Talks</a></li>
         </ul>
     </nav>
 
@@ -63,10 +64,7 @@
                     <span class="status-badge status-completed" id="pos-status">Completed</span>
                 </div>
                 <div class="project-body">
-                    <p class="project-description" id="pos-desc">
-                        Within the Next-Generation Internet (NGI) vision, POSIDONIA tackles green and human-centric network design for heterogeneous scenarios supported by the Fog-Edge-Cloud continuum. The project envisions a distributed network architecture to provide trustworthy and sustainable Location-Based Services (LBS) in IoT scenarios where threat mitigation is opportunistically offloaded between the local network and its core infrastructure. Digital Twins (DTs) are integrated to ensure interoperability and handle computationally-heavy operations. The project was carried out in collaboration with Saint Louis University (SLU), Prof. Flavio Esposito, as the US counterpart.
-                    </p>
-
+                    <p class="project-description" id="pos-desc">Within the Next-Generation Internet (NGI) vision, POSIDONIA tackles green and human-centric network design for heterogeneous scenarios supported by the Fog-Edge-Cloud continuum. The project envisions a distributed network architecture to provide trustworthy and sustainable Location-Based Services (LBS) in IoT scenarios where threat mitigation is opportunistically offloaded between the local network and its core infrastructure. Digital Twins (DTs) are integrated to ensure interoperability and handle computationally-heavy operations. The project was carried out in collaboration with Saint Louis University (SLU), Prof. Flavio Esposito, as the US counterpart.</p>
                     <div class="project-info-grid">
                         <div class="project-info-item">
                             <span class="project-info-label" id="pos-label-funding">Funding</span>
@@ -85,7 +83,6 @@
                             <span class="project-info-value">IoT · Network Security · Edge Intelligence · xG Mobile Networks</span>
                         </div>
                     </div>
-
                     <span class="project-awards-title" id="pos-awards-title">Recognition</span>
                     <div class="project-awards">
                         <span class="award-tag">NGI Sargasso – European Funding</span>
@@ -101,6 +98,35 @@
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
                             Project Portal
                         </a>
+                    </div>
+                    <!-- POSIDONIA CAROUSEL -->
+                    <button class="photos-trigger" id="trigger-posidonia" onclick="carouselToggle('posidonia')">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="10" rx="1.5"/><circle cx="5.5" cy="7.5" r="1.5"/><path d="M1 11l3.5-3.5 3 3 2.5-2.5 4 4"/></svg>
+                        <span id="trigger-posidonia-label">Show photos</span>
+                        <span class="photo-count">4</span>
+                    </button>
+                    <div class="carousel-wrap" id="carousel-posidonia">
+                        <div class="carousel">
+                            <div class="carousel-stage">
+                                <div class="carousel-slide active" id="posidonia-slide-0"><img src="img/POSIDONIA/drone.jpg" alt="Autonomous drone — field testing" loading="lazy"></div>
+                                <div class="carousel-slide" id="posidonia-slide-1"><img src="img/POSIDONIA/nodo_uwb.jpg" alt="UWB localization node" loading="lazy"></div>
+                                <div class="carousel-slide" id="posidonia-slide-2"><img src="img/POSIDONIA/scenario.jpg" alt="Deployment scenario" loading="lazy"></div>
+                                <div class="carousel-slide" id="posidonia-slide-3"><img src="img/POSIDONIA/app_local.jpg" alt="Localization app interface" loading="lazy"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                <span class="caption-text" id="posidonia-caption">Autonomous drone — field testing</span>
+                                <div class="carousel-controls">
+                                    <div class="carousel-dots">
+                                        <button class="carousel-dot active" onclick="carouselGoTo('posidonia',0)"></button>
+                                        <button class="carousel-dot" onclick="carouselGoTo('posidonia',1)"></button>
+                                        <button class="carousel-dot" onclick="carouselGoTo('posidonia',2)"></button>
+                                        <button class="carousel-dot" onclick="carouselGoTo('posidonia',3)"></button>
+                                    </div>
+                                    <button class="carousel-btn" onclick="carouselPrev('posidonia')"><svg viewBox="0 0 12 12"><polyline points="8,2 4,6 8,10"/></svg></button>
+                                    <button class="carousel-btn" onclick="carouselNext('posidonia')"><svg viewBox="0 0 12 12"><polyline points="4,2 8,6 4,10"/></svg></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,10 +145,7 @@
                     <span class="status-badge status-active" id="agr-status">Active</span>
                 </div>
                 <div class="project-body">
-                    <p class="project-description" id="agr-desc">
-                        AGROS is a digital platform based on IoT technologies and next-generation GPS-free Location-Based Services designed to support precision agriculture. Built on the POSIDONIA architecture, it integrates a distributed network of IoT sensor nodes, an autonomous GPS-free rover (Lynxmotion platform with LIDAR-based navigation), and an edge-cloud infrastructure for real-time data processing. The system enables automated, context-aware, and human-centric agricultural operations — monitoring soil moisture, temperature, UV radiation, and capturing geolocated images for AI-based pest detection. Validated through two experimental testbeds in Sardinia (Dorgali and Sardara), the project targets small and medium agricultural enterprises seeking affordable precision farming solutions without complex GPS infrastructure.
-                    </p>
-
+                    <p class="project-description" id="agr-desc">AGROS is a digital platform based on IoT technologies and next-generation GPS-free Location-Based Services designed to support precision agriculture. Built on the POSIDONIA architecture, it integrates a distributed network of IoT sensor nodes, an autonomous GPS-free rover (Lynxmotion platform with LIDAR-based navigation), and an edge-cloud infrastructure for real-time data processing. The system enables automated, context-aware, and human-centric agricultural operations — monitoring soil moisture, temperature, UV radiation, and capturing geolocated images for AI-based pest detection. Validated through two experimental testbeds in Sardinia (Dorgali and Sardara), the project targets small and medium agricultural enterprises seeking affordable precision farming solutions without complex GPS infrastructure.</p>
                     <div class="project-info-grid">
                         <div class="project-info-item">
                             <span class="project-info-label" id="agr-label-funding">Support</span>
@@ -137,7 +160,6 @@
                             <span class="project-info-value">4 — Technology validated in lab and field</span>
                         </div>
                     </div>
-
                     <span class="project-awards-title" id="agr-awards-title">Recognition</span>
                     <div class="project-awards">
                         <span class="award-tag">e.INS Award – University of Cagliari</span>
@@ -153,6 +175,37 @@
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="10" height="10" rx="1"/><line x1="3" y1="4" x2="9" y2="4"/><line x1="3" y1="6" x2="9" y2="6"/><line x1="3" y1="8" x2="6" y2="8"/></svg>
                             Related Papers
                         </a>
+                    </div>
+                    <!-- AGROS CAROUSEL -->
+                    <button class="photos-trigger" id="trigger-agros" onclick="carouselToggle('agros')">
+                        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="14" height="10" rx="1.5"/><circle cx="5.5" cy="7.5" r="1.5"/><path d="M1 11l3.5-3.5 3 3 2.5-2.5 4 4"/></svg>
+                        <span id="trigger-agros-label">Show photos</span>
+                        <span class="photo-count">5</span>
+                    </button>
+                    <div class="carousel-wrap" id="carousel-agros">
+                        <div class="carousel">
+                            <div class="carousel-stage">
+                                <div class="carousel-slide active" id="agros-slide-0"><img src="img/AGROS/rover.jpeg" alt="Autonomous GPS-free rover — Lynxmotion platform" loading="lazy"></div>
+                                <div class="carousel-slide" id="agros-slide-1"><img src="img/AGROS/nodo_iot.jpg" alt="IoT sensor node — field deployment" loading="lazy"></div>
+                                <div class="carousel-slide" id="agros-slide-2"><img src="img/AGROS/edge.jpg" alt="Edge computing node" loading="lazy"></div>
+                                <div class="carousel-slide" id="agros-slide-3"><img src="img/AGROS/nodo_iot2.jpg" alt="IoT node — detail view" loading="lazy"></div>
+                                <div class="carousel-slide" id="agros-slide-4"><img src="img/AGROS/nodo_iot3.jpg" alt="IoT node — installation" loading="lazy"></div>
+                            </div>
+                            <div class="carousel-caption">
+                                <span class="caption-text" id="agros-caption">Autonomous GPS-free rover — Lynxmotion platform</span>
+                                <div class="carousel-controls">
+                                    <div class="carousel-dots">
+                                        <button class="carousel-dot active" onclick="carouselGoTo('agros',0)"></button>
+                                        <button class="carousel-dot" onclick="carouselGoTo('agros',1)"></button>
+                                        <button class="carousel-dot" onclick="carouselGoTo('agros',2)"></button>
+                                        <button class="carousel-dot" onclick="carouselGoTo('agros',3)"></button>
+                                        <button class="carousel-dot" onclick="carouselGoTo('agros',4)"></button>
+                                    </div>
+                                    <button class="carousel-btn" onclick="carouselPrev('agros')"><svg viewBox="0 0 12 12"><polyline points="8,2 4,6 8,10"/></svg></button>
+                                    <button class="carousel-btn" onclick="carouselNext('agros')"><svg viewBox="0 0 12 12"><polyline points="4,2 8,6 4,10"/></svg></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -171,10 +224,7 @@
                     <span class="status-badge status-concept" id="lens-status">Concept</span>
                 </div>
                 <div class="project-body">
-                    <p class="project-description" id="lens-desc">
-                        LENS is an early-detection system for catastrophic natural events — wildfires, landslides, floods, and extreme weather — based on a distributed network of geolocated IoT nodes equipped with environmental sensors (temperature, smoke, vibration) and supported by autonomous drones and rovers for on-site verification. Built on the POSIDONIA architecture, the system leverages the Fog-Edge-Cloud continuum and LoRa communications for low-power, long-range coverage in rural and hard-to-reach areas. Edge computing enables low-latency local decisions, while machine learning models in the Fog/Cloud layers provide predictive analytics and false-positive filtering. Autonomous vehicles are mission-triggered by sensor anomalies, eliminating the need for human operators and ensuring rapid, targeted responses.
-                    </p>
-
+                    <p class="project-description" id="lens-desc">LENS is an early-detection system for catastrophic natural events — wildfires, landslides, floods, and extreme weather — based on a distributed network of geolocated IoT nodes equipped with environmental sensors (temperature, smoke, vibration) and supported by autonomous drones and rovers for on-site verification. Built on the POSIDONIA architecture, the system leverages the Fog-Edge-Cloud continuum and LoRa communications for low-power, long-range coverage in rural and hard-to-reach areas. Edge computing enables low-latency local decisions, while machine learning models in the Fog/Cloud layers provide predictive analytics and false-positive filtering.</p>
                     <div class="project-info-grid">
                         <div class="project-info-item">
                             <span class="project-info-label" id="lens-label-trl">TRL</span>
@@ -185,7 +235,6 @@
                             <span class="project-info-value">Public administration, large landowners, agricultural enterprises in risk-prone areas</span>
                         </div>
                     </div>
-
                     <span class="project-awards-title" id="lens-awards-title">Recognition</span>
                     <div class="project-awards">
                         <span class="award-tag">Top 10 – Start Cup Sardegna 2025</span>
@@ -214,10 +263,7 @@
                     <span class="status-badge status-concept" id="gs-status">Concept</span>
                 </div>
                 <div class="project-body">
-                    <p class="project-description" id="gs-desc">
-                        GreenShield aims to develop a software Intrusion Prevention System (IPS) module optimized for resource-constrained Edge IoT architectures — such as Raspberry Pi — with applications in Smart Agriculture and Industrial IoT. Based on recent research on HTTP/3 proxy evaluation on ARM platforms, the system detects threats such as Request Smuggling and Race Conditions by analyzing hardware resource consumption patterns (CPU and RAM usage), as an alternative to costly deep packet inspection. This resource-aware approach enables robust security on battery-powered or solar-powered gateways, bridging the gap between modern protocol adoption and the need to preserve operational autonomy in distributed critical infrastructures.
-                    </p>
-
+                    <p class="project-description" id="gs-desc">GreenShield aims to develop a software Intrusion Prevention System (IPS) module optimized for resource-constrained Edge IoT architectures — such as Raspberry Pi — with applications in Smart Agriculture and Industrial IoT. Based on recent research on HTTP/3 proxy evaluation on ARM platforms, the system detects threats such as Request Smuggling and Race Conditions by analyzing hardware resource consumption patterns (CPU and RAM usage), as an alternative to costly deep packet inspection. This resource-aware approach enables robust security on battery-powered or solar-powered gateways, bridging the gap between modern protocol adoption and the need to preserve operational autonomy in distributed critical infrastructures.</p>
                     <div class="project-info-grid">
                         <div class="project-info-item">
                             <span class="project-info-label" id="gs-label-program">Program</span>
@@ -228,7 +274,6 @@
                             <span class="project-info-value">Hardware manufacturers and system integrators for Edge IoT</span>
                         </div>
                     </div>
-
                     <span class="project-awards-title" id="gs-awards-title">Recognition</span>
                     <div class="project-awards">
                         <span class="award-tag">SERICS – Lab2Bay Program</span>
@@ -258,148 +303,149 @@
         <svg viewBox="0 0 16 16"><polyline points="2,11 8,5 14,11"/></svg>
     </button>
 
-    <footer>
-        <p>&copy; 2026 Giovanni Pettorru. All rights reserved.</p>
-    </footer>
+    <footer><p>&copy; 2026 Giovanni Pettorru. All rights reserved.</p></footer>
 
     <script>
+    // ── BACK TO TOP ──
     const btt = document.getElementById('back-to-top');
-    window.addEventListener('scroll', () => {
-        btt.classList.toggle('visible', window.scrollY > 300);
-    }, { passive: true });
+    window.addEventListener('scroll', () => { btt.classList.toggle('visible', window.scrollY > 300); }, { passive: true });
 
+    // ── CAROUSEL ──
+    const _cState = {};
+    const _cCaptions = {
+        posidonia: ['Autonomous drone — field testing','UWB localization node','Deployment scenario','Localization app interface'],
+        agros:     ['Autonomous GPS-free rover — Lynxmotion platform','IoT sensor node — field deployment','Edge computing node','IoT node — detail view','IoT node — installation']
+    };
+
+    function carouselToggle(id) {
+        const wrap  = document.getElementById('carousel-' + id);
+        const btn   = document.getElementById('trigger-' + id);
+        const label = document.getElementById('trigger-' + id + '-label');
+        const open  = wrap.classList.toggle('open');
+        btn.classList.toggle('open', open);
+        label.textContent = open ? 'Hide photos' : 'Show photos';
+        if (_cState[id] === undefined) _cState[id] = 0;
+    }
+
+    function carouselGoTo(id, idx) {
+        if (_cState[id] === undefined) _cState[id] = 0;
+        document.querySelectorAll('#carousel-' + id + ' .carousel-slide')[_cState[id]].classList.remove('active');
+        document.querySelectorAll('#carousel-' + id + ' .carousel-dot')[_cState[id]].classList.remove('active');
+        _cState[id] = idx;
+        document.querySelectorAll('#carousel-' + id + ' .carousel-slide')[idx].classList.add('active');
+        document.querySelectorAll('#carousel-' + id + ' .carousel-dot')[idx].classList.add('active');
+        document.getElementById(id + '-caption').textContent = _cCaptions[id][idx];
+    }
+
+    function carouselNext(id) {
+        const n = document.querySelectorAll('#carousel-' + id + ' .carousel-slide').length;
+        carouselGoTo(id, ((_cState[id] || 0) + 1) % n);
+    }
+    function carouselPrev(id) {
+        const n = document.querySelectorAll('#carousel-' + id + ' .carousel-slide').length;
+        carouselGoTo(id, ((_cState[id] || 0) - 1 + n) % n);
+    }
+
+    // ── LANGUAGE ──
     function changeLang(lang) {
         localStorage.setItem('selectedLang', lang);
-
-        const t = {
+        const T = {
             en: {
-                navHome: 'Home', navPub: 'Publications', navProj: 'Projects',
-                title: 'Projects',
-                subtitle: 'Research and entrepreneurial projects in IoT, localization, and security',
-                completed: 'Completed', active: 'Active', concept: 'Concept',
-                awards: 'Recognition',
-                posTagline: 'POSition Information with Digital twin Offloading in trustworthy Next-generation Internet Applications',
-                posPeriod: 'September 2024 — May 2025 · 9 months · Budget: 100k €',
-                posDesc: 'Within the Next-Generation Internet (NGI) vision, POSIDONIA tackles green and human-centric network design for heterogeneous scenarios supported by the Fog-Edge-Cloud continuum. The project envisions a distributed network architecture to provide trustworthy and sustainable Location-Based Services (LBS) in IoT scenarios where threat mitigation is opportunistically offloaded between the local network and its core infrastructure. Digital Twins (DTs) are integrated to ensure interoperability and handle computationally-heavy operations. The project was carried out in collaboration with Saint Louis University (SLU), Prof. Flavio Esposito, as the US counterpart.',
-                posFunding: 'Funding', posPI: 'Principal Investigator', posTeam: 'Team', posAreas: 'Research Areas', posLinkPapers: 'Related Papers',
-                agrTagline: 'Agricultural Geolocation and Resource Optimization',
-                agrPeriod: 'October 2024 — ongoing',
-                agrDesc: 'AGROS is a digital platform based on IoT technologies and next-generation GPS-free Location-Based Services designed to support precision agriculture. Built on the POSIDONIA architecture, it integrates a distributed network of IoT sensor nodes, an autonomous GPS-free rover (Lynxmotion platform with LIDAR-based navigation), and an edge-cloud infrastructure for real-time data processing. The system enables automated, context-aware, and human-centric agricultural operations — monitoring soil moisture, temperature, UV radiation, and capturing geolocated images for AI-based pest detection. Validated through two experimental testbeds in Sardinia (Dorgali and Sardara), the project targets small and medium agricultural enterprises seeking affordable precision farming solutions without complex GPS infrastructure.',
-                agrSupport: 'Support', agrTeam: 'Team', agrTRL: 'TRL',
-                lensTagline: 'Location-based Emergency Notification System',
-                lensPeriod: 'October 2025 — concept phase',
-                lensDesc: 'LENS is an early-detection system for catastrophic natural events — wildfires, landslides, floods, and extreme weather — based on a distributed network of geolocated IoT nodes equipped with environmental sensors (temperature, smoke, vibration) and supported by autonomous drones and rovers for on-site verification. Built on the POSIDONIA architecture, the system leverages the Fog-Edge-Cloud continuum and LoRa communications for low-power, long-range coverage in rural and hard-to-reach areas. Edge computing enables low-latency local decisions, while machine learning models in the Fog/Cloud layers provide predictive analytics and false-positive filtering. Autonomous vehicles are mission-triggered by sensor anomalies, eliminating the need for human operators.',
-                lensTRL: 'TRL', lensMarket: 'Target Market',
-                gsTagline: 'Resource-aware Intrusion Prevention for Edge IoT',
-                gsPeriod: 'January 2026 — concept phase',
-                gsDesc: 'GreenShield aims to develop a software Intrusion Prevention System (IPS) module optimized for resource-constrained Edge IoT architectures — such as Raspberry Pi — with applications in Smart Agriculture and Industrial IoT. Based on recent research on HTTP/3 proxy evaluation on ARM platforms, the system detects threats such as Request Smuggling and Race Conditions by analyzing hardware resource consumption patterns (CPU and RAM usage), as an alternative to costly deep packet inspection. This resource-aware approach enables robust security on battery-powered or solar-powered gateways, bridging the gap between modern protocol adoption and the need to preserve operational autonomy in distributed critical infrastructures.',
-                gsProgram: 'Program', gsMarket: 'Target Market'
+                page:'Projects', navHome:'Home', navPub:'Publications', navProj:'Projects', navTalks:'Awards & Talks',
+                title:'Projects', subtitle:'Research and entrepreneurial projects in IoT, localization, and security',
+                completed:'Completed', active:'Active', concept:'Concept', awards:'Recognition',
+                posTagline:'POSition Information with Digital twin Offloading in trustworthy Next-generation Internet Applications',
+                posPeriod:'September 2024 — May 2025 · 9 months · Budget: 100k €',
+                posDesc:'Within the Next-Generation Internet (NGI) vision, POSIDONIA tackles green and human-centric network design for heterogeneous scenarios supported by the Fog-Edge-Cloud continuum. The project envisions a distributed network architecture to provide trustworthy and sustainable Location-Based Services (LBS) in IoT scenarios where threat mitigation is opportunistically offloaded between the local network and its core infrastructure. Digital Twins (DTs) are integrated to ensure interoperability and handle computationally-heavy operations. The project was carried out in collaboration with Saint Louis University (SLU), Prof. Flavio Esposito, as the US counterpart.',
+                posFunding:'Funding', posPI:'Principal Investigator', posTeam:'Team', posAreas:'Research Areas', posLinkPapers:'Related Papers',
+                agrTagline:'Agricultural Geolocation and Resource Optimization', agrPeriod:'October 2024 — ongoing',
+                agrDesc:'AGROS is a digital platform based on IoT technologies and next-generation GPS-free Location-Based Services designed to support precision agriculture. Built on the POSIDONIA architecture, it integrates a distributed network of IoT sensor nodes, an autonomous GPS-free rover (Lynxmotion platform with LIDAR-based navigation), and an edge-cloud infrastructure for real-time data processing. The system enables automated, context-aware, and human-centric agricultural operations — monitoring soil moisture, temperature, UV radiation, and capturing geolocated images for AI-based pest detection. Validated through two experimental testbeds in Sardinia (Dorgali and Sardara), the project targets small and medium agricultural enterprises seeking affordable precision farming solutions without complex GPS infrastructure.',
+                agrSupport:'Support', agrTeam:'Team', agrTRL:'TRL',
+                lensTagline:'Location-based Emergency Notification System', lensPeriod:'October 2025 — concept phase',
+                lensDesc:'LENS is an early-detection system for catastrophic natural events — wildfires, landslides, floods, and extreme weather — based on a distributed network of geolocated IoT nodes equipped with environmental sensors (temperature, smoke, vibration) and supported by autonomous drones and rovers for on-site verification. Built on the POSIDONIA architecture, the system leverages the Fog-Edge-Cloud continuum and LoRa communications for low-power, long-range coverage in rural and hard-to-reach areas. Edge computing enables low-latency local decisions, while machine learning models in the Fog/Cloud layers provide predictive analytics and false-positive filtering.',
+                lensTRL:'TRL', lensMarket:'Target Market',
+                gsTagline:'Resource-aware Intrusion Prevention for Edge IoT', gsPeriod:'January 2026 — concept phase',
+                gsDesc:'GreenShield aims to develop a software Intrusion Prevention System (IPS) module optimized for resource-constrained Edge IoT architectures — such as Raspberry Pi — with applications in Smart Agriculture and Industrial IoT. Based on recent research on HTTP/3 proxy evaluation on ARM platforms, the system detects threats such as Request Smuggling and Race Conditions by analyzing hardware resource consumption patterns (CPU and RAM usage), as an alternative to costly deep packet inspection. This resource-aware approach enables robust security on battery-powered or solar-powered gateways, bridging the gap between modern protocol adoption and the need to preserve operational autonomy in distributed critical infrastructures.',
+                gsProgram:'Program', gsMarket:'Target Market'
             },
             it: {
-                navHome: 'Home', navPub: 'Pubblicazioni', navProj: 'Progetti',
-                title: 'Progetti',
-                subtitle: 'Progetti di ricerca e imprenditoriali in IoT, localizzazione e sicurezza',
-                completed: 'Concluso', active: 'Attivo', concept: 'Concept',
-                awards: 'Riconoscimenti',
-                posTagline: 'Informazioni di POSizione con Digital twin Offloading in applicazioni Internet di nuova generazione affidabili',
-                posPeriod: 'Settembre 2024 — Maggio 2025 · 9 mesi · Budget: 100k €',
-                posDesc: "Nell'ambito della visione Next-Generation Internet (NGI), POSIDONIA affronta la progettazione di reti green e antropocentriche per scenari eterogenei supportati dal continuum Fog-Edge-Cloud. Il progetto prevede un'architettura di rete distribuita per fornire Location-Based Services (LBS) affidabili e sostenibili in scenari IoT, dove la mitigazione delle minacce è opportunisticamente distribuita tra la rete locale e la sua infrastruttura core. I Digital Twin (DT) sono integrati per garantire interoperabilità e gestire operazioni computazionalmente intensive. Il progetto è stato svolto in collaborazione con la Saint Louis University (SLU), Prof. Flavio Esposito, come controparte statunitense.",
-                posFunding: 'Finanziamento', posPI: 'Principal Investigator', posTeam: 'Team', posAreas: 'Aree di Ricerca', posLinkPapers: 'Paper Correlati',
-                agrTagline: 'Geolocalizzazione Agricola e Ottimizzazione delle Risorse',
-                agrPeriod: 'Ottobre 2024 — in corso',
-                agrDesc: "AGROS è una piattaforma digitale basata su tecnologie IoT e Location-Based Services GPS-free di nuova generazione per supportare l'agricoltura di precisione. Costruita sull'architettura POSIDONIA, integra una rete distribuita di nodi IoT, un rover autonomo GPS-free (piattaforma Lynxmotion con navigazione LIDAR) e un'infrastruttura edge-cloud per l'elaborazione dei dati in tempo reale. Il sistema abilita operazioni agricole automatizzate e context-aware: monitoraggio di umidità del suolo, temperatura, radiazione UV e acquisizione di immagini geolocalizzate per il rilevamento di fitopatie tramite AI. Validato attraverso due testbed sperimentali in Sardegna (Dorgali e Sardara), il progetto si rivolge a piccole e medie imprese agricole in cerca di soluzioni di agricoltura di precisione accessibili e senza infrastrutture GPS complesse.",
-                agrSupport: 'Supporto', agrTeam: 'Team', agrTRL: 'TRL',
-                lensTagline: 'Sistema di Notifica di Emergenza Basato sulla Posizione',
-                lensPeriod: 'Ottobre 2025 — fase concept',
-                lensDesc: "LENS è un sistema di rilevamento precoce di eventi naturali catastrofici — incendi, frane, alluvioni, fenomeni meteorologici estremi — basato su una rete distribuita di nodi IoT geolocalizzati con sensori ambientali (temperatura, fumo, vibrazioni) e supportato da droni e rover autonomi per verifiche sul campo. Costruito sull'architettura POSIDONIA, sfrutta il continuum Fog-Edge-Cloud e le comunicazioni LoRa per una copertura a basso consumo e lungo raggio in aree rurali o impervie. L'edge computing consente decisioni locali a bassa latenza, mentre modelli di machine learning negli strati Fog/Cloud forniscono analisi predittive e filtraggio dei falsi positivi. I veicoli autonomi vengono attivati automaticamente dalle anomalie rilevate dai sensori, eliminando la necessità di operatori umani.",
-                lensTRL: 'TRL', lensMarket: 'Mercato Target',
-                gsTagline: 'Prevenzione delle Intrusioni Resource-aware per Edge IoT',
-                gsPeriod: 'Gennaio 2026 — fase concept',
-                gsDesc: "GreenShield mira a sviluppare un modulo software di Intrusion Prevention System (IPS) ottimizzato per architetture Edge IoT a risorse limitate — come Raspberry Pi — con applicazioni in Smart Agriculture e Industrial IoT. Basato su recerche sulla valutazione di proxy HTTP/3 su piattaforme ARM, il sistema rileva minacce come Request Smuggling e Race Conditions analizzando i pattern di consumo delle risorse hardware (CPU e RAM), come alternativa alla costosa deep packet inspection. Questo approccio resource-aware permette una sicurezza robusta su gateway alimentati a batteria o pannelli solari, colmando il divario tra l'adozione di protocolli moderni e la necessità di preservare l'autonomia operativa nelle infrastrutture critiche distribuite.",
-                gsProgram: 'Programma', gsMarket: 'Mercato Target'
+                page:'Progetti', navHome:'Home', navPub:'Pubblicazioni', navProj:'Progetti', navTalks:'Premi & Talk',
+                title:'Progetti', subtitle:'Progetti di ricerca e imprenditoriali in IoT, localizzazione e sicurezza',
+                completed:'Concluso', active:'Attivo', concept:'Concept', awards:'Riconoscimenti',
+                posTagline:'Informazioni di POSizione con Digital twin Offloading in applicazioni Internet di nuova generazione affidabili',
+                posPeriod:'Settembre 2024 — Maggio 2025 · 9 mesi · Budget: 100k €',
+                posDesc:"Nell'ambito della visione Next-Generation Internet (NGI), POSIDONIA affronta la progettazione di reti green e antropocentriche per scenari eterogenei supportati dal continuum Fog-Edge-Cloud. Il progetto prevede un'architettura di rete distribuita per fornire Location-Based Services (LBS) affidabili e sostenibili in scenari IoT, dove la mitigazione delle minacce è opportunisticamente distribuita tra la rete locale e la sua infrastruttura core. I Digital Twin (DT) sono integrati per garantire interoperabilità e gestire operazioni computazionalmente intensive. Il progetto è stato svolto in collaborazione con la Saint Louis University (SLU), Prof. Flavio Esposito, come controparte statunitense.",
+                posFunding:'Finanziamento', posPI:'Principal Investigator', posTeam:'Team', posAreas:'Aree di Ricerca', posLinkPapers:'Paper Correlati',
+                agrTagline:'Geolocalizzazione Agricola e Ottimizzazione delle Risorse', agrPeriod:'Ottobre 2024 — in corso',
+                agrDesc:"AGROS è una piattaforma digitale basata su tecnologie IoT e Location-Based Services GPS-free di nuova generazione per supportare l'agricoltura di precisione. Costruita sull'architettura POSIDONIA, integra una rete distribuita di nodi IoT, un rover autonomo GPS-free (piattaforma Lynxmotion con navigazione LIDAR) e un'infrastruttura edge-cloud per l'elaborazione dei dati in tempo reale. Il sistema abilita operazioni agricole automatizzate e context-aware: monitoraggio di umidità del suolo, temperatura, radiazione UV e acquisizione di immagini geolocalizzate per il rilevamento di fitopatie tramite AI. Validato attraverso due testbed sperimentali in Sardegna (Dorgali e Sardara), il progetto si rivolge a piccole e medie imprese agricole in cerca di soluzioni di agricoltura di precisione accessibili e senza infrastrutture GPS complesse.",
+                agrSupport:'Supporto', agrTeam:'Team', agrTRL:'TRL',
+                lensTagline:'Sistema di Notifica di Emergenza Basato sulla Posizione', lensPeriod:'Ottobre 2025 — fase concept',
+                lensDesc:"LENS è un sistema di rilevamento precoce di eventi naturali catastrofici — incendi, frane, alluvioni, fenomeni meteorologici estremi — basato su una rete distribuita di nodi IoT geolocalizzati con sensori ambientali (temperatura, fumo, vibrazioni) e supportato da droni e rover autonomi per verifiche sul campo. Costruito sull'architettura POSIDONIA, sfrutta il continuum Fog-Edge-Cloud e le comunicazioni LoRa per una copertura a basso consumo e lungo raggio in aree rurali o impervie. L'edge computing consente decisioni locali a bassa latenza, mentre modelli di machine learning negli strati Fog/Cloud forniscono analisi predittive e filtraggio dei falsi positivi.",
+                lensTRL:'TRL', lensMarket:'Mercato Target',
+                gsTagline:'Prevenzione delle Intrusioni Resource-aware per Edge IoT', gsPeriod:'Gennaio 2026 — fase concept',
+                gsDesc:"GreenShield mira a sviluppare un modulo software di Intrusion Prevention System (IPS) ottimizzato per architetture Edge IoT a risorse limitate — come Raspberry Pi — con applicazioni in Smart Agriculture e Industrial IoT. Basato su ricerche sulla valutazione di proxy HTTP/3 su piattaforme ARM, il sistema rileva minacce come Request Smuggling e Race Conditions analizzando i pattern di consumo delle risorse hardware (CPU e RAM), come alternativa alla costosa deep packet inspection. Questo approccio resource-aware permette una sicurezza robusta su gateway alimentati a batteria o pannelli solari.",
+                gsProgram:'Programma', gsMarket:'Mercato Target'
             },
             fr: {
-                navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets',
-                title: 'Projets',
-                subtitle: 'Projets de recherche et entrepreneuriaux en IoT, localisation et sécurité',
-                completed: 'Terminé', active: 'Actif', concept: 'Concept',
-                awards: 'Distinctions',
-                posTagline: 'Informations de POSition avec Digital twin Offloading dans des applications Internet de nouvelle génération fiables',
-                posPeriod: 'Septembre 2024 — Mai 2025 · 9 mois · Budget : 100k €',
-                posDesc: "Dans le cadre de la vision Next-Generation Internet (NGI), POSIDONIA aborde la conception de réseaux écologiques et centrés sur l'humain pour des scénarios hétérogènes supportés par le continuum Fog-Edge-Cloud. Le projet envisage une architecture réseau distribuée pour fournir des services basés sur la localisation (LBS) fiables et durables dans des scénarios IoT, où la mitigation des menaces est opportunément déléguée entre le réseau local et son infrastructure centrale. Les Digital Twins (DT) sont intégrés pour garantir l'interopérabilité et gérer les opérations computationnellement intensives. Le projet a été réalisé en collaboration avec la Saint Louis University (SLU), Prof. Flavio Esposito, en tant que partenaire américain.",
-                posFunding: 'Financement', posPI: 'Investigateur Principal', posTeam: 'Équipe', posAreas: "Domaines de Recherche", posLinkPapers: 'Articles associés',
-                agrTagline: 'Géolocalisation Agricole et Optimisation des Ressources',
-                agrPeriod: 'Octobre 2024 — en cours',
-                agrDesc: "AGROS est une plateforme numérique basée sur les technologies IoT et des services de localisation sans GPS de nouvelle génération pour soutenir l'agriculture de précision. Construite sur l'architecture POSIDONIA, elle intègre un réseau distribué de nœuds IoT, un rover autonome sans GPS (plateforme Lynxmotion avec navigation LIDAR) et une infrastructure edge-cloud pour le traitement des données en temps réel. Le système permet des opérations agricoles automatisées et contextualisées : surveillance de l'humidité du sol, de la température, des UV et acquisition d'images géolocalisées pour la détection de maladies par IA. Validé sur deux sites expérimentaux en Sardaigne (Dorgali et Sardara), le projet cible les petites et moyennes entreprises agricoles cherchant des solutions d'agriculture de précision accessibles sans infrastructure GPS complexe.",
-                agrSupport: 'Soutien', agrTeam: 'Équipe', agrTRL: 'TRL',
-                lensTagline: "Système de Notification d'Urgence Basé sur la Localisation",
-                lensPeriod: 'Octobre 2025 — phase concept',
-                lensDesc: "LENS est un système de détection précoce d'événements naturels catastrophiques — incendies, glissements de terrain, inondations, phénomènes météorologiques extrêmes — basé sur un réseau distribué de nœuds IoT géolocalisés équipés de capteurs environnementaux (température, fumée, vibrations) et supporté par des drones et rovers autonomes pour vérification sur site. Construit sur l'architecture POSIDONIA, le système exploite le continuum Fog-Edge-Cloud et les communications LoRa pour une couverture basse consommation et longue portée dans les zones rurales ou difficiles d'accès. L'edge computing permet des décisions locales à faible latence, tandis que des modèles de machine learning dans les couches Fog/Cloud fournissent des analyses prédictives et filtrent les faux positifs.",
-                lensTRL: 'TRL', lensMarket: 'Marché Cible',
-                gsTagline: "Prévention des Intrusions économe en ressources pour l'Edge IoT",
-                gsPeriod: 'Janvier 2026 — phase concept',
-                gsDesc: "GreenShield vise à développer un module logiciel d'Intrusion Prevention System (IPS) optimisé pour les architectures Edge IoT à ressources limitées — comme Raspberry Pi — avec des applications en Smart Agriculture et Industrial IoT. Basé sur des recherches récentes sur l'évaluation de proxys HTTP/3 sur plateformes ARM, le système détecte des menaces telles que le Request Smuggling et les Race Conditions en analysant les patterns de consommation des ressources matérielles (CPU et RAM), comme alternative à la coûteuse inspection approfondie des paquets. Cette approche économe en ressources permet une sécurité robuste sur des passerelles alimentées par batterie ou panneaux solaires.",
-                gsProgram: 'Programme', gsMarket: 'Marché Cible'
+                page:'Projets', navHome:'Accueil', navPub:'Publications', navProj:'Projets', navTalks:'Prix & Talks',
+                title:'Projets', subtitle:'Projets de recherche et entrepreneuriaux en IoT, localisation et sécurité',
+                completed:'Terminé', active:'Actif', concept:'Concept', awards:'Distinctions',
+                posTagline:'Informations de POSition avec Digital twin Offloading dans des applications Internet de nouvelle génération fiables',
+                posPeriod:'Septembre 2024 — Mai 2025 · 9 mois · Budget : 100k €',
+                posDesc:"Dans le cadre de la vision Next-Generation Internet (NGI), POSIDONIA aborde la conception de réseaux écologiques et centrés sur l'humain pour des scénarios hétérogènes supportés par le continuum Fog-Edge-Cloud. Le projet envisage une architecture réseau distribuée pour fournir des services basés sur la localisation (LBS) fiables et durables dans des scénarios IoT, où la mitigation des menaces est opportunément déléguée entre le réseau local et son infrastructure centrale. Les Digital Twins (DT) sont intégrés pour garantir l'interopérabilité et gérer les opérations computationnellement intensives. Le projet a été réalisé en collaboration avec la Saint Louis University (SLU), Prof. Flavio Esposito, en tant que partenaire américain.",
+                posFunding:'Financement', posPI:'Investigateur Principal', posTeam:'Équipe', posAreas:'Domaines de Recherche', posLinkPapers:'Articles associés',
+                agrTagline:'Géolocalisation Agricole et Optimisation des Ressources', agrPeriod:'Octobre 2024 — en cours',
+                agrDesc:"AGROS est une plateforme numérique basée sur les technologies IoT et des services de localisation sans GPS de nouvelle génération pour soutenir l'agriculture de précision. Construite sur l'architecture POSIDONIA, elle intègre un réseau distribué de nœuds IoT, un rover autonome sans GPS (plateforme Lynxmotion avec navigation LIDAR) et une infrastructure edge-cloud pour le traitement des données en temps réel. Le système permet des opérations agricoles automatisées et contextualisées : surveillance de l'humidité du sol, de la température, des UV et acquisition d'images géolocalisées pour la détection de maladies par IA.",
+                agrSupport:'Soutien', agrTeam:'Équipe', agrTRL:'TRL',
+                lensTagline:"Système de Notification d'Urgence Basé sur la Localisation", lensPeriod:'Octobre 2025 — phase concept',
+                lensDesc:"LENS est un système de détection précoce d'événements naturels catastrophiques — incendies, glissements de terrain, inondations, phénomènes météorologiques extrêmes — basé sur un réseau distribué de nœuds IoT géolocalisés équipés de capteurs environnementaux (température, fumée, vibrations) et supporté par des drones et rovers autonomes pour vérification sur site. Construit sur l'architecture POSIDONIA, le système exploite le continuum Fog-Edge-Cloud et les communications LoRa pour une couverture basse consommation et longue portée dans les zones rurales ou difficiles d'accès.",
+                lensTRL:'TRL', lensMarket:'Marché Cible',
+                gsTagline:"Prévention des Intrusions économe en ressources pour l'Edge IoT", gsPeriod:'Janvier 2026 — phase concept',
+                gsDesc:"GreenShield vise à développer un module logiciel d'Intrusion Prevention System (IPS) optimisé pour les architectures Edge IoT à ressources limitées — comme Raspberry Pi — avec des applications en Smart Agriculture et Industrial IoT. Basé sur des recherches récentes sur l'évaluation de proxys HTTP/3 sur plateformes ARM, le système détecte des menaces telles que le Request Smuggling et les Race Conditions en analysant les patterns de consommation des ressources matérielles (CPU et RAM).",
+                gsProgram:'Programme', gsMarket:'Marché Cible'
             }
         };
-
-        const l = t[lang];
-
-        document.getElementById('header-page').innerText   = l.navProj;
-        ['nav-home','nav-pub','nav-proj'].forEach((id, i) => {
-            const el = document.getElementById(id);
-            if (el) el.innerText = [l.navHome, l.navPub, l.navProj][i];
-        });
-        if (document.getElementById('nav-talks')) document.getElementById('nav-talks').innerText = l.navTalks;
+        const l = T[lang];
+        document.getElementById('header-page').innerText   = l.page;
+        document.getElementById('nav-home').innerText      = l.navHome;
+        document.getElementById('nav-pub').innerText       = l.navPub;
+        document.getElementById('nav-proj').innerText      = l.navProj;
+        document.getElementById('nav-talks').innerText     = l.navTalks;
         document.getElementById('proj-title').innerText    = l.title;
         document.getElementById('proj-subtitle').innerText = l.subtitle;
-
-        document.getElementById('pos-status').innerText   = l.completed;
-        document.getElementById('agr-status').innerText   = l.active;
-        document.getElementById('lens-status').innerText  = l.concept;
-        document.getElementById('gs-status').innerText    = l.concept;
-
-        ['pos','agr','lens','gs'].forEach(p => {
-            const el = document.getElementById(p + '-awards-title');
-            if (el) el.innerText = l.awards;
-        });
-
-        // POSIDONIA
-        document.getElementById('pos-tagline').innerText  = l.posTagline;
-        document.getElementById('pos-period').innerText   = l.posPeriod;
-        document.getElementById('pos-desc').innerText     = l.posDesc;
+        document.getElementById('pos-status').innerText    = l.completed;
+        document.getElementById('agr-status').innerText    = l.active;
+        document.getElementById('lens-status').innerText   = l.concept;
+        document.getElementById('gs-status').innerText     = l.concept;
+        ['pos','agr','lens','gs'].forEach(p => { const e = document.getElementById(p+'-awards-title'); if(e) e.innerText = l.awards; });
+        document.getElementById('pos-tagline').innerText       = l.posTagline;
+        document.getElementById('pos-period').innerText        = l.posPeriod;
+        document.getElementById('pos-desc').innerText          = l.posDesc;
         document.getElementById('pos-label-funding').innerText = l.posFunding;
         document.getElementById('pos-label-pi').innerText      = l.posPI;
         document.getElementById('pos-label-team').innerText    = l.posTeam;
         document.getElementById('pos-label-areas').innerText   = l.posAreas;
-
-        // AGROS
-        document.getElementById('agr-tagline').innerText  = l.agrTagline;
-        document.getElementById('agr-period').innerText   = l.agrPeriod;
-        document.getElementById('agr-desc').innerText     = l.agrDesc;
+        document.getElementById('agr-tagline').innerText       = l.agrTagline;
+        document.getElementById('agr-period').innerText        = l.agrPeriod;
+        document.getElementById('agr-desc').innerText          = l.agrDesc;
         document.getElementById('agr-label-funding').innerText = l.agrSupport;
         document.getElementById('agr-label-team').innerText    = l.agrTeam;
         document.getElementById('agr-label-trl').innerText     = l.agrTRL;
-
-        // LENS
-        document.getElementById('lens-tagline').innerText = l.lensTagline;
-        document.getElementById('lens-period').innerText  = l.lensPeriod;
-        document.getElementById('lens-desc').innerText    = l.lensDesc;
+        document.getElementById('lens-tagline').innerText      = l.lensTagline;
+        document.getElementById('lens-period').innerText       = l.lensPeriod;
+        document.getElementById('lens-desc').innerText         = l.lensDesc;
         document.getElementById('lens-label-trl').innerText    = l.lensTRL;
         document.getElementById('lens-label-market').innerText = l.lensMarket;
-
-        // GREENSHIELD
-        document.getElementById('gs-tagline').innerText   = l.gsTagline;
-        document.getElementById('gs-period').innerText    = l.gsPeriod;
-        document.getElementById('gs-desc').innerText      = l.gsDesc;
-        document.getElementById('gs-label-program').innerText = l.gsProgram;
-        document.getElementById('gs-label-market').innerText  = l.gsMarket;
-
+        document.getElementById('gs-tagline').innerText        = l.gsTagline;
+        document.getElementById('gs-period').innerText         = l.gsPeriod;
+        document.getElementById('gs-desc').innerText           = l.gsDesc;
+        document.getElementById('gs-label-program').innerText  = l.gsProgram;
+        document.getElementById('gs-label-market').innerText   = l.gsMarket;
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
         document.getElementById('btn-' + lang).classList.add('active');
     }
 
-    window.onload = function () {
+    window.onload = function() {
         const savedLang = localStorage.getItem('selectedLang') || 'en';
         changeLang(savedLang);
     };

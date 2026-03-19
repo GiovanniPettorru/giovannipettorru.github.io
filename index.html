@@ -14,8 +14,6 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://giovannipettorru.github.io/img/gp.png">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Giovanni Pettorru | Ph.D.">
-    <meta name="twitter:description" content="Ph.D. researcher in IoT security and GPS-free localization. University of Cagliari.">
     <link rel="canonical" href="https://giovannipettorru.github.io/">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -47,7 +45,7 @@
     <main>
         <div class="grid-container">
             <div class="photo">
-                <img src="img/gp.png" alt="Foto di Giovanni Pettorru" style="width:50%">
+                <img src="img/gp.png" alt="Giovanni Pettorru" style="width:50%">
                 <div class="contact-info">
                     <p>Giovanni Pettorru, Ph.D.<br>
                     Dep. of Electrical and Electronic Eng.<br>
@@ -68,15 +66,15 @@
                     <div class="cv-section">
                         <span id="cv-sci-label" class="cv-type">Scientific</span>
                         <div class="cv-links">
-                            <a href="CV/EN CV Scientific - Giovanni Pettorru.pdf" download="giovannipettorru_cv_sci_en.pdf"><img src="img/EN.png" alt="CV Scientific EN" class="cv-icon"></a>
-                            <a href="CV/ITA CV Scientifico - Giovanni Pettorru.pdf" download="giovannipettorru_cv_sci_it.pdf"><img src="img/IT.png" alt="CV Scientifico IT" class="cv-icon"></a>
+                            <a href="CV/EN CV Scientific - Giovanni Pettorru.pdf" download="giovannipettorru_cv_sci_en.pdf"><img src="img/EN.png" alt="CV EN" class="cv-icon"></a>
+                            <a href="CV/ITA CV Scientifico - Giovanni Pettorru.pdf" download="giovannipettorru_cv_sci_it.pdf"><img src="img/IT.png" alt="CV IT" class="cv-icon"></a>
                         </div>
                     </div>
                     <div class="cv-section">
                         <span id="cv-ind-label" class="cv-type">Industrial</span>
                         <div class="cv-links">
-                            <a href="CV/EN CV Industrial - Giovanni Pettorru.pdf" download="giovannipettorru_cv_ind_en.pdf"><img src="img/EN.png" alt="CV Industrial EN" class="cv-icon"></a>
-                            <a href="CV/ITA CV Industriale - Giovanni Pettorru.pdf" download="giovannipettorru_cv_ind_it.pdf"><img src="img/IT.png" alt="CV Industriale IT" class="cv-icon"></a>
+                            <a href="CV/EN CV Industrial - Giovanni Pettorru.pdf" download="giovannipettorru_cv_ind_en.pdf"><img src="img/EN.png" alt="CV EN" class="cv-icon"></a>
+                            <a href="CV/ITA CV Industriale - Giovanni Pettorru.pdf" download="giovannipettorru_cv_ind_it.pdf"><img src="img/IT.png" alt="CV IT" class="cv-icon"></a>
                         </div>
                     </div>
                 </div>
@@ -156,14 +154,14 @@
             fr: { page:'Accueil', navHome:'Accueil', navPub:'Publications', navProj:'Projets', navTalks:'Prix & Talks', bioTitle:'Biographie', sci:'Scientifique', ind:'Industriel', short:'Courte', full:'Complète' }
         };
         const t = T[lang];
-        document.getElementById('header-page').innerText = t.page;
-        document.getElementById('nav-home').innerText  = t.navHome;
-        document.getElementById('nav-pub').innerText   = t.navPub;
-        document.getElementById('nav-proj').innerText  = t.navProj;
-        document.getElementById('nav-talks').innerText = t.navTalks;
-        document.getElementById('bio-title').innerText = t.bioTitle;
-        document.getElementById('btn-short').innerText = t.short;
-        document.getElementById('btn-full').innerText  = t.full;
+        document.getElementById('header-page').innerText  = t.page;
+        document.getElementById('nav-home').innerText     = t.navHome;
+        document.getElementById('nav-pub').innerText      = t.navPub;
+        document.getElementById('nav-proj').innerText     = t.navProj;
+        document.getElementById('nav-talks').innerText    = t.navTalks;
+        document.getElementById('bio-title').innerText    = t.bioTitle;
+        document.getElementById('btn-short').innerText    = t.short;
+        document.getElementById('btn-full').innerText     = t.full;
         document.getElementById('cv-sci-label').innerText = t.sci;
         document.getElementById('cv-ind-label').innerText = t.ind;
         document.querySelectorAll('.bio-content').forEach(b => b.classList.remove('active'));

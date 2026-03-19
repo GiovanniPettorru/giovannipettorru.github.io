@@ -513,29 +513,10 @@
         localStorage.setItem('selectedLang', lang);
 
         const translations = {
-            en: {
-                    navHome: 'Home', navPub: 'Publications',
-                labelScholar: 'Scholar Metrics',
-                labelCitations: 'Citations',
-                labelFilter: 'Filter by Topic',
-                filterAll: 'All'
-            },
-            it: {
-                    navHome: 'Home', navPub: 'Pubblicazioni',
-                labelScholar: 'Metriche Scholar',
-                labelCitations: 'Citazioni',
-                labelFilter: 'Filtra per Tema',
-                filterAll: 'Tutti'
-            },
-            fr: {
-                    navHome: 'Accueil', navPub: 'Publications',
-                labelScholar: 'Métriques Scholar',
-                labelCitations: 'Citations',
-                labelFilter: 'Filtrer par Thème',
-                filterAll: 'Tous'
-            }
+            en: { navHome:'Home', navPub:'Publications', navProj:'Projects', navTalks:'Awards & Talks', labelScholar:'Scholar Metrics', labelCitations:'Citations', labelFilter:'Filter by Topic', filterAll:'All' },
+            it: { navHome:'Home', navPub:'Pubblicazioni', navProj:'Progetti', navTalks:'Premi & Talk', labelScholar:'Metriche Scholar', labelCitations:'Citazioni', labelFilter:'Filtra per Tema', filterAll:'Tutti' },
+            fr: { navHome:'Accueil', navPub:'Publications', navProj:'Projets', navTalks:'Prix & Talks', labelScholar:'Métriques Scholar', labelCitations:'Citations', labelFilter:'Filtrer par Thème', filterAll:'Tous' }
         };
-
         const t = translations[lang];
 
         if (document.getElementById('header-page')) document.getElementById('header-page').innerText = t.navPub;
