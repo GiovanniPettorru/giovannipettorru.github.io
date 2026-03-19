@@ -35,6 +35,7 @@
             <li><a href="index.html" id="nav-home">Home</a></li>
             <li><a href="publications.html" id="nav-pub">Publications</a></li>
             <li><a href="projects.html" id="nav-proj">Projects</a></li>
+            <li><a href="talks.html" id="nav-talks">Talks & Awards</a></li>
         </ul>
     </nav>
 
@@ -139,19 +140,19 @@
         const translations = {
             'en': {
                 page: 'Home',
-                navHome: 'Home', navPub: 'Publications', navProj: 'Projects',
+                navHome: 'Home', navPub: 'Publications', navProj: 'Projects', navTalks: 'Talks & Awards',
                 bioTitle: 'Biography',
                 sci: 'Scientific', ind: 'Industrial'
             },
             'it': {
                 page: 'Home',
-                navHome: 'Home', navPub: 'Pubblicazioni', navProj: 'Progetti',
+                navHome: 'Home', navPub: 'Pubblicazioni', navProj: 'Progetti', navTalks: 'Talks & Premi',
                 bioTitle: 'Biografia',
                 sci: 'Scientifico', ind: 'Industriale'
             },
             'fr': {
                 page: 'Accueil',
-                navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets',
+                navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets', navTalks: 'Talks & Prix',
                 bioTitle: 'Biographie',
                 sci: 'Scientifique', ind: 'Industriel'
             }
@@ -167,6 +168,7 @@
         if (document.getElementById('nav-home'))  document.getElementById('nav-home').innerText  = t.navHome;
         if (document.getElementById('nav-pub'))   document.getElementById('nav-pub').innerText   = t.navPub;
         if (document.getElementById('nav-proj'))  document.getElementById('nav-proj').innerText  = t.navProj;
+        if (document.getElementById('nav-talks')) document.getElementById('nav-talks').innerText = t.navTalks;
 
         // Bio
         const bioTitle = document.getElementById('bio-title');

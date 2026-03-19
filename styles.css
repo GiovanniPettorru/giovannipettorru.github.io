@@ -1335,3 +1335,227 @@ footer {
 @media screen and (max-width: 600px) {
     .project-info-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   TALKS & AWARDS PAGE
+   ============================================================ */
+
+.talks-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 40px 100px;
+}
+
+.talks-header {
+    margin-bottom: 40px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border-gold);
+    position: relative;
+}
+
+.talks-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0;
+    width: 48px; height: 2px;
+    background: var(--gold);
+}
+
+.talks-header h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--navy);
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.talks-header p {
+    font-family: 'Source Serif 4', serif;
+    color: var(--text-muted);
+    font-size: 15px;
+    font-style: italic;
+}
+
+/* ── SECTION LABELS ── */
+.talks-section { margin-bottom: 40px; }
+
+.talks-section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.talks-section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border), transparent);
+}
+
+/* ── CARD GRID ── */
+.talks-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 12px;
+}
+
+.talks-card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.talks-card:hover {
+    border-color: var(--border-gold);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-1px);
+}
+
+.talks-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+}
+
+.talks-card.type-award::before  { background: var(--gold); }
+.talks-card.type-talk::before   { background: #378ADD; }
+.talks-card.type-service::before{ background: #1D9E75; }
+.talks-card.type-conf::before   { background: var(--navy-light); }
+
+.talks-card-year {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+
+.talks-card-title {
+    font-family: 'Playfair Display', serif;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.talks-card-sub {
+    font-family: 'Source Serif 4', serif;
+    color: var(--text-mid);
+    font-size: 12.5px;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.talks-card-tag {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 2px;
+}
+
+.talks-card-tag.award   { background: rgba(200,169,81,0.12);  color: #854f0b; }
+.talks-card-tag.talk    { background: rgba(55,138,221,0.1);   color: #0c447c; }
+.talks-card-tag.service { background: rgba(29,158,117,0.1);   color: #085041; }
+
+/* ── CONFERENCE TABLE ── */
+.conf-table { width: 100%; border-collapse: collapse; }
+
+.conf-row {
+    display: grid;
+    grid-template-columns: 46px 40px 1fr auto;
+    gap: 14px;
+    align-items: start;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.conf-row:last-child { border-bottom: none; }
+
+.conf-row.speaker { background: rgba(200,169,81,0.04); margin: 0 -8px; padding: 12px 8px; border-radius: var(--radius); }
+
+.conf-code {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+    padding-top: 2px;
+}
+
+.conf-year {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--gold);
+    letter-spacing: 0.06em;
+    padding-top: 2px;
+}
+
+.conf-body {}
+
+.conf-title {
+    font-family: 'Source Serif 4', serif;
+    color: var(--navy);
+    font-size: 13.5px;
+    font-weight: 400;
+    margin-bottom: 3px;
+    line-height: 1.45;
+}
+
+.conf-venue {
+    font-family: 'DM Mono', monospace;
+    color: var(--text-muted);
+    font-size: 11px;
+    letter-spacing: 0.02em;
+}
+
+.speaker-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 2px;
+    background: rgba(200,169,81,0.12);
+    color: #854f0b;
+    border: 1px solid rgba(200,169,81,0.3);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.speaker-badge::before {
+    content: '';
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media screen and (max-width: 700px) {
+    .talks-container { padding: 30px 24px 100px; }
+    .talks-card-grid { grid-template-columns: 1fr; }
+    .conf-row { grid-template-columns: 36px 36px 1fr; }
+    .conf-row > :last-child { grid-column: 3; margin-top: 4px; }
+    .talks-header h2 { font-size: 26px; }
+}
