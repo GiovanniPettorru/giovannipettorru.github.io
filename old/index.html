@@ -17,7 +17,7 @@
     <link rel="canonical" href="https://giovannipettorru.github.io/">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
+</head> 
 <body>
     <header class="main-header">
         <div class="header-logo">
@@ -30,7 +30,7 @@
             <button id="btn-en" class="lang-btn" onclick="changeLang('en')">EN <span class="flag">🇬🇧</span></button>
             <button id="btn-it" class="lang-btn" onclick="changeLang('it')">ITA <span class="flag">🇮🇹</span></button>
             <button id="btn-fr" class="lang-btn" onclick="changeLang('fr')">FR <span class="flag">🇫🇷</span></button>
-        </div>
+        </div> 
     </header>
 
     <nav class="navbar">
@@ -51,7 +51,7 @@
                     Dep. of Electrical and Electronic Eng.<br>
                     DIEE, University of Cagliari, Italy<br>
                     Via Marengo, 3 - 09123 Cagliari<br>
-                    Email: <a href="/cdn-cgi/l/email-protection#7f181610091e111116510f1a0b0b100d0d0a3f0a11161c1e51160b"><span class="__cf_email__" data-cfemail="f7909e98819699999ed98792838398858582b782999e9496d99e83">[email&#160;protected]</span></a></p>
+                    Email: <a href="mailto:giovanni.pettorru@unica.it">giovanni.pettorru@unica.it</a></p>
                 </div>
                 <div class="social-icons">
                     <a href="https://github.com/GiovanniPettorru"><img src="img/github.png" alt="GitHub"></a>
@@ -59,18 +59,7 @@
                     <a href="https://www.scopus.com/authid/detail.uri?authorId=57220178493"><img src="img/scopus_icon.png" alt="Scopus"></a>
                     <a href="https://scholar.google.com/citations?hl=it&user=YRMlkTAAAAAJ"><img src="img/googlescholar_icon.png" alt="Google Scholar"></a>
                     <a href="https://orcid.org/0009-0002-3207-2669"><img src="img/orcid.png" alt="ORCID"></a>
-                    <a href="/cdn-cgi/l/email-protection#1f787670697e717176316f7a6b6b706d6d6a5f6a71767c7e31766b"><img src="img/mail.png" alt="Email"></a>
-                </div>
-                <p class="cv-main-title">Ph.D. Thesis</p>
-                <div class="download-cv-container" style="margin-bottom:10px;">
-                    <div class="cv-section" style="border-bottom:none;padding-bottom:0;">
-                        <span class="cv-type" id="thesis-label">Doctoral Thesis</span>
-                        <div class="cv-links">
-                            <a href="thesis/pettorru_phd_thesis.pdf" download="pettorru_phd_thesis.pdf" title="Download Ph.D. Thesis">
-                                <img src="img/EN.png" alt="PhD Thesis PDF" class="cv-icon">
-                            </a>
-                        </div>
-                    </div>
+                    <a href="mailto:giovanni.pettorru@unica.it"><img src="img/mail.png" alt="Email"></a>
                 </div>
                 <p class="cv-main-title">Download CV</p>
                 <div class="download-cv-container">
@@ -143,7 +132,7 @@
 
     <footer><p>&copy; 2026 Giovanni Pettorru. All rights reserved.</p></footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
     let currentMode = 'short';
     let currentLang = 'en';
 
@@ -160,9 +149,9 @@
         currentLang = lang;
         localStorage.setItem('selectedLang', lang);
         const T = {
-            en: { page:'Home', navHome:'Home', navPub:'Publications', navProj:'Projects', navTalks:'Awards & Talks', bioTitle:'Biography', sci:'Scientific', ind:'Industrial', short:'Short', full:'Full', thesis:'Doctoral Thesis' },
-            it: { page:'Home', navHome:'Home', navPub:'Pubblicazioni', navProj:'Progetti', navTalks:'Premi & Talk', bioTitle:'Biografia', sci:'Scientifico', ind:'Industriale', short:'Breve', full:'Completa', thesis:'Tesi di Dottorato' },
-            fr: { page:'Accueil', navHome:'Accueil', navPub:'Publications', navProj:'Projets', navTalks:'Prix & Talks', bioTitle:'Biographie', sci:'Scientifique', ind:'Industriel', short:'Courte', full:'Complète', thesis:'Thèse de Doctorat' }
+            en: { page:'Home', navHome:'Home', navPub:'Publications', navProj:'Projects', navTalks:'Awards & Talks', bioTitle:'Biography', sci:'Scientific', ind:'Industrial', short:'Short', full:'Full' },
+            it: { page:'Home', navHome:'Home', navPub:'Pubblicazioni', navProj:'Progetti', navTalks:'Premi & Talk', bioTitle:'Biografia', sci:'Scientifico', ind:'Industriale', short:'Breve', full:'Completa' },
+            fr: { page:'Accueil', navHome:'Accueil', navPub:'Publications', navProj:'Projets', navTalks:'Prix & Talks', bioTitle:'Biographie', sci:'Scientifique', ind:'Industriel', short:'Courte', full:'Complète' }
         };
         const t = T[lang];
         document.getElementById('header-page').innerText  = t.page;
@@ -174,7 +163,6 @@
         document.getElementById('btn-short').innerText    = t.short;
         document.getElementById('btn-full').innerText     = t.full;
         document.getElementById('cv-sci-label').innerText = t.sci;
-        if (document.getElementById('thesis-label')) document.getElementById('thesis-label').innerText = t.thesis;
         document.getElementById('cv-ind-label').innerText = t.ind;
         document.querySelectorAll('.bio-content').forEach(b => b.classList.remove('active'));
         document.getElementById('bio-' + currentMode + '-' + lang).classList.add('active');
@@ -184,4 +172,11 @@
 
     window.onload = function() {
         currentLang = localStorage.getItem('selectedLang') || 'en';
-        currentMode = lo
+        currentMode = localStorage.getItem('bioMode') || 'short';
+        changeLang(currentLang);
+        document.getElementById('btn-short').classList.toggle('active', currentMode === 'short');
+        document.getElementById('btn-full').classList.toggle('active', currentMode === 'full');
+    };
+    </script>
+</body>
+</html>
