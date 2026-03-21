@@ -460,6 +460,8 @@
     window.onload = function() {
         const savedLang = localStorage.getItem('selectedLang') || 'en';
         changeLang(savedLang);
+        document.querySelectorAll('.navbar a').forEach(a => a.classList.remove('nav-active'));
+        document.getElementById('nav-home').classList.add('nav-active');
     };
     </script>
 </body>

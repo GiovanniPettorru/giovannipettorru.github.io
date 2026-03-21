@@ -124,6 +124,7 @@ body {
     white-space: nowrap;
 }
 .navbar ul li a:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
+.navbar ul li a.nav-active { color: #fff; border-bottom-color: var(--gold); }
 
 /* ── MAIN ── */
 main { min-height: calc(100vh - 178px); padding-bottom: 80px; }
