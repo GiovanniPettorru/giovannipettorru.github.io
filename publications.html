@@ -37,6 +37,8 @@
         <ul>
             <li><a href="index.html" id="nav-home">Home</a></li>
             <li><a href="publications.html" id="nav-pub">Publications</a></li>
+            <li><a href="projects.html" id="nav-proj">Projects</a></li>
+            <li><a href="talks.html" id="nav-talks">Awards & Talks</a></li>
         </ul>
     </nav>
 
@@ -105,7 +107,6 @@
 
             <!-- ── PUBLICATIONS MAIN ── -->
             <div class="pub-main">
-                <div class="pub-counter" id="pub-counter"></div>
                 <div class="publication">
 
                     <div class="no-results" id="no-results">No publications in this topic.</div>
@@ -476,9 +477,6 @@
             const el = document.getElementById('count-' + t);
             if (el) el.textContent = counts[t];
         });
-        // Update counter
-        const counter = document.getElementById('pub-counter');
-        if (counter) counter.textContent = counts.all + ' publications · 2020–2026';
     }
 
     // ── SCHOLAR METRICS ──
@@ -546,11 +544,6 @@
     window.onload = function () {
         const savedLang = localStorage.getItem('selectedLang') || 'en';
         changeLang(savedLang);
-        // Mark active nav link
-        document.querySelectorAll('.navbar a').forEach(a => a.classList.remove('nav-active'));
-        const activeNav = document.getElementById('nav-pub');
-        if (activeNav) activeNav.classList.add('nav-active');
-
         updateCounts();
         loadScholarData();
     };

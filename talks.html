@@ -131,7 +131,7 @@
                         <div class="talks-card-year">2026 — present</div>
                         <div class="talks-card-title">Web & Social Media Chair</div>
                         <div class="talks-card-sub">IEEE ComSoc Italy Chapter</div>
-                        <span class="talks-card-tag service">Leadership</span>
+                        <span class="talks-card-tag service">Service</span>
                     </div>
 
                     <div class="talks-card type-service">
@@ -256,58 +256,44 @@
             const res = await fetch('img/Talks/index.json?t=' + Date.now());
             _tPhotos = await res.json();
         } catch(e) {
+            // If no index.json or empty, hide the carousel entirely
             wrap.style.display = 'none';
             return;
         }
-        if (!_tPhotos || _tPhotos.length === 0) { wrap.style.display = 'none'; return; }
+
+        if (!_tPhotos || _tPhotos.length === 0) {
+            wrap.style.display = 'none';
+            return;
+        }
 
         const stage = document.getElementById('talks-carousel-stage');
         const dotsEl = document.getElementById('talks-carousel-dots');
 
-        _tPhotos.forEach((entry, i) => {
-            // Support both ["file.jpg"] and ["file.jpg", "Caption text"] formats
-            const filename = Array.isArray(entry) ? entry[0] : entry;
-            const caption  = Array.isArray(entry) && entry[1] ? entry[1] : '';
-
+        // Build slides
+        _tPhotos.forEach((filename, i) => {
             const slide = document.createElement('div');
             slide.className = 'talks-carousel-slide' + (i === 0 ? ' active' : '');
-            slide.dataset.caption = caption;
+            slide.id = 'tslide-' + i;
             const img = document.createElement('img');
             img.src = 'img/Talks/' + filename;
-            img.alt = caption || ('Presentation photo ' + (i + 1));
+            img.alt = 'Presentation photo ' + (i + 1);
             img.loading = 'lazy';
             slide.appendChild(img);
             stage.appendChild(slide);
 
+            // Build dot
             const dot = document.createElement('button');
             dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
             dot.setAttribute('onclick', 'talksCarouselGoTo(' + i + ')');
             dotsEl.appendChild(dot);
         });
 
-        // Show first caption
-        _updateTalksCaption(0);
-
+        // Start autoplay — 4 seconds per slide
         _tTimer = setInterval(() => talksCarouselNext(), 4000);
+
+        // Pause on hover
         stage.addEventListener('mouseenter', () => clearInterval(_tTimer));
         stage.addEventListener('mouseleave', () => { _tTimer = setInterval(() => talksCarouselNext(), 4000); });
-    }
-
-    function _updateTalksCaption(idx) {
-        const slides = document.querySelectorAll('.talks-carousel-slide');
-        const bar = document.querySelector('.talks-carousel-bar');
-        if (!slides[idx]) return;
-        const cap = slides[idx].dataset.caption;
-        // Show/hide caption bar depending on whether there's text
-        let capEl = document.getElementById('talks-caption-text');
-        if (!capEl) {
-            capEl = document.createElement('span');
-            capEl.id = 'talks-caption-text';
-            capEl.style.cssText = 'font-family:"DM Mono",monospace;font-size:11px;color:var(--text-muted);letter-spacing:0.04em;flex:1;';
-            bar.insertBefore(capEl, bar.firstChild);
-        }
-        capEl.textContent = cap || '';
-        capEl.style.display = cap ? 'block' : 'none';
     }
 
     function talksCarouselGoTo(idx) {
@@ -316,7 +302,6 @@
         _tIdx = (idx + _tPhotos.length) % _tPhotos.length;
         document.querySelectorAll('.talks-carousel-slide')[_tIdx].classList.add('active');
         document.querySelectorAll('#talks-carousel-dots .carousel-dot')[_tIdx].classList.add('active');
-        _updateTalksCaption(_tIdx);
     }
 
     function talksCarouselNext() { talksCarouselGoTo(_tIdx + 1); }
@@ -361,11 +346,6 @@
     window.onload = function() {
         const savedLang = localStorage.getItem('selectedLang') || 'en';
         changeLang(savedLang);
-        // Mark active nav link
-        document.querySelectorAll('.navbar a').forEach(a => a.classList.remove('nav-active'));
-        const activeNav = document.getElementById('nav-talks');
-        if (activeNav) activeNav.classList.add('nav-active');
-
         initTalksCarousel();
     };
     </script>
