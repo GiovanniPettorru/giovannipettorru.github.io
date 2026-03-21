@@ -108,7 +108,7 @@
             <!-- ── PUBLICATIONS MAIN ── -->
             <div class="pub-main">
                 <div class="publication">
-
+                    <div id="pub-counter" style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); padding:10px 0 18px; border-bottom:1px solid var(--border); margin-bottom:24px;"></div>
                     <div class="no-results" id="no-results">No publications in this topic.</div>
 
                     <!-- 2026 -->
@@ -477,6 +477,9 @@
             const el = document.getElementById('count-' + t);
             if (el) el.textContent = counts[t];
         });
+
+        const counter = document.getElementById('pub-counter');
+        if (counter) counter.textContent = counts.all + ' publications · 2020–2026';
     }
 
     // ── SCHOLAR METRICS ──
