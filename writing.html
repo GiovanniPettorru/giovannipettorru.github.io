@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing | Giovanni Pettorru</title>
+    <meta name="description" content="Articles and posts by Giovanni Pettorru on IoT, precision agriculture, entrepreneurship and research communication.">
+    <meta name="keywords" content="Giovanni Pettorru, writing, blog, IoT, AGROS, precision agriculture, LinkedIn, research">
+    <meta name="author" content="Giovanni Pettorru">
+    <meta property="og:title" content="Writing | Giovanni Pettorru">
+    <meta property="og:description" content="Articles and posts on IoT, precision agriculture, entrepreneurship and research communication.">
+    <meta property="og:url" content="https://giovannipettorru.github.io/writing.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://giovannipettorru.github.io/img/gp.png">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://giovannipettorru.github.io/writing.html">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-logo">
+            <div class="header-text">
+                <span class="header-name">Giovanni Pettorru</span>
+                <span class="header-page" id="header-page">Writing</span>
+            </div>
+        </div>
+        <div class="lang-buttons-header">
+            <button id="btn-en" class="lang-btn" onclick="changeLang('en')">EN <span class="flag">🇬🇧</span></button>
+            <button id="btn-it" class="lang-btn" onclick="changeLang('it')">ITA <span class="flag">🇮🇹</span></button>
+            <button id="btn-fr" class="lang-btn" onclick="changeLang('fr')">FR <span class="flag">🇫🇷</span></button>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" id="nav-home">Home</a></li>
+            <li><a href="publications.html" id="nav-pub">Publications</a></li>
+            <li><a href="projects.html" id="nav-proj">Projects</a></li>
+            <li><a href="talks.html" id="nav-talks">Awards & Talks</a></li>
+            <li><a href="writing.html" id="nav-writing">Writing</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="writing-container">
+
+            <div class="writing-header">
+                <h2 id="writing-title">Writing</h2>
+                <p id="writing-subtitle">Articles and posts on research, technology, and entrepreneurship — published on LinkedIn</p>
+            </div>
+
+            <!-- ── POST 1 ── -->
+            <article class="post-card">
+                <div class="post-meta">
+                    <span class="post-date">23 March 2026</span>
+                    <span class="post-badge">AGROS · Precision Agriculture</span>
+                </div>
+                <div class="post-title" id="post1-title">Why We Must Stop Believing the "False Myth" of Digital Resistance</div>
+                <div class="post-excerpt" id="post1-excerpt">As a researcher and head of the AGROS project, I spent the last year doing something engineers often forget: listening to the real needs of those who will actually use our solutions. Field validation across Sardinian farms revealed that 87% of farmers are eager to invest in new technology — and zero said they were "not interested at all." The real barriers are cost and complexity, not culture.</div>
+                <a href="https://www.linkedin.com/in/giovannipettorru/" target="_blank" class="post-link" id="post1-link">
+                    Read on LinkedIn
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
+                </a>
+            </article>
+
+        </div>
+    </main>
+
+    <footer><p>&copy; 2026 Giovanni Pettorru. All rights reserved.</p></footer>
+
+    <script>
+    function changeLang(lang) {
+        localStorage.setItem('selectedLang', lang);
+        const T = {
+            en: {
+                page: 'Writing',
+                navHome: 'Home', navPub: 'Publications', navProj: 'Projects', navTalks: 'Awards & Talks', navWriting: 'Writing',
+                title: 'Writing',
+                subtitle: 'Articles and posts on research, technology, and entrepreneurship — published on LinkedIn',
+                post1Title: 'Why We Must Stop Believing the "False Myth" of Digital Resistance',
+                post1Excerpt: 'As a researcher and head of the AGROS project, I spent the last year doing something engineers often forget: listening to the real needs of those who will actually use our solutions. Field validation across Sardinian farms revealed that 87% of farmers are eager to invest in new technology — and zero said they were "not interested at all." The real barriers are cost and complexity, not culture.',
+                post1Link: 'Read on LinkedIn'
+            },
+            it: {
+                page: 'Articoli',
+                navHome: 'Home', navPub: 'Pubblicazioni', navProj: 'Progetti', navTalks: 'Premi & Talk', navWriting: 'Articoli',
+                title: 'Articoli',
+                subtitle: 'Articoli e post su ricerca, tecnologia e imprenditorialità — pubblicati su LinkedIn',
+                post1Title: 'Perché Dobbiamo Smettere di Credere al "Falso Mito" della Resistenza Digitale',
+                post1Excerpt: 'Come ricercatore e responsabile del progetto AGROS, ho trascorso l\'ultimo anno a fare una cosa che noi ingegneri spesso dimentichiamo: ascoltare i bisogni reali di chi dovrà usare le nostre soluzioni. La validazione sul campo nelle aziende agricole sarde ha rivelato che l\'87% degli agricoltori vuole investire in nuove tecnologie — e nessuno ha risposto "per niente interessato". Le vere barriere sono i costi e la complessità, non la cultura.',
+                post1Link: 'Leggi su LinkedIn'
+            },
+            fr: {
+                page: 'Articles',
+                navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets', navTalks: 'Prix & Talks', navWriting: 'Articles',
+                title: 'Articles',
+                subtitle: 'Articles et posts sur la recherche, la technologie et l\'entrepreneuriat — publiés sur LinkedIn',
+                post1Title: 'Pourquoi Nous Devons Arrêter de Croire au "Faux Mythe" de la Résistance Numérique',
+                post1Excerpt: 'En tant que chercheur et responsable du projet AGROS, j\'ai passé la dernière année à faire quelque chose que les ingénieurs oublient souvent : écouter les besoins réels de ceux qui utiliseront nos solutions. La validation terrain dans les exploitations sardes a révélé que 87% des agriculteurs souhaitent investir dans de nouvelles technologies — et aucun n\'a répondu "pas du tout intéressé". Les vraies barrières sont le coût et la complexité, pas la culture.',
+                post1Link: 'Lire sur LinkedIn'
+            }
+        };
+        const t = T[lang];
+        document.getElementById('header-page').innerText    = t.page;
+        document.getElementById('nav-home').innerText       = t.navHome;
+        document.getElementById('nav-pub').innerText        = t.navPub;
+        document.getElementById('nav-proj').innerText       = t.navProj;
+        document.getElementById('nav-talks').innerText      = t.navTalks;
+        document.getElementById('nav-writing').innerText    = t.navWriting;
+        document.getElementById('writing-title').innerText  = t.title;
+        document.getElementById('writing-subtitle').innerText = t.subtitle;
+        document.getElementById('post1-title').innerText    = t.post1Title;
+        document.getElementById('post1-excerpt').innerText  = t.post1Excerpt;
+        document.getElementById('post1-link').childNodes[0].textContent = t.post1Link + ' ';
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById('btn-' + lang).classList.add('active');
+        // Nav active
+        document.querySelectorAll('.navbar a').forEach(a => a.classList.remove('nav-active'));
+        document.getElementById('nav-writing').classList.add('nav-active');
+    }
+
+    window.onload = function() {
+        const savedLang = localStorage.getItem('selectedLang') || 'en';
+        changeLang(savedLang);
+    };
+    </script>
+</body>
+</html>    

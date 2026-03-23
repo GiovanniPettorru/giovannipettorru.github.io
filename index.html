@@ -39,6 +39,7 @@
             <li><a href="publications.html" id="nav-pub">Publications</a></li>
             <li><a href="projects.html" id="nav-proj">Projects</a></li>
             <li><a href="talks.html" id="nav-talks">Awards & Talks</a></li>
+            <li><a href="writing.html" id="nav-writing">Writing</a></li>
         </ul>
     </nav>
 
@@ -158,9 +159,9 @@
         currentLang = lang;
         localStorage.setItem('selectedLang', lang);
         const T = {
-            en: { page:'Home', navHome:'Home', navPub:'Publications', navProj:'Projects', navTalks:'Awards & Talks', bioTitle:'Biography', sci:'Scientific', ind:'Industrial', short:'Short', full:'Full' },
-            it: { page:'Home', navHome:'Home', navPub:'Pubblicazioni', navProj:'Progetti', navTalks:'Premi & Talk', bioTitle:'Biografia', sci:'Scientifico', ind:'Industriale', short:'Breve', full:'Completa' },
-            fr: { page:'Accueil', navHome:'Accueil', navPub:'Publications', navProj:'Projets', navTalks:'Prix & Talks', bioTitle:'Biographie', sci:'Scientifique', ind:'Industriel', short:'Courte', full:'Complète' }
+            en: { page:'Home', navHome:'Home', navPub:'Publications', navProj:'Projects', navTalks:'Awards & Talks', navWriting:'Writing', bioTitle:'Biography', sci:'Scientific', ind:'Industrial', short:'Short', full:'Full', thesis:'Doctoral Thesis' },
+            it: { page:'Home', navHome:'Home', navPub:'Pubblicazioni', navProj:'Progetti', navTalks:'Premi & Talk', navWriting:'Articoli', bioTitle:'Biografia', sci:'Scientifico', ind:'Industriale', short:'Breve', full:'Completa', thesis:'Tesi di Dottorato' },
+            fr: { page:'Accueil', navHome:'Accueil', navPub:'Publications', navProj:'Projets', navTalks:'Prix & Talks', navWriting:'Articles', bioTitle:'Biographie', sci:'Scientifique', ind:'Industriel', short:'Courte', full:'Complète', thesis:'Thèse de Doctorat' }
         };
         const t = T[lang];
         document.getElementById('header-page').innerText  = t.page;
