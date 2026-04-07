@@ -431,7 +431,7 @@ footer {
 .talks-carousel-bar { display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: var(--cream); border-top: 1px solid var(--border); }
 .talks-carousel-dots { display: flex; gap: 5px; align-items: center; flex-wrap: wrap; }
 .talks-carousel-controls { display: flex; gap: 6px; flex-shrink: 0; }
-@media screen and (max-width: 700px) { .talks-container { padding: 30px 24px 100px; }}
+@media screen and (max-width: 700px) { .talks-container { padding: 30px 24px 100px; }
 
 /* ============================================================
    TALKS & AWARDS PAGE — sezioni e card
@@ -534,3 +534,16 @@ footer {
 .post-link:hover svg { transform: translate(2px, -2px); }
 
 @media screen and (max-width: 600px) { .writing-container { padding: 30px 24px 100px; } .post-title { font-size: 19px; } }
+
+.post-link.coming-soon {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: 'DM Mono', monospace; font-size: 11px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-muted);
+    border-bottom: 1px dashed var(--border);
+    padding-bottom: 2px;
+    cursor: default;
+}
+.post-link.coming-soon svg { width: 12px; height: 12px; flex-shrink: 0; }
+
+.post-card.upcoming { opacity: 0.75; }

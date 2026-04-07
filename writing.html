@@ -51,6 +51,28 @@
                 <p id="writing-subtitle">Articles and posts on research, technology, and entrepreneurship</p>
             </div>
 
+            <!-- ================================================================
+                 HOW TO ADD A NEW POST:
+                 1. Copy an <article class="post-card"> block
+                 2. Change post-date, post-badge, data-title-*, data-excerpt-*, data-link-*
+                 3. If not yet online: add class="post-link coming-soon" and remove href
+                 4. Add translations in changeLang() using the same data-key
+                 ================================================================ -->
+
+            <!-- ── POST 2 — Coming soon ── -->
+            <article class="post-card">
+                <div class="post-meta">
+                    <span class="post-date">April 2026</span>
+                    <span class="post-badge" id="post2-badge">Localization · IoT</span>
+                </div>
+                <div class="post-title" id="post2-title">Why the Future of Localization No Longer Comes from the Sky</div>
+                <div class="post-excerpt" id="post2-excerpt">GPS changed the world — but it was designed for open skies, not hospital basements, automated warehouses, or IoT sensors running on micro-batteries. A look at opportunistic localization: how Wi-Fi, Bluetooth, magnetic fingerprinting, and inertial navigation are quietly replacing satellites in the places that matter most.</div>
+                <span class="post-link coming-soon" id="post2-link">
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="5"/><polyline points="6,3 6,6 8,7.5"/></svg>
+                    Coming soon on LinkedIn
+                </span>
+            </article>
+
             <!-- ── POST 1 ── -->
             <article class="post-card">
                 <div class="post-meta">
@@ -58,8 +80,8 @@
                     <span class="post-badge">AGROS · Precision Agriculture</span>
                 </div>
                 <div class="post-title" id="post1-title">Why We Must Stop Believing the "False Myth" of Digital Resistance</div>
-                <div class="post-excerpt" id="post1-excerpt">As a researcher and head of the AGROS project, I spent the last year doing something engineers often forget: listening to the real needs of those who will actually use our solutions. Field validation across Sardinian farms revealed that 87% of farmers are eager to invest in new technology — and zero said they were "not interested at all." The real barriers are cost and complexity, not culture.</div>
-                <a href="https://www.linkedin.com/pulse/agricoltori-e-tech-oltre-il-falso-mito-farmers-beyond-pettorru-qiqzf" target="_blank" class="post-link" id="post1-link">
+                <div class="post-excerpt" id="post1-excerpt">Digital tools in the field are already a reality: discover the data from our AGROS project survey. We listened to the land to design the future.</div>
+                <a href="https://www.linkedin.com/pulse/agricoltori-e-tech-oltre-il-falso-mito-farmers-beyond-pettorru-qiqzf" target="_blank" rel="noopener noreferrer" class="post-link" id="post1-link">
                     Read on LinkedIn
                     <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
                 </a>
@@ -79,44 +101,59 @@
                 navHome: 'Home', navPub: 'Publications', navProj: 'Projects', navTalks: 'Awards & Talks', navWriting: 'Writing',
                 title: 'Writing',
                 subtitle: 'Articles and posts on research, technology, and entrepreneurship',
-                post1Title: 'Why We Must Stop Believing the "False Myth" of Digital Resistance',
+                post2Badge:   'Localization · IoT',
+                post2Title:   'Why the Future of Localization No Longer Comes from the Sky',
+                post2Excerpt: 'GPS changed the world — but it was designed for open skies, not hospital basements, automated warehouses, or IoT sensors running on micro-batteries. A look at opportunistic localization: how Wi-Fi, Bluetooth, magnetic fingerprinting, and inertial navigation are quietly replacing satellites in the places that matter most.',
+                post2Link:    'Coming soon on LinkedIn',
+                post1Title:   'Why We Must Stop Believing the "False Myth" of Digital Resistance',
                 post1Excerpt: 'Digital tools in the field are already a reality: discover the data from our AGROS project survey. We listened to the land to design the future.',
-                post1Link: 'Read on LinkedIn'
+                post1Link:    'Read on LinkedIn'
             },
             it: {
                 page: 'Articoli',
                 navHome: 'Home', navPub: 'Pubblicazioni', navProj: 'Progetti', navTalks: 'Premi & Talk', navWriting: 'Articoli',
                 title: 'Articoli',
                 subtitle: 'Articoli e post su ricerca, tecnologia e imprenditorialità',
-                post1Title: 'Perché Dobbiamo Smettere di Credere al "Falso Mito" della Resistenza Digitale',
+                post2Badge:   'Localizzazione · IoT',
+                post2Title:   'Perché il Futuro della Localizzazione non Arriva Più dal Cielo',
+                post2Excerpt: 'Il GPS ha cambiato il mondo — ma è stato progettato per cieli aperti, non per seminterrati di ospedali, magazzini automatizzati o sensori IoT alimentati a micro-batteria. Uno sguardo alla localizzazione opportunistica: come Wi-Fi, Bluetooth, fingerprinting magnetico e navigazione inerziale stanno silenziosamente sostituendo i satelliti nei luoghi che contano di più.',
+                post2Link:    'Prossimamente su LinkedIn',
+                post1Title:   'Perché Dobbiamo Smettere di Credere al "Falso Mito" della Resistenza Digitale',
                 post1Excerpt: 'Il digitale tra i filari è già realtà: scopri i dati della nostra ricerca con il progetto AGROS. Abbiamo ascoltato la terra per progettare il futuro.',
-                post1Link: 'Leggi su LinkedIn'
+                post1Link:    'Leggi su LinkedIn'
             },
             fr: {
                 page: 'Articles',
                 navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets', navTalks: 'Prix & Talks', navWriting: 'Articles',
                 title: 'Articles',
                 subtitle: 'Articles et posts sur la recherche, la technologie et l\'entrepreneuriat',
-                post1Title: 'Pourquoi Nous Devons Arrêter de Croire au "Faux Mythe" de la Résistance Numérique',
-                post1Excerpt: 'Le numérique aux champs est déjà une réalité : découvrez ires données de notre enquête avec le projet AGROS. Nous avons écouté le terrain pour concevoir l\'avenir.',
-                post1Link: 'Lire sur LinkedIn'
+                post2Badge:   'Localisation · IoT',
+                post2Title:   'Pourquoi le Futur de la Localisation ne Vient Plus du Ciel',
+                post2Excerpt: 'Le GPS a changé le monde — mais il a été conçu pour des ciels dégagés, pas pour les sous-sols d\'hôpitaux, les entrepôts automatisés ou les capteurs IoT alimentés par micro-batterie. Un regard sur la localisation opportuniste : comment le Wi-Fi, le Bluetooth, le fingerprinting magnétique et la navigation inertielle remplacent discrètement les satellites là où c\'est le plus important.',
+                post2Link:    'Bientôt sur LinkedIn',
+                post1Title:   'Pourquoi Nous Devons Arrêter de Croire au "Faux Mythe" de la Résistance Numérique',
+                post1Excerpt: 'Le numérique aux champs est déjà une réalité : découvrez les données de notre enquête avec le projet AGROS. Nous avons écouté le terrain pour concevoir l\'avenir.',
+                post1Link:    'Lire sur LinkedIn'
             }
         };
         const t = T[lang];
-        document.getElementById('header-page').innerText    = t.page;
-        document.getElementById('nav-home').innerText       = t.navHome;
-        document.getElementById('nav-pub').innerText        = t.navPub;
-        document.getElementById('nav-proj').innerText       = t.navProj;
-        document.getElementById('nav-talks').innerText      = t.navTalks;
-        document.getElementById('nav-writing').innerText    = t.navWriting;
-        document.getElementById('writing-title').innerText  = t.title;
+        document.getElementById('header-page').innerText      = t.page;
+        document.getElementById('nav-home').innerText         = t.navHome;
+        document.getElementById('nav-pub').innerText          = t.navPub;
+        document.getElementById('nav-proj').innerText         = t.navProj;
+        document.getElementById('nav-talks').innerText        = t.navTalks;
+        document.getElementById('nav-writing').innerText      = t.navWriting;
+        document.getElementById('writing-title').innerText    = t.title;
         document.getElementById('writing-subtitle').innerText = t.subtitle;
-        document.getElementById('post1-title').innerText    = t.post1Title;
-        document.getElementById('post1-excerpt').innerText  = t.post1Excerpt;
+        document.getElementById('post2-badge').innerText      = t.post2Badge;
+        document.getElementById('post2-title').innerText      = t.post2Title;
+        document.getElementById('post2-excerpt').innerText    = t.post2Excerpt;
+        document.getElementById('post2-link').childNodes[1].textContent = ' ' + t.post2Link;
+        document.getElementById('post1-title').innerText      = t.post1Title;
+        document.getElementById('post1-excerpt').innerText    = t.post1Excerpt;
         document.getElementById('post1-link').childNodes[0].textContent = t.post1Link + ' ';
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
         document.getElementById('btn-' + lang).classList.add('active');
-        // Nav active
         document.querySelectorAll('.navbar a').forEach(a => a.classList.remove('nav-active'));
         document.getElementById('nav-writing').classList.add('nav-active');
     }
@@ -127,4 +164,4 @@
     };
     </script>
 </body>
-</html>    
+</html>
