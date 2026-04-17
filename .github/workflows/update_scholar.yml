@@ -2,7 +2,7 @@ name: Update Google Scholar Stats
 
 on:
   schedule:
-    # Ogni lunedì alle 06:00 UTC
+    # Ogni giorno alle 06:00 UTC
     - cron: '0 6 * * *'   
   workflow_dispatch: # permette di eseguirlo manualmente dalla tab Actions
 
