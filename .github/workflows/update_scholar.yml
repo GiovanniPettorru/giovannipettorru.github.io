@@ -6,6 +6,11 @@ on:
     - cron: '0 6 * * *'   
   workflow_dispatch: # permette di eseguirlo manualmente dalla tab Actions
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   update-scholar:
     runs-on: ubuntu-latest
