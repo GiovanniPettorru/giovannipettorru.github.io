@@ -102,6 +102,10 @@
                         Smart Parking / Mobility
                         <span class="filter-count" id="count-mobility"></span>
                     </button>
+                    <button class="filter-btn" data-topic="5G" onclick="filterTopic('5G', this)">
+                        5G / O-RAN
+                        <span class="filter-count" id="count-5G"></span>
+                    </button>
                 </div>
 
             </aside>
@@ -114,6 +118,32 @@
 
                     <!-- 2026 -->
                     <h2 class="year-marker" data-year="2026">2026</h2>
+
+                    <div class="pub-entry" data-topics="traffic,5G">
+                        <h2>Near-Real-Time Traffic Classification in O-RAN: A Layer 2 Approach at the 5G Edge</h2>
+                        <p>Pilia, E., Pettorru, G., Anedda, M., Murroni, M.</p>
+                        <p>15th IEEE International Conference on Consumer Electronics (ICCE-Berlin 2026), Special Session on Broadcasting</p>
+                        <div class="button-container">
+                            <button class="show-abstract-btn" onclick="toggleAbstract(25)">Show Abstract</button>
+                            <button class="access-document-btn disabled" disabled title="Not yet available online">Coming Soon</button>
+                        </div>
+                        <div class="abstract" id="abstract25" style="display:none;">
+                            <p>The convergence of broadcast and broadband is redefining how multimedia content is delivered over 5G networks. In this evolving landscape, real-time service awareness at the network edge is essential to guarantee differentiated Quality of Service (QoS) for both traditional broadcast flows and IP-based streaming services such as DVB-I. Traditional centralized Deep Packet Inspection (DPI) struggles to meet this requirement due to end-to-end encryption and long control loop latencies, which prevent instantaneous radio scheduling adjustments. To address these challenges, this paper introduces a lightweight traffic classification framework integrated into the Open Radio Access Network (O-RAN) architecture. By deploying a Machine Learning (ML)-based xApp within the Near-Real-Time RAN Intelligent Controller (Near-RT RIC), we shift classification to the network edge, leveraging Data Link-layer (L2) statistics. The proposed system is evaluated on a physical O-RAN-compliant testbed. Experimental results show a &asymp;&nbsp;95% offline classification accuracy, while online testing confirms sub-millisecond inference latencies, demonstrating the feasibility of real-time, service-aware edge intelligence in 5G deployments.</p>
+                        </div>
+                    </div>
+
+                    <div class="pub-entry" data-topics="localization">
+                        <h2>A multimodal RSSI-based dataset for indoor navigation in interference-prone environments</h2>
+                        <p>Pettorru, G., Pilloni, V., Martalò, M. </p>
+                        <p>IEEE Transactions on Wireless Communications, 2026</p>
+                        <div class="button-container">
+                            <button class="show-abstract-btn" onclick="toggleAbstract(24)">Show Abstract</button>
+                            <button class="access-document-btn disabled" disabled title="Not yet available online">Coming Soon</button>
+                        </div>
+                        <div class="abstract" id="abstract24" style="display:none;">
+                            <p> Location-Based Services (LBS) are increasingly important within the growing Internet of Things (IoT) domain, as they provide accurate context-aware information, i.e., the position of objects and users moving across a network. The key component of LBS is a positioning algorithm, which exploits wireless transmissions from anchors with known locations to infer the unknown place where a target is. To cope with the complexity constraints typical of IoT environments, GPS-free range-based methods are particularly suitable. To this end, two hybrid localization approaches, based on the fusion of wireless signal measurements, are presented and evaluated through simulations and real-world experiments. The results demonstrate significant performance improvements over conventional single-technology methods, underscoring the potential of hybrid approaches in enhancing the reliability of context-aware services across diverse IoT settings. The obtained results also provide practical insights into the implementation of effective hybrid methods. </p>
+                        </div>
+                    </div>
 
                     <div class="pub-entry" data-topics="localization">
                         <h2>A multimodal RSSI-based dataset for indoor navigation in interference-prone environments</h2>
@@ -494,7 +524,7 @@
     function updateCounts() {
         const entries = document.querySelectorAll('.pub-entry');
         const counts  = { all: entries.length };
-        const topics  = ['security','localization','traffic','ehealth','fire','mobility'];
+        const topics  = ['security','localization','traffic','ehealth','fire','mobility', '5G'];
 
         topics.forEach(t => {
             counts[t] = document.querySelectorAll(`.pub-entry[data-topics*="${t}"]`).length;
