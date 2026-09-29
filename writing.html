@@ -51,7 +51,21 @@
                 <p id="writing-subtitle">Articles and posts on research, technology, and entrepreneurship</p>
             </div>
 
-            <!-- ── POST 3 — Latest Article ── -->
+            <!-- ── POST 4 — Latest ── -->
+            <article class="post-card">
+                <div class="post-meta">
+                    <span class="post-date" id="post4-date">12 August 2026</span>
+                    <span class="post-badge" id="post4-badge">Research · Wellbeing</span>
+                </div>
+                <div class="post-title" id="post4-title">Learning to Do Nothing (Without Feeling Guilty)</div>
+                <div class="post-excerpt" id="post4-excerpt">A reflection on why researchers struggle to truly disconnect, even on vacation. The "publish or perish" culture, the Default Mode Network, and three personal rules for August: because rest is a performance prerequisite, not a reward.</div>
+                <a href="https://www.linkedin.com/pulse/imparare-non-fare-niente-e-sentirsi-colpa-learning-do-pettorru-mka3f/" target="_blank" rel="noopener noreferrer" class="post-link" id="post4-link">
+                    Read on LinkedIn
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
+                </a>
+            </article>
+
+            <!-- ── POST 3 ── -->
             <article class="post-card">
                 <div class="post-meta">
                     <span class="post-date">23 July 2026</span>
@@ -72,7 +86,7 @@
                     <span class="post-badge" id="post2-badge">Localization · IoT</span>
                 </div>
                 <div class="post-title" id="post2-title">Why the Future of Localization No Longer Comes from the Sky</div>
-                <div class="post-excerpt" id="post2-excerpt">GPS changed the world — but it was designed for open skies, not hospital basements, automated warehouses, or IoT sensors running on micro-batteries. A look at opportunistic localization: how Wi-Fi, Bluetooth, magnetic fingerprinting, and inertial navigation are quietly replacing satellites in the places that matter most.</div>
+                <div class="post-excerpt" id="post2-excerpt">GPS changed the world, but it was designed for open skies, not hospital basements, automated warehouses, or IoT sensors running on micro-batteries. A look at opportunistic localization: how Wi-Fi, Bluetooth, magnetic fingerprinting, and inertial navigation are quietly replacing satellites in the places that matter most.</div>
                 <a href="https://www.linkedin.com/pulse/perch%25C3%25A9-il-futuro-della-localizzazione-non-arriva-pi%25C3%25B9-dal-pettorru-cyfwf" target="_blank" rel="noopener noreferrer" class="post-link" id="post2-link">
                     Read on LinkedIn
                     <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
@@ -107,7 +121,13 @@
                 navHome: 'Home', navPub: 'Publications', navProj: 'Projects', navTalks: 'Awards & Talks', navWriting: 'Writing',
                 title: 'Writing',
                 subtitle: 'Articles and posts on research, technology, and entrepreneurship',
-                
+
+                post4Date:    '12 August 2026',
+                post4Badge:   'Research · Wellbeing',
+                post4Title:   'Learning to Do Nothing (Without Feeling Guilty)',
+                post4Excerpt: 'A reflection on why researchers struggle to truly disconnect, even on vacation. The "publish or perish" culture, the Default Mode Network, and three personal rules for August: because rest is a performance prerequisite, not a reward.',
+                post4Link:    'Read on LinkedIn',
+
                 post3Badge:   'Networking · Research',
                 post3Title:   'Beyond the Lab: The Value of Networking in Research',
                 post3Excerpt: 'If someone asked me what the most valuable skill I acquired during my research career was, I wouldn\'t hesitate: the power of networking. Why secrecy is an illusion and how open exchange speeds up real-world execution.',
@@ -128,7 +148,13 @@
                 navHome: 'Home', navPub: 'Pubblicazioni', navProj: 'Progetti', navTalks: 'Premi & Talk', navWriting: 'Articoli',
                 title: 'Articoli',
                 subtitle: 'Articoli e post su ricerca, tecnologia e imprenditorialità',
-                
+
+                post4Date:    '12 agosto 2026',
+                post4Badge:   'Ricerca · Benessere',
+                post4Title:   'Imparare a non fare niente (e a non sentirsi in colpa)',
+                post4Excerpt: 'Una riflessione su perché i ricercatori faticano a disconnettersi davvero, anche in vacanza. La cultura del "publish or perish", il Default Mode Network e tre regole personali per agosto: perché il riposo è un requisito della prestazione, non un premio.',
+                post4Link:    'Leggi su LinkedIn',
+
                 post3Badge:   'Networking · Ricerca',
                 post3Title:   'Oltre il Laboratorio: Il Valore del Networking nella Ricerca',
                 post3Excerpt: 'Se qualcuno mi chiedesse qual è stata la competenza più importante acquisita negli ultimi anni di ricerca, risponderei senza esitazione: il networking. Perché la segretezza è un\'illusione e come il confronto velocizza l\'esecuzione reale.',
@@ -149,7 +175,13 @@
                 navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets', navTalks: 'Prix & Talks', navWriting: 'Articles',
                 title: 'Articles',
                 subtitle: 'Articles et posts sur la recherche, la technologie et l\'entrepreneuriat',
-                
+
+                post4Date:    '12 août 2026',
+                post4Badge:   'Recherche · Bien-être',
+                post4Title:   'Apprendre à ne rien faire (et à ne pas s\'en sentir coupable)',
+                post4Excerpt: 'Une réflexion sur pourquoi les chercheurs peinent à décrocher vraiment, même en vacances. La culture du "publish or perish", le Default Mode Network et trois règles personnelles pour août : parce que le repos est un prérequis de la performance, pas une récompense.',
+                post4Link:    'Lire sur LinkedIn',
+
                 post3Badge:   'Réseautage · Recherche',
                 post3Title:   'Au-delà du Laboratoire : La Valeur du Réseautage dans la Recherche',
                 post3Excerpt: 'Si l\'on me demandait quelle a été la compétence la plus importante acquise ces dernières années en recherche, je répondrais sans hésiter : le réseautage. Pourquoi le secret est une illusion et comment le partage accélère l\'exécution.',
@@ -167,6 +199,7 @@
             }
         };
         const t = T[lang];
+
         document.getElementById('header-page').innerText      = t.page;
         document.getElementById('nav-home').innerText         = t.navHome;
         document.getElementById('nav-pub').innerText          = t.navPub;
@@ -175,23 +208,26 @@
         document.getElementById('nav-writing').innerText      = t.navWriting;
         document.getElementById('writing-title').innerText    = t.title;
         document.getElementById('writing-subtitle').innerText = t.subtitle;
-        
-        // Post 3 Updates
-        document.getElementById('post3-badge').innerText      = t.post3Badge;
-        document.getElementById('post3-title').innerText      = t.post3Title;
-        document.getElementById('post3-excerpt').innerText    = t.post3Excerpt;
+
+        document.getElementById('post4-date').innerText    = t.post4Date;
+        document.getElementById('post4-badge').innerText   = t.post4Badge;
+        document.getElementById('post4-title').innerText   = t.post4Title;
+        document.getElementById('post4-excerpt').innerText = t.post4Excerpt;
+        document.getElementById('post4-link').childNodes[0].textContent = t.post4Link + ' ';
+
+        document.getElementById('post3-badge').innerText   = t.post3Badge;
+        document.getElementById('post3-title').innerText   = t.post3Title;
+        document.getElementById('post3-excerpt').innerText = t.post3Excerpt;
         document.getElementById('post3-link').childNodes[0].textContent = t.post3Link + ' ';
 
-        // Post 2 Updates
-        document.getElementById('post2-badge').innerText      = t.post2Badge;
-        document.getElementById('post2-title').innerText      = t.post2Title;
-        document.getElementById('post2-excerpt').innerText    = t.post2Excerpt;
+        document.getElementById('post2-badge').innerText   = t.post2Badge;
+        document.getElementById('post2-title').innerText   = t.post2Title;
+        document.getElementById('post2-excerpt').innerText = t.post2Excerpt;
         document.getElementById('post2-link').childNodes[0].textContent = t.post2Link + ' ';
 
-        // Post 1 Updates
-        document.getElementById('post1-badge').innerText      = t.post1Badge;
-        document.getElementById('post1-title').innerText      = t.post1Title;
-        document.getElementById('post1-excerpt').innerText    = t.post1Excerpt;
+        document.getElementById('post1-badge').innerText   = t.post1Badge;
+        document.getElementById('post1-title').innerText   = t.post1Title;
+        document.getElementById('post1-excerpt').innerText = t.post1Excerpt;
         document.getElementById('post1-link').childNodes[0].textContent = t.post1Link + ' ';
 
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
