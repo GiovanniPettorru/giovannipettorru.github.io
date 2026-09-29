@@ -70,7 +70,7 @@
                     </div>
 
                     <div class="talks-card type-award">
-                        <div class="talks-card-year">2023</div>
+                        <div class="talks-card-year">2025</div>
                         <div class="talks-card-title">3rd Place – 4MT, IEEE GLOBECOM 2025</div>
                         <div class="talks-card-sub">Four-Minute Thesis Competition · Taipei, Taiwan</div>
                         <span class="talks-card-tag award">Competition</span>
@@ -110,7 +110,6 @@
                         <div class="talks-card-sub">Three-Minute Thesis Competition · 1st edition · Rome, Italy</div>
                         <span class="talks-card-tag award">Competition</span>
                     </div>
-
                 </div>
             </div>
 
@@ -118,6 +117,13 @@
             <div class="talks-section">
                 <div class="talks-section-label" id="label-talks">Talks</div>
                 <div class="talks-card-grid">
+                    <div class="talks-card type-talk">
+                        <div class="talks-card-year">2026</div>
+                        <div class="talks-card-title">AGROS Project – IAFE Forum</div>
+                        <div class="talks-card-sub">IEEE CAS Industry Forum IAFE (Industry for AgriFood Electronics) · Cagliari, Italy · September 2026</div>
+                        <span class="talks-card-tag talk">Public Talk</span>
+                    </div>
+
                     <div class="talks-card type-talk">
                         <div class="talks-card-year">2025</div>
                         <div class="talks-card-title">POSIDONIA Project Pitch – MWC Barcelona 2025</div>
@@ -131,14 +137,23 @@
                         <div class="talks-card-sub">Public lecture · Dorgali, Sardegna, Italy · 29 February 2024</div>
                         <span class="talks-card-tag talk">Public Talk</span>
                     </div>
-
                 </div>
             </div>
 
-            <!-- ── CONFERENCE PRESENTATIONS ──-->
+            <!-- ── CONFERENCE PRESENTATIONS ── -->
             <div class="talks-section">
                 <div class="talks-section-label" id="label-conf">Conference Presentations</div>
                 <div class="conf-table">
+                    <div class="conf-row speaker">
+                        <div class="conf-code">C19</div>
+                        <div class="conf-year">2026</div>
+                        <div class="conf-body">
+                            <div class="conf-title">A Feasibility Study of Edge-Centric Digital Twin for Autonomous Agricultural Decision Support</div>
+                            <div class="conf-venue">IEEE CAFE 2026 — Conference on Agrifood Electronics</div>
+                        </div>
+                        <span class="speaker-badge">Speaker</span>
+                    </div>
+
                     <div class="conf-row speaker">
                         <div class="conf-code">C17</div>
                         <div class="conf-year">2026</div>
@@ -208,15 +223,12 @@
                         </div>
                         <span class="speaker-badge">Speaker</span>
                     </div>
-
                 </div>
             </div>
 
             <!-- ── PHOTO GALLERY ── -->
             <div class="talks-photo-carousel" id="talks-carousel-wrap">
-                <div class="talks-carousel-stage" id="talks-carousel-stage">
-                    <!-- slides injected by JS -->
-                </div>
+                <div class="talks-carousel-stage" id="talks-carousel-stage"></div>
                 <div class="talks-carousel-bar">
                     <div class="talks-carousel-dots" id="talks-carousel-dots"></div>
                     <div class="talks-carousel-controls">
@@ -247,9 +259,9 @@
         const wrap = document.getElementById('talks-carousel-wrap');
         try {
             const res = await fetch('img/Talks/index.json?t=' + Date.now());
+            if (!res.ok) throw new Error('index.json not found');
             _tPhotos = await res.json();
         } catch(e) {
-            // If no index.json or empty, hide the carousel entirely
             wrap.style.display = 'none';
             return;
         }
@@ -262,11 +274,9 @@
         const stage = document.getElementById('talks-carousel-stage');
         const dotsEl = document.getElementById('talks-carousel-dots');
 
-        // Build slides
         _tPhotos.forEach((filename, i) => {
             const slide = document.createElement('div');
             slide.className = 'talks-carousel-slide' + (i === 0 ? ' active' : '');
-            slide.id = 'tslide-' + i;
             const img = document.createElement('img');
             img.src = 'img/Talks/' + filename;
             img.alt = 'Presentation photo ' + (i + 1);
@@ -274,17 +284,13 @@
             slide.appendChild(img);
             stage.appendChild(slide);
 
-            // Build dot
             const dot = document.createElement('button');
             dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
             dot.setAttribute('onclick', 'talksCarouselGoTo(' + i + ')');
             dotsEl.appendChild(dot);
         });
 
-        // Start autoplay — 4 seconds per slide
         _tTimer = setInterval(() => talksCarouselNext(), 4000);
-
-        // Pause on hover
         stage.addEventListener('mouseenter', () => clearInterval(_tTimer));
         stage.addEventListener('mouseleave', () => { _tTimer = setInterval(() => talksCarouselNext(), 4000); });
     }
@@ -301,37 +307,47 @@
     function talksCarouselPrev() { talksCarouselGoTo(_tIdx - 1); }
 
     // ── LANGUAGE ──
+    function setEl(id, text) {
+        const el = document.getElementById(id);
+        if (el) el.innerText = text;
+    }
+
     function changeLang(lang) {
         localStorage.setItem('selectedLang', lang);
         const T = {
             en: {
-                page:'Awards & Talks', navHome:'Home', navPub:'Publications', navProj:'Projects', navTalks:'Awards & Talks', navWriting:'Writing',
-                title:'Awards & Talks', subtitle:'Competitions, recognitions, conference presentations, and academic service',
-                labelAwards:'Awards & Recognition', labelTalks:'Talks', labelService:'Service & Roles', labelConf:'Conference Presentations'
+                page:'Awards & Talks', navHome:'Home', navPub:'Publications', navProj:'Projects',
+                navTalks:'Awards & Talks', navWriting:'Writing',
+                title:'Awards & Talks',
+                subtitle:'Competitions, recognitions, conference presentations, and academic service',
+                labelAwards:'Awards & Recognition', labelTalks:'Talks', labelConf:'Conference Presentations'
             },
             it: {
-                page:'Premi & Talk', navHome:'Home', navPub:'Pubblicazioni', navProj:'Progetti', navTalks:'Premi & Talk', navWriting:'Articoli',
-                title:'Premi & Talk', subtitle:'Riconoscimenti, talk, presentazioni a conferenze e servizio accademico',
-                labelAwards:'Premi e Riconoscimenti', labelTalks:'Talk', labelService:'Servizio e Ruoli', labelConf:'Presentazioni a Conferenze'
+                page:'Premi & Talk', navHome:'Home', navPub:'Pubblicazioni', navProj:'Progetti',
+                navTalks:'Premi & Talk', navWriting:'Articoli',
+                title:'Premi & Talk',
+                subtitle:'Riconoscimenti, talk, presentazioni a conferenze e servizio accademico',
+                labelAwards:'Premi e Riconoscimenti', labelTalks:'Talk', labelConf:'Presentazioni a Conferenze'
             },
             fr: {
-                page:'Prix & Talks', navHome:'Accueil', navPub:'Publications', navProj:'Projets', navTalks:'Prix & Talks', navWriting:'Articles',
-                title:'Prix & Talks', subtitle:'Distinctions, talks, présentations à des conférences et service académique',
-                labelAwards:'Prix & Distinctions', labelTalks:'Talks', labelService:'Service & Rôles', labelConf:'Présentations à des Conférences'
+                page:'Prix & Talks', navHome:'Accueil', navPub:'Publications', navProj:'Projets',
+                navTalks:'Prix & Talks', navWriting:'Articles',
+                title:'Prix & Talks',
+                subtitle:'Distinctions, talks, présentations à des conférences et service académique',
+                labelAwards:'Prix & Distinctions', labelTalks:'Talks', labelConf:'Présentations à des Conférences'
             }
         };
         const l = T[lang];
-        document.getElementById('header-page').innerText   = l.page;
-        document.getElementById('nav-home').innerText      = l.navHome;
-        document.getElementById('nav-pub').innerText       = l.navPub;
-        document.getElementById('nav-proj').innerText      = l.navProj;
-        document.getElementById('nav-talks').innerText     = l.navTalks;
-        document.getElementById('talks-title').innerText   = l.title;
-        document.getElementById('talks-subtitle').innerText= l.subtitle;
-        document.getElementById('label-awards').innerText  = l.labelAwards;
-        document.getElementById('label-talks').innerText   = l.labelTalks;
-        document.getElementById('label-service').innerText = l.labelService;
-        document.getElementById('label-conf').innerText    = l.labelConf;
+        setEl('header-page',    l.page);
+        setEl('nav-home',       l.navHome);
+        setEl('nav-pub',        l.navPub);
+        setEl('nav-proj',       l.navProj);
+        setEl('nav-talks',      l.navTalks);
+        setEl('talks-title',    l.title);
+        setEl('talks-subtitle', l.subtitle);
+        setEl('label-awards',   l.labelAwards);
+        setEl('label-talks',    l.labelTalks);
+        setEl('label-conf',     l.labelConf);
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
         document.getElementById('btn-' + lang).classList.add('active');
     }
