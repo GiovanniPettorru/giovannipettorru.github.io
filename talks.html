@@ -253,20 +253,32 @@
     window.addEventListener('scroll', () => { btt.classList.toggle('visible', window.scrollY > 300); }, { passive: true });
 
     // ── AUTO PHOTO CAROUSEL ──
+    // Legge le immagini direttamente dalla cartella via GitHub Contents API
+    // (funziona senza token per repo pubblici, limite 60 req/ora)
+    const GITHUB_REPO  = 'GiovanniPettorru/GiovanniPettorru.github.io'; // <-- aggiusta se diverso
+    const PHOTOS_PATH  = 'img/Talks';
+    const IMG_EXT      = /\.(jpe?g|png|webp|gif)$/i;
+
     let _tIdx = 0, _tTimer = null, _tPhotos = [];
 
     async function initTalksCarousel() {
         const wrap = document.getElementById('talks-carousel-wrap');
         try {
-            const res = await fetch('img/Talks/index.json?t=' + Date.now());
-            if (!res.ok) throw new Error('index.json not found');
-            _tPhotos = await res.json();
+            const api = `https://api.github.com/repos/${GITHUB_REPO}/contents/${PHOTOS_PATH}`;
+            const res = await fetch(api);
+            if (!res.ok) throw new Error('GitHub API error: ' + res.status);
+            const files = await res.json();
+            _tPhotos = files
+                .filter(f => f.type === 'file' && IMG_EXT.test(f.name))
+                .map(f => f.name)
+                .sort();
         } catch(e) {
+            console.warn('Carousel not loaded:', e.message);
             wrap.style.display = 'none';
             return;
         }
 
-        if (!_tPhotos || _tPhotos.length === 0) {
+        if (_tPhotos.length === 0) {
             wrap.style.display = 'none';
             return;
         }
@@ -278,7 +290,7 @@
             const slide = document.createElement('div');
             slide.className = 'talks-carousel-slide' + (i === 0 ? ' active' : '');
             const img = document.createElement('img');
-            img.src = 'img/Talks/' + filename;
+            img.src = PHOTOS_PATH + '/' + filename;
             img.alt = 'Presentation photo ' + (i + 1);
             img.loading = 'lazy';
             slide.appendChild(img);
