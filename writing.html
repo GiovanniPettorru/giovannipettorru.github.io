@@ -51,7 +51,21 @@
                 <p id="writing-subtitle">Articles and posts on research, technology, and entrepreneurship</p>
             </div>
 
-            <!-- ── POST 4 — Latest ── -->
+            <!-- ── POST 5 — Latest ── -->
+            <article class="post-card">
+                <div class="post-meta">
+                    <span class="post-date" id="post5-date">30 September 2026</span>
+                    <span class="post-badge" id="post5-badge">Mindset · Research</span>
+                </div>
+                <div class="post-title" id="post5-title">The Paradox of Pressure: Finding Peace Only When the Stakes Are High</div>
+                <div class="post-excerpt" id="post5-excerpt">A counterintuitive observation from research life: focus and clarity emerge not when the pressure disappears, but precisely when the stakes are at their highest. An exploration of why demanding situations can become a source of calm rather than anxiety.</div>
+                <a href="https://www.linkedin.com/pulse/il-paradosso-della-pressione-trovare-la-pace-solo-quando-pettorru-ngnff" target="_blank" rel="noopener noreferrer" class="post-link" id="post5-link">
+                    Read on LinkedIn
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
+                </a>
+            </article>
+
+            <!-- ── POST 4 ── -->
             <article class="post-card">
                 <div class="post-meta">
                     <span class="post-date" id="post4-date">12 August 2026</span>
@@ -122,6 +136,12 @@
                 title: 'Writing',
                 subtitle: 'Articles and posts on research, technology, and entrepreneurship',
 
+                post5Date:    '30 September 2026',
+                post5Badge:   'Mindset · Research',
+                post5Title:   'The Paradox of Pressure: Finding Peace Only When the Stakes Are High',
+                post5Excerpt: 'A counterintuitive observation from research life: focus and clarity emerge not when the pressure disappears, but precisely when the stakes are at their highest. An exploration of why demanding situations can become a source of calm rather than anxiety.',
+                post5Link:    'Read on LinkedIn',
+
                 post4Date:    '12 August 2026',
                 post4Badge:   'Research · Wellbeing',
                 post4Title:   'Learning to Do Nothing (Without Feeling Guilty)',
@@ -149,6 +169,12 @@
                 title: 'Articoli',
                 subtitle: 'Articoli e post su ricerca, tecnologia e imprenditorialità',
 
+                post5Date:    '30 settembre 2026',
+                post5Badge:   'Psicologia · Ricerca',
+                post5Title:   'Il paradosso della pressione: trovare la pace solo quando l\'asticella è alta',
+                post5Excerpt: 'Un\'osservazione controintuitiva dalla vita di ricerca: la concentrazione e la lucidità arrivano non quando la pressione scompare, ma esattamente quando l\'asticella è al massimo. Un\'esplorazione di perché le situazioni più impegnative possono diventare fonte di calma, piuttosto che di ansia.',
+                post5Link:    'Leggi su LinkedIn',
+
                 post4Date:    '12 agosto 2026',
                 post4Badge:   'Ricerca · Benessere',
                 post4Title:   'Imparare a non fare niente (e a non sentirsi in colpa)',
@@ -175,6 +201,12 @@
                 navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets', navTalks: 'Prix & Talks', navWriting: 'Articles',
                 title: 'Articles',
                 subtitle: 'Articles et posts sur la recherche, la technologie et l\'entrepreneuriat',
+
+                post5Date:    '30 septembre 2026',
+                post5Badge:   'Psychologie · Recherche',
+                post5Title:   'Le Paradoxe de la Pression : Trouver la Paix Seulement Quand les Enjeux Sont Élevés',
+                post5Excerpt: 'Une observation contre-intuitive de la vie de chercheur : la concentration et la clarté n\'émergent pas quand la pression disparaît, mais précisément quand les enjeux sont à leur maximum. Une exploration des raisons pour lesquelles les situations exigeantes peuvent devenir source de sérénité plutôt que d\'anxiété.',
+                post5Link:    'Lire sur LinkedIn',
 
                 post4Date:    '12 août 2026',
                 post4Badge:   'Recherche · Bien-être',
@@ -208,6 +240,12 @@
         document.getElementById('nav-writing').innerText      = t.navWriting;
         document.getElementById('writing-title').innerText    = t.title;
         document.getElementById('writing-subtitle').innerText = t.subtitle;
+
+        document.getElementById('post5-date').innerText    = t.post5Date;
+        document.getElementById('post5-badge').innerText   = t.post5Badge;
+        document.getElementById('post5-title').innerText   = t.post5Title;
+        document.getElementById('post5-excerpt').innerText = t.post5Excerpt;
+        document.getElementById('post5-link').childNodes[0].textContent = t.post5Link + ' ';
 
         document.getElementById('post4-date').innerText    = t.post4Date;
         document.getElementById('post4-badge').innerText   = t.post4Badge;
