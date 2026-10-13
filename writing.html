@@ -51,7 +51,21 @@
                 <p id="writing-subtitle">Articles and posts on research, technology, and entrepreneurship</p>
             </div>
 
-            <!-- ── POST 5 — Latest ── -->
+            <!-- ── POST 6 — Latest ── -->
+            <article class="post-card">
+                <div class="post-meta">
+                    <span class="post-date" id="post6-date">13 October 2026</span>
+                    <span class="post-badge" id="post6-badge">AI · Research</span>
+                </div>
+                <div class="post-title" id="post6-title">Researchers and AI: Who Is the Real Author?</div>
+                <div class="post-excerpt" id="post6-excerpt">A reflection on authorship in the age of AI: when researchers use AI tools to write and analyze, who is the real author of the work? [REPLACE WITH REAL EXCERPT]</div>
+                <a href="https://www.linkedin.com/pulse/ricercatori-e-ai-chi-%C3%A8-il-vero-autore-researchers-who-pettorru-n2zrf/" target="_blank" rel="noopener noreferrer" class="post-link" id="post6-link">
+                    Read on LinkedIn
+                    <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
+                </a>
+            </article>
+
+            <!-- ── POST 5 ── -->
             <article class="post-card">
                 <div class="post-meta">
                     <span class="post-date" id="post5-date">30 September 2026</span>
@@ -136,6 +150,12 @@
                 title: 'Writing',
                 subtitle: 'Articles and posts on research, technology, and entrepreneurship',
 
+                post6Date:    '13 October 2026',
+                post6Badge:   'AI · Research',
+                post6Title:   'Researchers and AI: Who Is the Real Author?',
+                post6Excerpt: 'A reflection on authorship in the age of AI: when researchers use AI tools to write and analyze, who is the real author of the work? [REPLACE WITH REAL EXCERPT]',
+                post6Link:    'Read on LinkedIn',
+
                 post5Date:    '30 September 2026',
                 post5Badge:   'Mindset · Research',
                 post5Title:   'The Paradox of Pressure: Finding Peace Only When the Stakes Are High',
@@ -169,6 +189,12 @@
                 title: 'Articoli',
                 subtitle: 'Articoli e post su ricerca, tecnologia e imprenditorialità',
 
+                post6Date:    '13 ottobre 2026',
+                post6Badge:   'AI · Ricerca',
+                post6Title:   'Ricercatori e AI: chi è il vero autore?',
+                post6Excerpt: 'Una riflessione sull\'autorialità nell\'era dell\'AI: quando i ricercatori usano strumenti di AI per scrivere e analizzare, chi è il vero autore del lavoro? [SOSTITUISCI CON ESTRATTO REALE]',
+                post6Link:    'Leggi su LinkedIn',
+
                 post5Date:    '30 settembre 2026',
                 post5Badge:   'Psicologia · Ricerca',
                 post5Title:   'Il paradosso della pressione: trovare la pace solo quando l\'asticella è alta',
@@ -201,6 +227,12 @@
                 navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets', navTalks: 'Prix & Talks', navWriting: 'Articles',
                 title: 'Articles',
                 subtitle: 'Articles et posts sur la recherche, la technologie et l\'entrepreneuriat',
+
+                post6Date:    '13 octobre 2026',
+                post6Badge:   'IA · Recherche',
+                post6Title:   'Chercheurs et IA : qui est le véritable auteur ?',
+                post6Excerpt: 'Une réflexion sur la paternité intellectuelle à l\'ère de l\'IA : lorsque les chercheurs utilisent des outils d\'IA pour écrire et analyser, qui est le véritable auteur du travail ? [REMPLACER PAR L\'EXTRAIT RÉEL]',
+                post6Link:    'Lire sur LinkedIn',
 
                 post5Date:    '30 septembre 2026',
                 post5Badge:   'Psychologie · Recherche',
@@ -240,6 +272,12 @@
         document.getElementById('nav-writing').innerText      = t.navWriting;
         document.getElementById('writing-title').innerText    = t.title;
         document.getElementById('writing-subtitle').innerText = t.subtitle;
+
+        document.getElementById('post6-date').innerText    = t.post6Date;
+        document.getElementById('post6-badge').innerText   = t.post6Badge;
+        document.getElementById('post6-title').innerText   = t.post6Title;
+        document.getElementById('post6-excerpt').innerText = t.post6Excerpt;
+        document.getElementById('post6-link').childNodes[0].textContent = t.post6Link + ' ';
 
         document.getElementById('post5-date').innerText    = t.post5Date;
         document.getElementById('post5-badge').innerText   = t.post5Badge;
