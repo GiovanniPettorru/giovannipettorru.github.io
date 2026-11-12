@@ -51,7 +51,27 @@
                 <p id="writing-subtitle">Articles and posts on research, technology, and entrepreneurship</p>
             </div>
 
-            <!-- ── POST 6 — Latest ── -->
+            <!-- ── POST 7 — Latest ── -->
+            <article class="post-card">
+                <div class="post-meta">
+                    <span class="post-date" id="post7-date">12 November 2026</span>
+                    <span class="post-badge" id="post7-badge">Cybersecurity · Hybrid Warfare</span>
+                </div>
+                <div class="post-title" id="post7-title">Hybrid Warfare in Italy: Why Was It So Easy?</div>
+                <div class="post-excerpt" id="post7-excerpt">Diverted flights, evacuated schools, a minister's data on the dark web, supermarkets throwing away their stock: ten days of hybrid threats across Europe and Italy. What "hybrid" really means, what these attacks are for, and why the uncomfortable question is not who did it, but why it was so easy.</div>
+                <div class="post-links" style="display:flex; gap:1.25rem; flex-wrap:wrap;">
+                    <a href="https://www.linkedin.com/pulse/guerra-ibrida-italia-perch%C3%A9-%C3%A8-stato-cos%C3%AC-facile-hybrid-pettorru-ltbgf/" target="_blank" rel="noopener noreferrer" class="post-link" id="post7-link">
+                        Read on LinkedIn
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
+                    </a>
+                    <a href="https://giovannipettorru.substack.com/p/guerra-ibrida-in-italia-perche-e?r=4mdwgs&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" target="_blank" rel="noopener noreferrer" class="post-link" id="post7-link-sub">
+                        Read on Substack
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- ── POST 6 — ── -->
             <article class="post-card">
                 <div class="post-meta">
                     <span class="post-date" id="post6-date">13 October 2026</span>
@@ -150,6 +170,13 @@
                 title: 'Writing',
                 subtitle: 'Articles and posts on research, technology, and entrepreneurship',
 
+                post7Date:    '12 November 2026',
+                post7Badge:   'Cybersecurity · Hybrid Warfare',
+                post7Title:   'Hybrid Warfare in Italy: Why Was It So Easy?',
+                post7Excerpt: 'Diverted flights, evacuated schools, a minister\'s data on the dark web, supermarkets throwing away their stock: ten days of hybrid threats across Europe and Italy. What "hybrid" really means, what these attacks are for, and why the uncomfortable question is not who did it, but why it was so easy.',
+                post7Link:    'Read on LinkedIn',
+                post7LinkSub: 'Read on Substack',
+
                 post6Date:    '13 October 2026',
                 post6Badge:   'AI · Research',
                 post6Title:   'Researchers and AI: Who Is the Real Author?',
@@ -189,6 +216,13 @@
                 title: 'Articoli',
                 subtitle: 'Articoli e post su ricerca, tecnologia e imprenditorialità',
 
+                post7Date:    '12 novembre 2026',
+                post7Badge:   'Cybersecurity · Guerra ibrida',
+                post7Title:   'Guerra ibrida in Italia: perché è stato così facile?',
+                post7Excerpt: 'Voli deviati, scuole evacuate, i dati di un ministro sul dark web, supermercati costretti a buttare la merce: dieci giorni di minacce ibride in Europa e in Italia. Cosa significa davvero «ibrida», a cosa servono questi attacchi e perché la domanda scomoda non è chi è stato, ma perché è stato così facile.',
+                post7Link:    'Leggi su LinkedIn',
+                post7LinkSub: 'Leggi su Substack',
+
                 post6Date:    '13 ottobre 2026',
                 post6Badge:   'AI · Ricerca',
                 post6Title:   'Ricercatori e AI: chi è il vero autore?',
@@ -227,6 +261,13 @@
                 navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets', navTalks: 'Prix & Talks', navWriting: 'Articles',
                 title: 'Articles',
                 subtitle: 'Articles et posts sur la recherche, la technologie et l\'entrepreneuriat',
+
+                post7Date:    '12 novembre 2026',
+                post7Badge:   'Cybersécurité · Guerre hybride',
+                post7Title:   'Guerre hybride en Italie : pourquoi cela a-t-il été si facile ?',
+                post7Excerpt: 'Vols déroutés, écoles évacuées, les données d\'un ministre sur le dark web, des supermarchés contraints de jeter leurs produits : dix jours de menaces hybrides en Europe et en Italie. Ce que « hybride » signifie vraiment, à quoi servent ces attaques, et pourquoi la question qui dérange n\'est pas qui l\'a fait, mais pourquoi cela a été si facile.',
+                post7Link:    'Lire sur LinkedIn',
+                post7LinkSub: 'Lire sur Substack',
 
                 post6Date:    '13 octobre 2026',
                 post6Badge:   'IA · Recherche',
@@ -272,6 +313,13 @@
         document.getElementById('nav-writing').innerText      = t.navWriting;
         document.getElementById('writing-title').innerText    = t.title;
         document.getElementById('writing-subtitle').innerText = t.subtitle;
+
+        document.getElementById('post7-date').innerText    = t.post7Date;
+        document.getElementById('post7-badge').innerText   = t.post7Badge;
+        document.getElementById('post7-title').innerText   = t.post7Title;
+        document.getElementById('post7-excerpt').innerText = t.post7Excerpt;
+        document.getElementById('post7-link').childNodes[0].textContent     = t.post7Link + ' ';
+        document.getElementById('post7-link-sub').childNodes[0].textContent = t.post7LinkSub + ' ';
 
         document.getElementById('post6-date').innerText    = t.post6Date;
         document.getElementById('post6-badge').innerText   = t.post6Badge;
