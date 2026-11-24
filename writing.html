@@ -51,7 +51,27 @@
                 <p id="writing-subtitle">Articles and posts on research, technology, and entrepreneurship</p>
             </div>
 
-            <!-- ── POST 7 — Latest ── -->
+            <!-- ── POST 8 — Latest ── -->
+            <article class="post-card">
+                <div class="post-meta">
+                    <span class="post-date" id="post8-date">24 November 2026</span>
+                    <span class="post-badge" id="post8-badge">Communication · Public Speaking</span>
+                </div>
+                <div class="post-title" id="post8-title">Why Being Right Means Little If Nobody Follows You</div>
+                <div class="post-excerpt" id="post8-excerpt">A room full of experts and one complete beginner, a mixed crowd of meat eaters and vegans, the anxiety that shows up before you say a word: notes from an evening on public speaking in Cagliari. Why soft skills are barely soft at all, how to make your case without creating an antagonist, and why a solid idea only gets you halfway if nobody follows you.</div>
+                <div class="post-links" style="display:flex; gap:1.25rem; flex-wrap:wrap;">
+                    <a href="https://www.linkedin.com/pulse/perch%25C3%25A9-non-basta-avere-ragione-se-nessuno-ti-segue-why-pettorru-miuyf" target="_blank" rel="noopener noreferrer" class="post-link" id="post8-link">
+                        Read on LinkedIn
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
+                    </a>
+                    <a href="https://giovannipettorru.substack.com/p/perche-non-basta-avere-ragione-se?r=4mdwgs&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" target="_blank" rel="noopener noreferrer" class="post-link" id="post8-link-sub">
+                        Read on Substack
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 10L10 2M10 2H6M10 2V6"/></svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- ── POST 7 ── -->
             <article class="post-card">
                 <div class="post-meta">
                     <span class="post-date" id="post7-date">12 November 2026</span>
@@ -170,6 +190,13 @@
                 title: 'Writing',
                 subtitle: 'Articles and posts on research, technology, and entrepreneurship',
 
+                post8Date:    '24 November 2026',
+                post8Badge:   'Communication · Public Speaking',
+                post8Title:   'Why Being Right Means Little If Nobody Follows You',
+                post8Excerpt: 'A room full of experts and one complete beginner, a mixed crowd of meat eaters and vegans, the anxiety that shows up before you say a word: notes from an evening on public speaking in Cagliari. Why soft skills are barely soft at all, how to make your case without creating an antagonist, and why a solid idea only gets you halfway if nobody follows you.',
+                post8Link:    'Read on LinkedIn',
+                post8LinkSub: 'Read on Substack',
+
                 post7Date:    '12 November 2026',
                 post7Badge:   'Cybersecurity · Hybrid Warfare',
                 post7Title:   'Hybrid Warfare in Italy: Why Was It So Easy?',
@@ -216,6 +243,13 @@
                 title: 'Articoli',
                 subtitle: 'Articoli e post su ricerca, tecnologia e imprenditorialità',
 
+                post8Date:    '24 novembre 2026',
+                post8Badge:   'Comunicazione · Public Speaking',
+                post8Title:   'Perché non basta avere ragione se nessuno ti segue',
+                post8Excerpt: 'Una sala piena di esperti e un solo profano, un pubblico misto di carnivori e vegani, l\'ansia che arriva prima ancora di aprire bocca: appunti da una serata sul public speaking a Cagliari. Perché le soft skill hanno ben poco di soft, come sostenere una tesi senza creare un antagonista e perché un\'idea solida è solo metà del percorso se nessuno ti segue.',
+                post8Link:    'Leggi su LinkedIn',
+                post8LinkSub: 'Leggi su Substack',
+
                 post7Date:    '12 novembre 2026',
                 post7Badge:   'Cybersecurity · Guerra ibrida',
                 post7Title:   'Guerra ibrida in Italia: perché è stato così facile?',
@@ -261,6 +295,13 @@
                 navHome: 'Accueil', navPub: 'Publications', navProj: 'Projets', navTalks: 'Prix & Talks', navWriting: 'Articles',
                 title: 'Articles',
                 subtitle: 'Articles et posts sur la recherche, la technologie et l\'entrepreneuriat',
+
+                post8Date:    '24 novembre 2026',
+                post8Badge:   'Communication · Prise de parole',
+                post8Title:   'Pourquoi avoir raison ne suffit pas si personne ne vous suit',
+                post8Excerpt: 'Une salle remplie d\'experts et un seul néophyte, un public mêlant carnivores et végans, l\'anxiété qui monte avant même d\'ouvrir la bouche : notes d\'une soirée consacrée à la prise de parole en public à Cagliari. Pourquoi les soft skills n\'ont de soft que le nom, comment défendre une thèse sans se créer d\'adversaires et pourquoi une idée solide ne vous mène qu\'à mi-chemin si personne ne vous suit.',
+                post8Link:    'Lire sur LinkedIn',
+                post8LinkSub: 'Lire sur Substack',
 
                 post7Date:    '12 novembre 2026',
                 post7Badge:   'Cybersécurité · Guerre hybride',
@@ -313,6 +354,13 @@
         document.getElementById('nav-writing').innerText      = t.navWriting;
         document.getElementById('writing-title').innerText    = t.title;
         document.getElementById('writing-subtitle').innerText = t.subtitle;
+
+        document.getElementById('post8-date').innerText    = t.post8Date;
+        document.getElementById('post8-badge').innerText   = t.post8Badge;
+        document.getElementById('post8-title').innerText   = t.post8Title;
+        document.getElementById('post8-excerpt').innerText = t.post8Excerpt;
+        document.getElementById('post8-link').childNodes[0].textContent     = t.post8Link + ' ';
+        document.getElementById('post8-link-sub').childNodes[0].textContent = t.post8LinkSub + ' ';
 
         document.getElementById('post7-date').innerText    = t.post7Date;
         document.getElementById('post7-badge').innerText   = t.post7Badge;
